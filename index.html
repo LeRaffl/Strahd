@@ -1,1 +1,517 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dingeling – Kampagnen-Archiv</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --bg: #0d0c0a;
+      --bg2: #161410;
+      --bg3: #1e1b16;
+      --border: #2e2a22;
+      --border2: #3d3830;
+      --gold: #c9a84c;
+      --gold-dim: #8a6f32;
+      --gold-bg: #1a1508;
+      --text: #e8dfc8;
+      --text2: #a89e88;
+      --text3: #6b6358;
+      --red: #8b2020;
+      --radius: 8px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Crimson Text', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--bg2);
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      background: var(--gold-bg);
+      border: 1px solid var(--gold-dim);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+    }
+
+    header p {
+      font-size: 13px;
+      color: var(--text3);
+      font-family: 'Crimson Text', serif;
+    }
+
+    .header-tags {
+      margin-left: auto;
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .tag {
+      font-size: 12px;
+      font-family: 'Crimson Text', serif;
+      padding: 2px 10px;
+      border-radius: 20px;
+      background: var(--gold-bg);
+      color: var(--gold-dim);
+      border: 1px solid var(--gold-dim);
+    }
+
+    /* Layout */
+    .layout {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+      height: calc(100vh - 73px);
+    }
+
+    /* Sidebar */
+    aside {
+      width: 260px;
+      flex-shrink: 0;
+      border-right: 1px solid var(--border);
+      background: var(--bg2);
+      overflow-y: auto;
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    aside h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .char-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px;
+    }
+
+    .char-name {
+      font-family: 'Cinzel', serif;
+      font-size: 16px;
+      color: var(--gold);
+      margin-bottom: 2px;
+    }
+
+    .char-sub {
+      font-size: 13px;
+      color: var(--text2);
+      margin-bottom: 12px;
+    }
+
+    .stat-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .stat {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 12px;
+      color: var(--text2);
+      font-family: 'Crimson Text', serif;
+    }
+
+    .stat span {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .sessions-empty {
+      font-size: 14px;
+      color: var(--text3);
+      font-style: italic;
+      padding: 10px 0;
+    }
+
+    .session-item {
+      padding: 8px 10px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--bg3);
+      cursor: pointer;
+      transition: border-color 0.15s;
+      margin-bottom: 6px;
+    }
+
+    .session-item:hover { border-color: var(--gold-dim); }
+
+    .session-item p { font-size: 13px; color: var(--text); }
+    .session-item small { font-size: 12px; color: var(--text3); }
+
+    /* Chat */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    #messages::-webkit-scrollbar { width: 4px; }
+    #messages::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+    .msg {
+      max-width: 680px;
+      line-height: 1.65;
+    }
+
+    .msg-user {
+      align-self: flex-end;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      font-size: 16px;
+    }
+
+    .msg-ai {
+      align-self: flex-start;
+      background: var(--gold-bg);
+      border: 1px solid var(--gold-dim);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    .msg-label {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .msg-user .msg-label { color: var(--text3); text-align: right; }
+    .msg-ai .msg-label { color: var(--gold-dim); }
+
+    .typing-dots {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      padding: 4px 0;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--gold-dim);
+      border-radius: 50%;
+      animation: pulse 1.2s infinite;
+    }
+
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes pulse { 0%,80%,100%{opacity:0.2} 40%{opacity:1} }
+
+    /* Input area */
+    .input-area {
+      border-top: 1px solid var(--border);
+      padding: 16px 24px;
+      background: var(--bg2);
+    }
+
+    .quick-btns {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .quick-btn {
+      font-size: 13px;
+      font-family: 'Crimson Text', serif;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--border2);
+      background: transparent;
+      color: var(--text2);
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .quick-btn:hover {
+      border-color: var(--gold-dim);
+      color: var(--gold);
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    #msg-input {
+      flex: 1;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      padding: 10px 16px;
+      font-size: 16px;
+      font-family: 'Crimson Text', serif;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    #msg-input:focus { border-color: var(--gold-dim); }
+    #msg-input::placeholder { color: var(--text3); }
+
+    #send-btn {
+      background: var(--gold-bg);
+      border: 1px solid var(--gold-dim);
+      border-radius: var(--radius);
+      padding: 10px 20px;
+      font-size: 15px;
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      cursor: pointer;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+
+    #send-btn:hover { background: #241d0b; }
+    #send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* Scrollbar */
+    aside::-webkit-scrollbar { width: 4px; }
+    aside::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+    @media (max-width: 600px) {
+      aside { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🎲</div>
+  <div>
+    <h1>Dingeling</h1>
+    <p>Kampagnen-Archivar · D&D 5e</p>
+  </div>
+  <div class="header-tags">
+    <span class="tag">Shii Take · Druid 3</span>
+    <span class="tag" id="session-count-tag">0 Sessions</span>
+  </div>
+</header>
+
+<div class="layout">
+  <aside>
+    <div>
+      <h2>Charakter</h2>
+      <div class="char-card">
+        <p class="char-name">Shii Take</p>
+        <p class="char-sub">Human Druid 3 · Sage · Spieler: Raffi</p>
+        <div class="stat-row">
+          <div class="stat">HP <span>24</span></div>
+          <div class="stat">AC <span>14</span></div>
+          <div class="stat">WIS <span>+3</span></div>
+          <div class="stat">Init <span>+1</span></div>
+        </div>
+        <div class="stat-row">
+          <div class="stat">Wild Shape <span>2×</span></div>
+          <div class="stat">Perc <span>+5</span></div>
+        </div>
+        <div style="margin-top: 10px; font-size: 13px; color: var(--text3);">
+          Common · Deep Speech · Druidic · Gnomish · Goblin · Sylvan
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2>Sessions</h2>
+      <div id="sessions-list">
+        <p class="sessions-empty">Noch keine Sessions aufgezeichnet.</p>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <div id="messages">
+      <div class="msg msg-ai">
+        <div class="msg-label">Dingeling · Archivar</div>
+        Willkommen im Kampagnen-Archiv! Ich kenne Shii Takes Charakter-Daten und halte die gesamte Kampagnen-Geschichte fest. Frag mich alles — über Charakterwerte, vergangene Sessions oder was auch immer gerade relevant ist.
+      </div>
+    </div>
+
+    <div class="input-area">
+      <div class="quick-btns">
+        <button class="quick-btn" onclick="quickAsk('Was sind Shii Takes stärkste Fähigkeiten?')">Shii Takes Stärken</button>
+        <button class="quick-btn" onclick="quickAsk('Erkläre Wild Shape — wie funktioniert das genau?')">Wild Shape erklärt</button>
+        <button class="quick-btn" onclick="quickAsk('Welche Sprachen spricht Shii Take und warum könnte das wichtig sein?')">Sprachen & Nutzen</button>
+        <button class="quick-btn" onclick="quickAsk('Was ist zuletzt in der Kampagne passiert?')">Letztes Mal...</button>
+      </div>
+      <div class="input-row">
+        <input type="text" id="msg-input" placeholder="Frag den Archivar..." onkeydown="if(event.key==='Enter' && !event.shiftKey) sendMsg()" />
+        <button id="send-btn" onclick="sendMsg()">Senden →</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+  const WORKER_URL = 'https://strahd-proxy.xgwvfz7nrb.workers.dev';
+
+  const SYSTEM = `Du bist Dingeling, der Kampagnen-Archivar für eine D&D 5e Kampagne.
+Antworte immer auf Deutsch. Halte Antworten prägnant (2-4 Sätze) aber vollständig und hilfreich.
+Wenn du etwas nicht weißt weil noch keine Sessions aufgezeichnet sind, sag es direkt und freundlich.
+Schreib in einem leicht epischen, aber zugänglichen Ton — du bist ein weiser Archivar, kein Roboter.
+
+## Charakter: Shii Take
+- Spieler: Raffi (LeRaffl)
+- Klasse/Level: Druid 3
+- Spezies: Human | Background: Sage | Erfahrung: Milestone
+- Stats: STR 8 (-1) | DEX 13 (+1) | CON 15 (+2) | INT 10 (+0) | WIS 17 (+3) | CHA 12 (+1)
+- HP: 24 | AC: 14 | Initiative: +1 | Speed: 30ft | Proficiency Bonus: +2
+- Hit Dice: 3d8
+- Skills (Proficient): Animal Handling +3, Arcana +2, History +2, Insight +5, Medicine +5, Nature +2, Perception +5, Performance +1, Survival +5
+- Passive Perception: 15 | Passive Insight: 13 | Passive Investigation: 10
+- Armor: Light Armor, Medium Armor, Shields
+- Weapons: Club, Dagger, Dart, Javelin, Mace, Quarterstaff, Scimitar, Sickle, Sling, Spear
+- Tools: Herbalism Kit
+- Sprachen: Common, Deep Speech, Druidic, Gnomish, Goblin, Sylvan
+- Wild Shape: 2x pro Short Rest. Max CR 1/4. Kein Fliegen, kein Schwimmen. Max 1h pro Transformation. Natural Recovery 1x pro Long Rest — kann ausgegebene Spell Slots (bis zu Druid Level / 2 = 1 Slot Level) einmal pro Long Rest zurückbekommen.
+- Hauptwaffe: Wurzelstab (Shillelagh) +5 to hit, 1d6+3 Bludgeoning
+- Ranged: Sporenhusten (Poison Spray) +5 to hit, 1d12 Poison
+- Unarmed Strike: +1, 0 Bludgeoning
+
+## Sessions im Archiv
+Noch keine Sessions aufgezeichnet. Das Kampagnen-Archiv ist frisch angelegt.
+Sobald Sessions hinzugefügt werden, findest du sie hier.`;
+
+  let history = [];
+
+  function scrollToBottom() {
+    const msgs = document.getElementById('messages');
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+
+  function addMessage(text, role) {
+    const msgs = document.getElementById('messages');
+    const div = document.createElement('div');
+    div.className = `msg msg-${role}`;
+    const label = document.createElement('div');
+    label.className = 'msg-label';
+    label.textContent = role === 'user' ? 'Du' : 'Dingeling · Archivar';
+    const content = document.createElement('div');
+    content.textContent = text;
+    div.appendChild(label);
+    div.appendChild(content);
+    msgs.appendChild(div);
+    scrollToBottom();
+    return div;
+  }
+
+  function addTyping() {
+    const msgs = document.getElementById('messages');
+    const div = document.createElement('div');
+    div.id = 'typing-indicator';
+    div.className = 'msg msg-ai';
+    div.innerHTML = '<div class="msg-label">Dingeling · Archivar</div><div class="typing-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>';
+    msgs.appendChild(div);
+    scrollToBottom();
+  }
+
+  async function sendMsg() {
+    const input = document.getElementById('msg-input');
+    const btn = document.getElementById('send-btn');
+    const text = input.value.trim();
+    if (!text) return;
+
+    input.value = '';
+    btn.disabled = true;
+    addMessage(text, 'user');
+    history.push({ role: 'user', content: text });
+    addTyping();
+
+    try {
+      const res = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: 'claude-sonnet-4-20250514',
+          max_tokens: 1000,
+          system: SYSTEM,
+          messages: history
+        })
+      });
+
+      const data = await res.json();
+      const reply = data.content?.map(b => b.text || '').join('') || 'Fehler beim Lesen der Antwort.';
+
+      document.getElementById('typing-indicator')?.remove();
+      history.push({ role: 'assistant', content: reply });
+      addMessage(reply, 'ai');
+    } catch (e) {
+      document.getElementById('typing-indicator')?.remove();
+      addMessage('Der Archivar antwortet nicht — bitte erneut versuchen.', 'ai');
+    }
+
+    btn.disabled = false;
+    input.focus();
+  }
+
+  function quickAsk(text) {
+    document.getElementById('msg-input').value = text;
+    sendMsg();
+  }
+</script>
+
+</body>
+</html>
