@@ -1,0 +1,2 @@
+# Strahd
+DnD Campaign Logger
