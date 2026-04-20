@@ -485,7 +485,7 @@ Sobald Sessions hinzugefügt werden, findest du sie hier.`;
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
+          model: 'claude-sonnet-4-5',
           max_tokens: 1000,
           system: SYSTEM,
           messages: history
@@ -493,10 +493,17 @@ Sobald Sessions hinzugefügt werden, findest du sie hier.`;
       });
 
       const data = await res.json();
-      const reply = data.content?.map(b => b.text || '').join('') || 'Fehler beim Lesen der Antwort.';
+      let reply;
+      if (data.content) {
+        reply = data.content.map(b => b.text || '').join('');
+      } else if (data.error) {
+        reply = `API Fehler: ${data.error.message || JSON.stringify(data.error)}`;
+      } else {
+        reply = `Unbekannter Fehler: ${JSON.stringify(data)}`;
+      }
 
       document.getElementById('typing-indicator')?.remove();
-      history.push({ role: 'assistant', content: reply });
+      if (data.content) history.push({ role: 'assistant', content: reply });
       addMessage(reply, 'ai');
     } catch (e) {
       document.getElementById('typing-indicator')?.remove();
