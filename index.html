@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dingeling – Kampagnen-Archiv</title>
+  <title>Biblo – Kampagnen-Archiv</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <style>
@@ -342,12 +342,12 @@
 <header>
   <div class="logo">🎲</div>
   <div>
-    <h1>Dingeling</h1>
+    <h1>Biblo</h1>
     <p>Kampagnen-Archivar · D&D 5e</p>
   </div>
   <div class="header-tags">
     <span class="tag">Shii Take · Druid 3</span>
-    <span class="tag" id="session-count-tag">0 Sessions</span>
+    <span class="tag" id="session-count-tag">1 Session</span>
   </div>
 </header>
 
@@ -377,7 +377,10 @@
     <div>
       <h2>Sessions</h2>
       <div id="sessions-list">
-        <p class="sessions-empty">Noch keine Sessions aufgezeichnet.</p>
+        <div class="session-item" onclick="quickAsk('Was ist in Session 001 in Ibrido passiert?')">
+          <p>001 · Masken und Monster</p>
+          <small>2026-04-19 · Ibrido</small>
+        </div>
       </div>
     </div>
   </aside>
@@ -385,17 +388,17 @@
   <main>
     <div id="messages">
       <div class="msg msg-ai">
-        <div class="msg-label">Dingeling · Archivar</div>
-        Willkommen im Kampagnen-Archiv! Ich kenne Shii Takes Charakter-Daten und halte die gesamte Kampagnen-Geschichte fest. Frag mich alles — über Charakterwerte, vergangene Sessions oder was auch immer gerade relevant ist.
+        <div class="msg-label">Biblo · Archivar</div>
+        Willkommen im Kampagnen-Archiv! Ich bin Biblo und halte die Kampagnen-Geschichte fest — Shii Takes Werte genauso wie vergangene Sessions, NPCs, Orte und Loot. Frag mich einfach.
       </div>
     </div>
 
     <div class="input-area">
       <div class="quick-btns">
+        <button class="quick-btn" onclick="quickAsk('Was ist in Session 001 in Ibrido passiert?')">Session 001</button>
+        <button class="quick-btn" onclick="quickAsk('Wer ist Kara Krasandel wirklich?')">Kara Krasandel</button>
         <button class="quick-btn" onclick="quickAsk('Was sind Shii Takes stärkste Fähigkeiten?')">Shii Takes Stärken</button>
-        <button class="quick-btn" onclick="quickAsk('Erkläre Wild Shape — wie funktioniert das genau?')">Wild Shape erklärt</button>
-        <button class="quick-btn" onclick="quickAsk('Welche Sprachen spricht Shii Take und warum könnte das wichtig sein?')">Sprachen & Nutzen</button>
-        <button class="quick-btn" onclick="quickAsk('Was ist zuletzt in der Kampagne passiert?')">Letztes Mal...</button>
+        <button class="quick-btn" onclick="quickAsk('Welches Loot hat die Party und von wem?')">Loot-Übersicht</button>
       </div>
       <div class="input-row">
         <input type="text" id="msg-input" placeholder="Frag den Archivar..." onkeydown="if(event.key==='Enter' && !event.shiftKey) sendMsg()" />
@@ -408,7 +411,7 @@
 <script>
   const WORKER_URL = 'https://strahd-proxy.xgwvfz7nrb.workers.dev';
 
-  const SYSTEM = `Du bist Dingeling, der Kampagnen-Archivar für eine D&D 5e Kampagne.
+  const SYSTEM = `Du bist Biblo, der Kampagnen-Archivar für eine D&D 5e Kampagne.
 Antworte immer auf Deutsch. Halte Antworten prägnant (2-4 Sätze) aber vollständig und hilfreich.
 Wenn du etwas nicht weißt weil noch keine Sessions aufgezeichnet sind, sag es direkt und freundlich.
 Schreib in einem leicht epischen, aber zugänglichen Ton — du bist ein weiser Archivar, kein Roboter.
@@ -431,9 +434,39 @@ Schreib in einem leicht epischen, aber zugänglichen Ton — du bist ein weiser 
 - Ranged: Sporenhusten (Poison Spray) +5 to hit, 1d12 Poison
 - Unarmed Strike: +1, 0 Bludgeoning
 
+## Welt-Kontext
+Die Kampagne spielt im Reich **Emberez**, wo seit Jahrhunderten ein geheimer Krieg zwischen dem **Aureum** (Engelsorden) und der **Malum Animus** (Dämonenkollektiv) tobt. Planare Spannungen verhindern, dass Engel auf der Materialebene direkt gegen Dämonen vorgehen — sie brauchen sterbliche Hände. Erst in den Neun Höllen können sie einen besiegten Dämon selbst stellen.
+
 ## Sessions im Archiv
-Noch keine Sessions aufgezeichnet. Das Kampagnen-Archiv ist frisch angelegt.
-Sobald Sessions hinzugefügt werden, findest du sie hier.`;
+
+### Session 001 — Eine Nacht der Masken und Monster (2026-04-19, DM: Jana)
+**Modul:** A Night of Masks and Monsters (A Requiem of Wings #1, DMsGuild). Als abgeschlossener One-Shot auf Level 3 gespielt.
+**Ort:** Ibrido — venezianisch inspirierte Kanalstadt, Amnian-Kolonie in Emberez.
+
+**Party (alle Level 3):**
+- Shii Take (Mensch Druide, Raffi)
+- Major Sempft (Halbling Paladin, Felix)
+- Lazar (Tabaxi Mönch, Andi)
+- Moxi (Goblin Jäger, Svenja)
+
+**Verlauf:**
+- Ankunft per Gondel. Auf dem Stadtplatz entdecken sie ein Denkmal für ein totes Hybridwesen (halb Mensch, halb Vogel, blaue Flügel) mit dem Zweimasken-Tattoo des Marquis di Maschera.
+- Am Denkmal treffen sie **Kara Krasandel** — blauer Zopf, Augen-Tattoos auf den Handflächen. Sie ist in Wahrheit eine **Deva des Aureum**, undercover in Ibrido.
+- Am Maskenball im **Castel di Maschera** verteilt die Türsteherin **Zoe Needle** Tiermasken (Shii Take: Hirsch, Moxi: Eichhörnchen, Lazar: Katze, Major Sempft: unbekannt). Gastgeber **Prospero, Marquis di Maschera** trägt eine Maske mit drei Gesichtern gleichzeitig.
+- Ein Zwerg provoziert Moxi; Wachen greifen ein, bevor es eskaliert.
+- **Lazar** merkt, dass der Wein vergiftet ist. Shii Take und Major Sempft hatten nichts getrunken, Moxi schläft auf dem Überhang ein und wird von Shii Take geheilt. Unten schlafen alle Gäste ein.
+- Die Party durchsucht Prosperos Privatgemächer. Lazar entkommt knapp einem Bücher-Stapel. Shii Takes *Detect Magic* zeigt drei magische Entitäten, eine unter dem Boden. Ein Thunderclap (Flavour: explodierender Riesenpilz) trifft auch Major Sempft — sofortige Heilung per Goodberries (Pilze).
+- Der Angriff triggert die Masken: Die Party bekommt tierische Züge (Shii Take: Geweihhörner) plus individuelle Buffs/Debuffs. Shii Takes Buff (10 Minuten telepathisch mit Hybridwesen reden) wird nie benutzt.
+- **Prospero** erscheint in seiner wahren Form als Cambion **Akro Dimiryan** auf einem Reitmonster (wohl Greif). **Lazars** erste Aktion: *Darkness* aufs Reittier — permanent blind, für den Kampf raus.
+- Im Erdgeschoss tobt Chaos: die eingeschlafenen Gäste wurden in Tiere verwandelt und zerfleischen sich gegenseitig.
+- **Shii Take** fesselt Akro mit Pilzmyzel (Entangle-Flavour), nach dem Befreien direkt riesige Enoki-Pilze hinterher — Akro hängt fest. **Lazar** verprügelt ihn mit Speer und Fäusten, heilt zwischendurch. Kampf schnell und klar zugunsten der Party.
+- **Kara Krasandel** erscheint in ihrer wahren Deva-Form, erklärt den planaren Kontext (Aureum kann Akro jetzt in den Neun Höllen stellen) und überreicht der Party ein **+1 Amulett of Protection**.
+
+**Wichtige NPCs:** Kara Krasandel (Deva, Aureum, Verbündete) · Akro Dimiryan/Prospero (Cambion, besiegt) · Zoe Needle (Türsteherin).
+**Loot:** +1 Amulett of Protection (von Kara).
+**Offene Fäden:** Aureum vs. Malum Animus läuft weiter. Was passiert mit den in Tiere verwandelten Gästen? Was hätte Shii Takes ungenutzter Hybridwesen-Telepathie-Buff enthüllt?
+
+**Shii Takes Spell-Flavour:** Alle Spells sind Pilze. Thunderclap = explodierender Riesenpilz. Goodberries = Heilpilze. Entangle = Pilzmyzel oder riesige Enoki-Pilze. Shillelagh = Wurzelstab.`;
 
   let history = [];
 
@@ -448,7 +481,7 @@ Sobald Sessions hinzugefügt werden, findest du sie hier.`;
     div.className = `msg msg-${role}`;
     const label = document.createElement('div');
     label.className = 'msg-label';
-    label.textContent = role === 'user' ? 'Du' : 'Dingeling · Archivar';
+    label.textContent = role === 'user' ? 'Du' : 'Biblo · Archivar';
     const content = document.createElement('div');
     content.textContent = text;
     div.appendChild(label);
@@ -463,7 +496,7 @@ Sobald Sessions hinzugefügt werden, findest du sie hier.`;
     const div = document.createElement('div');
     div.id = 'typing-indicator';
     div.className = 'msg msg-ai';
-    div.innerHTML = '<div class="msg-label">Dingeling · Archivar</div><div class="typing-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>';
+    div.innerHTML = '<div class="msg-label">Biblo · Archivar</div><div class="typing-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>';
     msgs.appendChild(div);
     scrollToBottom();
   }

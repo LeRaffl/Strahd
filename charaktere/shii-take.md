@@ -42,4 +42,4 @@ Common, Deep Speech, Druidic, Gnomish, Goblin, Sylvan
 ---
 
 ## Notizen & Charakterentwicklung
-*Wird nach Sessions ergänzt.*
+- **Session 001 (One-Shot, Ibrido):** Shii Take flavoured alle Spells als Pilze — Thunderclap als explodierender Riesenpilz, Goodberries als Heilpilze, Entangle als Pilzmyzel bzw. riesige Enoki-Pilze. Traf den eigenen Paladin (Major Sempft) versehentlich mit Thunderclap und heilte sofort mit Goodberries. Durch die aktivierte Tiermaske bekam sie Geweihhörner und den (ungenutzten) Buff „10 Minuten telepathisch mit Hybridwesen kommunizieren".
