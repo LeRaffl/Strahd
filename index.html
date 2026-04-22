@@ -578,7 +578,7 @@ ${MANIFEST}`;
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         model: MODEL,
-        max_tokens: 1500,
+        max_tokens: 2000,
         system: SYSTEM,
         tools: TOOLS,
         messages
@@ -601,9 +601,11 @@ ${MANIFEST}`;
     input.value = '';
     btn.disabled = true;
     addMessage(text, 'user');
+    const historyCheckpoint = history.length;
     history.push({ role: 'user', content: text });
     addTyping();
 
+    let turnSucceeded = false;
     try {
       let iteration = 0;
       while (iteration < MAX_TOOL_ITERATIONS) {
@@ -638,15 +640,23 @@ ${MANIFEST}`;
         const reply = extractText(data.content);
         removeTyping();
         addMessage(reply || '(keine Antwort)', 'ai');
+        turnSucceeded = true;
         break;
       }
-      if (iteration >= MAX_TOOL_ITERATIONS) {
+      if (!turnSucceeded && iteration >= MAX_TOOL_ITERATIONS) {
         removeTyping();
         addMessage('Biblo hat zu viele Dateien hintereinander geladen und gestoppt. Stell die Frage bitte etwas konkreter.', 'ai');
       }
     } catch (e) {
       removeTyping();
       addMessage(`Der Archivar antwortet nicht — ${e.message}`, 'ai');
+    }
+
+    // Bei Fehler, Abbruch oder Iteration-Limit: alles aus diesem Turn aus
+    // der history droppen, damit die nächste Frage nicht mit unresolved
+    // tool_uses oder zwei user-Messages in Folge an die API geht.
+    if (!turnSucceeded) {
+      history.length = historyCheckpoint;
     }
 
     btn.disabled = false;
