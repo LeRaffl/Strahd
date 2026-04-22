@@ -346,7 +346,7 @@
     <p>Kampagnen-Archivar · D&D 5e</p>
   </div>
   <div class="header-tags">
-    <span class="tag">Shii Take · Druid 3</span>
+    <span class="tag">4 Charaktere</span>
     <span class="tag" id="session-count-tag">1 Session</span>
   </div>
 </header>
@@ -389,16 +389,16 @@
     <div id="messages">
       <div class="msg msg-ai">
         <div class="msg-label">Biblo · Archivar</div>
-        Willkommen im Kampagnen-Archiv! Ich bin Biblo und halte die Kampagnen-Geschichte fest — Shii Takes Werte genauso wie vergangene Sessions, NPCs, Orte und Loot. Frag mich einfach.
+        Willkommen im Kampagnen-Archiv. Ich bin Biblo und kenne Party-Charaktere, ihre Persönlichkeiten und Beziehungen, Spells und Fähigkeiten, NPCs, Orte und Session-Berichte. Frag mich — ich lade die Details nach, wenn's drauf ankommt.
       </div>
     </div>
 
     <div class="input-area">
       <div class="quick-btns">
-        <button class="quick-btn" onclick="quickAsk('Was ist in Session 001 in Ibrido passiert?')">Session 001</button>
-        <button class="quick-btn" onclick="quickAsk('Wer ist Kara Krasandel wirklich?')">Kara Krasandel</button>
-        <button class="quick-btn" onclick="quickAsk('Was sind Shii Takes stärkste Fähigkeiten?')">Shii Takes Stärken</button>
-        <button class="quick-btn" onclick="quickAsk('Welches Loot hat die Party und von wem?')">Loot-Übersicht</button>
+        <button class="quick-btn" onclick="quickAsk('Wie würde Moxi reagieren, wenn ein lauter Fremder auf uns zukommt?')">Moxi-Reaktion</button>
+        <button class="quick-btn" onclick="quickAsk('Was kann Shii Take alles zaubern und wie funktioniert Entangle?')">Shii Takes Spells</button>
+        <button class="quick-btn" onclick="quickAsk('Wie stehen Lazar und Major Sempft zueinander?')">Beziehung Lazar/Major</button>
+        <button class="quick-btn" onclick="quickAsk('Fasse Session 001 in drei Sätzen zusammen.')">Session 001</button>
       </div>
       <div class="input-row">
         <input type="text" id="msg-input" placeholder="Frag den Archivar..." onkeydown="if(event.key==='Enter' && !event.shiftKey) sendMsg()" />
@@ -410,63 +410,89 @@
 
 <script>
   const WORKER_URL = 'https://strahd-proxy.xgwvfz7nrb.workers.dev';
+  const MODEL = 'claude-sonnet-4-5';
+  const MAX_TOOL_ITERATIONS = 8;
+
+  const MANIFEST = `## Charaktere (global)
+- \`charaktere/shii-take/charakterbogen.md\` — Shii Take (Human Druide, Raffi) — Stats, Spells, Ausrüstung
+- \`charaktere/shii-take/persoenlichkeit.md\` — Shii Take Voice, Traits, Reaktionsmuster
+- \`charaktere/shii-take/beziehungen.md\` — Shii Takes Beziehungen (pro Kampagne)
+- \`charaktere/lazar/charakterbogen.md\` — Lazar (Tabaxi Mönch, Andi)
+- \`charaktere/lazar/persoenlichkeit.md\` — Lazar Voice, Reaktionsmuster (Min-Max, Ergebnis-orientiert)
+- \`charaktere/lazar/beziehungen.md\` — Lazars Beziehungen
+- \`charaktere/major-sempft/charakterbogen.md\` — Major Sempft (Halbling Paladin, Felix)
+- \`charaktere/major-sempft/persoenlichkeit.md\` — Major Sempft (militärisch, proaktiv, formal)
+- \`charaktere/major-sempft/beziehungen.md\` — Majors Beziehungen
+- \`charaktere/moxi/charakterbogen.md\` — Moxi (Goblin Jäger, Svenja)
+- \`charaktere/moxi/persoenlichkeit.md\` — Moxi (ängstlich, Versteckspiel, Flucht-Reflex)
+- \`charaktere/moxi/beziehungen.md\` — Moxis Beziehungen
+
+## Regeln (global)
+- \`regeln/spells/thunderclap.md\` — Thunderclap (Cantrip, Evocation, 5-ft radius)
+- \`regeln/spells/goodberry.md\` — Goodberry (Level 1, Heilung + Nahrung)
+- \`regeln/spells/entangle.md\` — Entangle (Level 1, Restrain)
+- \`regeln/spells/detect-magic.md\` — Detect Magic (Level 1 Ritual)
+- \`regeln/spells/darkness.md\` — Darkness (Level 2)
+- \`regeln/spells/shillelagh.md\` — Shillelagh (Cantrip, Stab-Buff)
+- \`regeln/spells/poison-spray.md\` — Poison Spray (Cantrip)
+- \`regeln/features/wild-shape.md\` — Wild Shape (Druid 2+)
+- \`regeln/features/natural-recovery.md\` — Natural Recovery (Druid Circle of Land 2+)
+- \`regeln/features/druidic.md\` — Druidic Sprache
+- \`regeln/magic-items/amulet-of-protection.md\` — +1 Amulett of Protection
+
+## Kampagne: Requiem of Wings (One-Shot, abgeschlossen)
+- \`kampagnen/requiem-of-wings/party.md\` — Wer war dabei
+- \`kampagnen/requiem-of-wings/_kontext/welt.md\` — Emberez, Aureum, Malum Animus
+- \`kampagnen/requiem-of-wings/_kontext/timeline.md\` — Timeline
+- \`kampagnen/requiem-of-wings/sessions/001-masks-and-monsters.md\` — S001: Ibrido, Maskenball, Akro-Kampf
+- \`kampagnen/requiem-of-wings/npcs/kara-krasandel.md\` — Kara Krasandel (Deva, Aureum)
+- \`kampagnen/requiem-of-wings/npcs/akro-dimiryan.md\` — Akro / Prospero (Cambion, besiegt)
+- \`kampagnen/requiem-of-wings/npcs/zoe-needle.md\` — Zoe Needle (Türsteherin)
+- \`kampagnen/requiem-of-wings/orte/ibrido.md\` — Ibrido (Kanalstadt)
+- \`kampagnen/requiem-of-wings/orte/castel-di-maschera.md\` — Castel di Maschera`;
 
   const SYSTEM = `Du bist Biblo, der Kampagnen-Archivar für eine D&D 5e Kampagne.
-Antworte immer auf Deutsch. Halte Antworten prägnant (2-4 Sätze) aber vollständig und hilfreich.
-Wenn du etwas nicht weißt weil noch keine Sessions aufgezeichnet sind, sag es direkt und freundlich.
-Schreib in einem leicht epischen, aber zugänglichen Ton — du bist ein weiser Archivar, kein Roboter.
+Antworte immer auf Deutsch, prägnant (2–4 Sätze), in einem leicht epischen aber zugänglichen Ton.
 
-## Charakter: Shii Take
-- Spieler: Raffi (LeRaffl)
-- Klasse/Level: Druid 3
-- Spezies: Human | Background: Sage | Erfahrung: Milestone
-- Stats: STR 8 (-1) | DEX 13 (+1) | CON 15 (+2) | INT 10 (+0) | WIS 17 (+3) | CHA 12 (+1)
-- HP: 24 | AC: 14 | Initiative: +1 | Speed: 30ft | Proficiency Bonus: +2
-- Hit Dice: 3d8
-- Skills (Proficient): Animal Handling +3, Arcana +2, History +2, Insight +5, Medicine +5, Nature +2, Perception +5, Performance +1, Survival +5
-- Passive Perception: 15 | Passive Insight: 13 | Passive Investigation: 10
-- Armor: Light Armor, Medium Armor, Shields
-- Weapons: Club, Dagger, Dart, Javelin, Mace, Quarterstaff, Scimitar, Sickle, Sling, Spear
-- Tools: Herbalism Kit
+## Wie du arbeitest
+Das Archiv ist in Markdown-Dateien organisiert. Du siehst unten den **Manifest-Index**: pro Datei einen 1-Zeiler, was drin steht.
+Für Detail-Fragen nutzt du das Tool \`read_file(path)\`, um gezielt nachzulesen. Lies nur was du brauchst — nicht vorsorglich.
+Für Überblicks-Fragen reicht oft der Manifest + Shii Takes Kern-Daten unten.
+Wenn ein Thema in mehreren Dateien steht (z.B. Persönlichkeit + Beziehungen + Session-Verhalten), lade die relevanten nacheinander.
+Zitiere oder parafrasiere nur aus tatsächlich geladenen Dateien. Wenn du etwas nicht weißt → sag es direkt.
+
+## Kern-Daten: Shii Take
+- Spieler: Raffi | Human Druide, Level 3 | Background: Sage
+- Stats: STR 8 (-1) · DEX 13 (+1) · CON 15 (+2) · INT 10 (0) · WIS 17 (+3) · CHA 12 (+1)
+- HP 24 · AC 14 · Init +1 · Speed 30 · Prof +2
+- Skills: Animal Handling +3, Arcana +2, History +2, Insight +5, Medicine +5, Nature +2, Perception +5, Performance +1, Survival +5
 - Sprachen: Common, Deep Speech, Druidic, Gnomish, Goblin, Sylvan
-- Wild Shape: 2x pro Short Rest. Max CR 1/4. Kein Fliegen, kein Schwimmen. Max 1h pro Transformation. Natural Recovery 1x pro Long Rest — kann ausgegebene Spell Slots (bis zu Druid Level / 2 = 1 Slot Level) einmal pro Long Rest zurückbekommen.
-- Hauptwaffe: Wurzelstab (Shillelagh) +5 to hit, 1d6+3 Bludgeoning
-- Ranged: Sporenhusten (Poison Spray) +5 to hit, 1d12 Poison
-- Unarmed Strike: +1, 0 Bludgeoning
+- Hauptwaffe: Wurzelstab (Shillelagh) +5, 1d6+3 · Ranged: Poison Spray („Sporenhusten") +5, 1d12
+- Flavour: alle Spells sind Pilze. Spricht mit dem Pilz auf ihrem Stab. Bietet Leuten Pilze zum Essen an.
 
-## Welt-Kontext
-Die Kampagne spielt im Reich **Emberez**, wo seit Jahrhunderten ein geheimer Krieg zwischen dem **Aureum** (Engelsorden) und der **Malum Animus** (Dämonenkollektiv) tobt. Planare Spannungen verhindern, dass Engel auf der Materialebene direkt gegen Dämonen vorgehen — sie brauchen sterbliche Hände. Erst in den Neun Höllen können sie einen besiegten Dämon selbst stellen.
+## Manifest
+${MANIFEST}`;
 
-## Sessions im Archiv
-
-### Session 001 — Eine Nacht der Masken und Monster (2026-04-19, DM: Jana)
-**Modul:** A Night of Masks and Monsters (A Requiem of Wings #1, DMsGuild). Als abgeschlossener One-Shot auf Level 3 gespielt.
-**Ort:** Ibrido — venezianisch inspirierte Kanalstadt, Amnian-Kolonie in Emberez.
-
-**Party (alle Level 3):**
-- Shii Take (Mensch Druide, Raffi)
-- Major Sempft (Halbling Paladin, Felix)
-- Lazar (Tabaxi Mönch, Andi)
-- Moxi (Goblin Jäger, Svenja)
-
-**Verlauf:**
-- Ankunft per Gondel. Auf dem Stadtplatz entdecken sie ein Denkmal für ein totes Hybridwesen (halb Mensch, halb Vogel, blaue Flügel) mit dem Zweimasken-Tattoo des Marquis di Maschera.
-- Am Denkmal treffen sie **Kara Krasandel** — blauer Zopf, Augen-Tattoos auf den Handflächen. Sie ist in Wahrheit eine **Deva des Aureum**, undercover in Ibrido.
-- Am Maskenball im **Castel di Maschera** verteilt die Türsteherin **Zoe Needle** Tiermasken (Shii Take: Hirsch, Moxi: Eichhörnchen, Lazar: Katze, Major Sempft: unbekannt). Gastgeber **Prospero, Marquis di Maschera** trägt eine Maske mit drei Gesichtern gleichzeitig.
-- Ein Zwerg provoziert Moxi; Wachen greifen ein, bevor es eskaliert.
-- **Lazar** merkt, dass der Wein vergiftet ist. Shii Take und Major Sempft hatten nichts getrunken, Moxi schläft auf dem Überhang ein und wird von Shii Take geheilt. Unten schlafen alle Gäste ein.
-- Die Party durchsucht Prosperos Privatgemächer. Lazar entkommt knapp einem Bücher-Stapel. Shii Takes *Detect Magic* zeigt drei magische Entitäten, eine unter dem Boden. Ein Thunderclap (Flavour: explodierender Riesenpilz) trifft auch Major Sempft — sofortige Heilung per Goodberries (Pilze).
-- Der Angriff triggert die Masken: Die Party bekommt tierische Züge (Shii Take: Geweihhörner) plus individuelle Buffs/Debuffs. Shii Takes Buff (10 Minuten telepathisch mit Hybridwesen reden) wird nie benutzt.
-- **Prospero** erscheint in seiner wahren Form als Cambion **Akro Dimiryan** auf einem Reitmonster (wohl Greif). **Lazars** erste Aktion: *Darkness* aufs Reittier — permanent blind, für den Kampf raus.
-- Im Erdgeschoss tobt Chaos: die eingeschlafenen Gäste wurden in Tiere verwandelt und zerfleischen sich gegenseitig.
-- **Shii Take** fesselt Akro mit Pilzmyzel (Entangle-Flavour), nach dem Befreien direkt riesige Enoki-Pilze hinterher — Akro hängt fest. **Lazar** verprügelt ihn mit Speer und Fäusten, heilt zwischendurch. Kampf schnell und klar zugunsten der Party.
-- **Kara Krasandel** erscheint in ihrer wahren Deva-Form, erklärt den planaren Kontext (Aureum kann Akro jetzt in den Neun Höllen stellen) und überreicht der Party ein **+1 Amulett of Protection**.
-
-**Wichtige NPCs:** Kara Krasandel (Deva, Aureum, Verbündete) · Akro Dimiryan/Prospero (Cambion, besiegt) · Zoe Needle (Türsteherin).
-**Loot:** +1 Amulett of Protection (von Kara).
-**Offene Fäden:** Aureum vs. Malum Animus läuft weiter. Was passiert mit den in Tiere verwandelten Gästen? Was hätte Shii Takes ungenutzter Hybridwesen-Telepathie-Buff enthüllt?
-
-**Shii Takes Spell-Flavour:** Alle Spells sind Pilze. Thunderclap = explodierender Riesenpilz. Goodberries = Heilpilze. Entangle = Pilzmyzel oder riesige Enoki-Pilze. Shillelagh = Wurzelstab.`;
+  const TOOLS = [
+    {
+      name: 'read_file',
+      description: 'Liest eine Markdown-Datei aus dem Archiv. Pfad relativ zum Repo-Root, wie im Manifest angegeben. Gibt den kompletten Inhalt zurück.',
+      input_schema: {
+        type: 'object',
+        properties: { path: { type: 'string', description: 'Pfad wie "charaktere/shii-take/persoenlichkeit.md"' } },
+        required: ['path']
+      }
+    },
+    {
+      name: 'list_files',
+      description: 'Listet im Manifest aufgeführte Dateien, deren Pfad mit dem Präfix beginnt. Nützlich um z.B. alle Spells zu sehen.',
+      input_schema: {
+        type: 'object',
+        properties: { prefix: { type: 'string', description: 'z.B. "regeln/spells/" oder "kampagnen/requiem-of-wings/"' } },
+        required: ['prefix']
+      }
+    }
+  ];
 
   let history = [];
 
@@ -491,14 +517,79 @@ Die Kampagne spielt im Reich **Emberez**, wo seit Jahrhunderten ein geheimer Kri
     return div;
   }
 
-  function addTyping() {
+  function addTyping(hint) {
     const msgs = document.getElementById('messages');
     const div = document.createElement('div');
     div.id = 'typing-indicator';
     div.className = 'msg msg-ai';
-    div.innerHTML = '<div class="msg-label">Biblo · Archivar</div><div class="typing-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>';
+    const hintText = hint ? `<div style="font-size:12px;color:var(--text3);margin-top:4px;font-style:italic;">${hint}</div>` : '';
+    div.innerHTML = `<div class="msg-label">Biblo · Archivar</div><div class="typing-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>${hintText}`;
     msgs.appendChild(div);
     scrollToBottom();
+  }
+
+  function updateTyping(hint) {
+    const ind = document.getElementById('typing-indicator');
+    if (!ind) return;
+    let hintEl = ind.querySelector('div[style]');
+    if (!hintEl) {
+      hintEl = document.createElement('div');
+      hintEl.setAttribute('style', 'font-size:12px;color:var(--text3);margin-top:4px;font-style:italic;');
+      ind.appendChild(hintEl);
+    }
+    hintEl.textContent = hint;
+  }
+
+  function removeTyping() {
+    document.getElementById('typing-indicator')?.remove();
+  }
+
+  // Extract the manifest's listed paths for list_files and path validation
+  const MANIFEST_PATHS = MANIFEST.split('\n')
+    .map(l => l.match(/`([^`]+)`/))
+    .filter(Boolean)
+    .map(m => m[1]);
+
+  async function runTool(name, input) {
+    if (name === 'read_file') {
+      const path = input.path || '';
+      if (!MANIFEST_PATHS.includes(path)) {
+        return { is_error: true, content: `Pfad "${path}" ist nicht im Manifest. Benutze einen Pfad aus dem Index.` };
+      }
+      try {
+        const res = await fetch(path);
+        if (!res.ok) return { is_error: true, content: `HTTP ${res.status} beim Laden von ${path}` };
+        return { is_error: false, content: await res.text() };
+      } catch (e) {
+        return { is_error: true, content: `Fetch-Fehler: ${e.message}` };
+      }
+    }
+    if (name === 'list_files') {
+      const prefix = input.prefix || '';
+      const matches = MANIFEST_PATHS.filter(p => p.startsWith(prefix));
+      return { is_error: false, content: matches.length ? matches.join('\n') : `(keine Dateien mit Präfix "${prefix}")` };
+    }
+    return { is_error: true, content: `Unbekanntes Tool: ${name}` };
+  }
+
+  async function callClaude(messages) {
+    const res = await fetch(WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: MODEL,
+        max_tokens: 2000,
+        system: SYSTEM,
+        tools: TOOLS,
+        messages
+      })
+    });
+    return res.json();
+  }
+
+  function extractText(content) {
+    if (!Array.isArray(content)) return '';
+    return content.filter(b => b.type === 'text').map(b => b.text).join('\n').trim();
   }
 
   async function sendMsg() {
@@ -510,37 +601,62 @@ Die Kampagne spielt im Reich **Emberez**, wo seit Jahrhunderten ein geheimer Kri
     input.value = '';
     btn.disabled = true;
     addMessage(text, 'user');
+    const historyCheckpoint = history.length;
     history.push({ role: 'user', content: text });
     addTyping();
 
+    let turnSucceeded = false;
     try {
-      const res = await fetch(WORKER_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-5',
-          max_tokens: 1000,
-          system: SYSTEM,
-          messages: history
-        })
-      });
+      let iteration = 0;
+      while (iteration < MAX_TOOL_ITERATIONS) {
+        iteration++;
+        const data = await callClaude(history);
 
-      const data = await res.json();
-      let reply;
-      if (data.content) {
-        reply = data.content.map(b => b.text || '').join('');
-      } else if (data.error) {
-        reply = `API Fehler: ${data.error.message || JSON.stringify(data.error)}`;
-      } else {
-        reply = `Unbekannter Fehler: ${JSON.stringify(data)}`;
+        if (data.error) {
+          removeTyping();
+          addMessage(`API Fehler: ${data.error.message || JSON.stringify(data.error)}`, 'ai');
+          break;
+        }
+
+        history.push({ role: 'assistant', content: data.content });
+
+        if (data.stop_reason === 'tool_use') {
+          const toolUses = data.content.filter(b => b.type === 'tool_use');
+          const toolResults = [];
+          for (const tu of toolUses) {
+            updateTyping(`lädt: ${tu.input.path || tu.input.prefix || tu.name}`);
+            const result = await runTool(tu.name, tu.input);
+            toolResults.push({
+              type: 'tool_result',
+              tool_use_id: tu.id,
+              content: result.content,
+              is_error: result.is_error
+            });
+          }
+          history.push({ role: 'user', content: toolResults });
+          continue;
+        }
+
+        const reply = extractText(data.content);
+        removeTyping();
+        addMessage(reply || '(keine Antwort)', 'ai');
+        turnSucceeded = true;
+        break;
       }
-
-      document.getElementById('typing-indicator')?.remove();
-      if (data.content) history.push({ role: 'assistant', content: reply });
-      addMessage(reply, 'ai');
+      if (!turnSucceeded && iteration >= MAX_TOOL_ITERATIONS) {
+        removeTyping();
+        addMessage('Biblo hat zu viele Dateien hintereinander geladen und gestoppt. Stell die Frage bitte etwas konkreter.', 'ai');
+      }
     } catch (e) {
-      document.getElementById('typing-indicator')?.remove();
-      addMessage('Der Archivar antwortet nicht — bitte erneut versuchen.', 'ai');
+      removeTyping();
+      addMessage(`Der Archivar antwortet nicht — ${e.message}`, 'ai');
+    }
+
+    // Bei Fehler, Abbruch oder Iteration-Limit: alles aus diesem Turn aus
+    // der history droppen, damit die nächste Frage nicht mit unresolved
+    // tool_uses oder zwei user-Messages in Folge an die API geht.
+    if (!turnSucceeded) {
+      history.length = historyCheckpoint;
     }
 
     btn.disabled = false;

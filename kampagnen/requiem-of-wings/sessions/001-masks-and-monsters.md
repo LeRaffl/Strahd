@@ -14,10 +14,10 @@ Die Party wird zu einem Maskenball des Marquis di Maschera eingeladen und deckt 
 ## Die Party
 | Spieler | Charakter | Rasse | Klasse | Level |
 |---------|-----------|-------|--------|-------|
-| Raffi | Shii Take | Mensch | Druide | 3 |
-| Felix | Major Sempft | Halbling | Paladin | 3 |
-| Andi | Lazar | Tabaxi | Mönch | 3 |
-| Svenja | Moxi | Goblin | Jäger | 3 |
+| Raffi | [Shii Take](../../../charaktere/shii-take/charakterbogen.md) | Mensch | Druide | 3 |
+| Felix | [Major Sempft](../../../charaktere/major-sempft/charakterbogen.md) | Halbling | Paladin | 3 |
+| Andi | [Lazar](../../../charaktere/lazar/charakterbogen.md) | Tabaxi | Mönch | 3 |
+| Svenja | [Moxi](../../../charaktere/moxi/charakterbogen.md) | Goblin | Jäger | 3 |
 
 Die Charaktere kennen sich in-character und sind als bekannte Abenteurer-Gruppe zusammen unterwegs. Als Dank für frühere Heldentaten wurden sie zu einem Urlaub nach Ibrido eingeladen.
 
@@ -83,15 +83,15 @@ Als Dank überreicht Kara der Party ein **+1 Amulett of Protection**.
 ---
 
 ## NPCs diese Session
-- **Kara Krasandel** — Deva des Aureum, undercover als blauzöpfige Frau mit Augen-Tattoos; Kontaktperson und Belohnerin
-- **Prospero, Marquis di Maschera** / **Akro Dimiryan** — Cambion, Gastgeber des Maskenballs, Antagonist; besiegt und in die Neun Höllen zurückgeschickt
-- **Zoe Needle** — Türsteherin am Castel di Maschera, verteilt die Tiermasken
+- **[Kara Krasandel](../npcs/kara-krasandel.md)** — Deva des Aureum, undercover als blauzöpfige Frau mit Augen-Tattoos; Kontaktperson und Belohnerin
+- **[Prospero, Marquis di Maschera](../npcs/akro-dimiryan.md)** / **Akro Dimiryan** — Cambion, Gastgeber des Maskenballs, Antagonist; besiegt und in die Neun Höllen zurückgeschickt
+- **[Zoe Needle](../npcs/zoe-needle.md)** — Türsteherin am Castel di Maschera, verteilt die Tiermasken
 - **Unbekannter Zwerg** — Stört Moxi auf dem Fest, wird von Wachen rausgebracht
 
 ---
 
 ## Neue Items / Veränderungen
-- **+1 Amulett of Protection** → Party-Loot, von Kara Krasandel überreicht
+- **[+1 Amulett of Protection](../../../regeln/magic-items/amulet-of-protection.md)** → Party-Loot, von Kara Krasandel überreicht
 
 ---
 
