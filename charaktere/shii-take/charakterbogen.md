@@ -1,6 +1,6 @@
 # Shii Take
 **Spieler:** Raffi
-**Spezies:** Human | **Klasse:** Druid (Circle offen)
+**Spezies:** Human (male) | **Klasse:** Druid (Circle offen)
 **Background:** Sage | **Erfahrung:** Milestone
 
 ---
