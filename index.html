@@ -411,50 +411,9 @@
   const WORKER_URL = 'https://strahd-proxy.xgwvfz7nrb.workers.dev';
   const MODEL = 'claude-haiku-4-5-20251001';
   const MAX_TOOL_ITERATIONS = 8;
+  const MANIFEST_PATH = '_kontext/manifest.md';
 
-  const MANIFEST = `## Charaktere (global)
-- \`charaktere/shii-take/charakterbogen.md\` — Shii Take (Human Druide, Raffi) — Stats, Spells, Ausrüstung
-- \`charaktere/shii-take/persoenlichkeit.md\` — Shii Take Voice, Traits, Reaktionsmuster
-- \`charaktere/shii-take/beziehungen.md\` — Shii Takes Beziehungen (pro Kampagne)
-- \`charaktere/lazar/charakterbogen.md\` — Lazar (Tabaxi Mönch, Andi)
-- \`charaktere/lazar/persoenlichkeit.md\` — Lazar Voice, Reaktionsmuster (Min-Max, Ergebnis-orientiert)
-- \`charaktere/lazar/beziehungen.md\` — Lazars Beziehungen
-- \`charaktere/major-sempft/charakterbogen.md\` — Major Sempft (Halbling Paladin, Felix)
-- \`charaktere/major-sempft/persoenlichkeit.md\` — Major Sempft (militärisch, proaktiv, formal)
-- \`charaktere/major-sempft/beziehungen.md\` — Majors Beziehungen
-- \`charaktere/moxi/charakterbogen.md\` — Moxi (Goblin Jäger, Svenja)
-- \`charaktere/moxi/persoenlichkeit.md\` — Moxi (ängstlich, Versteckspiel, Flucht-Reflex)
-- \`charaktere/moxi/beziehungen.md\` — Moxis Beziehungen
-
-## Regeln (global)
-- \`regeln/spells/thunderclap.md\` — Thunderclap (Cantrip, Evocation, 5-ft radius)
-- \`regeln/spells/goodberry.md\` — Goodberry (Level 1, Heilung + Nahrung)
-- \`regeln/spells/entangle.md\` — Entangle (Level 1, Restrain)
-- \`regeln/spells/detect-magic.md\` — Detect Magic (Level 1 Ritual)
-- \`regeln/spells/darkness.md\` — Darkness (Level 2)
-- \`regeln/spells/shillelagh.md\` — Shillelagh (Cantrip, Stab-Buff)
-- \`regeln/spells/poison-spray.md\` — Poison Spray (Cantrip)
-- \`regeln/features/wild-shape.md\` — Wild Shape (Druid 2+)
-- \`regeln/features/natural-recovery.md\` — Natural Recovery (Druid Circle of Land 2+)
-- \`regeln/features/druidic.md\` — Druidic Sprache
-- \`regeln/magic-items/amulet-of-protection.md\` — +1 Amulett of Protection
-
-## Kampagne: Requiem of Wings (One-Shot, abgeschlossen)
-- \`kampagnen/requiem-of-wings/party.md\` — Wer war dabei
-- \`kampagnen/requiem-of-wings/_kontext/welt.md\` — Emberez, Aureum, Malum Animus
-- \`kampagnen/requiem-of-wings/_kontext/timeline.md\` — Timeline
-- \`kampagnen/requiem-of-wings/sessions/001-masks-and-monsters.md\` — S001: Ibrido, Maskenball, Akro-Kampf
-- \`kampagnen/requiem-of-wings/npcs/kara-krasandel.md\` — Kara Krasandel (Deva, Aureum)
-- \`kampagnen/requiem-of-wings/npcs/akro-dimiryan.md\` — Akro / Prospero (Cambion, besiegt)
-- \`kampagnen/requiem-of-wings/npcs/zoe-needle.md\` — Zoe Needle (Türsteherin)
-- \`kampagnen/requiem-of-wings/orte/ibrido.md\` — Ibrido (Kanalstadt)
-- \`kampagnen/requiem-of-wings/orte/castel-di-maschera.md\` — Castel di Maschera
-
-### Transkripte (Roh-Mitschriften, last-resort)
-- \`kampagnen/requiem-of-wings/transcripts/README.md\` — Wofür der Transkript-Ordner ist
-- (weitere Transkripte werden hier gelistet sobald vorhanden, Pfad-Schema: \`kampagnen/requiem-of-wings/transcripts/<nr>-<slug>.md\`)`;
-
-  const SYSTEM = `Du bist Biblo, der Kampagnen-Archivar für eine D&D 5e Kampagne.
+  const SYSTEM_TEMPLATE = `Du bist Biblo, der Kampagnen-Archivar für eine D&D 5e Kampagne.
 Antworte immer auf Deutsch, prägnant (2–4 Sätze), in einem leicht epischen aber zugänglichen Ton.
 
 ## Wie du arbeitest
@@ -480,7 +439,7 @@ Wenn der User explizit ums Transkript bittet ("schau im Transkript", "was wurde 
 - Flavour: alle Spells sind Pilze. Spricht mit dem Pilz auf ihrem Stab. Bietet Leuten Pilze zum Essen an.
 
 ## Manifest
-${MANIFEST}`;
+`;
 
   const TOOLS = [
     {
@@ -553,16 +512,32 @@ ${MANIFEST}`;
     document.getElementById('typing-indicator')?.remove();
   }
 
-  // Extract the manifest's listed paths for list_files and path validation
-  const MANIFEST_PATHS = MANIFEST.split('\n')
-    .map(l => l.match(/`([^`]+)`/))
-    .filter(Boolean)
-    .map(m => m[1]);
+  // Manifest wird beim Page-Load aus _kontext/manifest.md gefetcht — Single
+  // Source of Truth. SYSTEM-Prompt + Pfad-Validierung leiten daraus ab.
+  let manifestText = '';
+  let manifestPaths = [];
+
+  function parseManifestPaths(text) {
+    return text.split('\n')
+      .map(l => l.match(/`([^`]+)`/))
+      .filter(Boolean)
+      .map(m => m[1]);
+  }
+
+  const manifestReady = (async () => {
+    const res = await fetch(MANIFEST_PATH);
+    if (!res.ok) throw new Error(`Manifest (${MANIFEST_PATH}) konnte nicht geladen werden: HTTP ${res.status}`);
+    manifestText = await res.text();
+    manifestPaths = parseManifestPaths(manifestText);
+  })();
+  // Unhandled-Rejection-Noise vermeiden — sendMsg fängt den Fehler eh ab,
+  // wenn der User wirklich was schickt.
+  manifestReady.catch(() => {});
 
   async function runTool(name, input) {
     if (name === 'read_file') {
       const path = input.path || '';
-      if (!MANIFEST_PATHS.includes(path)) {
+      if (!manifestPaths.includes(path)) {
         return { is_error: true, content: `Pfad "${path}" ist nicht im Manifest. Benutze einen Pfad aus dem Index.` };
       }
       try {
@@ -575,20 +550,21 @@ ${MANIFEST}`;
     }
     if (name === 'list_files') {
       const prefix = input.prefix || '';
-      const matches = MANIFEST_PATHS.filter(p => p.startsWith(prefix));
+      const matches = manifestPaths.filter(p => p.startsWith(prefix));
       return { is_error: false, content: matches.length ? matches.join('\n') : `(keine Dateien mit Präfix "${prefix}")` };
     }
     return { is_error: true, content: `Unbekanntes Tool: ${name}` };
   }
 
   async function callClaude(messages) {
+    await manifestReady;
     const res = await fetch(WORKER_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         model: MODEL,
         max_tokens: 2000,
-        system: SYSTEM,
+        system: SYSTEM_TEMPLATE + manifestText,
         tools: TOOLS,
         messages
       })
