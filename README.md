@@ -23,7 +23,8 @@ kampagnen/
     party.md                # Wer ist dabei, Level, Status
     _kontext/welt.md        # Setting, Fraktionen
     _kontext/timeline.md    # Timeline der Kampagne
-    sessions/               # Session-Summaries
+    sessions/               # Kuratierte Session-Summaries
+    transcripts/            # Roh-Transkripte / händische Mitschriften (last-resort)
     npcs/                   # NPCs dieser Kampagne
     orte/                   # Schauplätze dieser Kampagne
 
@@ -47,3 +48,10 @@ index.html                  # Biblo Web-UI
 
 ## Biblo (Web-Interface)
 Biblo läuft als Single-Page-App in `index.html`, deployed als GitHub Page. Der Web-Chat nutzt **Claude mit Tool-Use**: Biblo bekommt den Manifest-Index und ruft über `read_file` gezielt einzelne Dateien nach, wenn eine Frage Detail braucht. So bleibt der Initial-Prompt klein und das Archiv kann beliebig wachsen.
+
+## Transkripte / Mitschriften
+Roh-Material aus den Sessions liegt in `kampagnen/<kampagne>/transcripts/`. Das sind Voll-Transkripte oder händische Notizen — ungekürzt, im Gegensatz zu den kuratierten `sessions/<nr>.md`. Biblo greift hier nur als Last-Resort drauf zu (wenn die kuratierte Session-Datei eine Frage nicht abdeckt) oder wenn explizit danach gefragt wird. Workflow nach einer Session:
+
+1. Transkript in `kampagnen/<kampagne>/transcripts/<nr>-<slug>.md` ablegen — Template: `_templates/transcript.md`.
+2. Eintrag in `_kontext/manifest.md` ergänzen, sonst sieht Biblos Tool-Use die Datei nicht.
+3. Optional: Biblo bitten, die kuratierte `sessions/<nr>.md` aus dem Transkript nachzuziehen.

@@ -31,9 +31,10 @@
       font-family: 'Crimson Text', Georgia, serif;
       font-size: 17px;
       line-height: 1.6;
-      min-height: 100vh;
+      height: 100dvh;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
     }
 
     /* Header */
@@ -96,7 +97,7 @@
       display: flex;
       flex: 1;
       overflow: hidden;
-      height: calc(100vh - 73px);
+      min-height: 0;
     }
 
     /* Sidebar */
@@ -192,6 +193,8 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      min-width: 0;
+      min-height: 0;
     }
 
     #messages {
@@ -265,6 +268,7 @@
       border-top: 1px solid var(--border);
       padding: 16px 24px;
       background: var(--bg2);
+      flex-shrink: 0;
     }
 
     .quick-btns {
@@ -394,12 +398,7 @@
     </div>
 
     <div class="input-area">
-      <div class="quick-btns">
-        <button class="quick-btn" onclick="quickAsk('Wie würde Moxi reagieren, wenn ein lauter Fremder auf uns zukommt?')">Moxi-Reaktion</button>
-        <button class="quick-btn" onclick="quickAsk('Was kann Shii Take alles zaubern und wie funktioniert Entangle?')">Shii Takes Spells</button>
-        <button class="quick-btn" onclick="quickAsk('Wie stehen Lazar und Major Sempft zueinander?')">Beziehung Lazar/Major</button>
-        <button class="quick-btn" onclick="quickAsk('Fasse Session 001 in drei Sätzen zusammen.')">Session 001</button>
-      </div>
+      <div class="quick-btns" id="quick-btns"></div>
       <div class="input-row">
         <input type="text" id="msg-input" placeholder="Frag den Archivar..." onkeydown="if(event.key==='Enter' && !event.shiftKey) sendMsg()" />
         <button id="send-btn" onclick="sendMsg()">Senden →</button>
@@ -410,7 +409,7 @@
 
 <script>
   const WORKER_URL = 'https://strahd-proxy.xgwvfz7nrb.workers.dev';
-  const MODEL = 'claude-sonnet-4-5';
+  const MODEL = 'claude-haiku-4-5-20251001';
   const MAX_TOOL_ITERATIONS = 8;
 
   const MANIFEST = `## Charaktere (global)
@@ -449,7 +448,11 @@
 - \`kampagnen/requiem-of-wings/npcs/akro-dimiryan.md\` — Akro / Prospero (Cambion, besiegt)
 - \`kampagnen/requiem-of-wings/npcs/zoe-needle.md\` — Zoe Needle (Türsteherin)
 - \`kampagnen/requiem-of-wings/orte/ibrido.md\` — Ibrido (Kanalstadt)
-- \`kampagnen/requiem-of-wings/orte/castel-di-maschera.md\` — Castel di Maschera`;
+- \`kampagnen/requiem-of-wings/orte/castel-di-maschera.md\` — Castel di Maschera
+
+### Transkripte (Roh-Mitschriften, last-resort)
+- \`kampagnen/requiem-of-wings/transcripts/README.md\` — Wofür der Transkript-Ordner ist
+- (weitere Transkripte werden hier gelistet sobald vorhanden, Pfad-Schema: \`kampagnen/requiem-of-wings/transcripts/<nr>-<slug>.md\`)`;
 
   const SYSTEM = `Du bist Biblo, der Kampagnen-Archivar für eine D&D 5e Kampagne.
 Antworte immer auf Deutsch, prägnant (2–4 Sätze), in einem leicht epischen aber zugänglichen Ton.
@@ -460,6 +463,12 @@ Für Detail-Fragen nutzt du das Tool \`read_file(path)\`, um gezielt nachzulesen
 Für Überblicks-Fragen reicht oft der Manifest + Shii Takes Kern-Daten unten.
 Wenn ein Thema in mehreren Dateien steht (z.B. Persönlichkeit + Beziehungen + Session-Verhalten), lade die relevanten nacheinander.
 Zitiere oder parafrasiere nur aus tatsächlich geladenen Dateien. Wenn du etwas nicht weißt → sag es direkt.
+
+## Transkripte (\`*/transcripts/*\`)
+Das sind **Roh-Mitschriften** ganzer Sessions (oder händische Notizen). Sie sind groß und ungekürzt.
+**Default: nicht laden.** Für inhaltliche Fragen zu einer Session immer zuerst die kuratierte \`sessions/<nr>.md\` lesen.
+Nur wenn die kuratierte Datei eine Frage nicht beantwortet (wörtliche Zitate, Detail-Reihenfolge, vergessene Side-Quests) darfst du das passende Transkript laden — und dann sagst du dem User vorher kurz Bescheid ("ich schau mal ins Transkript").
+Wenn der User explizit ums Transkript bittet ("schau im Transkript", "was wurde wörtlich gesagt"), darfst du direkt rein.
 
 ## Kern-Daten: Shii Take
 - Spieler: Raffi | Human Druide, Level 3 | Background: Sage
@@ -667,6 +676,122 @@ ${MANIFEST}`;
     document.getElementById('msg-input').value = text;
     sendMsg();
   }
+
+  // Quick-Button-Vorschläge: pro Page-Load 4 random aus einem Pool.
+  // Kein LLM — Templates werden mit Daten aus dem Archiv-Index gefüllt.
+  const PARTY = [
+    { name: 'Shii Take', short: 'Shii Take', class: 'Druidin' },
+    { name: 'Lazar', short: 'Lazar', class: 'Mönch' },
+    { name: 'Major Sempft', short: 'Major', class: 'Paladin' },
+    { name: 'Moxi', short: 'Moxi', class: 'Jägerin' }
+  ];
+  const SPELLS = [
+    'Thunderclap', 'Goodberry', 'Entangle', 'Detect Magic',
+    'Darkness', 'Shillelagh', 'Poison Spray'
+  ];
+  const NPCS = [
+    { name: 'Kara Krasandel', hint: 'die Deva' },
+    { name: 'Akro Dimiryan', hint: 'Cambion vom Maskenball' },
+    { name: 'Zoe Needle', hint: 'Türsteherin' }
+  ];
+  const ORTE = ['Ibrido', 'Castel di Maschera'];
+  const SESSIONS = [
+    { nr: '001', titel: 'Masks and Monsters' }
+  ];
+  const SCENARIOS = [
+    'ein lauter Fremder auf die Gruppe zukommt',
+    'eine Kneipenschlägerei ausbricht',
+    'jemand respektlos mit der Party redet',
+    'die Gruppe in einen Hinterhalt läuft',
+    'ein Kind in Gefahr ist',
+    'fremde Magie in der Nähe pulsiert',
+    'jemand Shii Take einen Pilz ausschlägt',
+    'eine versperrte Tür den Weg blockiert'
+  ];
+
+  function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+  function pickPair(arr) {
+    const a = pick(arr);
+    let b = pick(arr);
+    while (b === a) b = pick(arr);
+    return [a, b];
+  }
+
+  function suggestionGenerators() {
+    return [
+      () => {
+        const c = pick(PARTY);
+        const s = pick(SCENARIOS);
+        return { label: `Reaktion: ${c.short}`, prompt: `Wie würde ${c.name} reagieren, wenn ${s}?` };
+      },
+      () => {
+        const [a, b] = pickPair(PARTY);
+        return { label: `Beziehung ${a.short}/${b.short}`, prompt: `Wie stehen ${a.name} und ${b.name} zueinander?` };
+      },
+      () => {
+        const sp = pick(SPELLS);
+        return { label: `${sp} erklären`, prompt: `Erklär mir ${sp} kurz und sag, wer in der Party den Spell castet.` };
+      },
+      () => {
+        const n = pick(NPCS);
+        return { label: `Wer war ${n.name.split(' ')[0]}?`, prompt: `Wer war ${n.name} (${n.hint}) nochmal genau?` };
+      },
+      () => {
+        const o = pick(ORTE);
+        return { label: `Ort: ${o}`, prompt: `Beschreib ${o} kurz — was muss man wissen?` };
+      },
+      () => {
+        const s = pick(SESSIONS);
+        return { label: `Session ${s.nr}`, prompt: `Fasse Session ${s.nr} (${s.titel}) in drei Sätzen zusammen.` };
+      },
+      () => {
+        const c = pick(PARTY);
+        return { label: `${c.short}s Skills`, prompt: `Was sind ${c.name}s wichtigste Skills und Stärken im Spiel?` };
+      },
+      () => ({ label: 'Party-Loot', prompt: 'Welche Magic Items hat die Party gerade und wer trägt was?' }),
+      () => ({ label: 'Shii Takes Spells', prompt: 'Was kann Shii Take alles zaubern? Liste mit kurzer Wirkung pro Spell.' }),
+      () => ({ label: 'Wild Shape', prompt: 'Wie funktioniert Shii Takes Wild Shape und wie oft pro Tag?' }),
+      () => {
+        const c = pick(PARTY);
+        return { label: `${c.short}s Beziehungen`, prompt: `Welche Beziehungen hat ${c.name} zur restlichen Party?` };
+      },
+      () => {
+        const c = pick(PARTY);
+        return { label: `${c.short}-Stimme`, prompt: `Wie klingt ${c.name}, wenn er/sie spricht? Gib mir 2-3 typische Sätze.` };
+      }
+    ];
+  }
+
+  function renderQuickButtons() {
+    const container = document.getElementById('quick-btns');
+    if (!container) return;
+    const generators = suggestionGenerators();
+    // Shuffle generators, dann pro Generator ein Vorschlag, dedupliziert nach Label.
+    for (let i = generators.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [generators[i], generators[j]] = [generators[j], generators[i]];
+    }
+    const seen = new Set();
+    const picks = [];
+    for (const gen of generators) {
+      const s = gen();
+      if (seen.has(s.label)) continue;
+      seen.add(s.label);
+      picks.push(s);
+      if (picks.length === 4) break;
+    }
+    container.innerHTML = '';
+    for (const s of picks) {
+      const btn = document.createElement('button');
+      btn.className = 'quick-btn';
+      btn.textContent = s.label;
+      btn.title = s.prompt;
+      btn.addEventListener('click', () => quickAsk(s.prompt));
+      container.appendChild(btn);
+    }
+  }
+
+  renderQuickButtons();
 </script>
 
 </body>
