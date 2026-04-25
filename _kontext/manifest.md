@@ -45,8 +45,12 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/requiem-of-wings/orte/ibrido.md` — Ibrido (Kanalstadt in Emberez)
 - `kampagnen/requiem-of-wings/orte/castel-di-maschera.md` — Castel di Maschera (Ort des Maskenballs)
 
+#### Transkripte (Roh-Mitschriften — nur als Last-Resort laden)
+- `kampagnen/requiem-of-wings/transcripts/README.md` — Wofür der Transkript-Ordner ist und wie er gepflegt wird
+
 ## Templates
 - `_templates/session.md`
+- `_templates/transcript.md`
 - `_templates/npc.md`
 - `_templates/spell.md`
 - `_templates/charakter-persoenlichkeit.md`
