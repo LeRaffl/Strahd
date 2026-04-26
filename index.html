@@ -243,6 +243,30 @@
     .msg-user .msg-label { color: var(--text3); text-align: right; }
     .msg-ai .msg-label { color: var(--gold-dim); }
 
+    .msg-body > *:first-child { margin-top: 0; }
+    .msg-body > *:last-child { margin-bottom: 0; }
+    .msg-body p { margin: 0 0 10px 0; line-height: 1.55; }
+    .msg-body strong { color: var(--gold); font-weight: 600; }
+    .msg-body em { color: var(--text2); font-style: italic; }
+    .msg-body h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      color: var(--gold-dim);
+      margin: 12px 0 6px 0;
+    }
+    .msg-body ul, .msg-body ol { margin: 6px 0 10px 0; padding-left: 22px; }
+    .msg-body li { margin: 3px 0; line-height: 1.5; }
+    .msg-body code {
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 0.9em;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      border-radius: 4px;
+      padding: 1px 5px;
+      color: var(--gold);
+    }
+
     .typing-dots {
       display: flex;
       gap: 5px;
@@ -352,6 +376,7 @@
   <div class="header-tags">
     <span class="tag">4 Charaktere</span>
     <span class="tag" id="session-count-tag">1 Session</span>
+    <span class="tag" id="cost-tag" title="Noch keine Anfragen">0 tok · $0.0000</span>
   </div>
 </header>
 
@@ -464,6 +489,38 @@ Wenn der User explizit ums Transkript bittet ("schau im Transkript", "was wurde 
 
   let history = [];
 
+  // Haiku 4.5 Preise (USD pro 1M Tokens)
+  const PRICING = { input: 1.00, output: 5.00, cacheWrite: 1.25, cacheRead: 0.10 };
+  const sessionUsage = { input: 0, output: 0, cacheWrite: 0, cacheRead: 0 };
+
+  function fmtTok(n) {
+    return n >= 1000 ? (n / 1000).toFixed(1) + 'k' : String(n);
+  }
+
+  function accumulateUsage(usage) {
+    if (!usage) return;
+    sessionUsage.input += usage.input_tokens || 0;
+    sessionUsage.output += usage.output_tokens || 0;
+    sessionUsage.cacheWrite += usage.cache_creation_input_tokens || 0;
+    sessionUsage.cacheRead += usage.cache_read_input_tokens || 0;
+
+    const cost =
+      (sessionUsage.input * PRICING.input +
+       sessionUsage.output * PRICING.output +
+       sessionUsage.cacheWrite * PRICING.cacheWrite +
+       sessionUsage.cacheRead * PRICING.cacheRead) / 1_000_000;
+
+    const totalIn = sessionUsage.input + sessionUsage.cacheWrite + sessionUsage.cacheRead;
+    const tag = document.getElementById('cost-tag');
+    tag.textContent = `${fmtTok(totalIn)} in · ${fmtTok(sessionUsage.output)} out · $${cost.toFixed(4)}`;
+    tag.title =
+      `Input: ${sessionUsage.input.toLocaleString()} (uncached)\n` +
+      `Cache write: ${sessionUsage.cacheWrite.toLocaleString()}\n` +
+      `Cache read: ${sessionUsage.cacheRead.toLocaleString()}\n` +
+      `Output: ${sessionUsage.output.toLocaleString()}\n` +
+      `Gesamt: $${cost.toFixed(4)}`;
+  }
+
   function scrollToBottom() {
     const msgs = document.getElementById('messages');
     msgs.scrollTop = msgs.scrollHeight;
@@ -477,12 +534,63 @@ Wenn der User explizit ums Transkript bittet ("schau im Transkript", "was wurde 
     label.className = 'msg-label';
     label.textContent = role === 'user' ? 'Du' : 'Biblo · Archivar';
     const content = document.createElement('div');
-    content.textContent = text;
+    if (role === 'ai') {
+      content.className = 'msg-body';
+      content.innerHTML = renderMarkdown(text);
+    } else {
+      content.textContent = text;
+    }
     div.appendChild(label);
     div.appendChild(content);
     msgs.appendChild(div);
     scrollToBottom();
     return div;
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  // Mini-Markdown: escape zuerst, dann nur bekannte Tags einsetzen.
+  // Unterstützt: ## Header, **bold**, *italic*, `code`, - bullets, 1. numbered, Absätze.
+  function renderMarkdown(text) {
+    const lines = escapeHtml(text).split('\n');
+    const out = [];
+    let listType = null; // 'ul' | 'ol' | null
+    let paraBuf = [];
+
+    const flushPara = () => {
+      if (paraBuf.length) { out.push('<p>' + paraBuf.join(' ') + '</p>'); paraBuf = []; }
+    };
+    const closeList = () => {
+      if (listType) { out.push(`</${listType}>`); listType = null; }
+    };
+    const openList = (t) => {
+      if (listType !== t) { closeList(); out.push(`<${t}>`); listType = t; }
+    };
+
+    for (const raw of lines) {
+      const line = raw.replace(/\s+$/, '');
+      let m;
+      if ((m = line.match(/^\s*[-*]\s+(.*)$/))) {
+        flushPara(); openList('ul'); out.push('<li>' + m[1] + '</li>');
+      } else if ((m = line.match(/^\s*\d+\.\s+(.*)$/))) {
+        flushPara(); openList('ol'); out.push('<li>' + m[1] + '</li>');
+      } else if ((m = line.match(/^#{1,3}\s+(.*)$/))) {
+        flushPara(); closeList(); out.push('<h4>' + m[1] + '</h4>');
+      } else if (line.trim() === '') {
+        flushPara(); closeList();
+      } else {
+        closeList(); paraBuf.push(line);
+      }
+    }
+    flushPara(); closeList();
+
+    return out.join('')
+      .replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>')
+      .replace(/`([^`\n]+)`/g, '<code>$1</code>');
   }
 
   function addTyping(hint) {
@@ -564,12 +672,20 @@ Wenn der User explizit ums Transkript bittet ("schau im Transkript", "was wurde 
       body: JSON.stringify({
         model: MODEL,
         max_tokens: 2000,
-        system: SYSTEM_TEMPLATE + manifestText,
+        system: [
+          {
+            type: 'text',
+            text: SYSTEM_TEMPLATE + manifestText,
+            cache_control: { type: 'ephemeral' }
+          }
+        ],
         tools: TOOLS,
         messages
       })
     });
-    return res.json();
+    const data = await res.json();
+    accumulateUsage(data.usage);
+    return data;
   }
 
   function extractText(content) {
