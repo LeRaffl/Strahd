@@ -50,6 +50,19 @@ index.html                  # Biblo Web-UI
 ## Biblo (Web-Interface)
 Biblo läuft als Single-Page-App in `index.html`, deployed als GitHub Page. Der Web-Chat nutzt **Claude mit Tool-Use**: Biblo bekommt den Manifest-Index und ruft über `read_file` gezielt einzelne Dateien nach, wenn eine Frage Detail braucht. So bleibt der Initial-Prompt klein und das Archiv kann beliebig wachsen.
 
+## Biblo lokal via Claude Code / Codex
+Alternativ kannst du Biblo direkt im Repo nutzen — über dein eigenes Claude- oder ChatGPT-Abo, ohne API-Kosten.
+
+Setup:
+1. **Repo klonen** (privat — du musst als Collaborator hinzugefügt sein).
+2. **Agent installieren:** [Claude Code](https://docs.claude.com/claude-code) (`npm install -g @anthropic-ai/claude-code`) oder [Codex CLI](https://github.com/openai/codex).
+3. **Im Repo starten:** `claude` bzw. `codex`. Beide laden automatisch `CLAUDE.md` (resp. `AGENTS.md`, ist ein Symlink) und verhalten sich entsprechend als Biblo.
+
+Typische Nutzung:
+- **Nachschlagen am Spieltisch** — "Was kann Lazars Mönchsklasse auf Level 3?", "Welche NPCs hatten wir in Session 1?"
+- **Session loggen** — Erzähl die Session, paste eine Apple-Notes-Mitschrift oder ein Transkript rein. Biblo strukturiert nach `_templates/session.md` und legt die Datei an. Audio muss vorher transkribiert werden (Apple Voice Memos / MacWhisper).
+- **Char-Building** — neue Spells/Items recherchieren und im Archiv anlegen.
+
 ## Transkripte / Mitschriften
 Roh-Material aus den Sessions liegt in `kampagnen/<kampagne>/transcripts/`. Das sind Voll-Transkripte oder händische Notizen — ungekürzt, im Gegensatz zu den kuratierten `sessions/<nr>.md`. Biblo greift hier nur als Last-Resort drauf zu (wenn die kuratierte Session-Datei eine Frage nicht abdeckt) oder wenn explizit danach gefragt wird. Workflow nach einer Session:
 
