@@ -37,6 +37,7 @@ index.html                  # Biblo Web-UI
 | Charakter | Spieler | Spezies | Klasse |
 |-----------|---------|---------|--------|
 | [Shii Take](charaktere/shii-take/charakterbogen.md) | Raffi | Human | Druide |
+| [Nia Sommerfeld](charaktere/nia-sommerfeld/charakterbogen.md) | Raffi | Human | Bard (College of Lore) |
 | [Lazar](charaktere/lazar/charakterbogen.md) | Andi | Tabaxi | Mönch |
 | [Major Sempft](charaktere/major-sempft/charakterbogen.md) | Felix | Halbling | Paladin |
 | [Moxi](charaktere/moxi/charakterbogen.md) | Svenja | Goblin | Jäger |
