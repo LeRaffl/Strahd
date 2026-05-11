@@ -49,6 +49,20 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `regeln/magic-items/amulet-of-protection.md` — +1 Amulett of Protection (Party-Loot S001)
 
 ## Kampagnen
+### Fluch des Strahd (geplant, Nia Sommerfeld bestätigt)
+- `kampagnen/fluch-des-strahd/party.md` — Wer mitspielt (Nia bestätigt, Rest TBD)
+- `kampagnen/fluch-des-strahd/_kontext/welt.md` — Barovia / Curse of Strahd, spoilerarm bis Kampagnenstart
+- `kampagnen/fluch-des-strahd/_kontext/timeline.md` — Timeline (Vor-der-Kampagne-Status)
+- `kampagnen/fluch-des-strahd/npcs/hanna-sommerfeld.md` — Nias Mutter (Apfelried, Hintergrund)
+- `kampagnen/fluch-des-strahd/npcs/bert-sommerfeld.md` — Nias Vater (Apfelried, Hintergrund)
+- `kampagnen/fluch-des-strahd/npcs/timo-sommerfeld.md` — Nias kleiner Bruder (studiert auswärts, Hintergrund)
+- `kampagnen/fluch-des-strahd/npcs/greta-holunder.md` — Nachbarin und Stammkundin (Apfelried, Hintergrund)
+- `kampagnen/fluch-des-strahd/npcs/oskar-bram.md` — Dachdecker mit kaputtem Rücken (Apfelried, Hintergrund)
+- `kampagnen/fluch-des-strahd/orte/apfelried.md` — Nias Heimatdorf (nicht-Barovia)
+
+#### Transkripte (Roh-Mitschriften — nur als Last-Resort laden)
+- `kampagnen/fluch-des-strahd/transcripts/README.md` — Wofür der Transkript-Ordner ist und wie er gepflegt wird
+
 ### Requiem of Wings (One-Shot, abgeschlossen)
 - `kampagnen/requiem-of-wings/party.md` — Wer war dabei
 - `kampagnen/requiem-of-wings/_kontext/welt.md` — Emberez, Aureum, Malum Animus
