@@ -123,6 +123,50 @@
       margin-bottom: 10px;
     }
 
+    .campaign-tabs {
+      display: flex;
+      gap: 6px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .campaign-tab {
+      flex: 1;
+      padding: 8px 10px;
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      background: transparent;
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--text2);
+      cursor: pointer;
+      text-align: center;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+
+    .campaign-tab:hover { border-color: var(--gold-dim); color: var(--gold); }
+
+    .campaign-tab.active {
+      background: var(--gold-bg);
+      border-color: var(--gold-dim);
+      color: var(--gold);
+    }
+
+    #campaign-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .campaign-status {
+      font-size: 11px;
+      color: var(--text3);
+      font-style: italic;
+      letter-spacing: 0.02em;
+      margin-bottom: -12px;
+    }
+
     .char-card {
       background: var(--bg3);
       border: 1px solid var(--border);
@@ -382,36 +426,8 @@
 
 <div class="layout">
   <aside>
-    <div>
-      <h2>Charakter</h2>
-      <div class="char-card">
-        <p class="char-name">Shii Take</p>
-        <p class="char-sub">Human Druid 3 · Sage · Spieler: Raffi</p>
-        <div class="stat-row">
-          <div class="stat">HP <span>24</span></div>
-          <div class="stat">AC <span>14</span></div>
-          <div class="stat">WIS <span>+3</span></div>
-          <div class="stat">Init <span>+1</span></div>
-        </div>
-        <div class="stat-row">
-          <div class="stat">Wild Shape <span>2×</span></div>
-          <div class="stat">Perc <span>+5</span></div>
-        </div>
-        <div style="margin-top: 10px; font-size: 13px; color: var(--text3);">
-          Common · Deep Speech · Druidic · Gnomish · Goblin · Sylvan
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <h2>Sessions</h2>
-      <div id="sessions-list">
-        <div class="session-item" onclick="quickAsk('Was ist in Session 001 in Ibrido passiert?')">
-          <p>001 · Masken und Monster</p>
-          <small>2026-04-19 · Ibrido</small>
-        </div>
-      </div>
-    </div>
+    <div class="campaign-tabs" id="campaign-tabs"></div>
+    <div id="campaign-pane"></div>
   </aside>
 
   <main>
@@ -438,13 +454,13 @@
   const MAX_TOOL_ITERATIONS = 8;
   const MANIFEST_PATH = '_kontext/manifest.md';
 
-  const SYSTEM_TEMPLATE = `Du bist Biblo, der Kampagnen-Archivar für eine D&D 5e Kampagne.
+  const SYSTEM_PREAMBLE = `Du bist Biblo, der Kampagnen-Archivar für eine D&D 5e Kampagne.
 Antworte immer auf Deutsch, prägnant (2–4 Sätze), in einem leicht epischen aber zugänglichen Ton.
 
 ## Wie du arbeitest
 Das Archiv ist in Markdown-Dateien organisiert. Du siehst unten den **Manifest-Index**: pro Datei einen 1-Zeiler, was drin steht.
 Für Detail-Fragen nutzt du das Tool \`read_file(path)\`, um gezielt nachzulesen. Lies nur was du brauchst — nicht vorsorglich.
-Für Überblicks-Fragen reicht oft der Manifest + Shii Takes Kern-Daten unten.
+Für Überblicks-Fragen reicht oft der Manifest + die Kern-Daten der aktiven Kampagne unten.
 Wenn ein Thema in mehreren Dateien steht (z.B. Persönlichkeit + Beziehungen + Session-Verhalten), lade die relevanten nacheinander.
 Zitiere oder parafrasiere nur aus tatsächlich geladenen Dateien. Wenn du etwas nicht weißt → sag es direkt.
 
@@ -454,17 +470,16 @@ Das sind **Roh-Mitschriften** ganzer Sessions (oder händische Notizen). Sie sin
 Nur wenn die kuratierte Datei eine Frage nicht beantwortet (wörtliche Zitate, Detail-Reihenfolge, vergessene Side-Quests) darfst du das passende Transkript laden — und dann sagst du dem User vorher kurz Bescheid ("ich schau mal ins Transkript").
 Wenn der User explizit ums Transkript bittet ("schau im Transkript", "was wurde wörtlich gesagt"), darfst du direkt rein.
 
-## Kern-Daten: Shii Take
-- Spieler: Raffi | Human Druide, Level 3 | Background: Sage
-- Stats: STR 8 (-1) · DEX 13 (+1) · CON 15 (+2) · INT 10 (0) · WIS 17 (+3) · CHA 12 (+1)
-- HP 24 · AC 14 · Init +1 · Speed 30 · Prof +2
-- Skills: Animal Handling +3, Arcana +2, History +2, Insight +5, Medicine +5, Nature +2, Perception +5, Performance +1, Survival +5
-- Sprachen: Common, Deep Speech, Druidic, Gnomish, Goblin, Sylvan
-- Hauptwaffe: Wurzelstab (Shillelagh) +5, 1d6+3 · Ranged: Poison Spray („Sporenhusten") +5, 1d12
-- Flavour: alle Spells sind Pilze. Spricht mit dem Pilz auf ihrem Stab. Bietet Leuten Pilze zum Essen an.
-
-## Manifest
 `;
+
+  function buildSystemPrompt() {
+    const c = activeCampaign();
+    return SYSTEM_PREAMBLE
+      + `## Aktive Kampagne: ${c.name} (${c.status})\n`
+      + c.systemBlock
+      + `\n\n## Manifest\n`
+      + manifestText;
+  }
 
   const TOOLS = [
     {
@@ -675,7 +690,7 @@ Wenn der User explizit ums Transkript bittet ("schau im Transkript", "was wurde 
         system: [
           {
             type: 'text',
-            text: SYSTEM_TEMPLATE + manifestText,
+            text: buildSystemPrompt(),
             cache_control: { type: 'ephemeral' }
           }
         ],
@@ -769,41 +784,138 @@ Wenn der User explizit ums Transkript bittet ("schau im Transkript", "was wurde 
     sendMsg();
   }
 
-  // Quick-Button-Vorschläge: pro Page-Load 4 random aus einem Pool.
-  // Kein LLM — Templates werden mit Daten aus dem Archiv-Index gefüllt.
-  const PARTY = [
-    { name: 'Shii Take', short: 'Shii Take', class: 'Druidin' },
-    { name: 'Nia Sommerfeld', short: 'Nia', class: 'Bardin' },
-    { name: 'Lazar', short: 'Lazar', class: 'Mönch' },
-    { name: 'Major Sempft', short: 'Major', class: 'Paladin' },
-    { name: 'Moxi', short: 'Moxi', class: 'Jägerin' }
-  ];
-  const SPELLS = [
-    'Thunderclap', 'Goodberry', 'Entangle', 'Detect Magic',
-    'Darkness', 'Shillelagh', 'Poison Spray'
-  ];
-  const NPCS = [
-    { name: 'Kara Krasandel', hint: 'die Deva' },
-    { name: 'Akro Dimiryan', hint: 'Cambion vom Maskenball' },
-    { name: 'Zoe Needle', hint: 'Türsteherin' }
-  ];
-  const ORTE = ['Ibrido', 'Castel di Maschera'];
-  const SESSIONS = [
-    { nr: '001', titel: 'Masks and Monsters' }
-  ];
-  const SCENARIOS = [
-    'ein lauter Fremder auf die Gruppe zukommt',
-    'eine Kneipenschlägerei ausbricht',
-    'jemand respektlos mit der Party redet',
-    'die Gruppe in einen Hinterhalt läuft',
-    'ein Kind in Gefahr ist',
-    'fremde Magie in der Nähe pulsiert',
-    'jemand Shii Take einen Pilz ausschlägt',
-    'eine versperrte Tür den Weg blockiert'
-  ];
+  // Kampagnen-Datenmodell: Sidebar, Quick-Buttons und System-Prompt
+  // werden von der aktiven Kampagne abgeleitet (Tab-Switcher oben).
+  const CAMPAIGNS = {
+    'fluch-des-strahd': {
+      name: 'Fluch des Strahd',
+      status: 'aktiv',
+      char: {
+        name: 'Nia Sommerfeld',
+        sub: 'Human Bard 3 (College of Lore) · Folk Hero · Spieler: Raffi',
+        stats: [
+          { label: 'HP', value: '21' },
+          { label: 'AC', value: '14' },
+          { label: 'CHA', value: '+3' },
+          { label: 'Init', value: '+3' }
+        ],
+        stats2: [
+          { label: 'Bardic Insp.', value: '3×' },
+          { label: 'Med/Ins', value: '+5' }
+        ],
+        languages: 'Common · Common Sign Language · Elvish'
+      },
+      sessions: [],
+      party: [
+        { name: 'Nia Sommerfeld', short: 'Nia', class: 'Bardin' }
+      ],
+      spells: [
+        'True Strike', 'Vicious Mockery', 'Healing Word', 'Cure Wounds',
+        'Faerie Fire', 'Dissonant Whispers', 'Bless', 'Aid', 'Enhance Ability'
+      ],
+      npcs: [
+        { name: 'Hanna Sommerfeld', hint: 'Nias Mutter aus Apfelried' },
+        { name: 'Bert Sommerfeld', hint: 'Nias Vater aus Apfelried' },
+        { name: 'Timo Sommerfeld', hint: 'Nias kleiner Bruder' },
+        { name: 'Greta Holunder', hint: 'Nachbarin und langjährige Kundin' },
+        { name: 'Oskar Bram', hint: 'Dachdecker mit kaputtem Rücken' }
+      ],
+      orte: ['Apfelried'],
+      scenarios: [
+        'die Gruppe nachts Wölfe heulen hört',
+        'dichter Nebel sich um die Party legt',
+        'eine Kutsche ohne Kutscher hält',
+        'ein Dorf voller verängstigter Bauern um Hilfe bittet',
+        'jemand keine Reflektion im Spiegel hat',
+        'ein Verwundeter dringend stabilisiert werden muss',
+        'fremde Magie in der Nähe pulsiert',
+        'jemand respektlos mit der Party redet'
+      ],
+      extras: [
+        { label: 'Nias Spells', prompt: 'Was kann Nia Sommerfeld alles zaubern? Liste mit kurzer Wirkung pro Spell.' },
+        { label: 'Bardic Inspiration', prompt: 'Wie funktioniert Nias Bardic Inspiration und Cutting Words mechanisch?' },
+        { label: 'Apfelried', prompt: 'Was muss ich über Apfelried, Nias Heimatdorf, wissen?' },
+        { label: 'Nias Combat-Plan', prompt: 'Wie sieht Nias typischer Combat-Loop auf Level 3 aus?' }
+      ],
+      systemBlock: `## Kern-Daten: Nia Sommerfeld (Fluch des Strahd, aktiv)
+- Spieler: Raffi | Human Bardin (College of Lore), Level 3 | Background: Folk Hero (Reha-Coach-Flavour)
+- Stats: STR 10 (0) · DEX 16 (+3) · CON 13 (+1) · INT 8 (-1) · WIS 12 (+1) · CHA 16 (+3)
+- HP 21 · AC 14 (Leather + DEX) · Init +3 · Speed 30 · Prof +2 · Spell DC 13 · Spell Atk +5
+- Expertise: Medicine +5, Insight +5 · Jack of All Trades +1 auf unproficient Checks
+- Sprachen: Common, Common Sign Language, Elvish
+- Cantrips: True Strike (CHA-Waffenangriff am Bo Staff), Vicious Mockery, Guidance (MI:Cleric), Spare the Dying (MI:Cleric)
+- 1st-Level: Healing Word, Cure Wounds, Faerie Fire, Dissonant Whispers, Bless (Magic Initiate)
+- 2nd-Level: Aid, Enhance Ability
+- Bardic Inspiration (d6) 3/Long Rest · Cutting Words als Reaktion
+- Flavour: warmherzige Physiotherapeutin und Combat-Medic aus Apfelried. Coacht im Kampf, stabilisiert Verwundete, alle Spells sind Reha-/Coaching-Cues.`
+    },
+    'requiem-of-wings': {
+      name: 'Requiem of Wings',
+      status: 'abgeschlossen',
+      char: {
+        name: 'Shii Take',
+        sub: 'Human Druid 3 · Sage · Spieler: Raffi',
+        stats: [
+          { label: 'HP', value: '24' },
+          { label: 'AC', value: '14' },
+          { label: 'WIS', value: '+3' },
+          { label: 'Init', value: '+1' }
+        ],
+        stats2: [
+          { label: 'Wild Shape', value: '2×' },
+          { label: 'Perc', value: '+5' }
+        ],
+        languages: 'Common · Deep Speech · Druidic · Gnomish · Goblin · Sylvan'
+      },
+      sessions: [
+        { nr: '001', titel: 'Masks and Monsters', date: '2026-04-19', ort: 'Ibrido' }
+      ],
+      party: [
+        { name: 'Shii Take', short: 'Shii Take', class: 'Druidin' },
+        { name: 'Lazar', short: 'Lazar', class: 'Mönch' },
+        { name: 'Major Sempft', short: 'Major', class: 'Paladin' },
+        { name: 'Moxi', short: 'Moxi', class: 'Jägerin' }
+      ],
+      spells: [
+        'Thunderclap', 'Goodberry', 'Entangle', 'Detect Magic',
+        'Darkness', 'Shillelagh', 'Poison Spray'
+      ],
+      npcs: [
+        { name: 'Kara Krasandel', hint: 'die Deva' },
+        { name: 'Akro Dimiryan', hint: 'Cambion vom Maskenball' },
+        { name: 'Zoe Needle', hint: 'Türsteherin' }
+      ],
+      orte: ['Ibrido', 'Castel di Maschera'],
+      scenarios: [
+        'ein lauter Fremder auf die Gruppe zukommt',
+        'eine Kneipenschlägerei ausbricht',
+        'jemand respektlos mit der Party redet',
+        'die Gruppe in einen Hinterhalt läuft',
+        'jemand Shii Take einen Pilz ausschlägt',
+        'fremde Magie in der Nähe pulsiert'
+      ],
+      extras: [
+        { label: 'Shii Takes Spells', prompt: 'Was kann Shii Take alles zaubern? Liste mit kurzer Wirkung pro Spell.' },
+        { label: 'Wild Shape', prompt: 'Wie funktioniert Shii Takes Wild Shape und wie oft pro Tag?' }
+      ],
+      systemBlock: `## Kern-Daten: Shii Take (Requiem of Wings, abgeschlossen)
+- Spieler: Raffi | Human Druide, Level 3 | Background: Sage
+- Stats: STR 8 (-1) · DEX 13 (+1) · CON 15 (+2) · INT 10 (0) · WIS 17 (+3) · CHA 12 (+1)
+- HP 24 · AC 14 · Init +1 · Speed 30 · Prof +2
+- Skills: Animal Handling +3, Arcana +2, History +2, Insight +5, Medicine +5, Nature +2, Perception +5, Performance +1, Survival +5
+- Sprachen: Common, Deep Speech, Druidic, Gnomish, Goblin, Sylvan
+- Hauptwaffe: Wurzelstab (Shillelagh) +5, 1d6+3 · Ranged: Poison Spray („Sporenhusten") +5, 1d12
+- Flavour: alle Spells sind Pilze. Spricht mit dem Pilz auf ihrem Stab. Bietet Leuten Pilze zum Essen an.`
+    }
+  };
+
+  const CAMPAIGN_ORDER = ['fluch-des-strahd', 'requiem-of-wings'];
+  let activeCampaignSlug = 'fluch-des-strahd';
+  function activeCampaign() { return CAMPAIGNS[activeCampaignSlug]; }
 
   function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
   function pickPair(arr) {
+    if (arr.length < 2) return null;
     const a = pick(arr);
     let b = pick(arr);
     while (b === a) b = pick(arr);
@@ -811,55 +923,65 @@ Wenn der User explizit ums Transkript bittet ("schau im Transkript", "was wurde 
   }
 
   function suggestionGenerators() {
-    return [
+    const c = activeCampaign();
+    const gens = [
       () => {
-        const c = pick(PARTY);
-        const s = pick(SCENARIOS);
-        return { label: `Reaktion: ${c.short}`, prompt: `Wie würde ${c.name} reagieren, wenn ${s}?` };
+        const ch = pick(c.party);
+        const s = pick(c.scenarios);
+        return { label: `Reaktion: ${ch.short}`, prompt: `Wie würde ${ch.name} reagieren, wenn ${s}?` };
       },
       () => {
-        const [a, b] = pickPair(PARTY);
-        return { label: `Beziehung ${a.short}/${b.short}`, prompt: `Wie stehen ${a.name} und ${b.name} zueinander?` };
-      },
-      () => {
-        const sp = pick(SPELLS);
+        const sp = pick(c.spells);
         return { label: `${sp} erklären`, prompt: `Erklär mir ${sp} kurz und sag, wer in der Party den Spell castet.` };
       },
       () => {
-        const n = pick(NPCS);
-        return { label: `Wer war ${n.name.split(' ')[0]}?`, prompt: `Wer war ${n.name} (${n.hint}) nochmal genau?` };
+        const ch = pick(c.party);
+        return { label: `${ch.short}s Skills`, prompt: `Was sind ${ch.name}s wichtigste Skills und Stärken im Spiel?` };
       },
       () => {
-        const o = pick(ORTE);
-        return { label: `Ort: ${o}`, prompt: `Beschreib ${o} kurz — was muss man wissen?` };
+        const ch = pick(c.party);
+        return { label: `${ch.short}s Beziehungen`, prompt: `Welche Beziehungen hat ${ch.name} zur restlichen Welt und Party?` };
       },
       () => {
-        const s = pick(SESSIONS);
-        return { label: `Session ${s.nr}`, prompt: `Fasse Session ${s.nr} (${s.titel}) in drei Sätzen zusammen.` };
+        const ch = pick(c.party);
+        return { label: `${ch.short}-Stimme`, prompt: `Wie klingt ${ch.name}, wenn sie/er spricht? Gib mir 2-3 typische Sätze.` };
       },
-      () => {
-        const c = pick(PARTY);
-        return { label: `${c.short}s Skills`, prompt: `Was sind ${c.name}s wichtigste Skills und Stärken im Spiel?` };
-      },
-      () => ({ label: 'Party-Loot', prompt: 'Welche Magic Items hat die Party gerade und wer trägt was?' }),
-      () => ({ label: 'Shii Takes Spells', prompt: 'Was kann Shii Take alles zaubern? Liste mit kurzer Wirkung pro Spell.' }),
-      () => ({ label: 'Wild Shape', prompt: 'Wie funktioniert Shii Takes Wild Shape und wie oft pro Tag?' }),
-      () => {
-        const c = pick(PARTY);
-        return { label: `${c.short}s Beziehungen`, prompt: `Welche Beziehungen hat ${c.name} zur restlichen Party?` };
-      },
-      () => {
-        const c = pick(PARTY);
-        return { label: `${c.short}-Stimme`, prompt: `Wie klingt ${c.name}, wenn er/sie spricht? Gib mir 2-3 typische Sätze.` };
-      }
+      () => ({ label: 'Party-Loot', prompt: 'Welche Magic Items hat die Party gerade und wer trägt was?' })
     ];
+    if (c.npcs.length) {
+      gens.push(() => {
+        const n = pick(c.npcs);
+        return { label: `Wer ist ${n.name.split(' ')[0]}?`, prompt: `Wer ist ${n.name} (${n.hint}) und was sollte ich wissen?` };
+      });
+    }
+    if (c.orte.length) {
+      gens.push(() => {
+        const o = pick(c.orte);
+        return { label: `Ort: ${o}`, prompt: `Beschreib ${o} kurz — was muss man wissen?` };
+      });
+    }
+    if (c.sessions.length) {
+      gens.push(() => {
+        const s = pick(c.sessions);
+        return { label: `Session ${s.nr}`, prompt: `Fasse Session ${s.nr} (${s.titel}) in drei Sätzen zusammen.` };
+      });
+    }
+    if (c.party.length >= 2) {
+      gens.push(() => {
+        const [a, b] = pickPair(c.party);
+        return { label: `Beziehung ${a.short}/${b.short}`, prompt: `Wie stehen ${a.name} und ${b.name} zueinander?` };
+      });
+    }
+    for (const extra of (c.extras || [])) {
+      gens.push(() => extra);
+    }
+    return gens;
   }
 
   function renderQuickButtons() {
     const container = document.getElementById('quick-btns');
     if (!container) return;
     const generators = suggestionGenerators();
-    // Shuffle generators, dann pro Generator ein Vorschlag, dedupliziert nach Label.
     for (let i = generators.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [generators[i], generators[j]] = [generators[j], generators[i]];
@@ -884,6 +1006,71 @@ Wenn der User explizit ums Transkript bittet ("schau im Transkript", "was wurde 
     }
   }
 
+  function renderCampaignTabs() {
+    const tabs = document.getElementById('campaign-tabs');
+    if (!tabs) return;
+    tabs.innerHTML = '';
+    for (const slug of CAMPAIGN_ORDER) {
+      const btn = document.createElement('button');
+      btn.className = 'campaign-tab' + (slug === activeCampaignSlug ? ' active' : '');
+      btn.textContent = CAMPAIGNS[slug].name;
+      btn.dataset.slug = slug;
+      btn.addEventListener('click', () => {
+        if (slug === activeCampaignSlug) return;
+        activeCampaignSlug = slug;
+        renderCampaignTabs();
+        renderCampaignPane();
+        renderQuickButtons();
+      });
+      tabs.appendChild(btn);
+    }
+  }
+
+  function renderCampaignPane() {
+    const pane = document.getElementById('campaign-pane');
+    if (!pane) return;
+    const c = activeCampaign();
+    const statsHtml = (arr) => arr.map(s =>
+      `<div class="stat">${escapeHtml(s.label)} <span>${escapeHtml(s.value)}</span></div>`
+    ).join('');
+    const sessionsHtml = c.sessions.length
+      ? c.sessions.map((s, idx) => `<div class="session-item" data-idx="${idx}">
+          <p>${escapeHtml(s.nr)} · ${escapeHtml(s.titel)}</p>
+          <small>${escapeHtml(s.date || '')}${s.ort ? ' · ' + escapeHtml(s.ort) : ''}</small>
+        </div>`).join('')
+      : `<div class="sessions-empty">Noch keine Sessions geloggt.</div>`;
+
+    pane.innerHTML = `
+      <p class="campaign-status">Status: ${escapeHtml(c.status)}</p>
+      <div>
+        <h2>Charakter</h2>
+        <div class="char-card">
+          <p class="char-name">${escapeHtml(c.char.name)}</p>
+          <p class="char-sub">${escapeHtml(c.char.sub)}</p>
+          <div class="stat-row">${statsHtml(c.char.stats)}</div>
+          <div class="stat-row">${statsHtml(c.char.stats2)}</div>
+          <div style="margin-top: 10px; font-size: 13px; color: var(--text3);">
+            ${escapeHtml(c.char.languages)}
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Sessions</h2>
+        <div id="sessions-list">${sessionsHtml}</div>
+      </div>
+    `;
+
+    pane.querySelectorAll('.session-item').forEach(el => {
+      const idx = Number(el.dataset.idx);
+      const s = c.sessions[idx];
+      el.addEventListener('click', () => {
+        quickAsk(`Was ist in Session ${s.nr} (${s.titel}) passiert?`);
+      });
+    });
+  }
+
+  renderCampaignTabs();
+  renderCampaignPane();
   renderQuickButtons();
 </script>
 
