@@ -6,13 +6,39 @@ Skala pro Dimension: **-3 bis +3** (0 = neutral).
 
 ## Fluch des Strahd
 
-### Party (PCs — Namen offen)
-**Typ:** Party / Patient:innen-im-weiteren-Sinne / Trainingsgruppe
-**Seit:** S001 | **Letzter Kontakt:** _TBD_
-**Vertrauen 0 · Respekt 0 · Zuneigung 0 · Rivalität 0**
-Zu Kampagnenbeginn offen. Nia wird wahrscheinlich schnell in die Rolle rutschen, andere körperlich und emotional zu stabilisieren, ohne sie bevormunden zu wollen.
+### Florpthyz Dread / Humphrey Fizzlepads (PC — Fighter)
+**Typ:** Bekannter aus dem Transformations-Abenteuer / Schutzbefohlener
+**Seit:** Vor Kampagnenstart | **Letzter Kontakt:** S000 (Schilfheim, Kneipe)
+**Vertrauen +2 · Respekt +1 · Zuneigung +2 · Rivalität 0**
+Nia weiß, wer er war. Sie hat ihn nach der Verwandlung mitgenommen, nach Apfelried gebracht, auf Amulett-Suche gemacht — und ist jetzt in Schilfheim, nachdem das Amulett nicht geholfen hat. Sie hört nicht auf. Er lässt es geschehen. Das ist erstmal genug.
 
-### Heimat / Praxis / Trainingsgruppe (Hintergrund — Details offen)
+### Alberich von Steinkreis (PC — Cleric)
+**Typ:** Bekannter aus Apfelried / Kamerad
+**Seit:** Apfelried (Kapellenbau) | **Letzter Kontakt:** S000
+**Vertrauen +2 · Respekt +2 · Zuneigung +2 · Rivalität 0**
+Er hat die Kapelle gebaut, sie hat ihm dabei zugeschaut und ihn dann von Florpthyz' Zustand erzählt. Seitdem reisen sie zusammen. Nia schätzt seinen Ernsthaftigkeitssinn — auch wenn sie manchmal die Hand hebt, wenn er zu schnell zur Axt greift.
+
+### Mara Winterried (PC — Bard / Tante)
+**Typ:** Familie
+**Seit:** Nia's Kindheit | **Letzter Kontakt:** S000
+**Vertrauen +3 · Respekt +2 · Zuneigung +3 · Rivalität 0**
+Nias Tante. Verließ Apfelried, weil ihr alles dort zu still war. Nia versteht das nicht ganz — für sie war Apfelried einfach gut. Aber sie freut sich, dass Mara dabei ist. Mara stellt immer die falschen Fragen zur richtigen Zeit.
+
+### Thorin (PC — Barbarian)
+**Typ:** Party-Kamerad
+**Seit:** Schilfheim | **Letzter Kontakt:** S000
+**Vertrauen +1 · Respekt +2 · Zuneigung +1 · Rivalität 0**
+Groß, ruhig, verlässlich. Er sagt wenig. Nia respektiert das. Sie wird irgendwann trotzdem seine Schultern checken — die sind nach jedem Kampf wie Beton.
+
+### Moxie (PC — Ranger)
+**Typ:** Party-Kameradin
+**Seit:** Schilfheim | **Letzter Kontakt:** S000
+**Vertrauen +1 · Respekt +2 · Zuneigung +1 · Rivalität 0**
+Moxie ist kleiner als Nia und eindeutig besser im Wald. Nia lässt ihr Raum — kein Aufdrängeln, keine erzwungene Fürsorge. Wenn Moxie Hilfe braucht, wird sie da sein.
+
+---
+
+### Heimat / Praxis / Trainingsgruppe (Hintergrund — Apfelried)
 **Typ:** Familie / Gemeinschaft / Berufliche Herkunft
 **Seit:** Vorgeschichte | **Letzter Kontakt:** vor Kampagnenstart
 **Vertrauen +3 · Respekt +2 · Zuneigung +3 · Rivalität 0**
@@ -24,11 +50,11 @@ Die bewusste Anti-Trauma-Verankerung: Apfelried, ein normales Dorf, in dem Fürs
 **Vertrauen +3 · Respekt +2 · Zuneigung +3 · Rivalität 0**
 Liebevolle, positive Eltern. Sie unterstützen Nia und haben sie eher sanft zum Reisen geschubst, weil sie gesehen haben, dass Nia außerhalb von Arbeit und Dorfleben wenig eigenes Ausprobieren zulässt.
 
-### Timo Sommerfeld (NPC — kleiner Bruder)
+### Timo Sommerfeld (NPC — älterer Bruder)
 **Typ:** Familie
 **Seit:** Kindheit | **Letzter Kontakt:** vor Kampagnenstart / per Brief
-**Vertrauen +2 · Respekt +1 · Zuneigung +2 · Rivalität 0**
-Zum Studieren weggezogen. Ein Zeichen dafür, dass normales Weggehen in Nias Welt nicht Verlust bedeuten muss.
+**Vertrauen +2 · Respekt +2 · Zuneigung +2 · Rivalität 0**
+Zum Medizinstudium weggezogen. Ein Zeichen dafür, dass normales Weggehen in Nias Welt nicht Verlust bedeuten muss. Potenzieller Anlaufpunkt für die Florpthyz-Quest.
 
 ### Greta Holunder (NPC — Nachbarin / Kundin)
 **Typ:** Nachbarschaft / langjährige Kundin

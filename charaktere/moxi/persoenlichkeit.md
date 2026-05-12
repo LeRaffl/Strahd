@@ -1,24 +1,38 @@
-# Persönlichkeit — Moxi
+# Persönlichkeit — Moxie
 
 ## Kern
-**Traits:** Sehr ängstlich. Versteckt sich gern, rennt weg, meidet Aufmerksamkeit. Klein und flink — nutzt beides.
-**Ideals:** _TODO_
-**Bonds:** _TODO_
-**Flaws:** Flieht reflexartig, manchmal bevor die Situation wirklich eskaliert.
+**Traits:** In der Natur: fokussiert, selbstsicher, motiviert. Drin / in Menschenmassen: unbehaglich, distanziert, leicht gereizt.
+**Ideals:** Natur ist verlässlich. Tiere lügen nicht. Menschen und Goblins machen nur Probleme.
+**Bonds:** Thorin — er hat ihr das Leben gerettet. Das zählt. Tiere, generell.
+**Flaws:** Misstraut Gruppen von Wesen instinktiv. Braucht eine Weile, um einzuschätzen, ob jemand "dazugehört". Manchmal beißt schwarzer Humor durch, ohne dass sie es merkt.
 
 ## Voice
-_TODO — Spieler ergänzt_. Wahrscheinlich leise, zögerlich, oft auf halber Lautstärke.
+Trocken, direkt, mit gelegentlichen Momenten schwarzen Humors. Keine großen Reden.
+
+> „Draußen wäre besser."
+> *(über einen Marktplatz)* „Zu viele. Können wir weiter?"
+> „Ich weiß, wo das Tier ist. Gebt mir fünf Minuten."
+> *(zu Florpthyz)* „Du tickst nicht synchron."
 
 ## Moralischer Kompass
-Vermutlich Neutral-kleiner Goblin in einer Welt, die ihn ständig übersehen oder einschüchtern will. Loyal zur Party, weil sie sicher ist.
+Chaotic Neutral. Sie jagt und tötet — aber nicht grundlos. Wenn jemand zur Party gehört, dann gehört er dazu. Punkt. Das ist kein sentimentales Konzept, das ist Logik.
 
 ## Reaktionsmuster
-- **Konfrontation / Einschüchterung:** flieht / versteckt sich (S001: vor betrunkenem Zwerg weggelaufen, obwohl's ein Fight hätte werden können)
-- **Menschenmenge / laute Party:** sucht einen erhöhten oder abgelegenen Beobachtungspunkt
-- **Größerer Gegner:** Guerilla-Stil aus Deckung statt Frontalangriff
-- **Ein Partymember in Gefahr:** überwindet sich, aber bevorzugt Fernkampf / Debuffs
-- **Erste Wahl bei Gelegenheit:** Stealth / Abstand
-- **Wenn alle schlafen / Gift wirkt:** Moxi meist früh betroffen (klein, leicht unter Schwellen)
+- **In der Natur / auf Straße:** entspannt, wach, kompetent.
+- **Gasthaus / Stadt / Menschenmenge:** hält Abstand, sucht erhöhte oder abgelegene Position, spricht weniger.
+- **Tier in der Nähe:** sofort interessiert. Spricht mit Animals, wenn sie kann.
+- **Jemand greift Party-Mitglied an:** markiert das Ziel, greift aus der Deckung an.
+- **Goblin-Begegnung:** kein automatischer Angriff — aber kein warmer Empfang. Abwartend, misstrauisch.
+- **Mensch verhält sich verdächtig:** beobachtet, markiert innerlich, meldet an Party.
+- **Florpthyz tickt:** zuckt kurz zusammen. Gewöhnt sich gerade dran.
+- **Jemand unterschätzt sie wegen Größe:** notiert es. Nutzt es.
+
+## Entwicklung (Strahd vs. Requiem of Wings)
+In Requiem of Wings war Moxie von echter Panik geprägt — Fluchtreflex, Versteckinstinkt. Für Fluch des Strahd ist das Konzept bewusst weiterentwickelt: Das Unbehagen bleibt, aber Moxie ist kampferprobt, gezielt und handlungsfähig. Die Angst ist zu einem stillen Filter geworden, nicht zu einer Schranke.
 
 ## Session-Beobachtungen
-- **S001 (Ibrido):** Eichhörnchen-Maske passt. Vor einem kleinen betrunkenen Zwerg weggerannt — Wachen haben den Zwerg rausgebracht, Fight entfiel. Trank vergifteten Wein, schlief auf dem Überhang im 1. Stock ein, wurde von Shii Take geheilt.
+### Requiem of Wings
+- **S001 (Ibrido):** Eichhörnchen-Maske. Vor einem betrunkenen Zwerg weggelaufen. Vergifteten Wein getrunken, eingeschlafen, von Shii Take geheilt.
+
+### Fluch des Strahd
+- **S000 (Session Zero):** Konzept aktualisiert. Kommt mit Thorin in Schilfheim an.
