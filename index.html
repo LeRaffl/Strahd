@@ -557,6 +557,79 @@
     .entity-name { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
     .entity-role { font-size: 11px; color: var(--ink-3); }
 
+    /* === Party Tab === */
+    .party-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .party-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: 280px;
+      transition: box-shadow 0.15s;
+    }
+    .party-card:hover { box-shadow: var(--shadow-md); }
+
+    .party-card-art {
+      background: repeating-linear-gradient(45deg, var(--surface-2) 0 8px, var(--surface-3) 8px 16px);
+      background-size: cover;
+      background-position: center top;
+      min-height: 280px;
+    }
+
+    .party-card-body {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-left: 1px solid var(--border);
+    }
+
+    .party-card-header { display: flex; flex-direction: column; gap: 3px; }
+    .party-card-name { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
+    .party-card-meta { font-size: 12px; color: var(--ink-3); }
+
+    .party-card-kern {
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .party-card-kern strong { color: var(--ink); font-weight: 600; }
+
+    .party-card-quote {
+      font-size: 13px;
+      color: var(--ink-3);
+      font-style: italic;
+      border-left: 2px solid var(--accent-line);
+      padding-left: 12px;
+    }
+
+    .party-card-action {
+      align-self: flex-start;
+      font-size: 12px;
+      padding: 6px 12px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--ink-2);
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .party-card-action:hover { background: var(--surface-2); border-color: var(--border-strong); color: var(--ink); }
+
+    @media (max-width: 700px) {
+      .party-card { grid-template-columns: 1fr; }
+      .party-card-art { min-height: 200px; border-left: none; border-bottom: 1px solid var(--border); }
+    }
+
     /* === Floating Chat === */
     .chat-fab {
       position: fixed;
@@ -848,6 +921,7 @@
 
     <nav class="section-tabs">
       <button class="section-tab active" data-section="sessions">Timeline</button>
+      <button class="section-tab" data-section="party">Party <span class="count" id="tab-party-count">0</span></button>
       <button class="section-tab" data-section="characters">NPCs <span class="count" id="tab-npc-count">0</span></button>
       <button class="section-tab" data-section="locations">Orte <span class="count" id="tab-loc-count">0</span></button>
       <button class="section-tab" data-section="spells">Spells <span class="count" id="tab-spell-count">0</span></button>
@@ -857,6 +931,13 @@
     <section id="section-sessions" class="section-content active">
       <div class="timeline" id="timeline-container">
         <div class="loading-skel">Lade Sessions aus dem Repo…</div>
+      </div>
+    </section>
+
+    <!-- Party -->
+    <section id="section-party" class="section-content">
+      <div class="party-grid" id="party-grid">
+        <div class="loading-skel">Lade Party…</div>
       </div>
     </section>
 
@@ -1018,12 +1099,12 @@ Index aller Dateien im Archiv.
   // Static party data (from party.md — known up-front, not session-dependent)
   // Wenn sich die Party ändert, hier updaten.
   const PARTY = [
-    { name: 'Nia Sommerfeld', class: 'Bard (College of Dance)', player: 'Raffi' },
-    { name: 'Florpthyz Dread', class: 'Fighter (Eldritch Knight)', player: 'Felix' },
-    { name: 'Alberich von Steinkreis', class: 'Cleric (Domain of Light)', player: 'Andi' },
-    { name: 'Thorin', class: 'Barbarian', player: 'Tom' },
-    { name: 'Moxie', class: 'Ranger (Monster Slayer)', player: 'Svenja' },
-    { name: 'Mara Winterried', class: 'Bard', player: 'Anna' }
+    { name: 'Nia Sommerfeld',        class: 'Bard (College of Dance)',    player: 'Raffi',  charDir: 'charaktere/nia-sommerfeld' },
+    { name: 'Florpthyz Dread',       class: 'Fighter (Eldritch Knight)',  player: 'Felix',  charDir: 'charaktere/florpthyz-dread' },
+    { name: 'Alberich von Steinkreis', class: 'Cleric (Domain of Light)', player: 'Andi',   charDir: 'charaktere/alberich' },
+    { name: 'Thorin',                class: 'Barbarian',                  player: 'Tom',    charDir: 'charaktere/thorin' },
+    { name: 'Moxie',                 class: 'Ranger (Monster Slayer)',    player: 'Svenja', charDir: 'charaktere/moxi' },
+    { name: 'Mara Winterried',       class: 'Bard',                       player: 'Anna',   charDir: 'charaktere/mara' },
   ];
 
   // Active campaign info for Biblo system prompt
@@ -1043,6 +1124,10 @@ Index aller Dateien im Archiv.
   function portraitStyle(name) {
     const url = PORTRAIT_BASE + avatarLabel(name);
     return `background-image:url('${url}');background-size:cover;background-position:center;`;
+  }
+  function artStyle(name) {
+    const url = 'assets/art/' + avatarLabel(name);
+    return `background-image:url('${url}');background-size:cover;background-position:center top;`;
   }
 
   /* ============================================================
@@ -1423,6 +1508,58 @@ Index aller Dateien im Archiv.
   }
 
   /* ============================================================
+     RENDER — PARTY TAB
+     ============================================================ */
+  function extractKern(md) {
+    const sections = parseSections(md);
+    const kern = sections['Kern'] || '';
+    return kern.split('\n').slice(0, 4).join('\n').trim();
+  }
+
+  function extractVoiceQuote(md) {
+    const m = md.match(/^>\s*[„"](.+?)["""]/m);
+    return m ? m[1].trim() : '';
+  }
+
+  async function renderPartyTab() {
+    const container = document.getElementById('party-grid');
+    document.getElementById('tab-party-count').textContent = PARTY.length;
+
+    const cards = await Promise.all(PARTY.map(async p => {
+      let kern = '', quote = '';
+      try {
+        const md = await fetchRepoFile(`${p.charDir}/persoenlichkeit.md`);
+        kern = extractKern(md);
+        quote = extractVoiceQuote(md);
+      } catch (e) {}
+      return { ...p, kern, quote };
+    }));
+
+    container.innerHTML = cards.map(c => `
+      <div class="party-card">
+        <div class="party-card-art" style="${artStyle(c.name)}"></div>
+        <div class="party-card-body">
+          <div class="party-card-header">
+            <div class="party-card-name">${escapeHtml(c.name)}</div>
+            <div class="party-card-meta">${escapeHtml(c.class)} · Gespielt von ${escapeHtml(c.player)}</div>
+          </div>
+          ${c.kern ? `<div class="party-card-kern">${renderInlineMd(escapeHtml(c.kern))}</div>` : ''}
+          ${c.quote ? `<div class="party-card-quote">„${escapeHtml(c.quote)}"</div>` : ''}
+          <button class="party-card-action" data-name="${escapeHtml(c.name)}">Im Chat fragen →</button>
+        </div>
+      </div>
+    `).join('');
+
+    container.querySelectorAll('.party-card-action').forEach(btn => {
+      btn.addEventListener('click', () => {
+        openChat();
+        chatInput.value = `Erzähl mir mehr über ${btn.dataset.name}.`;
+        chatInput.focus();
+      });
+    });
+  }
+
+  /* ============================================================
      RENDER — NPCs / LOCATIONS / SPELLS
      ============================================================ */
   function entityNameFromPath(path) {
@@ -1730,6 +1867,7 @@ Default: keine Transkripte laden — erst die kuratierte sessions/<nr>.md.`;
     }
 
     await renderTimeline();
+    renderPartyTab();
 
     const npcCount = await renderEntityGrid('characters-grid', `${CAMPAIGN_PREFIX}/npcs/`);
     const locCount = await renderEntityGrid('locations-grid', `${CAMPAIGN_PREFIX}/orte/`);
