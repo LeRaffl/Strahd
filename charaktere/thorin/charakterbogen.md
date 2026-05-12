@@ -12,9 +12,9 @@ Pragmatischer Krieger aus einem Volk von Strategen, das in den kalten Regionen d
 
 Sein Stamm ist das Zentrum seines Handelns — Freunde und Weggefährten werden geehrt, aber er vertraut nicht grundlos. Seine **Pfeife** ist sein ständiger Begleiter; ihre entspannende Wirkung hat ihm schon manche Freundschaft verschafft und manchem wurde damit vor seiner Rage Einhalt geboten.
 
-Die traditionellen **Tätowierungen** seines Stammes schützen ihn fast magisch vor starker Kälte und machen ihn gegen Frost immun. Er hat eine starke **Bindung an seine Ahnen** und ist überzeugt, dass sie ihm Schutz und Kraft gewähren — in Kämpfen meint er, ihre Hand schützend über sich zu spüren.
+Er verehrt die Göttin **Auriel** (Göttin des Windes / der Kälte) — nicht aus tiefem Glauben, sondern weil es zu seinem Volk gehört und er sich der Tradition verpflichtet fühlt. Die traditionellen **Tätowierungen** seines Stammes schützen ihn fast magisch vor starker Kälte und machen ihn gegen Frost immun; er ertrug dafür Tage lang Stiche mit grünen Nadeln. Er hat eine starke **Bindung an seine Ahnen** und ist überzeugt, dass sie ihm Schutz und Kraft gewähren — in Kämpfen meint er, ihre Hand schützend über sich zu spüren.
 
-Er zog aus seinem Dorf aus, nachdem er sein Volk erfolgreich gegen geisterhafte Frostwesen verteidigte — ein Sieg, der ihm Ehre und Ansehen brachte, aber auch zeigte, dass er noch viel über die Welt lernen muss. Er erforscht sie nun, um sein Dorf vor unbekannten Bedrohungen zu bewahren und seine Kampftechniken zu verfeinern.
+Er zog aus seinem Dorf aus, um den höchsten Kriegerrang seines Volkes erreichen zu können — eine Prüfung, die erst nach Bewährung in der weiten Welt möglich ist. Nachdem er sein Volk erfolgreich gegen geisterhafte Frostwesen verteidigte, brachte ihm dieser Sieg Ehre und Ansehen, zeigte ihm aber auch, dass er noch viel über die Welt lernen muss. Er erforscht sie nun, um sein Dorf vor unbekannten Bedrohungen zu bewahren und seine Kampftechniken zu verfeinern.
 
 ---
 
