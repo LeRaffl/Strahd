@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblo – Fluch des Strahd</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #faf8f5;
+      --surface: #ffffff;
+      --surface-2: #f3f0ea;
+      --surface-3: #ebe6dd;
+      --border: #e5dfd3;
+      --border-strong: #d4cbb9;
+      --ink: #1c1917;
+      --ink-2: #4a4640;
+      --ink-3: #7d7669;
+      --ink-4: #a8a193;
+      --accent: oklch(45% 0.12 25);
+      --accent-soft: oklch(95% 0.02 25);
+      --accent-line: oklch(85% 0.05 25);
+      --radius: 10px;
+      --radius-sm: 6px;
+      --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.04);
+      --shadow-md: 0 4px 12px rgba(28, 25, 23, 0.06);
+      --shadow-lg: 0 12px 32px rgba(28, 25, 23, 0.12);
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      min-height: 100dvh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* === Header === */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(250, 248, 245, 0.85);
+      backdrop-filter: saturate(180%) blur(12px);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+
+    .brand-mark {
+      width: 32px; height: 32px;
+      background: var(--accent); color: var(--surface);
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 14px;
+    }
+
+    .brand-text h1 { font-size: 14px; font-weight: 600; line-height: 1.1; }
+    .brand-text .subtitle { font-size: 11px; color: var(--ink-3); }
+
+    .status-bar { flex: 1; display: flex; gap: 18px; align-items: center; justify-content: flex-end; }
+    .status-item { display: flex; flex-direction: column; gap: 1px; text-align: right; }
+    .status-label { font-size: 10px; color: var(--ink-4); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+    .status-value { font-size: 13px; color: var(--ink); font-weight: 500; }
+    .status-divider { width: 1px; height: 24px; background: var(--border); }
+
+    /* === Layout === */
+    .layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 24px 120px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+    }
+
+    /* === Side Rail === */
+    .side-rail {
+      position: sticky;
+      top: 80px;
+      align-self: start;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+
+    .rail-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+    }
+
+    .rail-block-label {
+      font-size: 10px;
+      color: var(--ink-4);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    /* Party list */
+    .party-list { display: flex; flex-direction: column; gap: 6px; }
+
+    .party-member {
+      display: flex; align-items: center; gap: 8px;
+      padding: 6px 4px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.15s;
+    }
+
+    .party-member:hover { background: var(--surface-2); }
+
+    .party-member.own {
+      background: var(--accent-soft);
+      padding: 8px;
+      border-radius: var(--radius-sm);
+    }
+
+    .party-avatar {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: repeating-linear-gradient(45deg, var(--surface-3) 0 4px, var(--border) 4px 8px);
+      border: 1px solid var(--border-strong);
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .party-member.own .party-avatar { border-color: var(--accent); }
+
+    .party-info { flex: 1; min-width: 0; }
+    .party-name { font-size: 12px; font-weight: 600; line-height: 1.2; }
+    .party-class { font-size: 10px; color: var(--ink-3); }
+    .party-player { font-size: 10px; color: var(--ink-4); }
+    .own-tag {
+      font-size: 9px; color: var(--accent); font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .where-we-stand {
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.5;
+    }
+    .where-we-stand .highlight { color: var(--ink); font-weight: 500; }
+    .where-we-stand .accent { color: var(--accent); font-weight: 500; }
+
+    .next-session-pill {
+      margin-top: 12px;
+      padding: 10px 12px;
+      background: var(--accent-soft);
+      border-radius: 8px;
+      border: 1px solid var(--accent-line);
+    }
+    .next-session-pill .pill-label {
+      font-size: 10px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .next-session-pill .pill-value {
+      font-size: 13px;
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .next-session-pill .pill-sub {
+      font-size: 11px; color: var(--ink-3); margin-top: 2px;
+    }
+
+    .quick-links { display: flex; flex-direction: column; gap: 2px; }
+    .quick-link {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 7px 0;
+      font-size: 13px;
+      color: var(--ink-2);
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+    .quick-link:hover { color: var(--accent); }
+    .quick-link .count { font-size: 11px; color: var(--ink-4); font-variant-numeric: tabular-nums; }
+
+    /* === Main Content === */
+    .main-col { min-width: 0; }
+
+    .page-title {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .page-subtitle {
+      font-size: 13px;
+      color: var(--ink-3);
+      margin-bottom: 28px;
+    }
+
+    .page-subtitle .accent { color: var(--accent); font-weight: 500; }
+
+    .section-tabs {
+      display: flex;
+      gap: 4px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+      overflow-x: auto;
+    }
+
+    .section-tab {
+      padding: 10px 14px;
+      font-size: 13px;
+      color: var(--ink-3);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      font-weight: 500;
+      transition: color 0.15s;
+      white-space: nowrap;
+    }
+    .section-tab:hover { color: var(--ink); }
+    .section-tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .section-tab .count {
+      font-size: 11px; color: var(--ink-4); margin-left: 4px; font-variant-numeric: tabular-nums;
+    }
+    .section-tab.active .count { color: var(--accent); opacity: 0.7; }
+
+    /* === Timeline === */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px; top: 12px; bottom: 12px;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--border) 0%, var(--border) 95%, transparent 100%);
+    }
+
+    .session-entry { position: relative; margin-bottom: 24px; }
+    .session-entry:last-child { margin-bottom: 0; }
+
+    .session-dot {
+      position: absolute;
+      left: -28px; top: 14px;
+      width: 15px; height: 15px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 2px solid var(--border-strong);
+    }
+
+    .session-entry.latest .session-dot {
+      background: var(--accent);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-soft);
+    }
+
+    .session-entry.next-up .session-dot {
+      border-style: dashed;
+      background: var(--bg);
+    }
+
+    .session-entry.pre-campaign .session-dot {
+      background: var(--surface-3);
+      border-color: var(--border-strong);
+      width: 11px;
+      height: 11px;
+      left: -26px;
+      top: 16px;
+    }
+
+    .session-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+    .session-card:hover {
+      border-color: var(--border-strong);
+      box-shadow: var(--shadow-md);
+    }
+
+    .session-entry.next-up .session-card,
+    .session-entry.pre-campaign .session-card {
+      background: var(--surface-2);
+      border-style: dashed;
+      border-color: var(--border-strong);
+    }
+    .session-entry.next-up .session-card:hover,
+    .session-entry.pre-campaign .session-card:hover {
+      box-shadow: none;
+    }
+
+    .session-header {
+      padding: 14px 18px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .session-meta-left { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+    .session-nr {
+      font-size: 10px;
+      color: var(--ink-4);
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .session-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    .session-date { font-size: 12px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+
+    .session-body { padding: 0 18px 18px; }
+
+    .session-tldr {
+      font-size: 14px;
+      color: var(--ink-2);
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+    .session-tldr.from-repo {
+      padding-left: 12px;
+      border-left: 3px solid var(--accent-line);
+    }
+
+    .data-source-note {
+      font-size: 10px;
+      color: var(--ink-4);
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    }
+
+    .data-source-note .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+    .data-source-note .dot.placeholder { background: var(--ink-4); }
+
+    /* Memory grid */
+    .memory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .memory-card {
+      background: var(--surface-2);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      transition: all 0.15s;
+      cursor: pointer;
+    }
+    .memory-card:hover { background: var(--surface); border-color: var(--border); }
+
+    .memory-kind {
+      font-size: 9px;
+      color: var(--ink-4);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .memory-content { font-size: 13px; color: var(--ink-2); line-height: 1.45; }
+
+    .memory-card.quote .memory-content {
+      font-family: 'Iowan Old Style', 'Apple Garamond', 'Baskerville', Georgia, serif;
+      font-style: italic;
+      color: var(--ink);
+    }
+    .memory-card.quote .memory-attr {
+      font-size: 11px;
+      color: var(--ink-3);
+      font-style: normal;
+      margin-top: 4px;
+    }
+
+    .memory-card.npc { display: flex; align-items: center; gap: 10px; }
+    .npc-portrait {
+      width: 36px; height: 36px;
+      border-radius: 50%; flex-shrink: 0;
+      background: repeating-linear-gradient(45deg, var(--surface-3) 0 4px, var(--border) 4px 8px);
+      border: 1px solid var(--border);
+    }
+    .memory-card.npc .npc-info { flex: 1; min-width: 0; }
+    .memory-card.npc .npc-name { font-size: 13px; font-weight: 500; color: var(--ink); }
+    .memory-card.npc .npc-hint { font-size: 11px; color: var(--ink-3); line-height: 1.3; }
+
+    .memory-card.location { background: var(--accent-soft); }
+    .memory-card.location .memory-kind { color: var(--accent); opacity: 0.7; }
+    .memory-card.location .memory-content { color: var(--ink); font-weight: 500; }
+
+    .memory-card.thread {
+      background: var(--surface);
+      border-color: var(--border);
+      border-left: 3px solid var(--accent-line);
+    }
+
+    .memory-card.item { background: var(--surface); border-color: var(--border); }
+
+    .session-tags {
+      display: flex; gap: 6px; flex-wrap: wrap;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+    .session-tag {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 14px;
+      background: var(--surface-2);
+      color: var(--ink-3);
+      font-weight: 500;
+    }
+
+    .session-cta {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+    .session-action {
+      font-size: 12px;
+      padding: 6px 12px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--ink-2);
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .session-action:hover { background: var(--surface-2); border-color: var(--border-strong); color: var(--ink); }
+    .session-action.primary { background: var(--accent); color: var(--surface); border-color: var(--accent); }
+    .session-action.primary:hover { background: oklch(40% 0.13 25); }
+
+    /* Pre-Campaign / Next-up */
+    .pre-campaign .session-body,
+    .next-up .session-body {
+      padding-top: 0;
+    }
+
+    .pre-event-text {
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.55;
+      margin-bottom: 0;
+    }
+
+    .pre-event-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .pre-event-list li {
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .pre-event-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 4px;
+      height: 4px;
+      background: var(--ink-4);
+      border-radius: 50%;
+    }
+
+    .pre-event-list li strong { color: var(--ink); font-weight: 600; }
+    .pre-event-text + .pre-event-list { margin-top: 8px; }
+
+    /* Loading state */
+    .loading-skel {
+      padding: 18px;
+      text-align: center;
+      color: var(--ink-3);
+      font-size: 13px;
+    }
+
+    /* Entity Grid */
+    .placeholder-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .entity-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all 0.15s;
+      cursor: pointer;
+    }
+    .entity-card:hover {
+      border-color: var(--border-strong);
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-2px);
+    }
+
+    .entity-portrait {
+      width: 100%;
+      aspect-ratio: 1;
+      background: repeating-linear-gradient(45deg, var(--surface-2) 0 6px, var(--surface-3) 6px 12px);
+      position: relative;
+    }
+    .entity-portrait::after {
+      content: attr(data-label);
+      position: absolute; bottom: 8px; left: 8px;
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 9px;
+      color: var(--ink-3);
+      background: rgba(255, 255, 255, 0.85);
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    .entity-body { padding: 12px 14px; }
+    .entity-name { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .entity-role { font-size: 11px; color: var(--ink-3); }
+
+    /* === Floating Chat === */
+    .chat-fab {
+      position: fixed;
+      bottom: 24px; right: 24px;
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--surface);
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-lg);
+      z-index: 100;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+    }
+    .chat-fab:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(28, 25, 23, 0.2); }
+    .chat-fab svg { width: 22px; height: 22px; }
+
+    .chat-panel {
+      position: fixed;
+      bottom: 24px; right: 24px;
+      width: 400px;
+      max-width: calc(100vw - 48px);
+      height: 600px;
+      max-height: calc(100vh - 80px);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow-lg);
+      z-index: 101;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .chat-panel.open { display: flex; }
+
+    .chat-panel-header {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--surface);
+    }
+    .chat-panel-title { font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+    .chat-panel-title-mark {
+      width: 22px; height: 22px;
+      background: var(--accent); color: var(--surface);
+      border-radius: 5px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700;
+    }
+    .chat-panel-title-sub { font-size: 11px; color: var(--ink-3); font-weight: 400; margin-left: 4px; }
+
+    .chat-close {
+      background: transparent; border: none;
+      width: 28px; height: 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      color: var(--ink-3);
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.15s;
+    }
+    .chat-close:hover { background: var(--surface-2); color: var(--ink); }
+    .chat-close svg { width: 16px; height: 16px; }
+
+    .chat-cost {
+      padding: 4px 16px;
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 10px;
+      color: var(--ink-4);
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    #chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+
+    .chat-msg {
+      animation: slideUp 0.25s ease-out;
+      max-width: 90%;
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .chat-msg.user {
+      align-self: flex-end;
+      background: var(--accent); color: var(--surface);
+      padding: 8px 12px;
+      border-radius: 12px 12px 4px 12px;
+      font-size: 13px;
+    }
+    .chat-msg.ai {
+      align-self: flex-start;
+      padding: 8px 12px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 4px 12px 12px 12px;
+      font-size: 13px;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .chat-msg.ai p { margin: 0 0 8px 0; }
+    .chat-msg.ai p:last-child { margin-bottom: 0; }
+    .chat-msg.ai strong { color: var(--accent); font-weight: 600; }
+    .chat-msg.ai em { color: var(--ink-2); }
+    .chat-msg.ai h4 { font-size: 13px; font-weight: 600; margin: 8px 0 4px; color: var(--accent); }
+    .chat-msg.ai ul, .chat-msg.ai ol { margin: 4px 0 8px 18px; }
+    .chat-msg.ai li { margin: 2px 0; }
+    .chat-msg.ai code {
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 11px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1px 5px;
+      border-radius: 3px;
+      color: var(--accent);
+    }
+
+    .chat-typing { display: flex; gap: 4px; align-items: center; padding: 2px 0; }
+    .chat-typing-dot {
+      width: 5px; height: 5px; background: var(--ink-4); border-radius: 50%;
+      animation: chatBounce 1.4s infinite;
+    }
+    .chat-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .chat-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes chatBounce {
+      0%, 60%, 100% { opacity: 0.4; transform: translateY(0); }
+      30% { opacity: 1; transform: translateY(-4px); }
+    }
+
+    .chat-input-area {
+      border-top: 1px solid var(--border);
+      padding: 12px;
+      background: var(--surface);
+    }
+    .chat-suggestions { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+    .chat-suggestion {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--ink-2);
+      cursor: pointer;
+      transition: all 0.15s;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .chat-suggestion:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent-line);
+      color: var(--accent);
+    }
+
+    .chat-input-row { display: flex; gap: 8px; align-items: flex-end; }
+    #chat-input {
+      flex: 1;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-family: inherit;
+      color: var(--ink);
+      outline: none;
+      transition: all 0.15s;
+      resize: none;
+      min-height: 36px;
+      max-height: 100px;
+    }
+    #chat-input:focus {
+      border-color: var(--accent);
+      background: var(--surface);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+    }
+    #chat-send {
+      background: var(--accent); color: var(--surface);
+      border: none;
+      border-radius: 8px;
+      width: 36px; height: 36px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+    #chat-send:hover:not(:disabled) { background: oklch(40% 0.13 25); }
+    #chat-send:disabled { opacity: 0.4; cursor: not-allowed; }
+    #chat-send svg { width: 16px; height: 16px; }
+
+    .section-content { display: none; }
+    .section-content.active { display: block; }
+
+    /* === Responsive === */
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; gap: 24px; padding: 20px 16px 100px; }
+      .side-rail { position: static; order: 2; }
+      .main-col { order: 1; }
+      .page-title { font-size: 24px; }
+      .timeline { padding-left: 22px; }
+      .session-dot { left: -22px; }
+      .session-entry.pre-campaign .session-dot { left: -20px; }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner { padding: 12px 16px; gap: 12px; }
+      .status-bar { gap: 12px; }
+      .status-item.hide-mobile { display: none; }
+      .session-header { padding: 12px 14px; }
+      .session-body { padding: 0 14px 14px; }
+      .session-title { font-size: 16px; }
+      .memory-grid { grid-template-columns: 1fr; }
+      .chat-panel { width: calc(100vw - 24px); right: 12px; bottom: 12px; }
+      .chat-fab { bottom: 16px; right: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-mark">B</div>
+      <div class="brand-text">
+        <h1>Biblo</h1>
+        <div class="subtitle">Kampagnen-Archiv</div>
+      </div>
+    </div>
+    <div class="status-bar">
+      <div class="status-item hide-mobile">
+        <div class="status-label">Kampagne</div>
+        <div class="status-value">Fluch des Strahd</div>
+      </div>
+      <div class="status-divider hide-mobile"></div>
+      <div class="status-item">
+        <div class="status-label">Sessions</div>
+        <div class="status-value" id="status-sessions">– gespielt</div>
+      </div>
+      <div class="status-divider"></div>
+      <div class="status-item">
+        <div class="status-label">Status</div>
+        <div class="status-value">Start am 13.05.</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- Side rail -->
+  <aside class="side-rail">
+    <div class="rail-block">
+      <div class="rail-block-label">Party</div>
+      <div class="party-list" id="party-list"></div>
+    </div>
+
+    <div class="rail-block">
+      <div class="rail-block-label">Wo wir stehen</div>
+      <div class="where-we-stand">
+        Die Gruppe trifft sich frisch in <span class="highlight">Schilfheim</span>, einem Dorf am See. Ein letztes Abenteuer liegt hinter ihnen — ein Amulett für <span class="highlight">Florpthyz</span> hat nicht funktioniert. Die Kampagne <span class="accent">beginnt morgen.</span>
+      </div>
+      <div class="next-session-pill">
+        <div class="pill-label">Nächste Session</div>
+        <div class="pill-value">Session 001 · 13.05.2026</div>
+        <div class="pill-sub">DM Jana · in Schilfheim</div>
+      </div>
+    </div>
+
+    <div class="rail-block">
+      <div class="rail-block-label">Schnellzugriff</div>
+      <div class="quick-links">
+        <div class="quick-link" data-section="sessions">Timeline <span class="count" id="qc-sessions">0</span></div>
+        <div class="quick-link" data-section="characters">NPCs <span class="count" id="qc-npcs">0</span></div>
+        <div class="quick-link" data-section="locations">Orte <span class="count" id="qc-locations">0</span></div>
+        <div class="quick-link" data-section="spells">Spells <span class="count" id="qc-spells">0</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main column -->
+  <main class="main-col">
+    <h2 class="page-title">Fluch des Strahd</h2>
+    <p class="page-subtitle">
+      D&D 5e · DM <strong>Jana</strong> · 6 Spieler · <span class="accent">bereit für Start</span>
+    </p>
+
+    <nav class="section-tabs">
+      <button class="section-tab active" data-section="sessions">Timeline</button>
+      <button class="section-tab" data-section="characters">NPCs <span class="count" id="tab-npc-count">0</span></button>
+      <button class="section-tab" data-section="locations">Orte <span class="count" id="tab-loc-count">0</span></button>
+      <button class="section-tab" data-section="spells">Spells <span class="count" id="tab-spell-count">0</span></button>
+    </nav>
+
+    <!-- Timeline -->
+    <section id="section-sessions" class="section-content active">
+      <div class="timeline" id="timeline-container">
+        <div class="loading-skel">Lade Sessions aus dem Repo…</div>
+      </div>
+    </section>
+
+    <!-- NPCs -->
+    <section id="section-characters" class="section-content">
+      <div class="placeholder-grid" id="characters-grid">
+        <div class="loading-skel">Lade NPCs…</div>
+      </div>
+    </section>
+
+    <!-- Locations -->
+    <section id="section-locations" class="section-content">
+      <div class="placeholder-grid" id="locations-grid">
+        <div class="loading-skel">Lade Orte…</div>
+      </div>
+    </section>
+
+    <!-- Spells -->
+    <section id="section-spells" class="section-content">
+      <div class="placeholder-grid" id="spells-grid">
+        <div class="loading-skel">Lade Spells…</div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Floating Chat -->
+<button class="chat-fab" id="chat-fab" aria-label="Biblo Chat öffnen">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+</button>
+
+<div class="chat-panel" id="chat-panel">
+  <div class="chat-panel-header">
+    <div class="chat-panel-title">
+      <div class="chat-panel-title-mark">B</div>
+      <div>Biblo<span class="chat-panel-title-sub">Archivar</span></div>
+    </div>
+    <button class="chat-close" id="chat-close" aria-label="Chat schließen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="chat-cost" id="chat-cost">Bereit · 0 tok · $0.0000</div>
+  <div id="chat-messages">
+    <div class="chat-msg ai">
+      Hallo! Ich kenne die Kampagne. Frag mich nach Sessions, NPCs, Spells, Orten — ich schau im Archiv nach. 📖
+    </div>
+  </div>
+  <div class="chat-input-area">
+    <div class="chat-suggestions" id="chat-suggestions"></div>
+    <div class="chat-input-row">
+      <textarea id="chat-input" placeholder="Frag den Archivar..." rows="1"></textarea>
+      <button id="chat-send" aria-label="Senden">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ============================================================
+     CONFIG
+     ============================================================ */
+  const CAMPAIGN_PREFIX = 'kampagnen/fluch-des-strahd';
+  const MANIFEST_PATH = '_kontext/manifest.md';
+  const TIMELINE_PATH = `${CAMPAIGN_PREFIX}/_kontext/timeline.md`;
+  // Auto-Fallback: wenn die UI nicht im Repo läuft (Preview, lokal),
+  // greifen wir direkt auf GitHub Raw zu, damit echte Repo-Inhalte angezeigt werden.
+  const REPO_RAW = 'https://raw.githubusercontent.com/LeRaffl/Strahd/main/';
+
+  // Letzter Fallback für die Preview: Snapshot der wichtigsten Dateien
+  // damit man sieht wie die UI mit echten Daten aussieht, auch wenn das
+  // Repo privat ist. Im Deploy wird das ignoriert weil die relativen
+  // Pfade direkt funktionieren.
+  const PREVIEW_FALLBACK = {
+    [MANIFEST_PATH]: `# Manifest
+Index aller Dateien im Archiv.
+
+## Charaktere
+- \`charaktere/nia-sommerfeld/charakterbogen.md\` — Nia Sommerfeld (Human Bard College of Lore, Raffi) — Stats, Spells, Ausrüstung
+- \`charaktere/nia-sommerfeld/persoenlichkeit.md\` — Nia Sommerfeld Voice, Traits, Reaktionsmuster
+- \`charaktere/florpthyz-dread/charakterbogen.md\` — Florpthyz Dread (Gnome Fighter, Felix) — Standuhr mit Tentakeln
+- \`charaktere/alberich/charakterbogen.md\` — Alberich von Steinkreis (Dwarf Cleric, Andi)
+- \`charaktere/thorin/charakterbogen.md\` — Thorin (Barbarian, Tom) — Nordbewohner
+- \`charaktere/mara/charakterbogen.md\` — Mara Winterried (Human Bard, Anna) — Nias Tante
+- \`charaktere/moxi/charakterbogen.md\` — Moxie (Goblin Ranger, Svenja)
+
+## Regeln
+### Spells
+- \`regeln/spells/aid.md\` — Aid (Level 2, +5 HP Buff)
+- \`regeln/spells/bless.md\` — Bless (Level 1, +1d4 auf Rolls)
+- \`regeln/spells/cure-wounds.md\` — Cure Wounds (Level 1, 2d8+Mod Heilung)
+- \`regeln/spells/dissonant-whispers.md\` — Dissonant Whispers (Level 1, 3d6 Psychic)
+- \`regeln/spells/enhance-ability.md\` — Enhance Ability (Level 2, Advantage)
+- \`regeln/spells/faerie-fire.md\` — Faerie Fire (Level 1, Debuff)
+- \`regeln/spells/guidance.md\` — Guidance (Cantrip, +1d4)
+- \`regeln/spells/healing-word.md\` — Healing Word (Level 1, Bonus Action Heilung)
+- \`regeln/spells/spare-the-dying.md\` — Spare the Dying (Cantrip, Stabilisierung)
+- \`regeln/spells/true-strike.md\` — True Strike (Cantrip)
+- \`regeln/spells/vicious-mockery.md\` — Vicious Mockery (Cantrip, 1d6 Psychic)
+
+## Kampagnen
+### Fluch des Strahd
+- \`kampagnen/fluch-des-strahd/party.md\` — 6 PCs, DM Jana, Gruppen-Backstory
+- \`kampagnen/fluch-des-strahd/_kontext/welt.md\` — Barovia, Strahd, Götter, Bevölkerung
+- \`kampagnen/fluch-des-strahd/_kontext/timeline.md\` — Pre-Campaign-Ereignisse, Schilfheim
+- \`kampagnen/fluch-des-strahd/_kontext/session-zero.md\` — Organisationsregeln, X-Card
+- \`kampagnen/fluch-des-strahd/npcs/hanna-sommerfeld.md\` — Nias Mutter (Apfelried)
+- \`kampagnen/fluch-des-strahd/npcs/bert-sommerfeld.md\` — Nias Vater (Apfelried)
+- \`kampagnen/fluch-des-strahd/npcs/timo-sommerfeld.md\` — Nias älterer Bruder
+- \`kampagnen/fluch-des-strahd/npcs/greta-holunder.md\` — Nachbarin und Stammkundin
+- \`kampagnen/fluch-des-strahd/npcs/oskar-bram.md\` — Dachdecker mit kaputtem Rücken
+- \`kampagnen/fluch-des-strahd/orte/apfelried.md\` — Nias Heimatdorf
+- \`kampagnen/fluch-des-strahd/orte/schilfheim.md\` — Startdorf an einem See`,
+
+    [TIMELINE_PATH]: `# Timeline
+
+*Wird automatisch nach jeder Session ergänzt.*
+
+---
+
+## Vor der Kampagne
+
+### Apfelried-Verbindungen
+- Nia Sommerfeld lebt und arbeitet als wandernde Physiotherapeutin aus **Apfelried** heraus.
+- Familie Sommerfeld (Hanna, Bert, Timo) und ihr Kund:innen-Kreis (Greta Holunder, Oskar Bram) bilden Nias Heimat-Anker.
+- Nia hat das Dorf bewusst verlassen — kein Trauma, sondern ein Impuls "raus und Welt kennenlernen".
+- **Alberich von Steinkreis** hilft beim Bau der Kapelle in Apfelried, lernt dabei Nia kennen.
+- **Mara Winterried** (Nias Tante) lebt ebenfalls in/um Apfelried, verlässt es wegen zu viel Stille und zu wenig Erinnerung.
+
+### Das Transformations-Abenteuer (vor Session 0)
+- Irgendwann läuft ein Zauber in einem Abenteuer katastrophal schief.
+- **Humphrey Fizzlepads**, ein lebensfroher Gnom-Barde, wird in eine mahagonifarbene Standuhr mit Tentakeln verwandelt.
+- Er nennt sich seitdem **Florpthyz Dread** und weiß nicht mehr, wer er war.
+- Nia nimmt ihn mit. Alberich ist dabei.
+- Die Gruppe versucht seitdem, die Verwandlung rückgängig zu machen.
+
+### Thorin trifft Moxie
+- **Thorin** (Barbar, Nordbewohner) zog aus seinem Stamm aus, um sich seinen höchsten Kriegerrang zu verdienen.
+- Er trifft **Moxie** (Goblin-Rangerin) bei einem Banditenüberfall und rettet ihr das Leben.
+- Seither ziehen beide zusammen.
+
+### Kurz vor Kampagnenstart (S000)
+- Die zusammengewürfelte Gruppe — Nia, Florpthyz, Alberich, Mara, Thorin, Moxie — schließt ein letztes Abenteuer ab.
+- Ein Amulett, das Florpthyz hätte zurückverwandeln sollen, funktioniert nicht.
+- Die Party befindet sich in **Schilfheim** (Dorf an einem See) und feiert/erholt sich in der Dorfkneipe.
+- **Dort beginnt Session 1** von Fluch des Strahd.
+
+---
+
+*Hier kommen Session-Einträge ab S001.*`
+  };
+
+  // Static party data (from party.md — known up-front, not session-dependent)
+  // Wenn sich die Party ändert, hier updaten.
+  const PARTY = [
+    { name: 'Nia Sommerfeld', class: 'Bard (College of Lore)', player: 'Raffi', isOwn: true },
+    { name: 'Florpthyz Dread', class: 'Fighter (Eldritch Knight)', player: 'Felix' },
+    { name: 'Alberich von Steinkreis', class: 'Cleric (Domain of Light)', player: 'Andi' },
+    { name: 'Thorin', class: 'Barbarian', player: 'Tom' },
+    { name: 'Moxie', class: 'Ranger (Monster Slayer)', player: 'Svenja' },
+    { name: 'Mara Winterried', class: 'Bard', player: 'Anna' }
+  ];
+
+  // Active campaign info for Biblo system prompt
+  const CAMPAIGN_NAME = 'Fluch des Strahd';
+  const CAMPAIGN_STATUS = 'aktiv — erste Session 13.05.2026';
+
+  /* ============================================================
+     HELPERS
+     ============================================================ */
+  function escapeHtml(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  function avatarLabel(name) {
+    return name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') + '.jpg';
+  }
+
+  /* ============================================================
+     MANIFEST / REPO ACCESS
+     ============================================================ */
+  let manifestText = '';
+  let manifestPaths = [];
+
+  async function loadManifest() {
+    // Try relative first (when deployed in repo), GitHub raw, then preview fallback.
+    let text = null;
+    try {
+      const res = await fetch(MANIFEST_PATH);
+      if (res.ok) text = await res.text();
+    } catch (e) {}
+    if (!text) {
+      try {
+        const res = await fetch(REPO_RAW + MANIFEST_PATH);
+        if (res.ok) text = await res.text();
+      } catch (e) {}
+    }
+    if (!text && PREVIEW_FALLBACK[MANIFEST_PATH]) {
+      text = PREVIEW_FALLBACK[MANIFEST_PATH];
+      console.info('[Biblo] Manifest aus Preview-Fallback geladen — Live-Daten erscheinen, sobald die Seite im Strahd-Repo deployed ist.');
+    }
+    if (!text) throw new Error('Manifest konnte nicht geladen werden');
+    manifestText = text;
+    manifestPaths = manifestText.split('\n')
+      .map(l => l.match(/`([^`]+)`/))
+      .filter(Boolean)
+      .map(m => m[1]);
+  }
+
+  async function fetchRepoFile(path) {
+    // Try relative, then GitHub raw, then preview fallback.
+    try {
+      const res = await fetch(path);
+      if (res.ok) return await res.text();
+    } catch (e) {}
+    try {
+      const res = await fetch(REPO_RAW + path);
+      if (res.ok) return await res.text();
+    } catch (e) {}
+    if (PREVIEW_FALLBACK[path]) return PREVIEW_FALLBACK[path];
+    throw new Error(`fetch ${path} failed`);
+  }
+
+  function pathsForPrefix(prefix) {
+    return manifestPaths.filter(p => p.startsWith(prefix));
+  }
+
+  /* ============================================================
+     MARKDOWN SECTION PARSING
+     ============================================================ */
+  // Splits markdown by H2 headers and returns a map { headerText: bodyText }
+  function parseSections(md) {
+    const sections = {};
+    const lines = md.split('\n');
+    let currentHeader = '_intro';
+    let buf = [];
+    for (const line of lines) {
+      const h2 = line.match(/^##\s+(.+?)\s*$/);
+      if (h2) {
+        sections[currentHeader] = buf.join('\n').trim();
+        currentHeader = h2[1].trim();
+        buf = [];
+      } else {
+        buf.push(line);
+      }
+    }
+    sections[currentHeader] = buf.join('\n').trim();
+    return sections;
+  }
+
+  // Parse session-front-matter-like lines: **Datum:** 2026-01-15, **DM:** ...
+  function parseSessionFrontMatter(md) {
+    const meta = {};
+    const lines = md.split('\n').slice(0, 20);
+    for (const line of lines) {
+      const m = line.match(/\*\*([^:*]+):\*\*\s*(.+?)\s*$/);
+      if (m) meta[m[1].trim().toLowerCase()] = m[2].trim();
+    }
+    return meta;
+  }
+
+  // Extract title from "# Session 001 – Titel"
+  function parseSessionTitle(md) {
+    const m = md.match(/^#\s+Session\s+(\d+)\s*[–\-:]\s*(.+?)\s*$/m);
+    if (m) return { nr: m[1], title: m[2].trim() };
+    const fallback = md.match(/^#\s+(.+?)\s*$/m);
+    return { nr: '???', title: fallback ? fallback[1] : 'Session' };
+  }
+
+  // Parse a bulleted list (- ** name ** ... ) — returns array of {bold, rest}
+  function parseBulletList(text) {
+    if (!text) return [];
+    const items = [];
+    for (const raw of text.split('\n')) {
+      const line = raw.trim();
+      if (!line.startsWith('-') && !line.startsWith('*')) continue;
+      const stripped = line.replace(/^[-*]\s+/, '');
+      // try **Name** — rest or **Name** rest
+      const m = stripped.match(/^\*\*\[?([^\]*]+?)\]?\([^)]*\)?\*\*\s*[–\-:]?\s*(.*)$/) ||
+                stripped.match(/^\*\*([^*]+?)\*\*\s*[–\-:]?\s*(.*)$/);
+      if (m) {
+        items.push({ bold: m[1].trim(), rest: m[2].trim() });
+      } else {
+        items.push({ bold: '', rest: stripped });
+      }
+    }
+    return items;
+  }
+
+  // Parse quotes — "..." – Attribution OR „..." – Attribution
+  function parseQuotes(text) {
+    if (!text) return [];
+    const quotes = [];
+    for (const raw of text.split('\n')) {
+      const line = raw.trim();
+      if (!line.startsWith('-') && !line.startsWith('*') && !line.startsWith('>')) continue;
+      // Match "..." – attr or „..." – attr
+      const m = line.match(/[„"]([^"„"]+)["""]\s*[–\-]\s*(.+?)$/);
+      if (m) {
+        quotes.push({ text: m[1].trim(), attr: m[2].trim() });
+      } else {
+        // also collect non-quoted moments
+        const stripped = line.replace(/^[-*>]\s+/, '');
+        if (stripped) quotes.push({ text: stripped, attr: '' });
+      }
+    }
+    return quotes;
+  }
+
+  /* ============================================================
+     PRE-CAMPAIGN ENTRIES (from timeline.md)
+     ============================================================ */
+  // Parsed from kampagnen/fluch-des-strahd/_kontext/timeline.md "## Vor der Kampagne"
+  function buildPreCampaignEntries(timelineMd) {
+    const sections = parseSections(timelineMd);
+    const pre = sections['Vor der Kampagne'] || '';
+    if (!pre) return [];
+
+    // Match each H3 heading and its body (up to next H3 or end)
+    const entries = [];
+    const regex = /^###\s+(.+?)\n([\s\S]*?)(?=^###\s+|^---|\z)/gm;
+    let m;
+    while ((m = regex.exec(pre)) !== null) {
+      entries.push({ title: m[1].trim(), body: m[2].trim() });
+    }
+    return entries;
+  }
+
+  // Render a markdown body with bullet support → inline list HTML
+  function renderBodyAsList(body) {
+    const lines = body.split('\n').map(l => l.trim()).filter(Boolean);
+    const items = [];
+    let intro = [];
+    let inList = false;
+    for (const line of lines) {
+      if (line.startsWith('- ') || line.startsWith('* ')) {
+        inList = true;
+        items.push(line.replace(/^[-*]\s+/, ''));
+      } else if (!inList) {
+        intro.push(line);
+      }
+    }
+    let html = '';
+    if (intro.length) html += `<p class="pre-event-text">${renderInlineMd(escapeHtml(intro.join(' ')))}</p>`;
+    if (items.length) {
+      html += `<ul class="pre-event-list">${items.map(i => `<li>${renderInlineMd(escapeHtml(i))}</li>`).join('')}</ul>`;
+    }
+    return html;
+  }
+
+  /* ============================================================
+     RENDER — SESSIONS TIMELINE
+     ============================================================ */
+  function renderMemoryCard(m) {
+    if (m.kind === 'quote') {
+      return `<div class="memory-card quote">
+        <div class="memory-kind">Zitat</div>
+        <div class="memory-content">„${escapeHtml(m.text)}"</div>
+        ${m.attr ? `<div class="memory-attr">— ${escapeHtml(m.attr)}</div>` : ''}
+      </div>`;
+    }
+    if (m.kind === 'npc') {
+      return `<div class="memory-card npc">
+        <div class="npc-portrait" title="${escapeHtml(avatarLabel(m.name))}"></div>
+        <div class="npc-info">
+          <div class="npc-name">${escapeHtml(m.name)}</div>
+          <div class="npc-hint">${escapeHtml(m.hint || '')}</div>
+        </div>
+      </div>`;
+    }
+    if (m.kind === 'item') {
+      return `<div class="memory-card item">
+        <div class="memory-kind">Neues Item</div>
+        <div class="memory-content">${escapeHtml(m.text)}</div>
+      </div>`;
+    }
+    if (m.kind === 'thread') {
+      return `<div class="memory-card thread">
+        <div class="memory-kind">Offener Faden</div>
+        <div class="memory-content">${escapeHtml(m.text)}</div>
+      </div>`;
+    }
+    if (m.kind === 'location') {
+      return `<div class="memory-card location">
+        <div class="memory-kind">Ort</div>
+        <div class="memory-content">${escapeHtml(m.text)}</div>
+      </div>`;
+    }
+    return '';
+  }
+
+  function buildMemoriesFromSession(sections) {
+    const memories = [];
+
+    // NPCs
+    const npcs = parseBulletList(sections['NPCs diese Session'] || '');
+    for (const n of npcs) {
+      if (n.bold) memories.push({ kind: 'npc', name: n.bold, hint: n.rest.split('—')[0].trim() || n.rest });
+    }
+
+    // Quotes
+    const quoteSection = sections['Zitate / Memorable Moments'] || sections['Zitate'] || '';
+    const quotes = parseQuotes(quoteSection);
+    for (const q of quotes.slice(0, 3)) {
+      memories.push({ kind: 'quote', text: q.text, attr: q.attr });
+    }
+
+    // Items
+    const items = parseBulletList(sections['Neue Items / Veränderungen'] || sections['Neue Items'] || '');
+    for (const i of items.slice(0, 2)) {
+      const text = i.bold ? `${i.bold} ${i.rest}` : i.rest;
+      memories.push({ kind: 'item', text });
+    }
+
+    // Open threads
+    const threads = parseBulletList(sections['Offene Fäden'] || '');
+    for (const t of threads.slice(0, 2)) {
+      memories.push({ kind: 'thread', text: t.bold ? `${t.bold} ${t.rest}` : t.rest });
+    }
+
+    return memories;
+  }
+
+  async function renderTimeline() {
+    const container = document.getElementById('timeline-container');
+
+    let timelineMd = '';
+    try {
+      timelineMd = await fetchRepoFile(TIMELINE_PATH);
+    } catch (e) {
+      // optional
+    }
+    const preCampaignEntries = buildPreCampaignEntries(timelineMd);
+
+    // Find all session files in manifest
+    const sessionPaths = pathsForPrefix(`${CAMPAIGN_PREFIX}/sessions/`);
+    document.getElementById('status-sessions').textContent = `${sessionPaths.length} gespielt`;
+    document.getElementById('qc-sessions').textContent = sessionPaths.length;
+
+    // Load all sessions
+    const sessions = [];
+    for (const path of sessionPaths) {
+      try {
+        const md = await fetchRepoFile(path);
+        const titleInfo = parseSessionTitle(md);
+        const meta = parseSessionFrontMatter(md);
+        const sections = parseSections(md);
+        const tldr = (sections['Zusammenfassung'] || '').replace(/\n+/g, ' ');
+        const memories = buildMemoriesFromSession(sections);
+        sessions.push({ path, nr: titleInfo.nr, title: titleInfo.title, date: meta['datum'] || '', location: meta['ort in der spielwelt'] || meta['ort'] || '', tldr, memories });
+      } catch (e) {
+        console.warn(`Konnte Session ${path} nicht laden:`, e);
+      }
+    }
+
+    // Sort by nr
+    sessions.sort((a, b) => parseInt(a.nr) - parseInt(b.nr));
+
+    let html = '';
+
+    // Pre-Campaign entries
+    for (const pc of preCampaignEntries) {
+      html += `<div class="session-entry pre-campaign">
+        <div class="session-dot"></div>
+        <div class="session-card">
+          <div class="session-header">
+            <div class="session-meta-left">
+              <span class="session-nr">Vor S001</span>
+              <span class="session-title">${escapeHtml(pc.title)}</span>
+            </div>
+          </div>
+          <div class="session-body">
+            ${renderBodyAsList(pc.body)}
+            <div class="data-source-note"><span class="dot"></span>aus _kontext/timeline.md</div>
+          </div>
+        </div>
+      </div>`;
+    }
+
+    // Real sessions
+    sessions.forEach((s, i) => {
+      const isLatest = i === sessions.length - 1;
+      html += `<div class="session-entry ${isLatest ? 'latest' : ''}">
+        <div class="session-dot"></div>
+        <div class="session-card">
+          <div class="session-header">
+            <div class="session-meta-left">
+              <span class="session-nr">Session ${escapeHtml(s.nr)}</span>
+              <span class="session-title">${escapeHtml(s.title)}</span>
+            </div>
+            ${s.date ? `<span class="session-date">${escapeHtml(s.date)}</span>` : ''}
+          </div>
+          <div class="session-body">
+            <p class="session-tldr from-repo">${escapeHtml(s.tldr)}</p>
+            ${s.memories.length ? `<div class="memory-grid">${s.memories.map(renderMemoryCard).join('')}</div>` : ''}
+            ${s.location ? `<div class="session-tags"><span class="session-tag">📍 ${escapeHtml(s.location)}</span></div>` : ''}
+            <div class="session-cta">
+              <button class="session-action primary" data-session="${escapeHtml(s.nr)}" data-action="ask">Im Chat fragen</button>
+              <a class="session-action" href="${escapeHtml(s.path)}" target="_blank" rel="noopener">Notizen öffnen</a>
+            </div>
+            <div class="data-source-note"><span class="dot"></span>aus ${escapeHtml(s.path)}</div>
+          </div>
+        </div>
+      </div>`;
+    });
+
+    // Next-up placeholder (Session 001 if no sessions yet, or next after last)
+    const nextNr = sessions.length === 0 ? '001' : String(sessions.length + 1).padStart(3, '0');
+    const nextDate = sessions.length === 0 ? '13.05.2026' : 'noch nicht geplant';
+    html += `<div class="session-entry next-up">
+      <div class="session-dot"></div>
+      <div class="session-card">
+        <div class="session-header">
+          <div class="session-meta-left">
+            <span class="session-nr">Session ${nextNr}</span>
+            <span class="session-title" style="color: var(--ink-3); font-style: italic;">noch nicht gespielt</span>
+          </div>
+          <span class="session-date">${escapeHtml(nextDate)}</span>
+        </div>
+        <div class="session-body">
+          <p class="pre-event-text" style="color: var(--ink-3);">
+            ${sessions.length === 0 
+              ? 'Die Kampagne beginnt in Schilfheim. Memory Cards erscheinen hier, sobald die Session-Notizen im Repo liegen.' 
+              : 'Memory Cards erscheinen hier nach der nächsten Session.'}
+          </p>
+        </div>
+      </div>
+    </div>`;
+
+    container.innerHTML = html;
+
+    // Wire up session-action clicks
+    container.querySelectorAll('.session-action[data-action="ask"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const nr = btn.dataset.session;
+        openChat();
+        chatInput.value = `Erzähl mir mehr über Session ${nr}.`;
+        chatInput.focus();
+      });
+    });
+  }
+
+  // Tiny inline-MD: bold + italic + links
+  function renderInlineMd(text) {
+    return text
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+      .replace(/`([^`]+)`/g, '<code style="background:var(--surface-3);padding:1px 4px;border-radius:3px;font-size:11px;">$1</code>');
+  }
+
+  /* ============================================================
+     RENDER — NPCs / LOCATIONS / SPELLS
+     ============================================================ */
+  function entityNameFromPath(path) {
+    const base = path.split('/').pop().replace(/\.md$/, '');
+    return base.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  }
+
+  async function renderEntityGrid(containerId, prefix, fallbackPrefixes = []) {
+    const container = document.getElementById(containerId);
+    let paths = pathsForPrefix(prefix);
+    for (const p of fallbackPrefixes) paths = paths.concat(pathsForPrefix(p));
+
+    if (paths.length === 0) {
+      container.innerHTML = '<div class="loading-skel">Noch nichts im Manifest.</div>';
+      return paths.length;
+    }
+
+    const cards = await Promise.all(paths.map(async (path) => {
+      const displayName = entityNameFromPath(path);
+      let hint = '';
+      // Find the manifest line for this path and use the description as hint
+      const manifestLine = manifestText.split('\n').find(l => l.includes(`\`${path}\``));
+      if (manifestLine) {
+        const m = manifestLine.match(/—\s*(.+?)\s*$/);
+        if (m) hint = m[1];
+      }
+      return { path, displayName, hint };
+    }));
+
+    container.innerHTML = cards.map(c => `
+      <div class="entity-card" data-path="${escapeHtml(c.path)}" data-name="${escapeHtml(c.displayName)}">
+        <div class="entity-portrait" data-label="${escapeHtml(avatarLabel(c.displayName))}"></div>
+        <div class="entity-body">
+          <div class="entity-name">${escapeHtml(c.displayName)}</div>
+          <div class="entity-role">${escapeHtml(c.hint || '')}</div>
+        </div>
+      </div>
+    `).join('');
+
+    container.querySelectorAll('.entity-card').forEach(card => {
+      card.addEventListener('click', () => {
+        openChat();
+        chatInput.value = `Erzähl mir mehr über ${card.dataset.name}.`;
+        chatInput.focus();
+      });
+    });
+
+    return paths.length;
+  }
+
+  /* ============================================================
+     RENDER — PARTY (sidebar)
+     ============================================================ */
+  function renderParty() {
+    const container = document.getElementById('party-list');
+    container.innerHTML = PARTY.map(p => `
+      <div class="party-member ${p.isOwn ? 'own' : ''}" data-name="${escapeHtml(p.name)}">
+        <div class="party-avatar"></div>
+        <div class="party-info">
+          <div class="party-name">${escapeHtml(p.name)} ${p.isOwn ? '<span class="own-tag">DU</span>' : ''}</div>
+          <div class="party-class">${escapeHtml(p.class)}</div>
+        </div>
+      </div>
+    `).join('');
+
+    container.querySelectorAll('.party-member').forEach(el => {
+      el.addEventListener('click', () => {
+        openChat();
+        chatInput.value = `Erzähl mir mehr über ${el.dataset.name}.`;
+        chatInput.focus();
+      });
+    });
+  }
+
+  /* ============================================================
+     CHAT (Claude Haiku)
+     ============================================================ */
+  const WORKER_URL = 'https://strahd-proxy.xgwvfz7nrb.workers.dev';
+  const MODEL = 'claude-haiku-4-5-20251001';
+  const MAX_TOOL_ITERATIONS = 8;
+
+  const SYSTEM_PREAMBLE = `Du bist Biblo, der Kampagnen-Archivar für eine D&D 5e Kampagne.
+Antworte immer auf Deutsch, prägnant (2–4 Sätze).
+Nutze \`read_file(path)\` und \`list_files(prefix)\` aus dem Manifest. Zitiere nur aus tatsächlich geladenen Dateien.
+Default: keine Transkripte laden — erst die kuratierte sessions/<nr>.md.`;
+
+  const TOOLS = [
+    { name: 'read_file', description: 'Liest eine Markdown-Datei aus dem Archiv.', input_schema: { type: 'object', properties: { path: { type: 'string' } }, required: ['path'] } },
+    { name: 'list_files', description: 'Listet Dateien mit Präfix.', input_schema: { type: 'object', properties: { prefix: { type: 'string' } }, required: ['prefix'] } }
+  ];
+
+  let history = [];
+  const PRICING = { input: 1.0, output: 5.0, cacheWrite: 1.25, cacheRead: 0.1 };
+  const sessionUsage = { input: 0, output: 0, cacheWrite: 0, cacheRead: 0 };
+
+  function fmtTok(n) { return n >= 1000 ? (n / 1000).toFixed(1) + 'k' : String(n); }
+  function accumulateUsage(usage) {
+    if (!usage) return;
+    sessionUsage.input += usage.input_tokens || 0;
+    sessionUsage.output += usage.output_tokens || 0;
+    sessionUsage.cacheWrite += usage.cache_creation_input_tokens || 0;
+    sessionUsage.cacheRead += usage.cache_read_input_tokens || 0;
+    const cost = ((sessionUsage.input * PRICING.input + sessionUsage.output * PRICING.output + sessionUsage.cacheWrite * PRICING.cacheWrite + sessionUsage.cacheRead * PRICING.cacheRead) / 1_000_000);
+    const totalIn = sessionUsage.input + sessionUsage.cacheWrite + sessionUsage.cacheRead;
+    document.getElementById('chat-cost').textContent = `${fmtTok(totalIn)} in · ${fmtTok(sessionUsage.output)} out · $${cost.toFixed(4)}`;
+  }
+
+  function buildSystemPrompt() {
+    return SYSTEM_PREAMBLE + `\n\n## Aktive Kampagne: ${CAMPAIGN_NAME} (${CAMPAIGN_STATUS})\n\n## Manifest\n` + manifestText;
+  }
+
+  async function runTool(name, input) {
+    if (name === 'read_file') {
+      const path = input.path || '';
+      if (!manifestPaths.includes(path)) return { is_error: true, content: `Pfad "${path}" nicht im Manifest.` };
+      try {
+        return { is_error: false, content: await fetchRepoFile(path) };
+      } catch (e) { return { is_error: true, content: `Fetch-Fehler: ${e.message}` }; }
+    }
+    if (name === 'list_files') {
+      const prefix = input.prefix || '';
+      const matches = manifestPaths.filter(p => p.startsWith(prefix));
+      return { is_error: false, content: matches.length ? matches.join('\n') : `(keine)` };
+    }
+    return { is_error: true, content: `Unbekanntes Tool: ${name}` };
+  }
+
+  async function callClaude(messages) {
+    const res = await fetch(WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: MODEL,
+        max_tokens: 2000,
+        system: [{ type: 'text', text: buildSystemPrompt(), cache_control: { type: 'ephemeral' } }],
+        tools: TOOLS,
+        messages
+      })
+    });
+    const data = await res.json();
+    accumulateUsage(data.usage);
+    return data;
+  }
+
+  function extractText(content) {
+    if (!Array.isArray(content)) return '';
+    return content.filter(b => b.type === 'text').map(b => b.text).join('\n').trim();
+  }
+
+  function renderMarkdownChat(text) {
+    const lines = escapeHtml(text).split('\n');
+    const out = []; let listType = null; let paraBuf = [];
+    const flushPara = () => { if (paraBuf.length) { out.push('<p>' + paraBuf.join(' ') + '</p>'); paraBuf = []; } };
+    const closeList = () => { if (listType) { out.push(`</${listType}>`); listType = null; } };
+    const openList = (t) => { if (listType !== t) { closeList(); out.push(`<${t}>`); listType = t; } };
+    for (const raw of lines) {
+      const line = raw.replace(/\s+$/, '');
+      let m;
+      if ((m = line.match(/^\s*[-*]\s+(.*)$/))) { flushPara(); openList('ul'); out.push('<li>' + m[1] + '</li>'); }
+      else if ((m = line.match(/^\s*\d+\.\s+(.*)$/))) { flushPara(); openList('ol'); out.push('<li>' + m[1] + '</li>'); }
+      else if ((m = line.match(/^#{1,3}\s+(.*)$/))) { flushPara(); closeList(); out.push('<h4>' + m[1] + '</h4>'); }
+      else if (line.trim() === '') { flushPara(); closeList(); }
+      else { closeList(); paraBuf.push(line); }
+    }
+    flushPara(); closeList();
+    return out.join('').replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>').replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>').replace(/`([^`\n]+)`/g, '<code>$1</code>');
+  }
+
+  function addChatMessage(text, role) {
+    const msgs = document.getElementById('chat-messages');
+    const div = document.createElement('div');
+    div.className = 'chat-msg ' + role;
+    if (role === 'ai') div.innerHTML = renderMarkdownChat(text);
+    else div.textContent = text;
+    msgs.appendChild(div);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+
+  function addTyping() {
+    const msgs = document.getElementById('chat-messages');
+    const div = document.createElement('div');
+    div.id = 'typing';
+    div.className = 'chat-msg ai';
+    div.innerHTML = '<div class="chat-typing"><div class="chat-typing-dot"></div><div class="chat-typing-dot"></div><div class="chat-typing-dot"></div></div>';
+    msgs.appendChild(div);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+
+  function removeTyping() { document.getElementById('typing')?.remove(); }
+
+  const chatInput = document.getElementById('chat-input');
+  const chatSend = document.getElementById('chat-send');
+  const chatPanel = document.getElementById('chat-panel');
+  const chatFab = document.getElementById('chat-fab');
+  const chatClose = document.getElementById('chat-close');
+
+  function openChat() { chatPanel.classList.add('open'); chatFab.style.display = 'none'; }
+  function closeChat() { chatPanel.classList.remove('open'); chatFab.style.display = 'flex'; }
+
+  chatFab.addEventListener('click', openChat);
+  chatClose.addEventListener('click', closeChat);
+
+  chatInput.addEventListener('input', () => {
+    chatInput.style.height = 'auto';
+    chatInput.style.height = Math.min(chatInput.scrollHeight, 100) + 'px';
+  });
+
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChatMessage(); }
+  });
+  chatSend.addEventListener('click', sendChatMessage);
+
+  async function sendChatMessage() {
+    const text = chatInput.value.trim();
+    if (!text) return;
+    chatInput.value = '';
+    chatInput.style.height = 'auto';
+    chatSend.disabled = true;
+    addChatMessage(text, 'user');
+    const checkpoint = history.length;
+    history.push({ role: 'user', content: text });
+    addTyping();
+
+    let succeeded = false;
+    try {
+      let iter = 0;
+      while (iter < MAX_TOOL_ITERATIONS) {
+        iter++;
+        const data = await callClaude(history);
+        if (data.error) { removeTyping(); addChatMessage(`Fehler: ${data.error.message || JSON.stringify(data.error)}`, 'ai'); break; }
+        history.push({ role: 'assistant', content: data.content });
+        if (data.stop_reason === 'tool_use') {
+          const toolUses = data.content.filter(b => b.type === 'tool_use');
+          const results = [];
+          for (const tu of toolUses) {
+            const r = await runTool(tu.name, tu.input);
+            results.push({ type: 'tool_result', tool_use_id: tu.id, content: r.content, is_error: r.is_error });
+          }
+          history.push({ role: 'user', content: results });
+          continue;
+        }
+        const reply = extractText(data.content);
+        removeTyping();
+        addChatMessage(reply || '(keine Antwort)', 'ai');
+        succeeded = true;
+        break;
+      }
+    } catch (e) { removeTyping(); addChatMessage(`Der Archivar antwortet nicht — ${e.message}`, 'ai'); }
+    if (!succeeded) history.length = checkpoint;
+    chatSend.disabled = false;
+    chatInput.focus();
+  }
+
+  function renderSuggestions() {
+    const suggestions = [
+      { label: 'Party erklärt', prompt: 'Wer ist alles in der Party und was ist die Gruppen-Backstory?' },
+      { label: 'Schilfheim', prompt: 'Was wissen wir über Schilfheim?' },
+      { label: 'Florpthyz', prompt: 'Was ist mit Florpthyz Dread passiert?' },
+      { label: 'Nias Spells', prompt: 'Was kann Nia gerade alles zaubern?' }
+    ];
+    document.getElementById('chat-suggestions').innerHTML = suggestions.map(s =>
+      `<button class="chat-suggestion" data-prompt="${escapeHtml(s.prompt)}">${escapeHtml(s.label)}</button>`
+    ).join('');
+    document.querySelectorAll('.chat-suggestion').forEach(b => {
+      b.addEventListener('click', () => { chatInput.value = b.dataset.prompt; sendChatMessage(); });
+    });
+  }
+
+  /* ============================================================
+     SECTION TABS
+     ============================================================ */
+  function renderSection(name) {
+    document.querySelectorAll('.section-content').forEach(s => s.classList.remove('active'));
+    document.getElementById(`section-${name}`).classList.add('active');
+    document.querySelectorAll('.section-tab').forEach(t => t.classList.toggle('active', t.dataset.section === name));
+  }
+
+  document.querySelectorAll('.section-tab').forEach(tab => {
+    tab.addEventListener('click', () => renderSection(tab.dataset.section));
+  });
+  document.querySelectorAll('.quick-link').forEach(link => {
+    link.addEventListener('click', () => {
+      renderSection(link.dataset.section);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  /* ============================================================
+     INIT
+     ============================================================ */
+  (async () => {
+    renderParty();
+    renderSuggestions();
+
+    try {
+      await loadManifest();
+    } catch (e) {
+      console.warn('Manifest-Fehler:', e);
+      document.getElementById('timeline-container').innerHTML = `
+        <div class="loading-skel">
+          ⚠️ Manifest <code>_kontext/manifest.md</code> konnte nicht geladen werden.<br/>
+          <small>Diese UI muss im Strahd-Repo deployed sein.</small>
+        </div>`;
+      return;
+    }
+
+    await renderTimeline();
+
+    const npcCount = await renderEntityGrid('characters-grid', `${CAMPAIGN_PREFIX}/npcs/`);
+    const locCount = await renderEntityGrid('locations-grid', `${CAMPAIGN_PREFIX}/orte/`);
+    const spellCount = await renderEntityGrid('spells-grid', 'regeln/spells/');
+
+    document.getElementById('qc-npcs').textContent = npcCount;
+    document.getElementById('qc-locations').textContent = locCount;
+    document.getElementById('qc-spells').textContent = spellCount;
+    document.getElementById('tab-npc-count').textContent = npcCount;
+    document.getElementById('tab-loc-count').textContent = locCount;
+    document.getElementById('tab-spell-count').textContent = spellCount;
+  })();
+</script>
+
+</body>
+</html>
