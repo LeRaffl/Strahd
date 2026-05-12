@@ -20,7 +20,8 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `charaktere/alberich/persoenlichkeit.md` — Alberich Voice, Lawful Good, tägliches Exorzismus-Ritual
 - `charaktere/alberich/beziehungen.md` — Alberichs Beziehungen (Fluch des Strahd)
 - `charaktere/thorin/charakterbogen.md` — Thorin (Barbarian, Tom) — 2,05m, Nordbewohner, verehrt Auriel aus Pflicht
-- `charaktere/thorin/persoenlichkeit.md` — Thorin Voice, behäbiger Bär, wenig Worte
+- `charaktere/thorin/persoenlichkeit.md` — Thorin Voice, behäbiger Bär, wenig Worte, Ahnen-Bindung
+- `charaktere/thorin/background.md` — Thorins Backstory: Krieger des Nordens, Frostwesen-Schlacht, Pfeife & Tätowierungen
 - `charaktere/thorin/beziehungen.md` — Thorins Beziehungen (Fluch des Strahd)
 - `charaktere/mara/charakterbogen.md` — Mara Winterried (Human Bard, Anna) — 40J, Folkloresammlerin, Nias Tante
 - `charaktere/mara/persoenlichkeit.md` — Mara Voice, fragt immer nach dem Warum, dokumentiert Humphreys Existenz
