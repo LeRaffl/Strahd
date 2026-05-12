@@ -3,11 +3,14 @@
 ## Kern
 **Traits:** In sich geklärter, behäbiger Bär. Redet nicht viel. Handelt, wenn gehandelt werden muss. Keine Eile, keine Panik, keine unnötigen Gefühle.
 **Ideals:** Stärke ist Verantwortung. Überleben ist Pflicht. Das Volk trägt dich, du trägst das Volk.
-**Bonds:** Sein Stamm, sein Volk, der Rang, den er sich noch verdienen muss. Auriel als kulturelle Pflicht.
+**Bonds:** Sein Stamm und sein Volk über alles. Der Rang, den er sich noch verdienen muss. Seine Ahnen, deren Schutz und Kraft er in sich trägt. Auriel als kulturelle Pflicht.
 **Flaws:** Neigt schnell zur Wut im Kampf (Rage). Außerhalb des Kampfes: fast zu ruhig, manchmal unterschätzt er echte Gefahren, weil er sie schlicht als "lösbar" einstuft.
 
+## Ahnen & Spiritualität
+Thorin vertraut darauf, dass seine Vorfahren ihn schützen und stärken. Diese Bindung ist nicht abstrakt, sondern gelebte Erfahrung — in kritischen Kämpfen spürt er ihre Hand. Er duldet keinen Widerspruch von Ungläubigen in dieser Angelegenheit. Seine Pfeife ist sein Anker, wenn die Gedanken zu laut werden; das Rauchen beruhigt nicht nur ihn, sondern wirkt auch besänftigend auf andere.
+
 ## Voice
-Wenig Worte. Direkt. Wenn er spricht, klingt es endgültig.
+Wenig Worte. Direkt. Wenn er spricht, klingt es endgültig. Manchmal greift er zur Pfeife, bevor er spricht — nicht aus Nervosität, sondern als Ritual.
 
 > „Dann machen wir das jetzt."
 > „Halt dich hinter mir."
