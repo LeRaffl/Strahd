@@ -5,7 +5,11 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `charaktere/shii-take/charakterbogen.md` — Shii Take (Human Druide, Raffi) — Stats, Spells, Ausrüstung
 - `charaktere/shii-take/persoenlichkeit.md` — Shii Take Voice, Traits, Reaktionsmuster
 - `charaktere/shii-take/beziehungen.md` — Shii Takes Beziehungen (pro Kampagne)
+<<<<<<< claude/elastic-grothendieck-361b11
 - `charaktere/nia-sommerfeld/charakterbogen.md` — Nia Sommerfeld (Human Bard College of Lore, Raffi) — Level-3-Build, Spells, Ausrüstung
+=======
+- `charaktere/nia-sommerfeld/charakterbogen.md` — Nia Sommerfeld (Arbeitstitel; Human Bard College of Dance, Raffi) — Level-3-Build, Spells, Ausrüstung
+>>>>>>> main
 - `charaktere/nia-sommerfeld/persoenlichkeit.md` — Nia Sommerfeld Voice, Traits, Reaktionsmuster
 - `charaktere/nia-sommerfeld/beziehungen.md` — Nia Sommerfelds Beziehungen (Fluch des Strahd, Party + Familie)
 - `charaktere/nia-sommerfeld/build-notizen.md` — DnDBeyond-Checklist Level 3 und Levelplan

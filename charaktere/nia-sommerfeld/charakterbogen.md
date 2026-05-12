@@ -1,10 +1,10 @@
 # Nia Sommerfeld (Arbeitstitel)
 **Spieler:** Raffi
-**Spezies:** Human | **Klasse:** Bard (College of Lore)
+**Spezies:** Human | **Klasse:** Bard (College of Dance)
 **Background:** Folk Hero (als wandernde Physiotherapeutin geflavoured) | **Erfahrung:** Milestone
-**Regeln:** D&D 5e 2024 / DnDBeyond Free Rules | **Start:** Level 3 | **Ability Scores:** Standard Array
+**Regeln:** D&D 5e 2024 / PHB 2024 | **Start:** Level 3 | **Ability Scores:** Standard Array
 
-> Arbeitsname und Details sind bewusst leicht umbenennbar. Mechanisch entspricht dieser Stand dem DnDBeyond-Free-Rules-Build: College of Lore statt College of Dance, Folk Hero statt Custom Background.
+> Arbeitsname und Details sind bewusst leicht umbenennbar. College of Dance erfordert PHB 2024 Zugang auf DnDBeyond (nicht in den Free Rules enthalten). Bis dahin lief der Build als College of Lore — der eigentliche Ziel-Build ist Dance.
 
 ---
 
@@ -24,7 +24,7 @@ Warmherzige Physiotherapeutin, Reha-Trainerin und Combat Medic aus einer intakte
 **Human ASI:** +2 DEX, +1 CHA
 
 **Proficiency Bonus:** +2 | **Speed:** 30 ft. | **Hit Dice:** 3d8 | **HP:** 21
-**AC:** 14 (Leather Armor + DEX) | **Initiative:** +3
+**AC:** 16 (Unarmored Defense: 10 + DEX +3 + CHA +3) | **Initiative:** +3
 **Spell Save DC:** 13 | **Spell Attack:** +5
 
 ## Skills
@@ -32,15 +32,12 @@ Warmherzige Physiotherapeutin, Reha-Trainerin und Combat Medic aus einer intakte
 |-------|------|--------------------|
 | Acrobatics | +5 | Folk Hero; Mobility, Fallen, Körperkontrolle |
 | Animal Handling | +3 | Folk Hero; Apfelried, Tiere, Hühner, Minka |
-| Athletics | +2 | College of Lore; Kraftsport, Heben, Bo-Staff-Körperlichkeit |
 | Insight | +5 | Bard Expertise; Körpersprache, Schmerz, Stress |
-| Investigation | +1 | College of Lore; Diagnostik, Ursachen finden |
 | Medicine | +5 | Bard Expertise; Berufskern |
-| Perception | +3 | College of Lore; Combat-Medic-Awareness |
 | Persuasion | +5 | Bard; Coaching, Beruhigen, Motivieren |
 | Survival | +3 | Human Skillful; wandernde Physio unterwegs |
 
-**Passive:** Perception 13 · Insight 15 · Investigation 11
+**Passive:** Perception 12 · Insight 15 · Investigation 10
 **Jack of All Trades:** halber Proficiency Bonus (+1) auf unproficient Ability Checks.
 
 ## Sprachen
@@ -56,7 +53,6 @@ Common Sign Language passt als professionelle, zugängliche Kommunikationsform f
 - **Human Traits:** Resourceful, Skillful, Versatile
 
 ## Ausrüstung
-- Leather Armor
 - 2 Daggers
 - Bo Staff / Quarterstaff (Trainingsstab / Mobility Stick)
 - Cook's Utensils
@@ -70,13 +66,15 @@ Common Sign Language passt als professionelle, zugängliche Kommunikationsform f
 - **Gold:** 14 GP
 
 ## Combat Notes Level 3
-- **Default Bonus Action:** Bardic Inspiration als Coach-Cue.
-- **Reaktion:** Cutting Words, wenn ein Gegner einen wichtigen Treffer, Check oder Schadenswurf hat.
+- **Bardic Inspiration:** Verteilen triggert direkt einen Bonus-Action Unarmed Strike für Nia — sie coacht und greift in einem Zug an.
+- **Inspiring Movement:** Ally macht 11+ auf Inspiration Die → bewegt sich als Reaktion halbe Geschwindigkeit ohne Opportunity Attack.
+- **Unarmed Strike:** +5 to hit (DEX oder CHA), 1d6+3 Schaden (Bludgeoning); primärer Nahkampf-Angriff ohne Cantrip-Investment.
+- **Bo Staff:** +5 to hit (CHA via True Strike), 1d6+3; nützlich für Reichweite oder wenn Unarmed Slot verbraucht.
 - **Default Buff:** Bless, wenn mehrere Allies angreifen oder Saves wichtig werden.
 - **Team-Offense:** Faerie Fire, wenn Advantage für mehrere Allies relevant ist.
 - **Emergency Healing:** Healing Word, wenn jemand down ist oder Abstand zählt.
 - **Hands-on Healing:** Cure Wounds oder Healer's Kit, wenn sie direkt an der Person ist.
-- **Bo Staff:** Ohne Magic nur STR-basiert (+2). Mit True Strike nutzt Nia CHA: +5 to hit, 1d6+3 Schaden, optional Radiant statt Bludgeoning.
+- **AC 16 Unarmored:** keine Rüstung nötig; Mobilität ist Teil des Kampfstils.
 
 ## Spells & Features
 ### Cantrips
@@ -97,8 +95,9 @@ Common Sign Language passt als professionelle, zugängliche Kommunikationsform f
 - **Enhance Ability** — perfekter Personal-Trainer-Spell für Checks.
 
 ### Features
-- **Bardic Inspiration (d6):** 3/Long Rest. Flavour: Technik-Cues, Atemrhythmus, Haltungskorrektur.
-- **Cutting Words:** Reaktion; reduziert gegnerischen d20-Test oder Schadenswurf mit Bardic Inspiration.
+- **Bardic Inspiration (d6):** 3/Long Rest. Flavour: Technik-Cues, Atemrhythmus, Haltungskorrektur, kurze Berührung an Schulter oder Arm.
+- **Dazzling Footwork:** Unarmored Defense (AC = 10+DEX+CHA); Unarmed Strikes nutzen DEX oder CHA, Schaden 1d6; nach Bardic Inspiration → Bonus-Action Unarmed Strike.
+- **Inspiring Movement:** Ally macht 11+ auf Inspiration Die → Reaktion: halbe Speed ohne Opportunity Attack.
 - **Expertise:** Medicine, Insight.
 - **Jack of All Trades:** +1 auf unproficient Ability Checks.
 - **Magic Initiate (Cleric):** Guidance, Spare the Dying, Bless; CHA als Spellcasting Ability.
