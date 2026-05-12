@@ -20,6 +20,8 @@ An freien Abenden geht Nia meistens früh ins Bett. Erholung ist kein Luxus, son
 ## Magie & Körperarbeit
 Nias Bard-Magie wirkt nicht wie Bühnenzauber, sondern wie physiologische Führung. Ihre Stimme gibt Takt, ihre Hände setzen Orientierungspunkte, ihre Bewegungen ziehen andere in einen besseren Rhythmus. Bei Heilung wird die Luft warm wie nach einem guten Bad; verspannte Muskeln lösen sich, Atemzüge werden tiefer, Hände hören auf zu zittern. Bei Buffs und Inspiration spürt man keine fremde Macht, sondern den eigenen Körper plötzlich klarer: Stand, Schwerpunkt, Timing, nächste Bewegung.
 
+Ihr Kampfstil ist Choreografie ohne Bühne. Nia liest Räume wie andere Leute Körpersprache lesen: wo steht wer, wer dreht sich gleich, wo ist die Lücke. Wenn sie Bardic Inspiration verteilt, tut sie das oft mit einer kurzen körperlichen Geste — ein Tippen auf die Schulter, ein Cue mit der Hand, manchmal nur ein Blick — und nutzt den Moment selbst für eine Attacke. Kein Showboating. Der Tanz ist Funktion, kein Auftritt.
+
 Sie trägt fast immer elastische Trainingsbänder bei sich, einfache Gummibänder aus ihrer Praxis. Damit demonstriert sie Übungen, stabilisiert notfalls Gelenke, improvisiert Dehnroutinen oder bindet einen Verband besser fest. Außerdem hat sie ein kleines Notizbuch mit Übungen, Patient:innen-Gewohnheiten, Essensnotizen und halbfertigen Briefen nach Hause.
 
 ## Voice
@@ -30,6 +32,8 @@ Freundlich-praktisch, mit ruhigem Trainerinnen-Ton. Keine großen Predigten; sie
 > „Du bist nicht kaputt. Du bist nur gerade sehr dramatisch verspannt."
 > „Behandeln kann ich dich in fünf Minuten immer noch. Außer du verblutest, dann diskutieren wir nachher."
 > „Meine Mutter sagt immer: Erst essen, dann urteilen. Ich ergänze: erst trinken, dann kämpfen."
+> „Links. Jetzt. — ich hatte schon recht, bevor du gefragt hast."
+> „Nicht nachdenken. Der Körper weiß das schon."
 
 ## Moralischer Kompass
 Neutral Good-ish mit praktischem Nutzenethos. Sie hilft zuerst, urteilt später. Wenn eine kalte Lösung langfristig vielen Menschen deutlich mehr hilft, kann sie sie akzeptieren; wenn die Kälte nur auf einer fragwürdigen, vermeintlichen oder unwahrscheinlichen Rechnung beruht, lehnt sie sie ab. Sie glaubt an Rehabilitation und zweite Chancen, muss aber lernen, dass nicht jeder Schaden sofort heilbar ist.
@@ -44,6 +48,7 @@ Neutral Good-ish mit praktischem Nutzenethos. Sie hilft zuerst, urteilt später.
 - **Fragwürdiges Heilmittel / Pilz / Kräutermischung:** lehnt nicht prinzipiell ab, prüft aber: kennt sie es, ist es genießbar, schlägt es auf den Magen, was sagt die Person, die es anbietet?
 - **Effizienz vs. Wärme:** Verschwendung ist nicht in ihrem Sinne. Sie kann harte Entscheidungen mittragen, wenn sie langfristig wirklich mehr Menschen helfen; sie widerspricht, wenn Effizienz nur als Ausrede für Kälte benutzt wird.
 - **Gegner unterschätzt sie:** wechselt ohne Show in saubere Kampfhaltung; keine Drohung, nur Fokus.
+- **Nia greift an / tritt in Nahkampf:** kurze, lesbare Bewegungssequenz — kein Showboating, aber präzise Raumnutzung. Sie positioniert sich so, dass sie sofort wieder raus kann. Wer ihr zuschaut, merkt, dass das kein Selbstverteidigungskurs war.
 - **Düstere Umgebung / Grausamkeit:** versucht zuerst mit normaler Freundlichkeit gegenzuhalten; Character Development ist, wo diese Strategie reicht und wo nicht.
 - **Alles eskaliert auf einmal:** wird dezent überfordert. Sie ist nicht daran gewöhnt, dass die Welt so schnell und so umfassend böse werden kann.
 - **Spott / Jammern:** kann sie wegignorieren. Sie weiß, dass Leute aus Schmerz, Angst oder Scham Dinge sagen, die sie nicht wirklich meinen.
