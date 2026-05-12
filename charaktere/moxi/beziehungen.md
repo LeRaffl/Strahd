@@ -1,6 +1,40 @@
-# Beziehungen — Moxi
+# Beziehungen — Moxie
 
 Skala pro Dimension: **-3 bis +3**.
+
+---
+
+## Fluch des Strahd
+
+### Thorin (PC — Barbarian)
+**Typ:** Beschützer / Weggefährte
+**Seit:** Vor Kampagnenstart (Banditenrettung) | **Letzter Kontakt:** S000
+**Vertrauen +3 · Respekt +3 · Zuneigung +2 · Rivalität 0**
+Er hat ihr Leben gerettet. Das rechnet Moxie nicht mit Worten ab, sondern mit Verlässlichkeit. Sie folgt ihm nicht — sie geht mit ihm. Das ist ein Unterschied, auch wenn er klein aussieht.
+
+### Nia Sommerfeld (PC — Bard)
+**Typ:** Party-Kameradin
+**Seit:** Schilfheim | **Letzter Kontakt:** S000
+**Vertrauen +1 · Respekt +2 · Zuneigung +1 · Rivalität 0**
+Mensch, aber irgendwie okay. Kümmert sich ohne zu nerven. Moxie lässt sich von ihr heilen, ohne zu knurren.
+
+### Florpthyz Dread (PC — Fighter)
+**Typ:** Party-Kamerad
+**Seit:** Schilfheim | **Letzter Kontakt:** S000
+**Vertrauen +1 · Respekt +1 · Zuneigung 0 · Rivalität 0**
+Eine Uhr. Mit Tentakeln. Tickt komisch. Moxie hält Abstand und beobachtet. Kein Feind — noch nicht eingestuft.
+
+### Alberich von Steinkreis (PC — Cleric)
+**Typ:** Party-Kamerad
+**Seit:** Schilfheim | **Letzter Kontakt:** S000
+**Vertrauen +1 · Respekt +1 · Zuneigung 0 · Rivalität 0**
+Zwerg mit strengem Kodex. Moxie versteht Regeln — solange sie praktisch sind. Abwartend.
+
+### Mara Winterried (PC — Bard)
+**Typ:** Party-Kameradin
+**Seit:** Schilfheim | **Letzter Kontakt:** S000
+**Vertrauen +1 · Respekt +1 · Zuneigung +1 · Rivalität 0**
+Stellt Fragen. Moxie antwortet manchmal kurz. Die Fragen über ihre Sippe stehen noch aus — Mara hat noch nicht gefragt.
 
 ---
 
