@@ -1018,7 +1018,7 @@ Index aller Dateien im Archiv.
   // Static party data (from party.md — known up-front, not session-dependent)
   // Wenn sich die Party ändert, hier updaten.
   const PARTY = [
-    { name: 'Nia Sommerfeld', class: 'Bard (College of Lore)', player: 'Raffi', isOwn: true },
+    { name: 'Nia Sommerfeld', class: 'Bard (College of Dance)', player: 'Raffi' },
     { name: 'Florpthyz Dread', class: 'Fighter (Eldritch Knight)', player: 'Felix' },
     { name: 'Alberich von Steinkreis', class: 'Cleric (Domain of Light)', player: 'Andi' },
     { name: 'Thorin', class: 'Barbarian', player: 'Tom' },
@@ -1036,8 +1036,13 @@ Index aller Dateien im Archiv.
   function escapeHtml(s) {
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
+  const PORTRAIT_BASE = 'assets/portraits/';
   function avatarLabel(name) {
-    return name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') + '.jpg';
+    return name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') + '.png';
+  }
+  function portraitStyle(name) {
+    const url = PORTRAIT_BASE + avatarLabel(name);
+    return `background-image:url('${url}');background-size:cover;background-position:center;`;
   }
 
   /* ============================================================
@@ -1180,12 +1185,13 @@ Index aller Dateien im Archiv.
     const pre = sections['Vor der Kampagne'] || '';
     if (!pre) return [];
 
-    // Match each H3 heading and its body (up to next H3 or end)
     const entries = [];
-    const regex = /^###\s+(.+?)\n([\s\S]*?)(?=^###\s+|^---|\z)/gm;
-    let m;
-    while ((m = regex.exec(pre)) !== null) {
-      entries.push({ title: m[1].trim(), body: m[2].trim() });
+    const parts = pre.split(/^###\s+/m);
+    for (const part of parts) {
+      if (!part.trim()) continue;
+      const nl = part.indexOf('\n');
+      if (nl === -1) continue;
+      entries.push({ title: part.slice(0, nl).trim(), body: part.slice(nl + 1).trim() });
     }
     return entries;
   }
@@ -1225,7 +1231,7 @@ Index aller Dateien im Archiv.
     }
     if (m.kind === 'npc') {
       return `<div class="memory-card npc">
-        <div class="npc-portrait" title="${escapeHtml(avatarLabel(m.name))}"></div>
+        <div class="npc-portrait" style="${portraitStyle(m.name)}"></div>
         <div class="npc-info">
           <div class="npc-name">${escapeHtml(m.name)}</div>
           <div class="npc-hint">${escapeHtml(m.hint || '')}</div>
@@ -1317,14 +1323,15 @@ Index aller Dateien im Archiv.
       }
     }
 
-    // Sort by nr
-    sessions.sort((a, b) => parseInt(a.nr) - parseInt(b.nr));
+    // Sort by nr descending (newest first)
+    sessions.sort((a, b) => parseInt(b.nr) - parseInt(a.nr));
 
     let html = '';
 
-    // Pre-Campaign entries
+    // Pre-Campaign entries (rendered last = bottom of timeline)
+    let preCampaignHtml = '';
     for (const pc of preCampaignEntries) {
-      html += `<div class="session-entry pre-campaign">
+      preCampaignHtml += `<div class="session-entry pre-campaign">
         <div class="session-dot"></div>
         <div class="session-card">
           <div class="session-header">
@@ -1341,9 +1348,32 @@ Index aller Dateien im Archiv.
       </div>`;
     }
 
-    // Real sessions
+    // Next-up placeholder at top (Session 001 if no sessions yet, or next after last)
+    const nextNr = sessions.length === 0 ? '001' : String(sessions.length + 1).padStart(3, '0');
+    const nextDate = sessions.length === 0 ? '13.05.2026' : 'noch nicht geplant';
+    html += `<div class="session-entry next-up">
+      <div class="session-dot"></div>
+      <div class="session-card">
+        <div class="session-header">
+          <div class="session-meta-left">
+            <span class="session-nr">Session ${nextNr}</span>
+            <span class="session-title" style="color: var(--ink-3); font-style: italic;">noch nicht gespielt</span>
+          </div>
+          <span class="session-date">${escapeHtml(nextDate)}</span>
+        </div>
+        <div class="session-body">
+          <p class="pre-event-text" style="color: var(--ink-3);">
+            ${sessions.length === 0
+              ? 'Die Kampagne beginnt in Schilfheim. Memory Cards erscheinen hier, sobald die Session-Notizen im Repo liegen.'
+              : 'Memory Cards erscheinen hier nach der nächsten Session.'}
+          </p>
+        </div>
+      </div>
+    </div>`;
+
+    // Real sessions (newest first)
     sessions.forEach((s, i) => {
-      const isLatest = i === sessions.length - 1;
+      const isLatest = i === 0;
       html += `<div class="session-entry ${isLatest ? 'latest' : ''}">
         <div class="session-dot"></div>
         <div class="session-card">
@@ -1368,28 +1398,8 @@ Index aller Dateien im Archiv.
       </div>`;
     });
 
-    // Next-up placeholder (Session 001 if no sessions yet, or next after last)
-    const nextNr = sessions.length === 0 ? '001' : String(sessions.length + 1).padStart(3, '0');
-    const nextDate = sessions.length === 0 ? '13.05.2026' : 'noch nicht geplant';
-    html += `<div class="session-entry next-up">
-      <div class="session-dot"></div>
-      <div class="session-card">
-        <div class="session-header">
-          <div class="session-meta-left">
-            <span class="session-nr">Session ${nextNr}</span>
-            <span class="session-title" style="color: var(--ink-3); font-style: italic;">noch nicht gespielt</span>
-          </div>
-          <span class="session-date">${escapeHtml(nextDate)}</span>
-        </div>
-        <div class="session-body">
-          <p class="pre-event-text" style="color: var(--ink-3);">
-            ${sessions.length === 0 
-              ? 'Die Kampagne beginnt in Schilfheim. Memory Cards erscheinen hier, sobald die Session-Notizen im Repo liegen.' 
-              : 'Memory Cards erscheinen hier nach der nächsten Session.'}
-          </p>
-        </div>
-      </div>
-    </div>`;
+    // Pre-campaign entries at the bottom
+    html += preCampaignHtml;
 
     container.innerHTML = html;
 
@@ -1444,7 +1454,7 @@ Index aller Dateien im Archiv.
 
     container.innerHTML = cards.map(c => `
       <div class="entity-card" data-path="${escapeHtml(c.path)}" data-name="${escapeHtml(c.displayName)}">
-        <div class="entity-portrait" data-label="${escapeHtml(avatarLabel(c.displayName))}"></div>
+        <div class="entity-portrait" style="${portraitStyle(c.displayName)}"></div>
         <div class="entity-body">
           <div class="entity-name">${escapeHtml(c.displayName)}</div>
           <div class="entity-role">${escapeHtml(c.hint || '')}</div>
@@ -1469,10 +1479,10 @@ Index aller Dateien im Archiv.
   function renderParty() {
     const container = document.getElementById('party-list');
     container.innerHTML = PARTY.map(p => `
-      <div class="party-member ${p.isOwn ? 'own' : ''}" data-name="${escapeHtml(p.name)}">
-        <div class="party-avatar"></div>
+      <div class="party-member" data-name="${escapeHtml(p.name)}">
+        <div class="party-avatar" style="${portraitStyle(p.name)}"></div>
         <div class="party-info">
-          <div class="party-name">${escapeHtml(p.name)} ${p.isOwn ? '<span class="own-tag">DU</span>' : ''}</div>
+          <div class="party-name">${escapeHtml(p.name)}</div>
           <div class="party-class">${escapeHtml(p.class)}</div>
         </div>
       </div>
