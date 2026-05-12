@@ -13,7 +13,7 @@
 - **Alberich von Steinkreis** hilft beim Bau der Kapelle in Apfelried, lernt dabei Nia kennen.
 - **Mara Winterried** (Nias Tante) lebt ebenfalls in/um Apfelried, verlässt es wegen zu viel Stille und zu wenig Erinnerung.
 
-### Das Transformations-Abenteuer (vor Session 0)
+### Das Transformations-Abenteuer
 - Irgendwann läuft ein Zauber in einem Abenteuer katastrophal schief.
 - **Humphrey Fizzlepads**, ein lebensfroher Gnom-Barde, wird in eine mahagonifarbene Standuhr mit Tentakeln verwandelt.
 - Er nennt sich seitdem **Florpthyz Dread** und weiß nicht mehr, wer er war.
@@ -25,7 +25,7 @@
 - Er trifft **Moxie** (Goblin-Rangerin) bei einem Banditenüberfall und rettet ihr das Leben.
 - Seither ziehen beide zusammen.
 
-### Kurz vor Kampagnenstart (S000)
+### Kurz vor Kampagnenstart
 - Die zusammengewürfelte Gruppe — Nia, Florpthyz, Alberich, Mara, Thorin, Moxie — schließt ein letztes Abenteuer ab.
 - Ein Amulett, das Florpthyz hätte zurückverwandeln sollen, funktioniert nicht.
 - Die Party befindet sich in **Schilfheim** (Dorf an einem See) und feiert/erholt sich in der Dorfkneipe.
