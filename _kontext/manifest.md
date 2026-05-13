@@ -78,6 +78,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/npcs/oskar-bram.md` — Dachdecker mit kaputtem Rücken (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/orte/apfelried.md` — Nias und Maras Heimatdorf (nicht-Barovia)
 - `kampagnen/fluch-des-strahd/orte/schilfheim.md` — Startdorf an einem See, Beginn von Session 1
+- `kampagnen/fluch-des-strahd/npcs/konrad-haupt.md` — Ehemaliger Soldat, Kurier, Nias Kindheitsfigur; brachte ihr ein paar Bo-Staff-Tricks bei (Hintergrund, kommt seltener)
 
 #### Transkripte (Roh-Mitschriften — nur als Last-Resort laden)
 - `kampagnen/fluch-des-strahd/transcripts/README.md` — Wofür der Transkript-Ordner ist und wie er gepflegt wird
