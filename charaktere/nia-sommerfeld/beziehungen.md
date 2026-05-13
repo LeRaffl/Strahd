@@ -67,3 +67,9 @@ Zum Medizinstudium weggezogen. Ein Zeichen dafür, dass normales Weggehen in Nia
 **Seit:** Vorgeschichte | **Letzter Kontakt:** vor Kampagnenstart
 **Vertrauen +2 · Respekt +1 · Zuneigung +1 · Rivalität +1**
 Dachdecker mit schlechtem Rücken und schlechter Einsicht. Nia hat ihn oft behandelt und ihm noch öfter erklärt, warum man schwere Lasten nicht aus dem Rücken hebt.
+
+### Konrad (NPC — Durchreisender / Kindheitsfigur)
+**Typ:** Prägend, aber lose — kein Mentor im formellen Sinne
+**Seit:** Nias Kindheit (~10 Jahre alt) | **Letzter Kontakt:** vor Kampagnenstart, kommt seltener
+**Vertrauen +2 · Respekt +3 · Zuneigung +2 · Rivalität 0**
+Ehemaliger Soldat, macht jetzt Kurierfahrten. Kommt 2–4x im Jahr durch Apfelried, weil die Straße so geht. Nia hat ihn als Kind bewundert und sich bei jedem Besuch selbst mehr beigebracht, um ihm was vorführen zu können. Er hat ihr ein paar Bo-Staff-Tricks gezeigt — ausgebildet hat er sie nie. Nia kennt nur seinen Vornamen. Kommt in letzter Zeit seltener, was Nia schade findet.
