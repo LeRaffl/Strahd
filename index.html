@@ -1191,6 +1191,75 @@
 
     /* Make entity cards still clearly clickable as nav targets */
     .entity-card { user-select: none; }
+
+    /* Clickable portrait on detail pages */
+    .detail-portrait.has-image {
+      cursor: zoom-in;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .detail-portrait.has-image:hover {
+      transform: scale(1.02);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* === Lightbox === */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(28, 25, 23, 0.82);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      cursor: zoom-out;
+      animation: lightboxIn 0.18s ease-out;
+    }
+    .lightbox.open { display: flex; }
+    @keyframes lightboxIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: var(--radius);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+      cursor: default;
+      animation: lightboxImgIn 0.22s cubic-bezier(0.2, 0.7, 0.3, 1.1);
+      background: var(--surface);
+    }
+    @keyframes lightboxImgIn {
+      from { opacity: 0; transform: scale(0.94); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 16px; right: 16px;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--surface);
+      border: none;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s;
+    }
+    .lightbox-close:hover { background: rgba(255, 255, 255, 0.22); }
+    .lightbox-close svg { width: 18px; height: 18px; }
+
+    .lightbox-caption {
+      position: absolute;
+      bottom: 20px; left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 12px;
+      letter-spacing: 0.03em;
+      max-width: 80%;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -1312,6 +1381,17 @@
       </div>
     </section>
   </main>
+</div>
+
+<!-- Lightbox for portraits / art -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildansicht">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Schließen">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+  <img class="lightbox-img" id="lightbox-img" alt=""/>
+  <div class="lightbox-caption" id="lightbox-caption"></div>
 </div>
 
 <!-- Floating Chat -->
@@ -2054,6 +2134,51 @@ Index aller Dateien im Archiv.
   }
 
   /* ============================================================
+     LIGHTBOX (click portrait → enlarge)
+     ============================================================ */
+  const lightboxEl = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  function openLightbox(src, caption) {
+    lightboxImg.src = src;
+    lightboxImg.alt = caption || '';
+    lightboxCaption.textContent = caption || '';
+    lightboxEl.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightboxEl.classList.remove('open');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  }
+  lightboxEl.addEventListener('click', (e) => {
+    // Close on backdrop click; ignore clicks on the image itself
+    if (e.target === lightboxEl || e.target === lightboxClose || e.target.closest('#lightbox-close')) {
+      closeLightbox();
+    }
+  });
+  lightboxImg.addEventListener('click', (e) => e.stopPropagation());
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxEl.classList.contains('open')) closeLightbox();
+  });
+
+  // Probe whether an image URL resolves, then call cb(exists)
+  const _imgProbeCache = new Map();
+  function probeImage(url) {
+    if (_imgProbeCache.has(url)) return _imgProbeCache.get(url);
+    const p = new Promise(resolve => {
+      const im = new Image();
+      im.onload = () => resolve(true);
+      im.onerror = () => resolve(false);
+      im.src = url;
+    });
+    _imgProbeCache.set(url, p);
+    return p;
+  }
+
+  /* ============================================================
      RENDER — PARTY TAB
      ============================================================ */
   function extractKern(md) {
@@ -2455,7 +2580,7 @@ Index aller Dateien im Archiv.
       </div>
 
       <div class="detail-banner ${hasArt ? '' : 'no-art'}">
-        ${hasArt ? `<div class="detail-portrait" style="${artStyle(title)}"></div>` : ''}
+        ${hasArt ? `<div class="detail-portrait"></div>` : ''}
         <div class="detail-title-block">
           <h1 class="detail-title">${escapeHtml(title)}</h1>
           ${subtitle ? `<div class="detail-subtitle">${subtitle}</div>` : ''}
@@ -2477,6 +2602,27 @@ Index aller Dateien im Archiv.
       chatInput.focus();
     });
     wireInternalNav(container);
+
+    // Make the portrait clickable → lightbox, but only if the image actually exists.
+    // We probe by slug (stable filename) AND by title (covers art keyed off display name)
+    // and use the first one that resolves.
+    const portraitEl = container.querySelector('.detail-portrait');
+    if (portraitEl) {
+      const candidates = [
+        'assets/art/' + slug + '.png',
+        'assets/art/' + avatarLabel(title),
+      ];
+      (async () => {
+        for (const url of candidates) {
+          if (await probeImage(url)) {
+            portraitEl.classList.add('has-image');
+            portraitEl.style.backgroundImage = `url('${url}')`;
+            portraitEl.addEventListener('click', () => openLightbox(url, title));
+            return;
+          }
+        }
+      })();
+    }
 
     // Character sub-tabs
     container.querySelectorAll('[data-detail-tab]').forEach(tab => {
