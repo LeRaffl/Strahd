@@ -1591,7 +1591,7 @@ Index aller Dateien im Archiv.
 
     container.innerHTML = cards.map(c => `
       <div class="entity-card" data-path="${escapeHtml(c.path)}" data-name="${escapeHtml(c.displayName)}">
-        <div class="entity-portrait" style="${portraitStyle(c.displayName)}"></div>
+        <div class="entity-portrait" style="${artStyle(c.displayName)}"></div>
         <div class="entity-body">
           <div class="entity-name">${escapeHtml(c.displayName)}</div>
           <div class="entity-role">${escapeHtml(c.hint || '')}</div>
