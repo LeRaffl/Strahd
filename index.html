@@ -848,6 +848,349 @@
       .chat-panel { width: calc(100vw - 24px); right: 12px; bottom: 12px; }
       .chat-fab { bottom: 16px; right: 16px; }
     }
+
+    /* === Spell list (compact) === */
+    .spell-list {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .spell-row {
+      display: grid;
+      grid-template-columns: 1.6fr 0.7fr 1fr 1.3fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 10px 14px;
+      cursor: pointer;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.12s;
+    }
+    .spell-row:last-of-type { border-bottom: none; }
+    .spell-row:hover { background: var(--surface-2); }
+    .spell-row.open { background: var(--surface-2); }
+
+    .spell-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+    .spell-level {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .spell-school { font-size: 12px; color: var(--ink-3); }
+    .spell-casters { font-size: 12px; color: var(--ink-2); }
+    .spell-chevron {
+      width: 16px; height: 16px;
+      color: var(--ink-4);
+      transition: transform 0.15s;
+      flex-shrink: 0;
+    }
+    .spell-row.open .spell-chevron { transform: rotate(90deg); color: var(--accent); }
+
+    .spell-details {
+      grid-column: 1 / -1;
+      padding: 4px 0 8px;
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.55;
+      display: none;
+    }
+    .spell-row.open .spell-details { display: block; }
+    .spell-details .md-h2 { font-size: 13px; margin-top: 12px; margin-bottom: 4px; }
+    .spell-details p { margin-bottom: 8px; }
+    .spell-details ul { margin: 4px 0 8px 18px; }
+    .spell-details .spell-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 6px 16px;
+      padding: 8px 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+    .spell-details .spell-meta-grid .label {
+      font-size: 10px;
+      color: var(--ink-4);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 1px;
+    }
+    .spell-details .spell-meta-grid .value { color: var(--ink); }
+
+    .spell-details-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border);
+    }
+
+    @media (max-width: 700px) {
+      .spell-row { grid-template-columns: 1fr auto; gap: 4px 12px; padding: 12px 14px; }
+      .spell-name { grid-column: 1; }
+      .spell-chevron { grid-column: 2; grid-row: 1 / span 2; }
+      .spell-level, .spell-school, .spell-casters {
+        grid-column: 1; font-size: 11px;
+      }
+      .spell-school::before { content: '· '; color: var(--ink-4); }
+      .spell-casters::before { content: '· '; color: var(--ink-4); }
+      .spell-row > .spell-level + .spell-school { display: inline; }
+    }
+
+    /* === Detail view (Charakter / NPC / Ort / Spell) === */
+    .detail-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .detail-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--ink-3);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 6px 10px 6px 6px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.15s;
+      font-family: inherit;
+    }
+    .detail-back:hover { color: var(--accent); background: var(--surface-2); }
+    .detail-back svg { width: 14px; height: 14px; }
+
+    .detail-ask {
+      font-size: 12px;
+      padding: 6px 12px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--ink-2);
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .detail-ask:hover { background: var(--accent-soft); border-color: var(--accent-line); color: var(--accent); }
+    .detail-ask svg { width: 13px; height: 13px; }
+
+    .detail-banner {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+    .detail-banner.no-art { grid-template-columns: 1fr; }
+
+    .detail-portrait {
+      width: 140px;
+      aspect-ratio: 1;
+      border-radius: var(--radius);
+      background: repeating-linear-gradient(45deg, var(--surface-2) 0 6px, var(--surface-3) 6px 12px);
+      background-size: cover;
+      background-position: center top;
+      border: 1px solid var(--border);
+    }
+
+    .detail-title-block { min-width: 0; }
+    .detail-title {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 4px;
+    }
+    .detail-subtitle {
+      font-size: 13px;
+      color: var(--ink-3);
+      margin-bottom: 12px;
+    }
+    .detail-meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      font-size: 12px;
+    }
+    .detail-meta-strip .meta-item { color: var(--ink-2); }
+    .detail-meta-strip .meta-label {
+      font-size: 10px;
+      color: var(--ink-4);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      margin-right: 4px;
+    }
+
+    @media (max-width: 640px) {
+      .detail-banner { grid-template-columns: 90px 1fr; gap: 16px; }
+      .detail-portrait { width: 90px; }
+      .detail-title { font-size: 22px; }
+    }
+
+    /* Rendered markdown body */
+    .md-body {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--ink);
+    }
+    .md-body h1 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 28px 0 10px;
+    }
+    .md-body h1:first-child { display: none; }
+    .md-body .md-h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.005em;
+      margin: 24px 0 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--border);
+    }
+    .md-body .md-h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 18px 0 6px;
+    }
+    .md-body p { margin: 0 0 12px; color: var(--ink-2); }
+    .md-body p strong { color: var(--ink); font-weight: 600; }
+    .md-body ul, .md-body ol { margin: 0 0 14px 22px; padding: 0; }
+    .md-body ul li, .md-body ol li {
+      margin: 4px 0;
+      color: var(--ink-2);
+      line-height: 1.6;
+    }
+    .md-body ul li::marker { color: var(--ink-4); }
+    .md-body ol li::marker { color: var(--ink-4); }
+    .md-body li strong { color: var(--ink); font-weight: 600; }
+    .md-body blockquote {
+      margin: 12px 0;
+      padding: 8px 14px;
+      border-left: 3px solid var(--accent-line);
+      background: var(--accent-soft);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-family: 'Iowan Old Style', 'Apple Garamond', 'Baskerville', Georgia, serif;
+      font-style: italic;
+      color: var(--ink);
+      font-size: 14px;
+    }
+    .md-body blockquote p:last-child { margin-bottom: 0; }
+    .md-body hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 22px 0;
+    }
+    .md-body code {
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 12.5px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: 1px 5px;
+      border-radius: 3px;
+      color: var(--accent);
+    }
+    .md-body a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent-line);
+      transition: border-color 0.15s;
+    }
+    .md-body a:hover { border-bottom-color: var(--accent); }
+    .md-body .md-table-wrap { overflow-x: auto; margin: 0 0 16px; }
+    .md-body table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    .md-body th, .md-body td {
+      padding: 6px 10px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink-2);
+    }
+    .md-body th {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink-3);
+      background: var(--surface-2);
+    }
+    .md-body tr:last-child td { border-bottom: none; }
+    .md-body td strong { color: var(--ink); font-weight: 600; }
+
+    /* "Verwandt" sub-section on detail pages */
+    .detail-related {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .detail-related-label {
+      font-size: 10px;
+      color: var(--ink-4);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .detail-related-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .detail-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      padding: 5px 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: var(--ink-2);
+      cursor: pointer;
+      transition: all 0.15s;
+      text-decoration: none;
+      font-family: inherit;
+    }
+    .detail-chip:hover { background: var(--accent-soft); border-color: var(--accent-line); color: var(--accent); }
+    .detail-chip .chip-kind {
+      font-size: 9px;
+      color: var(--ink-4);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+    }
+    .detail-chip:hover .chip-kind { color: var(--accent); opacity: 0.7; }
+
+    .detail-source-note {
+      margin-top: 24px;
+      font-size: 10px;
+      color: var(--ink-4);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    }
+    .detail-source-note .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+
+    /* Make entity cards still clearly clickable as nav targets */
+    .entity-card { user-select: none; }
   </style>
 </head>
 <body>
@@ -957,8 +1300,15 @@
 
     <!-- Spells -->
     <section id="section-spells" class="section-content">
-      <div class="placeholder-grid" id="spells-grid">
+      <div id="spells-grid">
         <div class="loading-skel">Lade Spells…</div>
+      </div>
+    </section>
+
+    <!-- Detail view (Charakter / NPC / Ort / Spell) -->
+    <section id="section-detail" class="section-content">
+      <div id="detail-container">
+        <div class="loading-skel">Lade Details…</div>
       </div>
     </section>
   </main>
@@ -986,7 +1336,7 @@
   <div class="chat-cost" id="chat-cost">Bereit · 0 tok · $0.0000</div>
   <div id="chat-messages">
     <div class="chat-msg ai">
-      Hallo! Ich kenne die Kampagne. Frag mich nach Sessions, NPCs, Spells, Orten — ich schau im Archiv nach. 📖
+      Hi! Wenn dir die Wiki-Seite zu nem Charakter, Ort oder Spell nicht reicht — frag mich. Ich schau im Archiv nach und fasse zusammen. 📖
     </div>
   </div>
   <div class="chat-input-area">
@@ -1474,8 +1824,8 @@ Index aller Dateien im Archiv.
             ${s.memories.length ? `<div class="memory-grid">${s.memories.map(renderMemoryCard).join('')}</div>` : ''}
             ${s.location ? `<div class="session-tags"><span class="session-tag">📍 ${escapeHtml(s.location)}</span></div>` : ''}
             <div class="session-cta">
-              <button class="session-action primary" data-session="${escapeHtml(s.nr)}" data-action="ask">Im Chat fragen</button>
-              <a class="session-action" href="${escapeHtml(s.path)}" target="_blank" rel="noopener">Notizen öffnen</a>
+              <a class="session-action" href="${escapeHtml(s.path)}" target="_blank" rel="noopener">Volle Notizen öffnen</a>
+              <button class="session-action" data-session="${escapeHtml(s.nr)}" data-action="ask">Biblo fragen</button>
             </div>
             <div class="data-source-note"><span class="dot"></span>aus ${escapeHtml(s.path)}</div>
           </div>
@@ -1508,6 +1858,202 @@ Index aller Dateien im Archiv.
   }
 
   /* ============================================================
+     MARKDOWN — Full body renderer for detail views
+     ============================================================
+     Handles: h1/h2/h3, paragraphs, ul/ol lists, tables (GFM),
+     blockquotes, hr, inline bold/italic/code/links.
+     Internal links to known repo paths get rewritten to hash routes
+     so navigation stays within the SPA. */
+
+  // Resolve a possibly-relative markdown link to a known repo path.
+  function resolveLinkPath(href, basePath) {
+    if (!href) return null;
+    if (/^https?:\/\//i.test(href) || href.startsWith('#') || href.startsWith('mailto:')) return null;
+    // Normalize ../ segments relative to the basePath directory
+    const baseDir = basePath ? basePath.split('/').slice(0, -1) : [];
+    const parts = href.split('/');
+    const stack = baseDir.slice();
+    for (const part of parts) {
+      if (part === '..') stack.pop();
+      else if (part === '.' || part === '') continue;
+      else stack.push(part);
+    }
+    return stack.join('/');
+  }
+
+  // Map a repo path to a router hash, if it's a known kind of entity.
+  function pathToHash(path) {
+    if (!path) return null;
+    let m;
+    if ((m = path.match(/^charaktere\/([^/]+)\//))) return `#char/${m[1]}`;
+    if ((m = path.match(/^kampagnen\/[^/]+\/npcs\/([^/]+)\.md$/))) return `#npc/${m[1]}`;
+    if ((m = path.match(/^kampagnen\/[^/]+\/orte\/([^/]+)\.md$/))) return `#ort/${m[1]}`;
+    if ((m = path.match(/^regeln\/spells\/([^/]+)\.md$/))) return `#spell/${m[1]}`;
+    if ((m = path.match(/^kampagnen\/[^/]+\/sessions\/([^/]+)\.md$/))) return `#session/${m[1]}`;
+    return null;
+  }
+
+  // Render inline markdown (bold/italic/code/links) — escaping first.
+  function renderInline(text, basePath) {
+    let s = escapeHtml(text);
+    // Inline code first (so * inside it doesn't get interpreted)
+    s = s.replace(/`([^`\n]+)`/g, (_, c) => `<code>${c}</code>`);
+    // Links — [label](href)
+    s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
+      const decoded = href.replace(/&amp;/g, '&');
+      const resolved = resolveLinkPath(decoded, basePath);
+      const hash = resolved ? pathToHash(resolved) : null;
+      if (hash) return `<a href="${hash}" data-nav="${hash}">${label}</a>`;
+      if (/^https?:\/\//i.test(decoded)) return `<a href="${decoded}" target="_blank" rel="noopener">${label}</a>`;
+      // unknown internal link → just plain bold-ish
+      return `<a href="${decoded}" target="_blank" rel="noopener">${label}</a>`;
+    });
+    // Bold and italic
+    s = s.replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>');
+    s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
+    return s;
+  }
+
+  // Render a GFM-style table block. `headerLine` is the line of column names,
+  // `align` is the separator row, `rows` are subsequent data rows.
+  function renderTable(headerLine, rows, basePath) {
+    const splitCells = (line) => {
+      let s = line.trim();
+      if (s.startsWith('|')) s = s.slice(1);
+      if (s.endsWith('|')) s = s.slice(0, -1);
+      return s.split('|').map(c => c.trim());
+    };
+    const headers = splitCells(headerLine);
+    const body = rows.map(splitCells);
+    let html = '<div class="md-table-wrap"><table><thead><tr>';
+    for (const h of headers) html += `<th>${renderInline(h, basePath)}</th>`;
+    html += '</tr></thead><tbody>';
+    for (const row of body) {
+      html += '<tr>';
+      for (let i = 0; i < headers.length; i++) {
+        html += `<td>${renderInline(row[i] || '', basePath)}</td>`;
+      }
+      html += '</tr>';
+    }
+    html += '</tbody></table></div>';
+    return html;
+  }
+
+  // Full markdown → HTML. Block-level: headings, lists, tables, quotes, hr, paragraphs.
+  function markdownToHtml(md, basePath) {
+    const lines = md.replace(/\r\n/g, '\n').split('\n');
+    const out = [];
+
+    let i = 0;
+    while (i < lines.length) {
+      const line = lines[i];
+      const trimmed = line.trim();
+
+      // Skip empty lines
+      if (!trimmed) { i++; continue; }
+
+      // Horizontal rule
+      if (/^(-{3,}|\*{3,}|_{3,})$/.test(trimmed)) { out.push('<hr/>'); i++; continue; }
+
+      // Heading
+      let mh;
+      if ((mh = trimmed.match(/^(#{1,6})\s+(.+?)\s*$/))) {
+        const level = mh[1].length;
+        const content = renderInline(mh[2], basePath);
+        if (level === 1) out.push(`<h1>${content}</h1>`);
+        else if (level === 2) out.push(`<div class="md-h2">${content}</div>`);
+        else out.push(`<div class="md-h3">${content}</div>`);
+        i++;
+        continue;
+      }
+
+      // Table (GFM): a line that contains |, followed by a separator row
+      if (line.includes('|') && i + 1 < lines.length && /^\s*\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)+\|?\s*$/.test(lines[i + 1])) {
+        const header = line;
+        i += 2; // skip header + separator
+        const rows = [];
+        while (i < lines.length && lines[i].includes('|') && lines[i].trim() !== '') {
+          rows.push(lines[i]);
+          i++;
+        }
+        out.push(renderTable(header, rows, basePath));
+        continue;
+      }
+
+      // Blockquote
+      if (trimmed.startsWith('>')) {
+        const buf = [];
+        while (i < lines.length && lines[i].trim().startsWith('>')) {
+          buf.push(lines[i].replace(/^\s*>\s?/, ''));
+          i++;
+        }
+        const inner = markdownToHtml(buf.join('\n'), basePath);
+        out.push(`<blockquote>${inner}</blockquote>`);
+        continue;
+      }
+
+      // Unordered list
+      if (/^[-*]\s+/.test(trimmed)) {
+        out.push('<ul>');
+        while (i < lines.length && /^\s*[-*]\s+/.test(lines[i])) {
+          const itemLines = [lines[i].replace(/^\s*[-*]\s+/, '')];
+          i++;
+          while (i < lines.length && /^\s{2,}\S/.test(lines[i])) {
+            itemLines.push(lines[i].replace(/^\s+/, ''));
+            i++;
+          }
+          out.push(`<li>${renderInline(itemLines.join(' '), basePath)}</li>`);
+        }
+        out.push('</ul>');
+        continue;
+      }
+
+      // Ordered list
+      if (/^\d+\.\s+/.test(trimmed)) {
+        out.push('<ol>');
+        while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) {
+          const itemLines = [lines[i].replace(/^\s*\d+\.\s+/, '')];
+          i++;
+          while (i < lines.length && /^\s{2,}\S/.test(lines[i])) {
+            itemLines.push(lines[i].replace(/^\s+/, ''));
+            i++;
+          }
+          out.push(`<li>${renderInline(itemLines.join(' '), basePath)}</li>`);
+        }
+        out.push('</ol>');
+        continue;
+      }
+
+      // Paragraph: gather consecutive non-empty, non-special lines
+      const paraBuf = [];
+      while (i < lines.length) {
+        const l = lines[i];
+        const t = l.trim();
+        if (!t) break;
+        if (/^(#{1,6})\s+/.test(t)) break;
+        if (/^[-*]\s+/.test(t) || /^\d+\.\s+/.test(t)) break;
+        if (t.startsWith('>')) break;
+        if (/^(-{3,}|\*{3,}|_{3,})$/.test(t)) break;
+        paraBuf.push(l);
+        i++;
+      }
+      if (paraBuf.length) out.push(`<p>${renderInline(paraBuf.join(' '), basePath)}</p>`);
+    }
+
+    return out.join('\n');
+  }
+
+  // Wire up internal-nav clicks inside rendered markdown.
+  function wireInternalNav(root) {
+    root.querySelectorAll('a[data-nav]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        location.hash = a.dataset.nav;
+      });
+    });
+  }
+
+  /* ============================================================
      RENDER — PARTY TAB
      ============================================================ */
   function extractKern(md) {
@@ -1535,8 +2081,10 @@ Index aller Dateien im Archiv.
       return { ...p, kern, quote };
     }));
 
-    container.innerHTML = cards.map(c => `
-      <div class="party-card">
+    container.innerHTML = cards.map(c => {
+      const slug = c.charDir.split('/').pop();
+      return `
+      <a class="party-card" href="#char/${escapeHtml(slug)}" data-nav="#char/${escapeHtml(slug)}" style="text-decoration:none;color:inherit;">
         <div class="party-card-art" style="${artStyle(c.name)}"></div>
         <div class="party-card-body">
           <div class="party-card-header">
@@ -1545,18 +2093,13 @@ Index aller Dateien im Archiv.
           </div>
           ${c.kern ? `<div class="party-card-kern">${renderInlineMd(escapeHtml(c.kern))}</div>` : ''}
           ${c.quote ? `<div class="party-card-quote">„${escapeHtml(c.quote)}"</div>` : ''}
-          <button class="party-card-action" data-name="${escapeHtml(c.name)}">Im Chat fragen →</button>
+          <span class="party-card-action">Charakterbogen öffnen →</span>
         </div>
-      </div>
-    `).join('');
+      </a>
+    `;
+    }).join('');
 
-    container.querySelectorAll('.party-card-action').forEach(btn => {
-      btn.addEventListener('click', () => {
-        openChat();
-        chatInput.value = `Erzähl mir mehr über ${btn.dataset.name}.`;
-        chatInput.focus();
-      });
-    });
+    wireInternalNav(container);
   }
 
   /* ============================================================
@@ -1567,7 +2110,7 @@ Index aller Dateien im Archiv.
     return base.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
   }
 
-  async function renderEntityGrid(containerId, prefix, fallbackPrefixes = []) {
+  async function renderEntityGrid(containerId, prefix, hashKind, fallbackPrefixes = []) {
     const container = document.getElementById(containerId);
     let paths = pathsForPrefix(prefix);
     for (const p of fallbackPrefixes) paths = paths.concat(pathsForPrefix(p));
@@ -1579,6 +2122,7 @@ Index aller Dateien im Archiv.
 
     const cards = await Promise.all(paths.map(async (path) => {
       const displayName = entityNameFromPath(path);
+      const slug = path.split('/').pop().replace(/\.md$/, '');
       let hint = '';
       // Find the manifest line for this path and use the description as hint
       const manifestLine = manifestText.split('\n').find(l => l.includes(`\`${path}\``));
@@ -1586,28 +2130,365 @@ Index aller Dateien im Archiv.
         const m = manifestLine.match(/—\s*(.+?)\s*$/);
         if (m) hint = m[1];
       }
-      return { path, displayName, hint };
+      return { path, slug, displayName, hint };
     }));
 
     container.innerHTML = cards.map(c => `
-      <div class="entity-card" data-path="${escapeHtml(c.path)}" data-name="${escapeHtml(c.displayName)}">
+      <a class="entity-card" href="#${hashKind}/${escapeHtml(c.slug)}" data-nav="#${hashKind}/${escapeHtml(c.slug)}" style="text-decoration:none;color:inherit;display:block;">
         <div class="entity-portrait" style="${artStyle(c.displayName)}"></div>
         <div class="entity-body">
           <div class="entity-name">${escapeHtml(c.displayName)}</div>
           <div class="entity-role">${escapeHtml(c.hint || '')}</div>
         </div>
-      </div>
+      </a>
     `).join('');
 
-    container.querySelectorAll('.entity-card').forEach(card => {
-      card.addEventListener('click', () => {
-        openChat();
-        chatInput.value = `Erzähl mir mehr über ${card.dataset.name}.`;
-        chatInput.focus();
+    wireInternalNav(container);
+    return paths.length;
+  }
+
+  /* ============================================================
+     RENDER — SPELLS as compact list
+     ============================================================ */
+  function parseSpellMeta(md) {
+    // Pull leading **Key:** value lines
+    const meta = {};
+    const lines = md.split('\n').slice(0, 20);
+    for (const line of lines) {
+      const m = line.match(/^\*\*([^:*]+):\*\*\s*(.+?)\s*$/);
+      if (m) meta[m[1].trim().toLowerCase()] = m[2].trim();
+    }
+    return meta;
+  }
+
+  function parseSpellLevelSchool(schule) {
+    // "Abjuration (1st Level)" → { school: 'Abjuration', level: '1' }
+    // "Evocation (Cantrip)" → { school: 'Evocation', level: '0' }
+    if (!schule) return { school: '', level: '' };
+    const m = schule.match(/^(.+?)\s*\(([^)]+)\)\s*$/);
+    if (!m) return { school: schule, level: '' };
+    const school = m[1].trim();
+    const lvl = m[2].toLowerCase();
+    let level = '';
+    if (lvl.includes('cantrip')) level = 'Cantrip';
+    else {
+      const lm = lvl.match(/(\d+)/);
+      if (lm) level = `Lvl ${lm[1]}`;
+    }
+    return { school, level };
+  }
+
+  function parseSpellCasters(md) {
+    // Find "## Von diesen Charakteren gecastet" section, return names
+    const sections = parseSections(md);
+    const txt = sections['Von diesen Charakteren gecastet'] || sections['Von'] || '';
+    if (!txt) return [];
+    const items = parseBulletList(txt);
+    return items.map(i => {
+      // bold may include [Name](link) — strip brackets
+      const name = i.bold.replace(/^\[/, '').replace(/\]$/, '');
+      return name;
+    }).filter(Boolean);
+  }
+
+  async function renderSpellList() {
+    const container = document.getElementById('spells-grid');
+    const paths = pathsForPrefix('regeln/spells/');
+    if (paths.length === 0) {
+      container.innerHTML = '<div class="loading-skel">Noch keine Spells im Manifest.</div>';
+      return 0;
+    }
+
+    const rows = await Promise.all(paths.map(async (path) => {
+      const slug = path.split('/').pop().replace(/\.md$/, '');
+      const displayName = entityNameFromPath(path);
+      let md = '';
+      try { md = await fetchRepoFile(path); } catch (e) {}
+      const meta = parseSpellMeta(md);
+      const { school, level } = parseSpellLevelSchool(meta['schule'] || '');
+      const casters = parseSpellCasters(md);
+      return { path, slug, displayName, level, school, casters, meta, md };
+    }));
+
+    // Sort: cantrips first, then by level ascending, then by name
+    rows.sort((a, b) => {
+      const order = (lvl) => lvl === 'Cantrip' ? 0 : (parseInt(lvl.replace(/\D/g, '')) || 99);
+      const d = order(a.level) - order(b.level);
+      if (d !== 0) return d;
+      return a.displayName.localeCompare(b.displayName);
+    });
+
+    const chev = `<svg class="spell-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>`;
+
+    container.innerHTML = `<div class="spell-list">${rows.map((r, i) => `
+      <div class="spell-row" data-slug="${escapeHtml(r.slug)}" data-idx="${i}">
+        <div class="spell-name">${escapeHtml(r.displayName)}</div>
+        <div class="spell-level">${escapeHtml(r.level)}</div>
+        <div class="spell-school">${escapeHtml(r.school)}</div>
+        <div class="spell-casters">${r.casters.length ? escapeHtml(r.casters.join(', ')) : '<span style="color:var(--ink-4)">—</span>'}</div>
+        ${chev}
+        <div class="spell-details" id="spell-details-${i}"></div>
+      </div>
+    `).join('')}</div>`;
+
+    // Expand/collapse on click
+    container.querySelectorAll('.spell-row').forEach((row, i) => {
+      row.addEventListener('click', (e) => {
+        // Ignore clicks on internal links within details
+        if (e.target.closest('a')) return;
+        const r = rows[i];
+        const wasOpen = row.classList.contains('open');
+        // Close other rows for clarity
+        container.querySelectorAll('.spell-row.open').forEach(o => o.classList.remove('open'));
+        if (wasOpen) {
+          location.hash = '#spells';
+          return;
+        }
+        row.classList.add('open');
+        const details = row.querySelector('.spell-details');
+        if (!details.dataset.rendered) {
+          details.innerHTML = renderSpellDetails(r);
+          wireInternalNav(details);
+          details.dataset.rendered = '1';
+        }
+        // Update hash so it's shareable, without triggering the router
+        if (location.hash !== `#spell/${r.slug}`) {
+          spellListSelection = r.slug;
+          window.history.replaceState(null, '', `#spell/${r.slug}`);
+        }
       });
     });
 
-    return paths.length;
+    return rows.length;
+  }
+
+  // Track the currently-expanded spell so router can skip a re-render
+  let spellListSelection = null;
+
+  function renderSpellDetails(r) {
+    const sections = parseSections(r.md);
+    const descSection = sections['Offizielle Beschreibung (SRD 5.1)'] || sections['Beschreibung'] || '';
+    const higherLevel = sections['Auf höheren Stufen'] || '';
+    const notes = sections['Notizen'] || sections['Build-Hinweise'] || '';
+
+    const metaItems = [];
+    const labels = ['casting time', 'range', 'components', 'duration', 'attack/save'];
+    for (const k of labels) {
+      if (r.meta[k]) metaItems.push({ label: k, value: r.meta[k] });
+    }
+
+    let html = '';
+    if (metaItems.length) {
+      html += `<div class="spell-meta-grid">${metaItems.map(m => `
+        <div><span class="label">${escapeHtml(m.label)}</span><span class="value">${escapeHtml(m.value)}</span></div>
+      `).join('')}</div>`;
+    }
+    if (descSection) html += markdownToHtml(descSection, r.path);
+    if (higherLevel) html += `<div class="md-h2">Auf höheren Stufen</div>${markdownToHtml(higherLevel, r.path)}`;
+    if (notes) html += `<div class="md-h2">Notizen</div>${markdownToHtml(notes, r.path)}`;
+    if (r.casters.length) {
+      // Linkify casters
+      const casterSection = sections['Von diesen Charakteren gecastet'] || '';
+      if (casterSection) {
+        html += `<div class="md-h2">Gecastet von</div>${markdownToHtml(casterSection, r.path)}`;
+      }
+    }
+
+    html += `<div class="spell-details-actions">
+      <a class="session-action" href="${escapeHtml(r.path)}" target="_blank" rel="noopener">Rohdatei öffnen</a>
+    </div>`;
+    return html;
+  }
+
+  /* ============================================================
+     RENDER — Detail view (Charakter / NPC / Ort / Spell)
+     ============================================================ */
+  const DETAIL_KIND_LABEL = {
+    char: { label: 'Charakter', back: 'Party', backHash: '#party' },
+    npc:  { label: 'NPC',       back: 'NPCs',  backHash: '#npcs' },
+    ort:  { label: 'Ort',       back: 'Orte',  backHash: '#orte' },
+    spell:{ label: 'Spell',     back: 'Spells',backHash: '#spells' }
+  };
+
+  // Resolve the file path(s) for a given (kind, slug). Characters use a folder
+  // with multiple files we stitch together; other kinds have a single .md.
+  function resolveDetailPaths(kind, slug) {
+    if (kind === 'char') {
+      const dir = `charaktere/${slug}`;
+      const files = [
+        `${dir}/charakterbogen.md`,
+        `${dir}/persoenlichkeit.md`,
+        `${dir}/beziehungen.md`,
+        `${dir}/build-notizen.md`,
+      ].filter(p => manifestPaths.includes(p));
+      return files;
+    }
+    const candidates = manifestPaths.filter(p => p.endsWith(`/${slug}.md`));
+    if (kind === 'npc')   return candidates.filter(p => p.includes('/npcs/'));
+    if (kind === 'ort')   return candidates.filter(p => p.includes('/orte/'));
+    if (kind === 'spell') return candidates.filter(p => p.startsWith('regeln/spells/'));
+    return candidates;
+  }
+
+  // Pull the first H1 title from a markdown file.
+  function extractH1(md) {
+    const m = md.match(/^#\s+(.+?)\s*$/m);
+    return m ? m[1].trim() : '';
+  }
+
+  // Pull the leading **Key:** value front-matter as a meta array (in source order).
+  function extractFrontMeta(md) {
+    const items = [];
+    const lines = md.split('\n');
+    // Stop at first H2 or horizontal rule
+    for (const line of lines) {
+      const t = line.trim();
+      if (!t) continue;
+      if (/^#{2,}\s+/.test(t)) break;
+      if (/^(-{3,}|\*{3,}|_{3,})$/.test(t)) break;
+      const m = t.match(/^\*\*([^:*]+):\*\*\s*(.+?)\s*$/);
+      if (m) items.push({ label: m[1].trim(), value: m[2].trim() });
+    }
+    return items;
+  }
+
+  // Strip the leading H1 and the front-matter block from the body, so we can
+  // render a clean banner + body without duplication.
+  function stripFrontMatterAndH1(md) {
+    const lines = md.split('\n');
+    let i = 0;
+    // Skip H1
+    if (i < lines.length && /^#\s+/.test(lines[i])) i++;
+    // Skip front-matter lines and blank lines until we hit a non-meta line
+    while (i < lines.length) {
+      const t = lines[i].trim();
+      if (!t) { i++; continue; }
+      if (/^\*\*[^:*]+:\*\*/.test(t)) { i++; continue; }
+      if (/^(-{3,}|\*{3,}|_{3,})$/.test(t)) { i++; continue; }
+      break;
+    }
+    return lines.slice(i).join('\n').trim();
+  }
+
+  async function renderDetail(kind, slug) {
+    const container = document.getElementById('detail-container');
+    container.innerHTML = '<div class="loading-skel">Lade…</div>';
+
+    const meta = DETAIL_KIND_LABEL[kind];
+    if (!meta) {
+      container.innerHTML = '<div class="loading-skel">Unbekannter Detail-Typ.</div>';
+      return;
+    }
+
+    const paths = resolveDetailPaths(kind, slug);
+    if (!paths.length) {
+      container.innerHTML = `<div class="loading-skel">Keine Datei für „${escapeHtml(slug)}" gefunden.</div>`;
+      return;
+    }
+
+    // Fetch all relevant files
+    const files = [];
+    for (const path of paths) {
+      try {
+        const md = await fetchRepoFile(path);
+        files.push({ path, md });
+      } catch (e) {
+        console.warn('Konnte Detail-Datei nicht laden:', path, e);
+      }
+    }
+    if (!files.length) {
+      container.innerHTML = `<div class="loading-skel">Datei für „${escapeHtml(slug)}" konnte nicht geladen werden.</div>`;
+      return;
+    }
+
+    // The first file's H1 + front-matter drive the banner
+    const primary = files[0];
+    const title = extractH1(primary.md) || entityNameFromPath(primary.path);
+    const frontMeta = extractFrontMeta(primary.md);
+
+    // Try to find a portrait image. For characters and party-named NPCs we have
+    // assets/portraits/<slug>.png; for arbitrary entities the art lookup happens
+    // off the displayed name.
+    const hasArt = true; // we always show the portrait slot — placeholder pattern is fine
+
+    // Section sub-tabs for character bundles (multiple files)
+    let sectionTabsHtml = '';
+    let activeBody = '';
+    if (files.length > 1) {
+      const tabNames = files.map(f => {
+        const base = f.path.split('/').pop().replace(/\.md$/, '');
+        if (base === 'charakterbogen') return 'Charakterbogen';
+        if (base === 'persoenlichkeit') return 'Persönlichkeit';
+        if (base === 'beziehungen') return 'Beziehungen';
+        if (base === 'build-notizen') return 'Build-Notizen';
+        return base.charAt(0).toUpperCase() + base.slice(1);
+      });
+      sectionTabsHtml = `<nav class="section-tabs" style="margin-bottom: 18px;">${
+        tabNames.map((name, i) => `<button class="section-tab ${i === 0 ? 'active' : ''}" data-detail-tab="${i}">${escapeHtml(name)}</button>`).join('')
+      }</nav>`;
+      activeBody = files.map((f, i) => `
+        <div class="detail-file-body" data-detail-body="${i}" style="${i === 0 ? '' : 'display:none;'}">
+          ${markdownToHtml(stripFrontMatterAndH1(f.md), f.path)}
+          <div class="detail-source-note"><span class="dot"></span>aus ${escapeHtml(f.path)}</div>
+        </div>
+      `).join('');
+    } else {
+      activeBody = `${markdownToHtml(stripFrontMatterAndH1(primary.md), primary.path)}
+        <div class="detail-source-note"><span class="dot"></span>aus ${escapeHtml(primary.path)}</div>`;
+    }
+
+    const subtitle = frontMeta.length ? frontMeta.slice(0, 1).map(m => `${escapeHtml(m.label)}: ${escapeHtml(m.value)}`).join('') : '';
+    const metaStrip = frontMeta.slice(1).map(m =>
+      `<span class="meta-item"><span class="meta-label">${escapeHtml(m.label)}</span>${escapeHtml(m.value)}</span>`
+    ).join('');
+
+    container.innerHTML = `
+      <div class="detail-header">
+        <button class="detail-back" data-back="${meta.backHash}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          Zurück zu ${escapeHtml(meta.back)}
+        </button>
+        <button class="detail-ask" data-ask="${escapeHtml(title)}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Biblo dazu fragen
+        </button>
+      </div>
+
+      <div class="detail-banner ${hasArt ? '' : 'no-art'}">
+        ${hasArt ? `<div class="detail-portrait" style="${artStyle(title)}"></div>` : ''}
+        <div class="detail-title-block">
+          <h1 class="detail-title">${escapeHtml(title)}</h1>
+          ${subtitle ? `<div class="detail-subtitle">${subtitle}</div>` : ''}
+          ${metaStrip ? `<div class="detail-meta-strip">${metaStrip}</div>` : ''}
+        </div>
+      </div>
+
+      ${sectionTabsHtml}
+      <div class="md-body">${activeBody}</div>
+    `;
+
+    // Wire up interactions
+    container.querySelector('.detail-back').addEventListener('click', (e) => {
+      location.hash = e.currentTarget.dataset.back;
+    });
+    container.querySelector('.detail-ask').addEventListener('click', (e) => {
+      openChat();
+      chatInput.value = `Erzähl mir mehr über ${e.currentTarget.dataset.ask}.`;
+      chatInput.focus();
+    });
+    wireInternalNav(container);
+
+    // Character sub-tabs
+    container.querySelectorAll('[data-detail-tab]').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const idx = tab.dataset.detailTab;
+        container.querySelectorAll('.section-tab[data-detail-tab]').forEach(t =>
+          t.classList.toggle('active', t.dataset.detailTab === idx));
+        container.querySelectorAll('[data-detail-body]').forEach(b => {
+          b.style.display = b.dataset.detailBody === idx ? '' : 'none';
+        });
+      });
+    });
   }
 
   /* ============================================================
@@ -1615,23 +2496,20 @@ Index aller Dateien im Archiv.
      ============================================================ */
   function renderParty() {
     const container = document.getElementById('party-list');
-    container.innerHTML = PARTY.map(p => `
-      <div class="party-member" data-name="${escapeHtml(p.name)}">
+    container.innerHTML = PARTY.map(p => {
+      const slug = p.charDir.split('/').pop();
+      return `
+      <a class="party-member" href="#char/${escapeHtml(slug)}" data-nav="#char/${escapeHtml(slug)}" style="text-decoration:none;color:inherit;">
         <div class="party-avatar" style="${portraitStyle(p.name)}"></div>
         <div class="party-info">
           <div class="party-name">${escapeHtml(p.name)}</div>
           <div class="party-class">${escapeHtml(p.class)}</div>
         </div>
-      </div>
-    `).join('');
+      </a>
+    `;
+    }).join('');
 
-    container.querySelectorAll('.party-member').forEach(el => {
-      el.addEventListener('click', () => {
-        openChat();
-        chatInput.value = `Erzähl mir mehr über ${el.dataset.name}.`;
-        chatInput.focus();
-      });
-    });
+    wireInternalNav(container);
   }
 
   /* ============================================================
@@ -1829,23 +2707,99 @@ Default: keine Transkripte laden — erst die kuratierte sessions/<nr>.md.`;
   }
 
   /* ============================================================
-     SECTION TABS
-     ============================================================ */
-  function renderSection(name) {
+     ROUTING (hash-based)
+     ============================================================
+     Sections: #timeline (default), #party, #npcs, #orte, #spells
+     Details:  #char/<slug>, #npc/<slug>, #ort/<slug>, #spell/<slug>
+  */
+
+  const SECTION_TABS = ['sessions', 'party', 'characters', 'locations', 'spells'];
+  const HASH_SECTION_MAP = {
+    'timeline': 'sessions',
+    'sessions': 'sessions',
+    'party':    'party',
+    'npcs':     'characters',
+    'orte':     'locations',
+    'spells':   'spells',
+  };
+  const SECTION_TO_HASH = {
+    'sessions':  '#timeline',
+    'party':     '#party',
+    'characters':'#npcs',
+    'locations': '#orte',
+    'spells':    '#spells',
+  };
+
+  function showSection(name) {
     document.querySelectorAll('.section-content').forEach(s => s.classList.remove('active'));
-    document.getElementById(`section-${name}`).classList.add('active');
-    document.querySelectorAll('.section-tab').forEach(t => t.classList.toggle('active', t.dataset.section === name));
+    const el = document.getElementById(`section-${name}`);
+    if (el) el.classList.add('active');
+    document.querySelectorAll('.section-tab').forEach(t =>
+      t.classList.toggle('active', t.dataset.section === name));
+  }
+
+  function showDetail(kind, slug) {
+    document.querySelectorAll('.section-content').forEach(s => s.classList.remove('active'));
+    document.getElementById('section-detail').classList.add('active');
+    // Highlight the matching parent tab
+    const parentTab = { char: 'party', npc: 'characters', ort: 'locations', spell: 'spells' }[kind];
+    document.querySelectorAll('.section-tab').forEach(t =>
+      t.classList.toggle('active', t.dataset.section === parentTab));
+    renderDetail(kind, slug);
+  }
+
+  function routeFromHash() {
+    const raw = (location.hash || '').replace(/^#/, '');
+    if (!raw) { showSection('sessions'); return; }
+    const parts = raw.split('/');
+    const head = parts[0];
+
+    // Detail routes
+    if (parts.length >= 2 && ['char', 'npc', 'ort', 'spell'].includes(head)) {
+      if (head === 'spell') {
+        // For spells we stay on the list; just scroll to + open the row.
+        showSection('spells');
+        const row = document.querySelector(`.spell-row[data-slug="${parts[1]}"]`);
+        if (row && !row.classList.contains('open')) {
+          row.click();
+        } else if (row) {
+          row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+      }
+      showDetail(head, parts.slice(1).join('/'));
+      window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+      return;
+    }
+
+    // Section routes
+    const section = HASH_SECTION_MAP[head];
+    if (section) { showSection(section); return; }
+
+    // Unknown hash → default
+    showSection('sessions');
   }
 
   document.querySelectorAll('.section-tab').forEach(tab => {
-    tab.addEventListener('click', () => renderSection(tab.dataset.section));
+    tab.addEventListener('click', () => {
+      const target = SECTION_TO_HASH[tab.dataset.section] || '#timeline';
+      if (location.hash === target) {
+        // Already there — just ensure section is shown (in case of detail view)
+        routeFromHash();
+      } else {
+        location.hash = target;
+      }
+    });
   });
   document.querySelectorAll('.quick-link').forEach(link => {
     link.addEventListener('click', () => {
-      renderSection(link.dataset.section);
+      const target = SECTION_TO_HASH[link.dataset.section] || '#timeline';
+      location.hash = target;
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
+
+  window.addEventListener('hashchange', routeFromHash);
 
   /* ============================================================
      INIT
@@ -1869,9 +2823,9 @@ Default: keine Transkripte laden — erst die kuratierte sessions/<nr>.md.`;
     await renderTimeline();
     renderPartyTab();
 
-    const npcCount = await renderEntityGrid('characters-grid', `${CAMPAIGN_PREFIX}/npcs/`);
-    const locCount = await renderEntityGrid('locations-grid', `${CAMPAIGN_PREFIX}/orte/`);
-    const spellCount = await renderEntityGrid('spells-grid', 'regeln/spells/');
+    const npcCount = await renderEntityGrid('characters-grid', `${CAMPAIGN_PREFIX}/npcs/`, 'npc');
+    const locCount = await renderEntityGrid('locations-grid', `${CAMPAIGN_PREFIX}/orte/`, 'ort');
+    const spellCount = await renderSpellList();
 
     document.getElementById('qc-npcs').textContent = npcCount;
     document.getElementById('qc-locations').textContent = locCount;
@@ -1879,6 +2833,9 @@ Default: keine Transkripte laden — erst die kuratierte sessions/<nr>.md.`;
     document.getElementById('tab-npc-count').textContent = npcCount;
     document.getElementById('tab-loc-count').textContent = locCount;
     document.getElementById('tab-spell-count').textContent = spellCount;
+
+    // Initial route from hash (deep links work on page load)
+    routeFromHash();
   })();
 </script>
 
