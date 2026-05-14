@@ -61,6 +61,7 @@ Schlammiger Weg, riesige Bäume, schmaler werdende Straße. Nach fast fünf Stun
 - Nia und Alberich hatten Treffer eingesteckt; Moxie heilt Alberich, danach allgemeine Heilung.
 
 ### Das Tor
+(../../../assets/sessions/001/das-tor.png)
 > Ein riesiges Steintor mit kopflosen Ritterstatuen öffnet sich von selbst — hinter der Party schließt sich der Nebel undurchdringlich.
 
 *[alle]*
