@@ -3,7 +3,7 @@
 **Modul:** Curse of Strahd (D&D 5e Adventure)
 **Regeln:** D&D 5e 2024
 **DM:** Jana
-**Status:** bereit — erste Session 13.05.2026
+**Status:** aktiv — S001 gespielt 13.05.2026
 **Startlevel:** 3
 
 | Charakter | Spieler | Klasse | Level | Status |
@@ -34,4 +34,6 @@ Die Gruppe besteht aus zwei Teilgruppen, die sich in **Schilfheim** zusammengefu
 Das letzte Abenteuer liegt gerade hinter der Gruppe. Ein Amulett, das Florpthyz hätte zurückverwandeln sollen, hat nicht funktioniert. Die Party ist in **Schilfheim** (einem Dorf an einem See) und feiert/erholt sich in einer Kneipe — genau dort beginnt Session 1.
 
 ## Sessions
-*Noch keine Sessions gespielt.*
+| Nr | Datum | Titel | Ort |
+|----|-------|-------|-----|
+| [S001](sessions/001-schilfheim-nach-barovia.md) | 13.05.2026 | Zwischen Schilfheim und Barovia | Schilfheim → Svalidsch Wald → Barovia (Dorf) |

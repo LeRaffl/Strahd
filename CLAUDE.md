@@ -46,9 +46,39 @@ Der häufigste Schreib-Job. Drei Eingabeformen, gleicher Output:
 
 ### Inhaltliche Konvention
 - Nur **In-Game-Geschehen** in die kuratierte Session. Out-of-Game-Witze landen höchstens unter "Zitate / Memorable Moments".
-- "Was passiert ist" chronologisch, mit Unter-Überschriften pro Szene.
+- "Was passiert ist" chronologisch, mit einer `### Szenen-Überschrift` pro Happening.
 - "Entscheidungen & Konsequenzen" als Bullets — was hat wer getan, was folgt daraus.
 - Offene Fäden explizit als eigene Sektion, damit sie nicht verloren gehen.
+
+### Szenen-Format (wichtig für die Timeline-UI)
+Jede `### Szene` in "Was passiert ist" wird in der Web-UI zur eigenen aufklappbaren Kachel. Pflicht-Layout direkt unter der H3:
+
+```markdown
+### Szenen-Titel
+> 1-Satz-Zusammenfassung als Blockquote — wird default in der Kachel angezeigt.
+
+*[Charaktere die dabei waren]*
+
+![optionale Bilduntertitel](../../../assets/sessions/<nr>/dateiname.jpg)
+
+Volle Details ab hier — Paragraphen, Bulletlists, Links zu NPCs/Orten…
+```
+
+- **`> Blockquote-Zeile`** = TLDR, immer 1 Satz, in der collapsed Kachel sichtbar
+- **`*[chars]*`** = wer dabei war (Mehrere kommagetrennt, oder `alle`); wird als Pill in der aufgeklappten Kachel gezeigt; später für Character-Filter nutzbar
+- **`![](pfad)`** = optional, 1–5 Bilder am Anfang des Szenen-Bodys, vor dem Fließtext
+
+### Bilder
+- **Storage:** `assets/sessions/<nr>/<dateiname>.{jpg,png}` (z.B. `assets/sessions/001/woelfe.jpg`)
+- **Session-Ebene** (Bilder für die ganze Session): direkt nach dem Meta-Block, vor `---` und `## Zusammenfassung`:
+  ```markdown
+  **Bilder:**
+  ![Sonnenuntergang in Schilfheim](../../../assets/sessions/001/schilfheim.jpg)
+  ![Tor zum Wald](../../../assets/sessions/001/tor.jpg)
+  ```
+- **Szenen-Ebene:** 1–5 `![]()` Zeilen direkt nach dem `*[chars]*`-Tag (siehe Szenen-Format oben).
+- Bilder werden als Thumbnail-Galerie gerendert. Klick öffnet Lightbox.
+- Wenn keine Bilder vorhanden sind: einfach die `**Bilder:**`-/`![]()`-Zeilen weglassen — die Galerie wird dann unsichtbar.
 
 ## Build-/Regelfragen
 

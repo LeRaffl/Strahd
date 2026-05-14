@@ -315,11 +315,18 @@
     .session-header {
       padding: 14px 18px;
       display: flex;
-      align-items: baseline;
+      align-items: center;
       justify-content: space-between;
       gap: 12px;
       flex-wrap: wrap;
+      cursor: pointer;
+      user-select: none;
     }
+    .session-entry.next-up .session-header,
+    .session-entry.pre-campaign .session-header { cursor: default; }
+
+    .session-header-left { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; flex: 1; min-width: 0; }
+    .session-header-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
     .session-meta-left { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
     .session-nr {
       font-size: 10px;
@@ -335,7 +342,21 @@
     }
     .session-date { font-size: 12px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
 
-    .session-body { padding: 0 18px 18px; }
+    .session-chevron {
+      width: 16px; height: 16px;
+      color: var(--ink-4);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    .session-card.expanded .session-chevron { transform: rotate(90deg); color: var(--accent); }
+
+    .session-body {
+      padding: 0 18px 18px;
+      display: none;
+    }
+    .session-card.expanded .session-body { display: block; }
+    .session-entry.next-up .session-body,
+    .session-entry.pre-campaign .session-body { display: block; }
 
     .session-tldr {
       font-size: 14px;
@@ -346,6 +367,139 @@
     .session-tldr.from-repo {
       padding-left: 12px;
       border-left: 3px solid var(--accent-line);
+    }
+
+    /* === Scene cards (chronologische Happenings innerhalb einer Session) === */
+    .scenes-label {
+      font-size: 10px;
+      color: var(--ink-4);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin: 6px 0 8px;
+    }
+    .scene-list {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding-left: 14px;
+      border-left: 2px solid var(--accent-line);
+    }
+    .scene-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: border-color 0.15s, box-shadow 0.15s;
+      position: relative;
+    }
+    .scene-card::before {
+      content: '';
+      position: absolute;
+      left: -17px;
+      top: 16px;
+      width: 8px;
+      height: 8px;
+      background: var(--surface);
+      border: 2px solid var(--accent-line);
+      border-radius: 50%;
+    }
+    .scene-card:hover {
+      border-color: var(--border-strong);
+      box-shadow: var(--shadow-sm);
+    }
+    .scene-card.expanded {
+      border-color: var(--accent-line);
+    }
+    .scene-card.expanded::before {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+    .scene-header {
+      padding: 10px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .scene-header-text { flex: 1; min-width: 0; }
+    .scene-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .scene-tldr {
+      font-size: 12.5px;
+      color: var(--ink-2);
+      line-height: 1.5;
+    }
+    .scene-chevron {
+      width: 13px; height: 13px;
+      color: var(--ink-4);
+      transition: transform 0.2s, color 0.2s;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .scene-card.expanded .scene-chevron { transform: rotate(90deg); color: var(--accent); }
+
+    .scene-body {
+      display: none;
+      padding: 4px 14px 14px;
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.6;
+      border-top: 1px dashed var(--border);
+      margin-top: 4px;
+    }
+    .scene-card.expanded .scene-body { display: block; }
+
+    /* Image galleries (session + scene level) */
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 8px 0 14px;
+    }
+    .image-gallery.scene { margin: 8px 0 12px; }
+    .image-thumb {
+      width: 140px;
+      height: 140px;
+      border-radius: var(--radius-sm);
+      background-size: cover;
+      background-position: center;
+      background-color: var(--surface-2);
+      cursor: zoom-in;
+      border: 1px solid var(--border);
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+    }
+    .image-thumb:hover {
+      transform: scale(1.03);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-strong);
+    }
+    .image-gallery.scene .image-thumb { width: 120px; height: 120px; }
+
+    .scene-body p { margin: 8px 0; }
+    .scene-body p:first-child { margin-top: 8px; }
+    .scene-body ul { margin: 6px 0 10px 18px; }
+    .scene-body li { margin-bottom: 3px; }
+    .scene-body strong { color: var(--ink); font-weight: 600; }
+    .scene-body em { color: var(--ink-3); }
+    .scene-body a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent-line); }
+    .scene-body a:hover { border-bottom-style: solid; }
+    .scene-body .scene-chars {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      color: var(--ink-3);
+      background: var(--surface-2);
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-bottom: 8px;
     }
 
     .data-source-note {
@@ -1304,12 +1458,12 @@
     <div class="rail-block">
       <div class="rail-block-label">Wo wir stehen</div>
       <div class="where-we-stand">
-        Die Gruppe trifft sich frisch in <span class="highlight">Schilfheim</span>, einem Dorf am See. Ein letztes Abenteuer liegt hinter ihnen — ein Amulett für <span class="highlight">Florpthyz</span> hat nicht funktioniert. Die Kampagne <span class="accent">beginnt am 13.05.2026 um 18 Uhr.</span>
+        Die Party ist in <span class="highlight">Barovia (Dorf)</span> angekommen. <span class="highlight">Irena Koljana</span> siecht dahin — und der Brief, der die Gruppe hierhergelockt hat, stammt <span class="accent">nicht vom Bürgermeister.</span>
       </div>
       <div class="next-session-pill">
         <div class="pill-label">Nächste Session</div>
-        <div class="pill-value">Session 001 · 13.05.2026</div>
-        <div class="pill-sub">DM Jana · in Schilfheim</div>
+        <div class="pill-value">noch nicht geplant</div>
+        <div class="pill-sub">DM Jana</div>
       </div>
     </div>
 
@@ -1774,6 +1928,117 @@ Index aller Dateien im Archiv.
     return '';
   }
 
+  // Parse markdown image lines `![alt](path)` — returns array of {alt, src}.
+  // Stops at the first non-image, non-empty line.
+  function consumeLeadingImages(lines, startIdx, basePath) {
+    const images = [];
+    let i = startIdx;
+    while (i < lines.length) {
+      const line = lines[i].trim();
+      if (!line) { i++; continue; }
+      const m = line.match(/^!\[([^\]]*)\]\(([^)]+)\)\s*$/);
+      if (!m) break;
+      const resolved = resolveLinkPath(m[2], basePath) || m[2];
+      images.push({ alt: m[1], src: resolved });
+      i++;
+    }
+    return { images, nextIdx: i };
+  }
+
+  // Extract session-level images from intro section. Looks for a `**Bilder:**` line
+  // and collects subsequent `![]()` lines until a blank, HR, or other content.
+  function parseSessionImages(sections, basePath) {
+    const intro = sections['_intro'] || '';
+    if (!intro) return [];
+    const lines = intro.split('\n');
+    const headerIdx = lines.findIndex(l => /^\*\*Bilder:\*\*\s*$/i.test(l.trim()));
+    if (headerIdx === -1) return [];
+    return consumeLeadingImages(lines, headerIdx + 1, basePath).images;
+  }
+
+  function renderImageGallery(images, variant) {
+    if (!images || !images.length) return '';
+    const cls = variant === 'scene' ? 'image-gallery scene' : 'image-gallery';
+    return `<div class="${cls}">${images.map(img =>
+      `<div class="image-thumb" role="button" tabindex="0" data-lightbox-src="${escapeHtml(img.src)}" data-lightbox-alt="${escapeHtml(img.alt)}" style="background-image:url('${encodeURI(img.src)}')" aria-label="${escapeHtml(img.alt || 'Bild')}"></div>`
+    ).join('')}</div>`;
+  }
+
+  // Parse scenes from "Was passiert ist" — each H3 becomes a scene with title, TLDR (>), char-tag (*[...]*), images and body.
+  function parseScenes(sections, basePath) {
+    const whatHappened = sections['Was passiert ist'] || '';
+    if (!whatHappened) return [];
+    const scenes = [];
+    const parts = whatHappened.split(/^###\s+/m);
+    for (const part of parts) {
+      if (!part.trim()) continue;
+      const nl = part.indexOf('\n');
+      const title = (nl === -1 ? part : part.slice(0, nl)).trim();
+      const rawBody = (nl === -1 ? '' : part.slice(nl + 1)).trim();
+      const lines = rawBody.split('\n');
+      let tldr = '';
+      let chars = '';
+      let bodyStart = 0;
+      // Consume leading metadata lines: blockquote TLDR, *[chars]*
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line) { bodyStart = i + 1; continue; }
+        if (line.startsWith('> ')) {
+          tldr = line.slice(2).trim();
+          bodyStart = i + 1;
+          continue;
+        }
+        const charMatch = line.match(/^\*\[(.+?)\]\*$/);
+        if (charMatch) {
+          chars = charMatch[1].trim();
+          bodyStart = i + 1;
+          continue;
+        }
+        break;
+      }
+      // Consume leading images
+      const { images, nextIdx } = consumeLeadingImages(lines, bodyStart, basePath);
+      const body = lines.slice(nextIdx).join('\n').trim();
+      scenes.push({ title, tldr, chars, images, body });
+    }
+    return scenes;
+  }
+
+  // Minimal markdown body renderer for scene details: paragraphs, bullet lists, inline bold/italic/code/links.
+  function renderSceneBody(md, basePath) {
+    if (!md) return '';
+    const lines = md.split('\n');
+    let html = '';
+    let para = [];
+    let inList = false;
+    const flushPara = () => {
+      if (para.length) {
+        html += `<p>${renderInline(para.join(' '), basePath)}</p>`;
+        para = [];
+      }
+    };
+    const closeList = () => {
+      if (inList) { html += '</ul>'; inList = false; }
+    };
+    for (const raw of lines) {
+      const line = raw.trim();
+      if (!line) { flushPara(); closeList(); continue; }
+      if (line.startsWith('- ') || line.startsWith('* ')) {
+        flushPara();
+        if (!inList) { html += '<ul>'; inList = true; }
+        html += `<li>${renderInline(line.slice(2), basePath)}</li>`;
+      } else if (line.startsWith('> ')) {
+        flushPara(); closeList();
+        html += `<blockquote>${renderInline(line.slice(2), basePath)}</blockquote>`;
+      } else {
+        closeList();
+        para.push(line);
+      }
+    }
+    flushPara(); closeList();
+    return html;
+  }
+
   function buildMemoriesFromSession(sections) {
     const memories = [];
 
@@ -1830,9 +2095,11 @@ Index aller Dateien im Archiv.
         const titleInfo = parseSessionTitle(md);
         const meta = parseSessionFrontMatter(md);
         const sections = parseSections(md);
-        const tldr = (sections['Zusammenfassung'] || '').replace(/\n+/g, ' ');
+        const tldr = (sections['Zusammenfassung'] || '').replace(/\n*-{3,}\s*$/, '').replace(/\n+/g, ' ').trim();
         const memories = buildMemoriesFromSession(sections);
-        sessions.push({ path, nr: titleInfo.nr, title: titleInfo.title, date: meta['datum'] || '', location: meta['ort in der spielwelt'] || meta['ort'] || '', tldr, memories });
+        const scenes = parseScenes(sections, path);
+        const sessionImages = parseSessionImages(sections, path);
+        sessions.push({ path, nr: titleInfo.nr, title: titleInfo.title, date: meta['datum'] || '', location: meta['ort in der spielwelt'] || meta['ort'] || '', tldr, memories, scenes, sessionImages });
       } catch (e) {
         console.warn(`Konnte Session ${path} nicht laden:`, e);
       }
@@ -1886,25 +2153,54 @@ Index aller Dateien im Archiv.
       </div>
     </div>`;
 
+    const sessionChevronSvg = `<svg class="session-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 4 10 8 6 12"/></svg>`;
+    const sceneChevronSvg = `<svg class="scene-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 4 10 8 6 12"/></svg>`;
+
     // Real sessions (newest first)
     sessions.forEach((s, i) => {
       const isLatest = i === 0;
+      const scenesHtml = s.scenes.length ? `
+            <div class="scenes-label">Chronologischer Ablauf</div>
+            <div class="scene-list">
+              ${s.scenes.map(scene => `
+                <div class="scene-card">
+                  <div class="scene-header">
+                    <div class="scene-header-text">
+                      <div class="scene-title">${escapeHtml(scene.title)}</div>
+                      <div class="scene-tldr">${scene.tldr ? renderInline(scene.tldr, s.path) : '<em style="color:var(--ink-4)">Keine Kurzbeschreibung</em>'}</div>
+                    </div>
+                    ${sceneChevronSvg}
+                  </div>
+                  <div class="scene-body">
+                    ${scene.chars ? `<div class="scene-chars">👥 ${escapeHtml(scene.chars)}</div>` : ''}
+                    ${renderImageGallery(scene.images, 'scene')}
+                    ${renderSceneBody(scene.body, s.path)}
+                  </div>
+                </div>
+              `).join('')}
+            </div>` : '';
+
       html += `<div class="session-entry ${isLatest ? 'latest' : ''}">
         <div class="session-dot"></div>
-        <div class="session-card">
+        <div class="session-card ${isLatest ? 'expanded' : ''}">
           <div class="session-header">
-            <div class="session-meta-left">
+            <div class="session-header-left">
               <span class="session-nr">Session ${escapeHtml(s.nr)}</span>
               <span class="session-title">${escapeHtml(s.title)}</span>
             </div>
-            ${s.date ? `<span class="session-date">${escapeHtml(s.date)}</span>` : ''}
+            <div class="session-header-right">
+              ${s.date ? `<span class="session-date">${escapeHtml(s.date)}</span>` : ''}
+              ${sessionChevronSvg}
+            </div>
           </div>
           <div class="session-body">
             <p class="session-tldr from-repo">${escapeHtml(s.tldr)}</p>
+            ${renderImageGallery(s.sessionImages, 'session')}
+            ${scenesHtml}
             ${s.memories.length ? `<div class="memory-grid">${s.memories.map(renderMemoryCard).join('')}</div>` : ''}
             ${s.location ? `<div class="session-tags"><span class="session-tag">📍 ${escapeHtml(s.location)}</span></div>` : ''}
             <div class="session-cta">
-              <a class="session-action" href="${escapeHtml(s.path)}" target="_blank" rel="noopener">Volle Notizen öffnen</a>
+              <a class="session-action" href="${escapeHtml(s.path)}" target="_blank" rel="noopener" title="Öffnet die kuratierte Session-Datei (Raffis Notizen) — nicht das Transkript">Mehr Notizen</a>
               <button class="session-action" data-session="${escapeHtml(s.nr)}" data-action="ask">Biblo fragen</button>
             </div>
             <div class="data-source-note"><span class="dot"></span>aus ${escapeHtml(s.path)}</div>
@@ -1917,6 +2213,37 @@ Index aller Dateien im Archiv.
     html += preCampaignHtml;
 
     container.innerHTML = html;
+
+    // Wire up session-card expand/collapse on header click
+    container.querySelectorAll('.session-entry:not(.next-up):not(.pre-campaign) > .session-card > .session-header').forEach(header => {
+      header.addEventListener('click', (e) => {
+        // Don't toggle if clicking a link or button inside the header
+        if (e.target.closest('a, button')) return;
+        const card = header.parentElement;
+        card.classList.toggle('expanded');
+      });
+    });
+
+    // Wire up scene-card expand/collapse on header click
+    container.querySelectorAll('.scene-card > .scene-header').forEach(header => {
+      header.addEventListener('click', (e) => {
+        if (e.target.closest('a, button, .image-thumb')) return;
+        const card = header.parentElement;
+        card.classList.toggle('expanded');
+      });
+    });
+
+    // Wire up image gallery thumbs → lightbox
+    container.querySelectorAll('.image-thumb').forEach(thumb => {
+      const open = (e) => {
+        e.stopPropagation();
+        openLightbox(thumb.dataset.lightboxSrc, thumb.dataset.lightboxAlt);
+      };
+      thumb.addEventListener('click', open);
+      thumb.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(e); }
+      });
+    });
 
     // Wire up session-action clicks
     container.querySelectorAll('.session-action[data-action="ask"]').forEach(btn => {

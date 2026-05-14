@@ -5,11 +5,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `charaktere/shii-take/charakterbogen.md` — Shii Take (Human Druide, Raffi) — Stats, Spells, Ausrüstung
 - `charaktere/shii-take/persoenlichkeit.md` — Shii Take Voice, Traits, Reaktionsmuster
 - `charaktere/shii-take/beziehungen.md` — Shii Takes Beziehungen (pro Kampagne)
-<<<<<<< claude/elastic-grothendieck-361b11
 - `charaktere/nia-sommerfeld/charakterbogen.md` — Nia Sommerfeld (Human Bard College of Lore, Raffi) — Level-3-Build, Spells, Ausrüstung
-=======
-- `charaktere/nia-sommerfeld/charakterbogen.md` — Nia Sommerfeld (Arbeitstitel; Human Bard College of Dance, Raffi) — Level-3-Build, Spells, Ausrüstung
->>>>>>> main
 - `charaktere/nia-sommerfeld/persoenlichkeit.md` — Nia Sommerfeld Voice, Traits, Reaktionsmuster
 - `charaktere/nia-sommerfeld/beziehungen.md` — Nia Sommerfelds Beziehungen (Fluch des Strahd, Party + Familie)
 - `charaktere/nia-sommerfeld/build-notizen.md` — DnDBeyond-Checklist Level 3 und Levelplan
@@ -66,19 +62,28 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `regeln/magic-items/amulet-of-protection.md` — +1 Amulett of Protection (Party-Loot S001)
 
 ## Kampagnen
-### Fluch des Strahd (aktiv — erste Session 13.05.2026)
+### Fluch des Strahd (aktiv — S001 gespielt 13.05.2026)
 - `kampagnen/fluch-des-strahd/party.md` — 6 PCs, DM Jana, Gruppen-Backstory
 - `kampagnen/fluch-des-strahd/_kontext/welt.md` — Barovia, Strahd, Götter (Morgenfürst/Mutternacht), Bevölkerung
-- `kampagnen/fluch-des-strahd/_kontext/timeline.md` — Pre-Campaign-Ereignisse, Transformations-Abenteuer, Startpunkt Schilfheim
+- `kampagnen/fluch-des-strahd/_kontext/timeline.md` — Pre-Campaign-Ereignisse, Session-Einträge
 - `kampagnen/fluch-des-strahd/_kontext/session-zero.md` — Organisationsregeln, Do's/Don'ts, X-Card, Regelwerk 2024
+- `kampagnen/fluch-des-strahd/sessions/001-schilfheim-nach-barovia.md` — S001: Auftrag in Schilfheim, Svalidsch Wald, Ankunft in Barovia (Dorf)
 - `kampagnen/fluch-des-strahd/npcs/hanna-sommerfeld.md` — Nias Mutter (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/bert-sommerfeld.md` — Nias Vater (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/timo-sommerfeld.md` — Nias älterer Bruder (studiert Medizin, pot. Anlaufpunkt Florpthyz-Quest)
 - `kampagnen/fluch-des-strahd/npcs/greta-holunder.md` — Nachbarin und Stammkundin (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/oskar-bram.md` — Dachdecker mit kaputtem Rücken (Apfelried, Hintergrund)
+- `kampagnen/fluch-des-strahd/npcs/konrad-haupt.md` — Ehemaliger Soldat, Kurier, Nias Kindheitsfigur (Hintergrund)
+- `kampagnen/fluch-des-strahd/npcs/arigal-nachtigall.md` — Arigal von und zu Nachtigall (Bote des Bürgermeisters, S001)
+- `kampagnen/fluch-des-strahd/npcs/koljan-indirovic.md` — Koljan Indirovic (Bürgermeister Barovia, nur aus Brief bekannt)
+- `kampagnen/fluch-des-strahd/npcs/irena-koljana.md` — Irena Koljana (Adoptivtochter des Bürgermeisters, krank, Ziel der Reise)
+- `kampagnen/fluch-des-strahd/npcs/ismag-der-geringere.md` — Ismag der Geringere (leibl. Sohn des Bürgermeisters, Informationsquelle S001)
+- `kampagnen/fluch-des-strahd/npcs/marie.md` — Marie (Mutter in Barovia, Tochter von Strahd entführt)
+- `kampagnen/fluch-des-strahd/npcs/gertruda.md` — Gertruda (Maries Tochter, 14–16 J., in Ravenloft)
+- `kampagnen/fluch-des-strahd/npcs/bildrath.md` — Bildrath (Ladeninhaber Barovia, Wucherpreise)
 - `kampagnen/fluch-des-strahd/orte/apfelried.md` — Nias und Maras Heimatdorf (nicht-Barovia)
-- `kampagnen/fluch-des-strahd/orte/schilfheim.md` — Startdorf an einem See, Beginn von Session 1
-- `kampagnen/fluch-des-strahd/npcs/konrad-haupt.md` — Ehemaliger Soldat, Kurier, Nias Kindheitsfigur; brachte ihr ein paar Bo-Staff-Tricks bei (Hintergrund, kommt seltener)
+- `kampagnen/fluch-des-strahd/orte/schilfheim.md` — Startdorf an einem See, Schauplatz Session-Anfang
+- `kampagnen/fluch-des-strahd/orte/barovia-dorf.md` — Dorf Barovia: Gasthaus, Laden, Maries Haus, Ravenloft am Horizont
 
 #### Transkripte (Roh-Mitschriften — nur als Last-Resort laden)
 - `kampagnen/fluch-des-strahd/transcripts/README.md` — Wofür der Transkript-Ordner ist und wie er gepflegt wird
