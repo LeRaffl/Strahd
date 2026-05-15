@@ -36,19 +36,21 @@ Inhalt des Briefes: Seine Adoptivtochter **[Irena Koljana](../npcs/irena-koljana
 Das Gold wandert in den Sack. Damit gilt der Auftrag als angenommen.
 
 ### Nacht und Morgen — Fund in den Ritzen
-> Mara durchsucht die Kneipenritzen und findet einen Metallknopf mit fremdem Wappen und einen Rubin — Herkunft unbekannt.
+> Flori bewacht die Tür des Massenlagers mit Alarm-Zauber und eigenem Körper; Mara findet zwischen den Matratzen einen Metallknopf mit fremdem Wappen und einen Rubin.
 
 *[Mara]*
 
 ![Schilfheim](../../../assets/art/schilfheim.png)
 ![Morgen in Schilfheim](../../../assets/art/morgen-in-schilfheim.png)
 
-Die Party schläft im Gemeinschaftsraum. Mara durchsucht die Ritzen und Winkel:
+Die Party hat das **Massenlager** der Kneipe für sich allein — ein langer Raum mit einer Reihe Matratzen. Moxie schläft mit dem Goldsack im Arm. Flori castet **Alarm** auf den Raum (Klingelton: Schiffshorn, Trigger: 7 Uhr) **und stellt sich zusätzlich physisch vor die Tür** — Moxie wollte schon ein Bett davorziehen. Alberich baut sich abends einen Stuhl mit Kerzen für sein Morgen-Ritual auf.
+
+Mara durchsucht die Ritzen zwischen den Matratzen:
 - Mehrere Mäuseskelette
 - Einen Metallknopf mit eingravierten Wappen: **Pferd mit einer Lanze, kein Reiter** *(wessen Wappen das ist, bleibt offen)*
 - Einen **Rubin** *(Herkunft und Wert unklar)*
 
-Um 7 Uhr ertönt Floris Weckalarm — ein Schiffshorn. Üppiges Buffet-Frühstück. Mara raucht, Nia macht Pilates. Dann Aufbruch nach Westen.
+Um 7 Uhr ertönt Floris Schiffshorn-Alarm. Alberich wacht theatralisch auf, Nia macht draußen auf dem Gras Pilates, Mara raucht auf einer Treppe. Üppiges Buffet-Frühstück. Dann Aufbruch nach Westen.
 
 ### Der Svalidsch Wald — Wölfe
 > Nach fünf Stunden Marsch greifen drei Wölfe an — Thorin verjagt einen, Nia und die anderen erledigen die übrigen zwei.
