@@ -72,7 +72,7 @@ Schlammiger Weg, riesige Bäume, schmaler werdende Straße. Nach fast fünf Stun
 
 Fünfzehn Minuten später taucht ein riesiges steinernes Tor auf, flankiert von hohen Ritterstatuen. Die Schwerter der Statuen liegen kopflos im Unkraut zu ihren Füßen. Als Flori anklopfen will, öffnet sich das Tor von selbst.
 
-- Thorin ehrt kurz vor dem Durchschreiten die Ahnen der Krieger.
+- Thorin geht vor dem Durchschreiten zu den Statuen, **berührt beide abgeschlagenen Köpfe** kurz und dankt seinen Ahnen.
 - Alberich untersucht die liegenden Köpfe — sie sind erodiert, nicht abgeschlagen.
 
 Hinter dem Tor schließt sich der Nebel sofort. Kein Rückweg. Der Svalidsch Wald dahinter wirkt anders: Bäume turmhoch, Licht gedämpft. Alberichs Lichtzauber hält die Dunkelheit auf Abstand. Moxie nimmt wahr, dass der Nebel undurchdringlich und gefährlich ist. Flori merkt, dass die Umgebung nicht natürlich ist.
@@ -84,9 +84,9 @@ Hinter dem Tor schließt sich der Nebel sofort. Kein Rückweg. Der Svalidsch Wal
 
 ![Ein Leichnam am Wegrand](../../../assets/sessions/001/ein-leichnam-am-wegrand.png)
 
-Fauliger Geruch führt die Party abseits des Wegs. Ein **zerfetzter Leichnam in tristbrauner Lederkleidung**, aus dem Maden kriechen. In der Hand hält er einen Brief. Nia vergleicht ihn mit dem Brief des Bürgermeisters — er sieht ähnlich aus.
+Thorin nimmt den Geruch schon vom Weg aus wahr — *„Den Geruch des Todes"* — und stellt fest: **alter Tod, kein frischer Kampf.** Der fauliger Geruch führt die Party abseits des Wegs zu einem **zerfetzten Leichnam in tristbrauner Lederkleidung**, aus dem Maden kriechen. In der Hand hält er einen Brief. Nia vergleicht ihn mit dem Brief des Bürgermeisters — er sieht ähnlich aus.
 
-Thorin erschnüffelt: die beiden Briefe riechen **unterschiedlich**. Mindestens einer ist also nicht von derselben Hand. Moxie schließt aus den Todeszeichen auf Untote oder Niedergänger als Todesursache. Thorin fragt in die Runde, ob man an Vampire glaubt.
+Thorin erschnüffelt: die beiden Briefe riechen **unterschiedlich**. Mindestens einer ist also nicht von derselben Hand. **Moxie zieht sofort den Schluss:** *„Das heißt, wir sind nicht vom Bürgermeister beauftragt."* (Bestätigung folgt später durch Ismag.) Sie schließt aus den Todeszeichen auf Untote oder Niedergänger als Todesursache. Thorin fragt in die Runde, ob man an Vampire glaubt.
 
 *(Wer der Tote ist, erfahren Nia, Thorin und Flori später in der Taverne von Ismag: es war **Markus**, ein Angestellter des Bürgermeisters, der Fremde vor den Gefahren warnen sollte.)*
 
@@ -110,7 +110,7 @@ Am Horizont sticht eine riesige Burg wie eine Lanze in den Himmel: lila Dächer,
 
 Ein vernagelt-dunkles Haus, zwei Stockwerke. Nia klopft. Nur Schluchzen. Thorin öffnet die Tür sanft. Mara wirkt *Message* und teilt der Person mit, dass sie aus Schilfheim zur Hilfe gekommen sind.
 
-Die Frau öffnet einen Spalt: graue Strähnen, zwei Zöpfe, fahle Haut, mottenzerfressen braunes Kleid, Kopftuch. Sie umklammert eine Puppe, ist tränenüberströmt und extrem ängstlich.
+Die Frau öffnet einen Spalt: graue Strähnen, zwei Zöpfe, fahle Haut, mottenzerfressen braunes Kleid, Kopftuch. Sie umklammert die ganze Zeit eine **missgebildete Puppe** mit anzüglichem Grinsen in einem Sackleinen-Kleidchen — auf einem kleinen Zettel an der Puppe steht *„kein Spaß, kein Blinski"* (was auch immer das heißen mag). Sie ist tränenüberströmt und extrem ängstlich.
 
 **[Marie](../npcs/marie.md)** erzählt:
 - Strahd ist der "Teufel von Barovia" — er hat ihre Tochter **[Gertruda](../npcs/gertruda.md)** (14–16 Jahre) entführt.
@@ -125,7 +125,7 @@ Die Frau öffnet einen Spalt: graue Strähnen, zwei Zöpfe, fahle Haut, mottenze
 
 ![Bildrath verhandelt](../../../assets/sessions/001/bildrath-verhandelt.png)
 
-- Bildrath verkauft nur Abenteurer-Ausrüstung, redet in hohem Ton, quirky. Wucherpreise.
+- Bildrath verkauft nur Abenteurer-Ausrüstung, redet in hohem Ton, quirky. Wucherpreise — z.B. **250 Gold** für ein Fläschchen Weihwasser. Bildrath glaubt wirklich, dass es Weihwasser ist.
 - Er erklärt: Nachts kommen Zombies, Ghoule, "oder irgendetwas" — daher die Verbarrikadierungen.
 - Er könnte eine Karte zeichnen, braucht aber bis morgen. Moxie zeichnet sie selbst (Kartengedächtnis).
 - Im Laden befindet sich ein sehr stämmiger Angestellter. Konfrontation wird unbewusst vermieden.
@@ -137,7 +137,7 @@ Die Frau öffnet einen Spalt: graue Strähnen, zwei Zöpfe, fahle Haut, mottenze
 
 ![Ismag der Geringere](../../../assets/art/ismag-der-geringere.png)
 
-- Wirt **Arik** — pummeliger, freundlicher Mann. Der Wein vom Weingut "Weinmagier" (nahe Kret) ist überraschend gut.
+- Wirt **Arik** — pummeliger, freundlicher Mann. Der Wein vom Weingut "Weinmagier" (nahe Kret) ist überraschend gut. Nias Insight-Check: Arik glaubt wirklich daran — der Wein ist eine der letzten Sachen, auf die Barovia noch stolz sein kann.
 - Ecktisch: **drei bunt gekleidete Damen** mit eigenem Akzent — riechen laut Thorin ähnlich wie Arigal. Sie sind vermutlich Vistani, gehören aber nicht zu Arigal (Thorin testet es mit einem Weinangebot, sie sind verwirrt).
 - Beim Feuer, allein: **[Ismag der Geringere](../npcs/ismag-der-geringere.md)** — nicht bunt, nicht grau. Trinkt Wein.
 
@@ -203,9 +203,11 @@ Thorin verrät versehentlich, dass der Tote im Wald existiert. Ismag erfährt so
 
 ## Zitate / Memorable Moments
 - Flori klopft ans sich schon öffnende Tor — war knapp
-- Thorin erschnüffelt: "Riecht anders." — zwei Briefe, eine Frage
+- Thorin erschnüffelt: "Den Geruch des Todes." — noch bevor der Leichnam zu sehen ist
+- Thorin: "Riecht anders." — zwei Briefe, eine Frage
 - Nia halbiert einen flüchtenden Wolf horizontal
 - Erster Blick auf Ravenloft: "Wie ein hässliches Neuschwanstein."
+- Maries Puppe grinst anzüglich — auf dem Zettel: „kein Spaß, kein Blinski"
 - Thorin verrät versehentlich Markus' Tod — Ismag erfährt es so
 
 ---
