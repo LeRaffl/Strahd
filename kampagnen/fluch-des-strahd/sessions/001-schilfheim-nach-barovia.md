@@ -79,6 +79,8 @@ Hinter dem Tor schließt sich der Nebel sofort. Kein Rückweg. Der Svalidsch Wal
 
 *[alle]*
 
+![Ein Leichnam am Wegrand](../../../assets/sessions/001/ein-leichnam-am-wegrand.png)
+
 Fauliger Geruch führt die Party abseits des Wegs. Ein **zerfetzter Leichnam in tristbrauner Lederkleidung**, aus dem Maden kriechen. In der Hand hält er einen Brief. Nia vergleicht ihn mit dem Brief des Bürgermeisters — er sieht ähnlich aus.
 
 Thorin erschnüffelt: die beiden Briefe riechen **unterschiedlich**. Mindestens einer ist also nicht von derselben Hand. Moxie schließt aus den Todeszeichen auf Untote oder Niedergänger als Todesursache. Thorin fragt in die Runde, ob man an Vampire glaubt.
