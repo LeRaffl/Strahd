@@ -84,6 +84,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/orte/apfelried.md` — Nias und Maras Heimatdorf (nicht-Barovia)
 - `kampagnen/fluch-des-strahd/orte/schilfheim.md` — Startdorf an einem See, Schauplatz Session-Anfang
 - `kampagnen/fluch-des-strahd/orte/barovia-dorf.md` — Dorf Barovia: Gasthaus, Laden, Maries Haus, Ravenloft am Horizont
+- `kampagnen/fluch-des-strahd/orte/ravenloft.md` — Schloss Ravenloft: Sitz von Strahd, am Horizont sichtbar, noch nicht betreten
 
 #### Key Items
 - `kampagnen/fluch-des-strahd/items/brief-von-koljan-indirowitsch-version-1.md` — Brief von Koljan Indirowitsch (Version 1, gefälscht, bei Nia) — Lockbrief nach Barovia
