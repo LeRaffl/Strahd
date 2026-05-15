@@ -41,6 +41,7 @@ Das Gold wandert in den Sack. Damit gilt der Auftrag als angenommen.
 *[Mara]*
 
 ![Schilfheim](../../../assets/art/schilfheim.png)
+![Schlafen in Schilfheim](../../../assets/art/schlafen-in-schilfheim.jpg)
 ![Morgen in Schilfheim](../../../assets/art/morgen-in-schilfheim.png)
 
 Die Party hat das **Massenlager** der Kneipe für sich allein — ein langer Raum mit einer Reihe Matratzen. Moxie schläft mit dem Goldsack im Arm. Flori castet **Alarm** auf den Raum (Klingelton: Schiffshorn, Trigger: 7 Uhr) **und stellt sich zusätzlich physisch vor die Tür** — Moxie wollte schon ein Bett davorziehen. Alberich baut sich abends einen Stuhl mit Kerzen für sein Morgen-Ritual auf.
