@@ -128,6 +128,8 @@ Die Frau öffnet einen Spalt: graue Strähnen, zwei Zöpfe, fahle Haut, mottenze
 
 *[Nia, Thorin, Flori]*
 
+![Ismag der Geringere](../../../assets/art/ismag-der-geringere.png)
+
 - Wirt **Arik** — pummeliger, freundlicher Mann. Der Wein vom Weingut "Weinmagier" (nahe Kret) ist überraschend gut.
 - Ecktisch: **drei bunt gekleidete Damen** mit eigenem Akzent — riechen laut Thorin ähnlich wie Arigal. Sie sind vermutlich Vistani, gehören aber nicht zu Arigal (Thorin testet es mit einem Weinangebot, sie sind verwirrt).
 - Beim Feuer, allein: **[Ismag der Geringere](../npcs/ismag-der-geringere.md)** — nicht bunt, nicht grau. Trinkt Wein.
