@@ -167,7 +167,7 @@ Thorin verrät versehentlich, dass der Tote im Wald existiert. Ismag erfährt so
 - Zwei Briefe riechen unterschiedlich → einer ist gefälscht oder von anderer Hand; welcher ist echt? *(alle, die dabei waren)*
 - Ismag bestätigt: ihr Brief kommt nicht vom Bürgermeister → Wer hat sie nach Barovia gelockt und warum? *(Nia, Thorin, Flori)*
 - Thorin verrät Markus' Tod → Ismag weiß jetzt, dass sein Bruder tot ist
-- Moxie zeichnet Karte von Barovia (Dorf) *(Moxie, Mara, Alberich)*
+- Moxie will eine Karte von Barovia (Dorf) zeichnen (noch nicht passiert — sie hat Kartengedächtnis und will später selbst zeichnen statt bei Bildrath kaufen)
 - Thorin nimmt den Geruch von Gertrudas Kleid auf (Kleid an Marie zurückgegeben) → Thorin kann Gertruda erschnüffeln
 
 ---
@@ -188,10 +188,11 @@ Thorin verrät versehentlich, dass der Tote im Wald existiert. Ismag erfährt so
 ---
 
 ## Neue Items / Veränderungen
-- **Metallknopf** mit Wappen (Pferd + Lanze ohne Reiter) → bei Mara *(Herkunft unklar)*
-- **Rubin** → bei Mara *(Herkunft unklar)*
-- **100 Goldkronen** → Party-Kasse (bei Moxie)
-- **Karte von Barovia (Dorf)** → von Moxie gezeichnet *(Moxie, Mara, Alberich)*
+- **[Brief von Koljan Indirowitsch (Version 1)](../items/brief-von-koljan-indirowitsch-version-1.md)** *(gefälscht, Lockbrief nach Barovia)* → bei Nia
+- **[Brief von Koljan Indirowitsch (Version 2)](../items/brief-von-koljan-indirowitsch-version-2.md)** *(echt, Markus' Warnschreiben)* → bei Nia
+- **[Metallknopf](../items/metallknopf.md)** mit Wappen (Pferd + Lanze ohne Reiter) → bei Mara *(Herkunft unklar)*
+- **[Rubin](../items/rubin.md)** → bei Mara *(Herkunft unklar)*
+- **[95 Goldkronen](../items/goldkronen.md)** → Party-Kasse (bei Moxie); 5 bei Nia
 - **Gertrudas Geruch** → Thorin (Kleid wurde an Marie zurückgegeben)
 
 ---

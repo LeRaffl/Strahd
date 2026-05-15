@@ -1473,6 +1473,7 @@
         <div class="quick-link" data-section="sessions">Timeline <span class="count" id="qc-sessions">0</span></div>
         <div class="quick-link" data-section="characters">NPCs <span class="count" id="qc-npcs">0</span></div>
         <div class="quick-link" data-section="locations">Orte <span class="count" id="qc-locations">0</span></div>
+        <div class="quick-link" data-section="items">Items <span class="count" id="qc-items">0</span></div>
         <div class="quick-link" data-section="spells">Spells <span class="count" id="qc-spells">0</span></div>
       </div>
     </div>
@@ -1490,6 +1491,7 @@
       <button class="section-tab" data-section="party">Party <span class="count" id="tab-party-count">0</span></button>
       <button class="section-tab" data-section="characters">NPCs <span class="count" id="tab-npc-count">0</span></button>
       <button class="section-tab" data-section="locations">Orte <span class="count" id="tab-loc-count">0</span></button>
+      <button class="section-tab" data-section="items">Items <span class="count" id="tab-item-count">0</span></button>
       <button class="section-tab" data-section="spells">Spells <span class="count" id="tab-spell-count">0</span></button>
     </nav>
 
@@ -1518,6 +1520,13 @@
     <section id="section-locations" class="section-content">
       <div class="placeholder-grid" id="locations-grid">
         <div class="loading-skel">Lade Orte…</div>
+      </div>
+    </section>
+
+    <!-- Items -->
+    <section id="section-items" class="section-content">
+      <div class="placeholder-grid" id="items-grid">
+        <div class="loading-skel">Lade Items…</div>
       </div>
     </section>
 
@@ -2319,6 +2328,7 @@ Index aller Dateien im Archiv.
     if ((m = path.match(/^charaktere\/([^/]+)\//))) return `#char/${m[1]}`;
     if ((m = path.match(/^kampagnen\/[^/]+\/npcs\/([^/]+)\.md$/))) return `#npc/${m[1]}`;
     if ((m = path.match(/^kampagnen\/[^/]+\/orte\/([^/]+)\.md$/))) return `#ort/${m[1]}`;
+    if ((m = path.match(/^kampagnen\/[^/]+\/items\/([^/]+)\.md$/))) return `#item/${m[1]}`;
     if ((m = path.match(/^regeln\/spells\/([^/]+)\.md$/))) return `#spell/${m[1]}`;
     if ((m = path.match(/^kampagnen\/[^/]+\/sessions\/([^/]+)\.md$/))) return `#session/${m[1]}`;
     return null;
@@ -2611,7 +2621,9 @@ Index aller Dateien im Archiv.
 
     // Sort by recency (most recently seen session first)
     if (globalSessions.length > 0) {
-      const normalize = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const normalize = s => s.toLowerCase()
+        .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+        .replace(/[^a-z0-9]/g, '');
 
       if (prefix.endsWith('/npcs/')) {
         // Build map: card slug → highest session nr seen
@@ -2638,17 +2650,18 @@ Index aller Dateien im Archiv.
           return a.displayName.localeCompare(b.displayName);
         });
 
-      } else if (prefix.endsWith('/orte/')) {
-        // Build map: ort slug → highest session nr where all slug words appear in session text
-        // Word matching (like NPC) handles "barovia-dorf" vs. "Dorf Barovia" in location field
+      } else if (prefix.endsWith('/orte/') || prefix.endsWith('/items/')) {
+        // Build map: slug → highest session nr where all slug words appear in session text
+        // Word matching (like NPC) handles "barovia-dorf" vs. "Dorf Barovia" in location field;
+        // for items, matches things like "metallknopf" or "rubin" mentioned in scene bodies.
         const recency = {};
         for (const session of globalSessions) {
           const nr = parseInt(session.nr);
-          const sessionText = [
+          const sessionText = normalize([
             session.location,
             session.title,
             ...session.scenes.map(s => `${s.title} ${s.tldr} ${s.body}`)
-          ].join(' ').toLowerCase();
+          ].join(' '));
           for (const card of cards) {
             const slugWords = card.slug.split('-').filter(w => w.length > 3);
             if (slugWords.length > 0 && slugWords.every(w => sessionText.includes(w))) {
@@ -2676,6 +2689,19 @@ Index aller Dateien im Archiv.
     `).join('');
 
     wireInternalNav(container);
+
+    // Async: upgrade card display names to the H1 of each MD file (handles
+    // German casing/diacritics that the slug-derived title can't represent,
+    // e.g. "Brief Von Koljan Indirowitsch Version 1" → "Brief von Koljan Indirowitsch (Version 1)").
+    for (const c of cards) {
+      fetchRepoFile(c.path).then(md => {
+        const h1 = extractH1(md);
+        if (!h1 || h1 === c.displayName) return;
+        const nameEl = container.querySelector(`a[href="#${hashKind}/${c.slug}"] .entity-name`);
+        if (nameEl) nameEl.textContent = h1;
+      }).catch(() => {});
+    }
+
     return paths.length;
   }
 
@@ -2839,6 +2865,7 @@ Index aller Dateien im Archiv.
     char: { label: 'Charakter', back: 'Party', backHash: '#party' },
     npc:  { label: 'NPC',       back: 'NPCs',  backHash: '#npcs' },
     ort:  { label: 'Ort',       back: 'Orte',  backHash: '#orte' },
+    item: { label: 'Item',      back: 'Items', backHash: '#items' },
     spell:{ label: 'Spell',     back: 'Spells',backHash: '#spells' }
   };
 
@@ -2858,6 +2885,7 @@ Index aller Dateien im Archiv.
     const candidates = manifestPaths.filter(p => p.endsWith(`/${slug}.md`));
     if (kind === 'npc')   return candidates.filter(p => p.includes('/npcs/'));
     if (kind === 'ort')   return candidates.filter(p => p.includes('/orte/'));
+    if (kind === 'item')  return candidates.filter(p => p.includes('/items/'));
     if (kind === 'spell') return candidates.filter(p => p.startsWith('regeln/spells/'));
     return candidates;
   }
@@ -3267,13 +3295,14 @@ Default: keine Transkripte laden — erst die kuratierte sessions/<nr>.md.`;
      Details:  #char/<slug>, #npc/<slug>, #ort/<slug>, #spell/<slug>
   */
 
-  const SECTION_TABS = ['sessions', 'party', 'characters', 'locations', 'spells'];
+  const SECTION_TABS = ['sessions', 'party', 'characters', 'locations', 'items', 'spells'];
   const HASH_SECTION_MAP = {
     'timeline': 'sessions',
     'sessions': 'sessions',
     'party':    'party',
     'npcs':     'characters',
     'orte':     'locations',
+    'items':    'items',
     'spells':   'spells',
   };
   const SECTION_TO_HASH = {
@@ -3281,6 +3310,7 @@ Default: keine Transkripte laden — erst die kuratierte sessions/<nr>.md.`;
     'party':     '#party',
     'characters':'#npcs',
     'locations': '#orte',
+    'items':     '#items',
     'spells':    '#spells',
   };
 
@@ -3296,7 +3326,7 @@ Default: keine Transkripte laden — erst die kuratierte sessions/<nr>.md.`;
     document.querySelectorAll('.section-content').forEach(s => s.classList.remove('active'));
     document.getElementById('section-detail').classList.add('active');
     // Highlight the matching parent tab
-    const parentTab = { char: 'party', npc: 'characters', ort: 'locations', spell: 'spells' }[kind];
+    const parentTab = { char: 'party', npc: 'characters', ort: 'locations', item: 'items', spell: 'spells' }[kind];
     document.querySelectorAll('.section-tab').forEach(t =>
       t.classList.toggle('active', t.dataset.section === parentTab));
     renderDetail(kind, slug);
@@ -3309,7 +3339,7 @@ Default: keine Transkripte laden — erst die kuratierte sessions/<nr>.md.`;
     const head = parts[0];
 
     // Detail routes
-    if (parts.length >= 2 && ['char', 'npc', 'ort', 'spell'].includes(head)) {
+    if (parts.length >= 2 && ['char', 'npc', 'ort', 'item', 'spell'].includes(head)) {
       if (head === 'spell') {
         // For spells we stay on the list; just scroll to + open the row.
         showSection('spells');
@@ -3379,13 +3409,16 @@ Default: keine Transkripte laden — erst die kuratierte sessions/<nr>.md.`;
 
     const npcCount = await renderEntityGrid('characters-grid', `${CAMPAIGN_PREFIX}/npcs/`, 'npc');
     const locCount = await renderEntityGrid('locations-grid', `${CAMPAIGN_PREFIX}/orte/`, 'ort');
+    const itemCount = await renderEntityGrid('items-grid', `${CAMPAIGN_PREFIX}/items/`, 'item');
     const spellCount = await renderSpellList();
 
     document.getElementById('qc-npcs').textContent = npcCount;
     document.getElementById('qc-locations').textContent = locCount;
+    document.getElementById('qc-items').textContent = itemCount;
     document.getElementById('qc-spells').textContent = spellCount;
     document.getElementById('tab-npc-count').textContent = npcCount;
     document.getElementById('tab-loc-count').textContent = locCount;
+    document.getElementById('tab-item-count').textContent = itemCount;
     document.getElementById('tab-spell-count').textContent = spellCount;
 
     // Initial route from hash (deep links work on page load)
