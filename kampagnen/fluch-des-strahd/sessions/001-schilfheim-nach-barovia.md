@@ -188,8 +188,8 @@ Thorin verrät versehentlich, dass der Tote im Wald existiert. Ismag erfährt so
 ---
 
 ## Neue Items / Veränderungen
-- **[Brief vom „Bürgermeister"](../items/brief-buergermeister.md)** *(gefälscht)* → bei Nia
-- **[Brief am Leichnam](../items/brief-markus.md)** *(echt, Markus' Warnschreiben)* → bei Nia
+- **[Brief von Koljan Indirowitsch (Version 1)](../items/brief-von-koljan-indirowitsch-version-1.md)** *(gefälscht, Lockbrief nach Barovia)* → bei Nia
+- **[Brief von Koljan Indirowitsch (Version 2)](../items/brief-von-koljan-indirowitsch-version-2.md)** *(echt, Markus' Warnschreiben)* → bei Nia
 - **[Metallknopf](../items/metallknopf.md)** mit Wappen (Pferd + Lanze ohne Reiter) → bei Mara *(Herkunft unklar)*
 - **[Rubin](../items/rubin.md)** → bei Mara *(Herkunft unklar)*
 - **[95 Goldkronen](../items/goldkronen.md)** → Party-Kasse (bei Moxie); 5 bei Nia

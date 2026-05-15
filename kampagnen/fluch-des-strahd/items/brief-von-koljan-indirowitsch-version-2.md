@@ -1,7 +1,7 @@
-# Brief am Leichnam *(echt, an Markus)*
+# Brief von Koljan Indirowitsch (Version 2)
 **Bei:** Nia
 **Erstauftritt:** S001 — Svalidsch Wald, in der Hand des zerfetzten Leichnams von Markus
-**Typ:** Brief
+**Typ:** Brief (echt, von Koljan an Markus)
 
 ---
 

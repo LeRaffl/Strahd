@@ -86,8 +86,8 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/orte/barovia-dorf.md` — Dorf Barovia: Gasthaus, Laden, Maries Haus, Ravenloft am Horizont
 
 #### Key Items
-- `kampagnen/fluch-des-strahd/items/brief-buergermeister.md` — Brief vom „Bürgermeister" (gefälscht, bei Nia) — Lockbrief nach Barovia
-- `kampagnen/fluch-des-strahd/items/brief-markus.md` — Brief am Leichnam (echt, bei Nia) — Markus' Warnschreiben für Wanderer
+- `kampagnen/fluch-des-strahd/items/brief-von-koljan-indirowitsch-version-1.md` — Brief von Koljan Indirowitsch (Version 1, gefälscht, bei Nia) — Lockbrief nach Barovia
+- `kampagnen/fluch-des-strahd/items/brief-von-koljan-indirowitsch-version-2.md` — Brief von Koljan Indirowitsch (Version 2, echt, bei Nia) — Markus' Warnschreiben für Wanderer
 - `kampagnen/fluch-des-strahd/items/metallknopf.md` — Metallknopf mit Wappen (Pferd + Lanze ohne Reiter, bei Mara)
 - `kampagnen/fluch-des-strahd/items/rubin.md` — Rubin (bei Mara, Wert unklar)
 - `kampagnen/fluch-des-strahd/items/goldkronen.md` — 95 Goldkronen Party-Kasse (bei Moxie, Vorauszahlung Auftrag)

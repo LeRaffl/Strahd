@@ -1,7 +1,7 @@
-# Brief vom „Bürgermeister" *(gefälscht)*
+# Brief von Koljan Indirowitsch (Version 1)
 **Bei:** Nia
 **Erstauftritt:** S001 — Kneipe „Zum Schilf" in Schilfheim, überbracht von Arigal
-**Typ:** Brief
+**Typ:** Brief (gefälscht)
 
 ---
 

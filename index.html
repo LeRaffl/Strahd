@@ -2689,6 +2689,19 @@ Index aller Dateien im Archiv.
     `).join('');
 
     wireInternalNav(container);
+
+    // Async: upgrade card display names to the H1 of each MD file (handles
+    // German casing/diacritics that the slug-derived title can't represent,
+    // e.g. "Brief Von Koljan Indirowitsch Version 1" → "Brief von Koljan Indirowitsch (Version 1)").
+    for (const c of cards) {
+      fetchRepoFile(c.path).then(md => {
+        const h1 = extractH1(md);
+        if (!h1 || h1 === c.displayName) return;
+        const nameEl = container.querySelector(`a[href="#${hashKind}/${c.slug}"] .entity-name`);
+        if (nameEl) nameEl.textContent = h1;
+      }).catch(() => {});
+    }
+
     return paths.length;
   }
 
