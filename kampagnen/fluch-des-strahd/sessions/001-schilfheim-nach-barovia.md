@@ -40,7 +40,8 @@ Das Gold wandert in den Sack. Damit gilt der Auftrag als angenommen.
 
 *[Mara]*
 
-![Morgen in Schilfheim](../../../assets/sessions/001/morgen-in-schilfheim.png)
+![Schilfheim](../../../assets/art/schilfheim.png)
+![Morgen in Schilfheim](../../../assets/art/morgen-in-schilfheim.png)
 
 Die Party schläft im Gemeinschaftsraum. Mara durchsucht die Ritzen und Winkel:
 - Mehrere Mäuseskelette
