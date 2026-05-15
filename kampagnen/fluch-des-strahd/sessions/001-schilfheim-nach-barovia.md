@@ -27,6 +27,10 @@ Die Party nimmt in Schilfheim einen Hilferuf des Bürgermeisters von Barovia an 
 ### Abend in Schilfheim — Die Kneipe "Zum Schilf"
 > Arigal von und zu Nachtigall stürmt in die Kneipe und übergibt Brief + 100 Gold im Auftrag des Bürgermeisters von Barovia — die Adoptivtochter siecht dahin, die Party soll helfen.
 
+*[alle]*
+
+![Arigal stürmt herein](../../../assets/art/arigal-stuermt-herein.jpg)
+
 Die Party erholt sich nach ihrem letzten Abenteuer in Schilfheim, einem kleinen Dorf am See im goldenen Sonnenuntergang. Schilf, Steg, hübsch. Die Kneipe "Zum Schilf" ist gut gefüllt; Bardame **Selia** hinter der Theke besticht durch auffällige Muskulatur, die sie gern zur Schau stellt.
 
 Draußen zieht Nebel auf. Die Tür wird aufgestoßen: **[Arigal von und zu Nachtigall](../npcs/arigal-nachtigall.md)**, ein Mann in bunten, edlen Kleidern, stürmt herein, sucht sofort die Party und legt Brief und Geldbeutel (100 Goldkronen) auf den Tisch. Der Brief kommt von **[Koljan Indirovic](../npcs/koljan-indirovic.md)**, dem Bürgermeister des Dorfes Barovia — und enthält die Namen aller Partymitglieder. Wie der Bürgermeister von ihnen weiß, erklärt Arigal nicht.
