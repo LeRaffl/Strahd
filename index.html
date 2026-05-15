@@ -1695,6 +1695,9 @@ Index aller Dateien im Archiv.
   const CAMPAIGN_NAME = 'Fluch des Strahd';
   const CAMPAIGN_STATUS = 'aktiv — erste Session 13.05.2026';
 
+  // Sessions cached globally so NPC/Ort grids can sort by recency
+  let globalSessions = [];
+
   /* ============================================================
      HELPERS
      ============================================================ */
@@ -2107,6 +2110,7 @@ Index aller Dateien im Archiv.
 
     // Sort by nr descending (newest first)
     sessions.sort((a, b) => parseInt(b.nr) - parseInt(a.nr));
+    globalSessions = sessions;
 
     let html = '';
 
@@ -2584,6 +2588,62 @@ Index aller Dateien im Archiv.
       }
       return { path, slug, displayName, hint };
     }));
+
+    // Sort by recency (most recently seen session first)
+    if (globalSessions.length > 0) {
+      const normalize = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+      if (prefix.endsWith('/npcs/')) {
+        // Build map: card slug → highest session nr seen
+        // Matching: all slug words (>3 chars) must appear in the normalized memory name,
+        // to handle cases like slug "arigal-nachtigall" vs. memory "Arigal von und zu Nachtigall"
+        const recency = {};
+        for (const session of globalSessions) {
+          const nr = parseInt(session.nr);
+          for (const mem of session.memories) {
+            if (mem.kind !== 'npc') continue;
+            const normMem = normalize(mem.name);
+            for (const card of cards) {
+              const slugWords = card.slug.split('-').filter(w => w.length > 3);
+              if (slugWords.length > 0 && slugWords.every(w => normMem.includes(w))) {
+                if (recency[card.slug] === undefined || nr > recency[card.slug]) recency[card.slug] = nr;
+              }
+            }
+          }
+        }
+        cards.sort((a, b) => {
+          const aNr = recency[a.slug] ?? -1;
+          const bNr = recency[b.slug] ?? -1;
+          if (bNr !== aNr) return bNr - aNr;
+          return a.displayName.localeCompare(b.displayName);
+        });
+
+      } else if (prefix.endsWith('/orte/')) {
+        // Build map: ort slug → highest session nr where all slug words appear in session text
+        // Word matching (like NPC) handles "barovia-dorf" vs. "Dorf Barovia" in location field
+        const recency = {};
+        for (const session of globalSessions) {
+          const nr = parseInt(session.nr);
+          const sessionText = [
+            session.location,
+            session.title,
+            ...session.scenes.map(s => `${s.title} ${s.tldr} ${s.body}`)
+          ].join(' ').toLowerCase();
+          for (const card of cards) {
+            const slugWords = card.slug.split('-').filter(w => w.length > 3);
+            if (slugWords.length > 0 && slugWords.every(w => sessionText.includes(w))) {
+              if (recency[card.slug] === undefined || nr > recency[card.slug]) recency[card.slug] = nr;
+            }
+          }
+        }
+        cards.sort((a, b) => {
+          const aNr = recency[a.slug] ?? -1;
+          const bNr = recency[b.slug] ?? -1;
+          if (bNr !== aNr) return bNr - aNr;
+          return a.displayName.localeCompare(b.displayName);
+        });
+      }
+    }
 
     container.innerHTML = cards.map(c => `
       <a class="entity-card" href="#${hashKind}/${escapeHtml(c.slug)}" data-nav="#${hashKind}/${escapeHtml(c.slug)}" style="text-decoration:none;color:inherit;display:block;">
