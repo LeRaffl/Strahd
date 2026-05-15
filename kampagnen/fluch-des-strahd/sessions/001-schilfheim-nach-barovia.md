@@ -92,6 +92,8 @@ Thorin erschnüffelt: die beiden Briefe riechen **unterschiedlich**. Mindestens 
 
 *[alle]*
 
+![Dorf Barovia](../../../assets/art/barovia-dorf.png)
+
 Glitschige Pflastersteine, Häuser die sich lichten — ein morsches Schild: **Barovia (Dorf)**. Alles verrottet, verrammelt, Kratz- und Feuerspuren. Aber bewohnt.
 
 Am Horizont sticht eine riesige Burg wie eine Lanze in den Himmel: lila Dächer, Erker, viele Türmchen. Schloss Ravenloft. Am zentralen Platz: links das Schild von **Bildrath's Laden**, rechts das **Gasthaus Blut auf den Reben**. Aus einer Seitenstraße: ein klage­ndes Schluchzen.
@@ -117,6 +119,8 @@ Die Frau öffnet einen Spalt: graue Strähnen, zwei Zöpfe, fahle Haut, mottenze
 > Moxie, Mara und Alberich kaufen ein und erfahren: nachts kommen Untote ins Dorf, daher die Verbarrikadierungen.
 
 *[Moxie, Mara, Alberich]*
+
+![Bildrath verhandelt](../../../assets/sessions/001/bildrath-verhandelt.png)
 
 - Bildrath verkauft nur Abenteurer-Ausrüstung, redet in hohem Ton, quirky. Wucherpreise.
 - Er erklärt: Nachts kommen Zombies, Ghoule, "oder irgendetwas" — daher die Verbarrikadierungen.
