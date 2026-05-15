@@ -1717,6 +1717,26 @@ Index aller Dateien im Archiv.
     return `background-image:url('${url}');background-size:cover;background-position:center top;`;
   }
 
+  // After list-view renders, swap any .png background-image to .jpg/.jpeg/.webp if the PNG doesn't exist.
+  // Lets users drop in JPG portraits without converting.
+  async function applyArtFallback() {
+    const selectors = '.entity-portrait, .npc-portrait, .party-card-art, .party-avatar';
+    const els = [...document.querySelectorAll(selectors)];
+    await Promise.all(els.map(async (el) => {
+      const m = (el.style.backgroundImage || '').match(/url\(['"]?(.+?\.png)['"]?\)/);
+      if (!m) return;
+      const pngUrl = m[1];
+      if (await probeImage(pngUrl)) return;
+      for (const ext of ['jpg', 'jpeg', 'webp']) {
+        const altUrl = pngUrl.replace(/\.png$/, '.' + ext);
+        if (await probeImage(altUrl)) {
+          el.style.backgroundImage = `url('${altUrl}')`;
+          return;
+        }
+      }
+    }));
+  }
+
   /* ============================================================
      MANIFEST / REPO ACCESS
      ============================================================ */
@@ -2995,10 +3015,11 @@ Index aller Dateien im Archiv.
     // and use the first one that resolves.
     const portraitEl = container.querySelector('.detail-portrait');
     if (portraitEl) {
-      const candidates = [
-        'assets/art/' + slug + '.png',
-        'assets/art/' + avatarLabel(title),
+      const baseCandidates = [
+        'assets/art/' + slug,
+        'assets/art/' + avatarLabel(title).replace(/\.png$/, ''),
       ];
+      const candidates = baseCandidates.flatMap(b => ['png', 'jpg', 'jpeg', 'webp'].map(ext => `${b}.${ext}`));
       (async () => {
         for (const url of candidates) {
           if (await probeImage(url)) {
@@ -3369,6 +3390,9 @@ Default: keine Transkripte laden — erst die kuratierte sessions/<nr>.md.`;
 
     // Initial route from hash (deep links work on page load)
     routeFromHash();
+
+    // Swap PNG → JPG/WebP for any portrait whose PNG doesn't resolve
+    applyArtFallback();
   })();
 </script>
 
