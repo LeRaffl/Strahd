@@ -42,7 +42,8 @@ Der häufigste Schreib-Job. Drei Eingabeformen, gleicher Output:
    Nimm Session 001 als Referenz für Tiefe und Ton: `kampagnen/requiem-of-wings/sessions/001-masks-and-monsters.md`.
 3. **Manifest ergänzen:** Eintrag in `_kontext/manifest.md` für jede neue Datei.
 4. **Querverweise:** Wenn die Session neue NPCs / Orte / Items einführt → lege auch diese Dateien an (oder verlinke bestehende) und referenziere sie aus der Session.
-5. **Commit:** Aussagekräftige Message, z.B. `Session 002: <Titel>`.
+5. **Aktueller Plan updaten:** `kampagnen/<kampagne>/_kontext/aktueller-plan.md` ist die Quelle für den Header-Badge "Plan" in der UI. Wenn die Session das **Hauptziel** verschiebt (Quest abgeschlossen, neuer Auftrag, neue Priorität) oder Nebenfäden öffnet/schließt → Datei anpassen. Wenn sich nichts ändert → einfach so lassen.
+6. **Commit:** Aussagekräftige Message, z.B. `Session 002: <Titel>`.
 
 ### Inhaltliche Konvention
 - Nur **In-Game-Geschehen** in die kuratierte Session. Out-of-Game-Witze landen höchstens unter "Zitate / Memorable Moments".

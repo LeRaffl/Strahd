@@ -1439,8 +1439,8 @@
       </div>
       <div class="status-divider"></div>
       <div class="status-item">
-        <div class="status-label">Status</div>
-        <div class="status-value" id="status-overall">Start am 13.05.</div>
+        <div class="status-label">Plan</div>
+        <div class="status-value" id="status-overall">läuft</div>
       </div>
     </div>
   </div>
@@ -1603,6 +1603,7 @@
   const MANIFEST_PATH = '_kontext/manifest.md';
   const TIMELINE_PATH = `${CAMPAIGN_PREFIX}/_kontext/timeline.md`;
   const TERMINE_PATH = `${CAMPAIGN_PREFIX}/_kontext/termine.md`;
+  const PLAN_PATH = `${CAMPAIGN_PREFIX}/_kontext/aktueller-plan.md`;
   // Auto-Fallback: wenn die UI nicht im Repo läuft (Preview, lokal),
   // greifen wir direkt auf GitHub Raw zu, damit echte Repo-Inhalte angezeigt werden.
   const REPO_RAW = 'https://raw.githubusercontent.com/LeRaffl/Strahd/main/';
@@ -1923,6 +1924,16 @@ Index aller Dateien im Archiv.
     return entries;
   }
 
+  // Erstes **bold** unter "## Hauptziel" — wird im Header-Badge "Plan" angezeigt.
+  function parseCurrentPlan(md) {
+    if (!md) return null;
+    const sections = parseSections(md);
+    const haupt = sections['Hauptziel'] || sections['Plan'] || '';
+    if (!haupt) return null;
+    const m = haupt.match(/\*\*([^*]+)\*\*/);
+    return m ? m[1].trim() : null;
+  }
+
   function updateNextSessionPill(termine) {
     const pill = document.getElementById('next-session-pill');
     if (!pill) return;
@@ -2187,13 +2198,16 @@ Index aller Dateien im Archiv.
     const termine = parseTermine(termineMd);
     updateNextSessionPill(termine);
 
+    let planMd = '';
+    try {
+      planMd = await fetchRepoFile(PLAN_PATH);
+    } catch (e) {
+      // optional
+    }
     const statusEl = document.getElementById('status-overall');
     if (statusEl) {
-      if (termine.length > 0) {
-        statusEl.textContent = `Nächste: ${termine[0].weekdayShort} ${termine[0].date.slice(0, 6)}`;
-      } else {
-        statusEl.textContent = 'läuft';
-      }
+      const planText = parseCurrentPlan(planMd);
+      if (planText) statusEl.textContent = planText;
     }
 
     // Find all session files in manifest
