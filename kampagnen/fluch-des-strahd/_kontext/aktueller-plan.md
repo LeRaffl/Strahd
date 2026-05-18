@@ -1,5 +1,5 @@
 # Aktueller Plan
-*Was die Party gerade vorhat. Wird nach jeder Session aktualisiert — der Header-Badge in der UI zieht den fett markierten Eintrag unter `## Hauptziel`.*
+*Was die Party gerade vorhat. Wird nach jeder Session aktualisiert. Nicht in der UI sichtbar — Referenz für Biblo bei Quest-Fragen.*
 
 ---
 

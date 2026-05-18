@@ -181,6 +181,66 @@
     .next-session-pill .pill-sub {
       font-size: 11px; color: var(--ink-3); margin-top: 2px;
     }
+    .next-session-pill .pill-bullets {
+      margin: 8px 0 0;
+      padding: 8px 0 0;
+      border-top: 1px solid var(--accent-line);
+      list-style: none;
+      font-size: 11px;
+      color: var(--ink-3);
+      line-height: 1.45;
+    }
+    .next-session-pill .pill-bullets li {
+      padding: 2px 0 2px 10px;
+      position: relative;
+    }
+    .next-session-pill .pill-bullets li::before {
+      content: "·";
+      position: absolute;
+      left: 0; top: 1px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Schlanker Geplant-Strich oberhalb der ersten echten Session */
+    .upcoming-line {
+      position: relative;
+      padding: 6px 0 14px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      color: var(--ink-3);
+      border-bottom: 1px dashed var(--border);
+    }
+    .upcoming-line::before {
+      content: "";
+      position: absolute;
+      left: -26px; top: 9px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1.5px dashed var(--ink-4);
+    }
+    .upcoming-line .upcoming-label {
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-right: 10px;
+    }
+    .upcoming-line .upcoming-item strong {
+      color: var(--ink-2);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+    .upcoming-line .upcoming-typ {
+      color: var(--ink-4);
+      margin-left: 4px;
+    }
+    .upcoming-line .upcoming-sep {
+      margin: 0 8px;
+      color: var(--ink-4);
+    }
 
     .quick-links { display: flex; flex-direction: column; gap: 2px; }
     .quick-link {
@@ -1439,8 +1499,8 @@
       </div>
       <div class="status-divider"></div>
       <div class="status-item">
-        <div class="status-label">Plan</div>
-        <div class="status-value" id="status-overall">läuft</div>
+        <div class="status-label">Ort</div>
+        <div class="status-value" id="status-overall">—</div>
       </div>
     </div>
   </div>
@@ -1603,7 +1663,6 @@
   const MANIFEST_PATH = '_kontext/manifest.md';
   const TIMELINE_PATH = `${CAMPAIGN_PREFIX}/_kontext/timeline.md`;
   const TERMINE_PATH = `${CAMPAIGN_PREFIX}/_kontext/termine.md`;
-  const PLAN_PATH = `${CAMPAIGN_PREFIX}/_kontext/aktueller-plan.md`;
   // Auto-Fallback: wenn die UI nicht im Repo läuft (Preview, lokal),
   // greifen wir direkt auf GitHub Raw zu, damit echte Repo-Inhalte angezeigt werden.
   const REPO_RAW = 'https://raw.githubusercontent.com/LeRaffl/Strahd/main/';
@@ -1924,14 +1983,11 @@ Index aller Dateien im Archiv.
     return entries;
   }
 
-  // Erstes **bold** unter "## Hauptziel" — wird im Header-Badge "Plan" angezeigt.
-  function parseCurrentPlan(md) {
-    if (!md) return null;
-    const sections = parseSections(md);
-    const haupt = sections['Hauptziel'] || sections['Plan'] || '';
-    if (!haupt) return null;
-    const m = haupt.match(/\*\*([^*]+)\*\*/);
-    return m ? m[1].trim() : null;
+  // Letztes Segment einer "A → B → C"-Ort-Angabe (für Header-Badge "Ort").
+  function lastLocationSegment(loc) {
+    if (!loc) return '';
+    const parts = loc.split(/→|->|>/g).map(s => s.trim()).filter(Boolean);
+    return parts[parts.length - 1] || '';
   }
 
   function updateNextSessionPill(termine) {
@@ -1946,10 +2002,14 @@ Index aller Dateien im Archiv.
     }
     const next = termine[0];
     const typLabel = next.typ === 'lang' ? 'Lange Session' : (next.typ === 'kurz' ? 'Kurze Session' : 'Session');
+    const bulletsHtml = next.bullets.length
+      ? `<ul class="pill-bullets">${next.bullets.slice(0, 3).map(b => `<li>${renderInlineMd(escapeHtml(b))}</li>`).join('')}</ul>`
+      : '';
     pill.innerHTML = `
       <div class="pill-label">Nächste Session</div>
       <div class="pill-value">${escapeHtml(next.weekdayShort)}, ${escapeHtml(next.date)}</div>
-      <div class="pill-sub">${escapeHtml(typLabel)} · DM Jana</div>`;
+      <div class="pill-sub">${escapeHtml(typLabel)} · DM Jana</div>
+      ${bulletsHtml}`;
   }
 
   /* ============================================================
@@ -2198,18 +2258,6 @@ Index aller Dateien im Archiv.
     const termine = parseTermine(termineMd);
     updateNextSessionPill(termine);
 
-    let planMd = '';
-    try {
-      planMd = await fetchRepoFile(PLAN_PATH);
-    } catch (e) {
-      // optional
-    }
-    const statusEl = document.getElementById('status-overall');
-    if (statusEl) {
-      const planText = parseCurrentPlan(planMd);
-      if (planText) statusEl.textContent = planText;
-    }
-
     // Find all session files in manifest
     const sessionPaths = pathsForPrefix(`${CAMPAIGN_PREFIX}/sessions/`);
     document.getElementById('status-sessions').textContent = `${sessionPaths.length} gespielt`;
@@ -2237,6 +2285,13 @@ Index aller Dateien im Archiv.
     sessions.sort((a, b) => parseInt(b.nr) - parseInt(a.nr));
     globalSessions = sessions;
 
+    // Header-Badge "Ort": letztes Segment des "Ort in der Spielwelt" der jüngsten Session
+    const statusEl = document.getElementById('status-overall');
+    if (statusEl && sessions.length > 0) {
+      const loc = lastLocationSegment(sessions[0].location);
+      if (loc) statusEl.textContent = loc;
+    }
+
     let html = '';
 
     // Pre-Campaign entries (rendered last = bottom of timeline)
@@ -2259,35 +2314,17 @@ Index aller Dateien im Archiv.
       </div>`;
     }
 
-    // Next-up entries at top — eine Kachel pro geplantem Termin (aus termine.md),
-    // sonst ein einzelner Platzhalter. Neuester Termin oben → wir rendern in
-    // umgekehrter Reihenfolge (terminReversed), damit der unmittelbar nächste
-    // Termin zuoberst landet.
+    // Geplante Termine als schlanker One-Liner über der jüngsten Session.
+    // Die Sidebar-Pill enthält die Detail-Bullets, die Timeline nur Datum + Typ.
     if (termine.length > 0) {
-      const baseNr = sessions.length + 1;
-      const terminReversed = termine.map((t, idx) => ({ ...t, nr: String(baseNr + idx).padStart(3, '0') })).reverse();
-      for (const t of terminReversed) {
-        const typLabel = t.typ === 'lang' ? 'Lange Session geplant' : (t.typ === 'kurz' ? 'Kurze Session geplant' : 'Geplant');
-        const bulletsHtml = t.bullets.length
-          ? `<ul class="pre-event-list">${t.bullets.map(b => `<li>${renderInlineMd(escapeHtml(b))}</li>`).join('')}</ul>`
-          : '';
-        html += `<div class="session-entry next-up">
-          <div class="session-dot"></div>
-          <div class="session-card">
-            <div class="session-header">
-              <div class="session-meta-left">
-                <span class="session-nr">Session ${t.nr}</span>
-                <span class="session-title" style="color: var(--ink-3); font-style: italic;">${escapeHtml(typLabel)}</span>
-              </div>
-              <span class="session-date">${escapeHtml(t.weekdayShort)}, ${escapeHtml(t.date)}</span>
-            </div>
-            <div class="session-body">
-              ${bulletsHtml}
-              <div class="data-source-note"><span class="dot"></span>aus _kontext/termine.md</div>
-            </div>
-          </div>
-        </div>`;
-      }
+      const parts = termine.map(t => {
+        const typShort = t.typ === 'lang' ? 'lang' : (t.typ === 'kurz' ? 'kurz' : '');
+        const typHtml = typShort ? ` <span class="upcoming-typ">(${escapeHtml(typShort)})</span>` : '';
+        return `<span class="upcoming-item"><strong>${escapeHtml(t.weekdayShort)} ${escapeHtml(t.date.slice(0, 6))}</strong>${typHtml}</span>`;
+      }).join('<span class="upcoming-sep">·</span>');
+      html += `<div class="upcoming-line">
+        <span class="upcoming-label">Geplant</span>${parts}
+      </div>`;
     } else {
       const nextNr = sessions.length === 0 ? '001' : String(sessions.length + 1).padStart(3, '0');
       const nextDate = sessions.length === 0 ? '13.05.2026' : 'noch nicht geplant';
