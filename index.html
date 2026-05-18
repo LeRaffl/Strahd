@@ -1440,7 +1440,7 @@
       <div class="status-divider"></div>
       <div class="status-item">
         <div class="status-label">Status</div>
-        <div class="status-value">Start am 13.05.</div>
+        <div class="status-value" id="status-overall">Start am 13.05.</div>
       </div>
     </div>
   </div>
@@ -2186,6 +2186,15 @@ Index aller Dateien im Archiv.
     }
     const termine = parseTermine(termineMd);
     updateNextSessionPill(termine);
+
+    const statusEl = document.getElementById('status-overall');
+    if (statusEl) {
+      if (termine.length > 0) {
+        statusEl.textContent = `Nächste: ${termine[0].weekdayShort} ${termine[0].date.slice(0, 6)}`;
+      } else {
+        statusEl.textContent = 'läuft';
+      }
+    }
 
     // Find all session files in manifest
     const sessionPaths = pathsForPrefix(`${CAMPAIGN_PREFIX}/sessions/`);
