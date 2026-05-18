@@ -1460,7 +1460,7 @@
       <div class="where-we-stand">
         Die Party ist in <span class="highlight">Barovia (Dorf)</span> angekommen. <span class="highlight">Irena Koljana</span> siecht dahin — und der Brief, der die Gruppe hierhergelockt hat, stammt <span class="accent">nicht vom Bürgermeister.</span>
       </div>
-      <div class="next-session-pill">
+      <div class="next-session-pill" id="next-session-pill">
         <div class="pill-label">Nächste Session</div>
         <div class="pill-value">noch nicht geplant</div>
         <div class="pill-sub">DM Jana</div>
@@ -1602,6 +1602,7 @@
   const CAMPAIGN_PREFIX = 'kampagnen/fluch-des-strahd';
   const MANIFEST_PATH = '_kontext/manifest.md';
   const TIMELINE_PATH = `${CAMPAIGN_PREFIX}/_kontext/timeline.md`;
+  const TERMINE_PATH = `${CAMPAIGN_PREFIX}/_kontext/termine.md`;
   // Auto-Fallback: wenn die UI nicht im Repo läuft (Preview, lokal),
   // greifen wir direkt auf GitHub Raw zu, damit echte Repo-Inhalte angezeigt werden.
   const REPO_RAW = 'https://raw.githubusercontent.com/LeRaffl/Strahd/main/';
@@ -1878,6 +1879,69 @@ Index aller Dateien im Archiv.
   }
 
   /* ============================================================
+     TERMINE (from termine.md "## Anstehend")
+     ============================================================ */
+  const WEEKDAY_SHORT = {
+    'Sonntag': 'So', 'Montag': 'Mo', 'Dienstag': 'Di', 'Mittwoch': 'Mi',
+    'Donnerstag': 'Do', 'Freitag': 'Fr', 'Samstag': 'Sa'
+  };
+
+  function parseTermine(md) {
+    if (!md) return [];
+    const sections = parseSections(md);
+    const anstehend = sections['Anstehend'] || '';
+    if (!anstehend) return [];
+
+    const entries = [];
+    const lines = anstehend.split('\n');
+    let current = null;
+    const h3Re = /^###\s+([A-Za-zÄÖÜäöüß]+),\s*(\d{2})\.(\d{2})\.(\d{4})\s*[—–\-]\s*(.+?)\s*$/;
+    for (const line of lines) {
+      const h3 = line.match(h3Re);
+      if (h3) {
+        if (current) entries.push(current);
+        const [, weekday, dd, mm, yyyy, label] = h3;
+        const lower = label.toLowerCase();
+        const typ = lower.includes('lang') ? 'lang' : (lower.includes('kurz') ? 'kurz' : 'session');
+        current = {
+          weekday,
+          weekdayShort: WEEKDAY_SHORT[weekday] || weekday.slice(0, 2),
+          date: `${dd}.${mm}.${yyyy}`,
+          dateIso: `${yyyy}-${mm}-${dd}`,
+          label: label.trim(),
+          typ,
+          bullets: []
+        };
+      } else if (current) {
+        const b = line.trim().match(/^[-*]\s+(.+)$/);
+        if (b) current.bullets.push(b[1]);
+      }
+    }
+    if (current) entries.push(current);
+
+    entries.sort((a, b) => a.dateIso.localeCompare(b.dateIso));
+    return entries;
+  }
+
+  function updateNextSessionPill(termine) {
+    const pill = document.getElementById('next-session-pill');
+    if (!pill) return;
+    if (!termine || termine.length === 0) {
+      pill.innerHTML = `
+        <div class="pill-label">Nächste Session</div>
+        <div class="pill-value">noch nicht geplant</div>
+        <div class="pill-sub">DM Jana</div>`;
+      return;
+    }
+    const next = termine[0];
+    const typLabel = next.typ === 'lang' ? 'Lange Session' : (next.typ === 'kurz' ? 'Kurze Session' : 'Session');
+    pill.innerHTML = `
+      <div class="pill-label">Nächste Session</div>
+      <div class="pill-value">${escapeHtml(next.weekdayShort)}, ${escapeHtml(next.date)}</div>
+      <div class="pill-sub">${escapeHtml(typLabel)} · DM Jana</div>`;
+  }
+
+  /* ============================================================
      PRE-CAMPAIGN ENTRIES (from timeline.md)
      ============================================================ */
   // Parsed from kampagnen/fluch-des-strahd/_kontext/timeline.md "## Vor der Kampagne"
@@ -2114,6 +2178,15 @@ Index aller Dateien im Archiv.
     }
     const preCampaignEntries = buildPreCampaignEntries(timelineMd);
 
+    let termineMd = '';
+    try {
+      termineMd = await fetchRepoFile(TERMINE_PATH);
+    } catch (e) {
+      // optional — pill bleibt im Default-Zustand
+    }
+    const termine = parseTermine(termineMd);
+    updateNextSessionPill(termine);
+
     // Find all session files in manifest
     const sessionPaths = pathsForPrefix(`${CAMPAIGN_PREFIX}/sessions/`);
     document.getElementById('status-sessions').textContent = `${sessionPaths.length} gespielt`;
@@ -2163,28 +2236,58 @@ Index aller Dateien im Archiv.
       </div>`;
     }
 
-    // Next-up placeholder at top (Session 001 if no sessions yet, or next after last)
-    const nextNr = sessions.length === 0 ? '001' : String(sessions.length + 1).padStart(3, '0');
-    const nextDate = sessions.length === 0 ? '13.05.2026' : 'noch nicht geplant';
-    html += `<div class="session-entry next-up">
-      <div class="session-dot"></div>
-      <div class="session-card">
-        <div class="session-header">
-          <div class="session-meta-left">
-            <span class="session-nr">Session ${nextNr}</span>
-            <span class="session-title" style="color: var(--ink-3); font-style: italic;">noch nicht gespielt</span>
+    // Next-up entries at top — eine Kachel pro geplantem Termin (aus termine.md),
+    // sonst ein einzelner Platzhalter. Neuester Termin oben → wir rendern in
+    // umgekehrter Reihenfolge (terminReversed), damit der unmittelbar nächste
+    // Termin zuoberst landet.
+    if (termine.length > 0) {
+      const baseNr = sessions.length + 1;
+      const terminReversed = termine.map((t, idx) => ({ ...t, nr: String(baseNr + idx).padStart(3, '0') })).reverse();
+      for (const t of terminReversed) {
+        const typLabel = t.typ === 'lang' ? 'Lange Session geplant' : (t.typ === 'kurz' ? 'Kurze Session geplant' : 'Geplant');
+        const bulletsHtml = t.bullets.length
+          ? `<ul class="pre-event-list">${t.bullets.map(b => `<li>${renderInlineMd(escapeHtml(b))}</li>`).join('')}</ul>`
+          : '';
+        html += `<div class="session-entry next-up">
+          <div class="session-dot"></div>
+          <div class="session-card">
+            <div class="session-header">
+              <div class="session-meta-left">
+                <span class="session-nr">Session ${t.nr}</span>
+                <span class="session-title" style="color: var(--ink-3); font-style: italic;">${escapeHtml(typLabel)}</span>
+              </div>
+              <span class="session-date">${escapeHtml(t.weekdayShort)}, ${escapeHtml(t.date)}</span>
+            </div>
+            <div class="session-body">
+              ${bulletsHtml}
+              <div class="data-source-note"><span class="dot"></span>aus _kontext/termine.md</div>
+            </div>
           </div>
-          <span class="session-date">${escapeHtml(nextDate)}</span>
+        </div>`;
+      }
+    } else {
+      const nextNr = sessions.length === 0 ? '001' : String(sessions.length + 1).padStart(3, '0');
+      const nextDate = sessions.length === 0 ? '13.05.2026' : 'noch nicht geplant';
+      html += `<div class="session-entry next-up">
+        <div class="session-dot"></div>
+        <div class="session-card">
+          <div class="session-header">
+            <div class="session-meta-left">
+              <span class="session-nr">Session ${nextNr}</span>
+              <span class="session-title" style="color: var(--ink-3); font-style: italic;">noch nicht gespielt</span>
+            </div>
+            <span class="session-date">${escapeHtml(nextDate)}</span>
+          </div>
+          <div class="session-body">
+            <p class="pre-event-text" style="color: var(--ink-3);">
+              ${sessions.length === 0
+                ? 'Die Kampagne beginnt in Schilfheim. Memory Cards erscheinen hier, sobald die Session-Notizen im Repo liegen.'
+                : 'Memory Cards erscheinen hier nach der nächsten Session.'}
+            </p>
+          </div>
         </div>
-        <div class="session-body">
-          <p class="pre-event-text" style="color: var(--ink-3);">
-            ${sessions.length === 0
-              ? 'Die Kampagne beginnt in Schilfheim. Memory Cards erscheinen hier, sobald die Session-Notizen im Repo liegen.'
-              : 'Memory Cards erscheinen hier nach der nächsten Session.'}
-          </p>
-        </div>
-      </div>
-    </div>`;
+      </div>`;
+    }
 
     const sessionChevronSvg = `<svg class="session-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 4 10 8 6 12"/></svg>`;
     const sceneChevronSvg = `<svg class="scene-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 4 10 8 6 12"/></svg>`;

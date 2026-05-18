@@ -67,6 +67,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/_kontext/welt.md` — Barovia, Strahd, Götter (Morgenfürst/Mutternacht), Bevölkerung
 - `kampagnen/fluch-des-strahd/_kontext/timeline.md` — Pre-Campaign-Ereignisse, Session-Einträge
 - `kampagnen/fluch-des-strahd/_kontext/session-zero.md` — Organisationsregeln, Do's/Don'ts, X-Card, Regelwerk 2024
+- `kampagnen/fluch-des-strahd/_kontext/termine.md` — Geplante und vergangene Sessions, Format-Reminder lang/kurz
 - `kampagnen/fluch-des-strahd/sessions/001-schilfheim-nach-barovia.md` — S001: Auftrag in Schilfheim, Svalidsch Wald, Ankunft in Barovia (Dorf)
 - `kampagnen/fluch-des-strahd/npcs/hanna-sommerfeld.md` — Nias Mutter (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/bert-sommerfeld.md` — Nias Vater (Apfelried, Hintergrund)
