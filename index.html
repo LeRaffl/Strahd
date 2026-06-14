@@ -1475,9 +1475,90 @@
       max-width: 80%;
       text-align: center;
     }
+  /* === Login Overlay === */
+  #login-overlay {
+    position: fixed; inset: 0; z-index: 9999;
+    background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  #login-overlay.hidden { display: none; }
+  .login-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    padding: 40px 36px;
+    width: 100%; max-width: 400px;
+    display: flex; flex-direction: column; gap: 24px;
+  }
+  .login-brand { display: flex; align-items: center; gap: 10px; }
+  .login-brand-mark {
+    width: 36px; height: 36px;
+    background: var(--accent); color: var(--surface);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 16px;
+  }
+  .login-brand-text h2 { font-size: 15px; font-weight: 600; }
+  .login-brand-text p { font-size: 12px; color: var(--ink-3); }
+  .login-body { display: flex; flex-direction: column; gap: 12px; }
+  .login-body label { font-size: 12px; font-weight: 600; color: var(--ink-2); }
+  .login-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    color: var(--ink);
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .login-input:focus { border-color: var(--accent); }
+  .login-input.error { border-color: oklch(55% 0.18 25); }
+  .login-error {
+    font-size: 12px;
+    color: oklch(45% 0.18 25);
+    min-height: 16px;
+  }
+  .login-btn {
+    width: 100%;
+    padding: 11px;
+    background: var(--accent);
+    color: var(--surface);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .login-btn:hover { opacity: 0.88; }
   </style>
 </head>
 <body>
+
+<div id="login-overlay">
+  <div class="login-card">
+    <div class="login-brand">
+      <div class="login-brand-mark">B</div>
+      <div class="login-brand-text">
+        <h2>Biblo – Fluch des Strahd</h2>
+        <p>Kampagnen-Archiv</p>
+      </div>
+    </div>
+    <div class="login-body">
+      <label for="login-input">Wie heißt du oder dein Charakter?</label>
+      <input id="login-input" class="login-input" type="text" autocomplete="off"
+             placeholder="" />
+      <div class="login-error" id="login-error"></div>
+      <button class="login-btn" id="login-btn">Eintreten</button>
+    </div>
+  </div>
+</div>
 
 <header>
   <div class="header-inner">
@@ -1657,6 +1738,83 @@
 </div>
 
 <script>
+  /* ============================================================
+     AUTH
+     ============================================================ */
+  (() => {
+const VALID = new Set([
+      // Nia Sommerfeld (Raffi)
+      'nia', 'nia sommerfeld', 'sommerfeld',
+      // Florpthyz Dread (Felix) — "kein schwein kann das schreiben"
+      'florpthyz', 'florpthyz dread', 'flori', 'flory', 'flori dread',
+      'florphy', 'florphyz', 'flortphyz', 'florpthyz', 'floriphtyz',
+      'florpthyz', 'floriphtyz', 'floriphyz',
+      'humphrey', 'humphrey fizzlepads', 'fizzlepads', 'humphy',
+      // Alberich (Andi)
+      'alberich', 'alberich von steinkreis', 'albi', 'albrich', 'alberik',
+      // Lazar (Andi)
+      'lazar', 'lazaar', 'lazar tabaxi',
+      // Major Sempft (Felix)
+      'major', 'sempft', 'major sempft', 'sempf', 'der major',
+      // Mara Winterried (Anna)
+      'mara', 'mara winterried', 'winterried',
+      // Moxie (Svenja)
+      'moxie', 'moxi', 'moxy', 'moksi',
+      // Shii Take (Raffi)
+      'shii take', 'shii-take', 'shiitake', 'shii', 'shii tak',
+      // Thorin (Tom)
+      'thorin', 'torin', 'thorin barbarian',
+      // Spielernamen (fallback)
+      'raffi', 'rafael', 'raffael', 'andi', 'andreas', 'felix', 'anna', 'svenja', 'tom', 'jana',
+    ]);
+
+    function normalize(s) {
+      return s.trim().toLowerCase()
+        .replace(/[äÄ]/g, 'ae').replace(/[öÖ]/g, 'oe').replace(/[üÜ]/g, 'ue').replace(/ß/g, 'ss');
+    }
+
+    function tryLogin(raw) {
+      const key = normalize(raw);
+      if (!VALID.has(key)) return false;
+
+      sessionStorage.setItem('biblo_auth', '1');
+      document.getElementById('login-overlay').classList.add('hidden');
+
+      // Login in Google Sheet loggen (fire-and-forget)
+      const fd = new FormData();
+      fd.append('entry.1780260843', raw.trim());
+      fetch('https://docs.google.com/forms/d/e/1FAIpQLSc6YB68u8uxCsAjELLoNWeQIdN0VJ1CHp591pxi27EHzX3UQQ/formResponse', {
+        method: 'POST', mode: 'no-cors', body: fd,
+      }).catch(() => {});
+
+      return true;
+    }
+
+    if (sessionStorage.getItem('biblo_auth')) {
+      document.getElementById('login-overlay').classList.add('hidden');
+      return;
+    }
+
+    const input = document.getElementById('login-input');
+    const btn   = document.getElementById('login-btn');
+    const err   = document.getElementById('login-error');
+
+    btn.addEventListener('click', () => {
+      if (!tryLogin(input.value)) {
+        input.classList.add('error');
+        err.textContent = 'Das kenne ich nicht — versuch einen anderen Namen oder Spitznamen.';
+      }
+    });
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') btn.click();
+    });
+    input.addEventListener('input', () => {
+      input.classList.remove('error');
+      err.textContent = '';
+    });
+    input.focus();
+  })();
+
   /* ============================================================
      CONFIG
      ============================================================ */
