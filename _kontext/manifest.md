@@ -104,7 +104,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 
 #### Roh-Mitschriften (nur als Last-Resort laden)
 - `kampagnen/fluch-des-strahd/transcripts/README.md` — Wofür der Ordner ist und wie er gepflegt wird
-- `kampagnen/fluch-des-strahd/transcripts/002-koljans-letztes-geleit.md` — S002 Roh-Mitschrift (handschriftlich + Audio)
+- `kampagnen/fluch-des-strahd/transcripts/002-koljans-letztes-geleit.md` — S002 Roh-Mitschrift (handschriftlich)
 
 ### Requiem of Wings (One-Shot, abgeschlossen)
 - `kampagnen/requiem-of-wings/party.md` — Wer war dabei

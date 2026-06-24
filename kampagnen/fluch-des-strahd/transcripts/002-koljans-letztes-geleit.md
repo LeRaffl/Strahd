@@ -1,6 +1,6 @@
 # Roh-Mitschrift Session 002 – Koljans letztes Geleit
 **Datum:** 2026-06-21
-**Quelle:** Handschriftliche Mitschrift (Spieler) + Audio-Transkription
+**Quelle:** Handschriftliche Mitschrift (Spieler)
 **Status:** Roh
 
 ---
