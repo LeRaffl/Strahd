@@ -6,7 +6,7 @@
 ---
 
 ## Zusammenfassung
-Die Party vertieft ihr Gespräch mit Ismag und stellt fest: Die Taverne gehört den drei Vistani-Damen, der Barkeeper Arik hat keine Seele, und Vampire kommen nicht in Wagen hinein — brauchbare Erkenntnisse alle. Dann der Schock: Koljan Indirovic, der Bürgermeister, liegt im Empfangszimmer seines eigenen Herrenhauses als Leiche in einer zugenagelt­en Kiste. Am nächsten Morgen trägt Thorin ihn auf dem Rücken zum Friedhof, der Priester Donavitsch spricht die Worte — während im Keller der Kirche sein vampirisierter Sohn hungert. Die Party bricht mit Irena auf Richtung Vistani-Becken.
+Die Party vertieft ihr Gespräch mit Ismag und stellt fest: Die Taverne gehört den drei Vistani-Damen, der Barkeeper Arik hat keine Seele, und Vampire kommen nicht in Wagen hinein — brauchbare Erkenntnisse alle. Dann der Schock: Koljan Indirovic, der Bürgermeister, liegt im Empfangszimmer seines eigenen Herrenhauses als Leiche in einer zugenagelt­en Kiste. Am nächsten Morgen trägt Thorin ihn auf dem Rücken zum Friedhof, der Priester Donavitsch spricht die Worte — während im Keller der Kirche sein vampirisierter Sohn hungert. Die Party bricht mit Irena auf Richtung Tser-Becken.
 
 ---
 
@@ -39,7 +39,7 @@ Was Ismag der Gruppe erzählt:
 - Knoblauch soll helfen (Ismag weiß es nicht sicher). Salz kann als Linie ausgestreut werden — über die kommen Vampire nicht. Ghoule hält Salz allerdings nicht auf.
 - Vor einem Jahr hat ein Magier Barovianer zusammengetrommelt und ist Richtung Ravenloft gezogen. Keiner ist zurückgekommen — nicht der Magier, nicht die Leute aus dem Dorf, nicht die vom Land. Was in Ravenloft passierte, weiß niemand.
 - Strahd **hat** Feinde in Barovia, aber sie sind schwer zu finden. Ismag zählt sich dazu — als schwachen Feind. Es soll Stärkere geben, aber niemand weiß wer.
-- Irena soll so schnell wie möglich nach **Valaki** oder **Krezk** gebracht werden — beides gesichertere Städte an der Svalidsch. Ismag braucht die Party dafür.
+- Irena soll so schnell wie möglich nach **Vallaki** oder **Krezk** gebracht werden — beides gesichertere Städte an der Alten Swalitsch-Straße. Ismag braucht die Party dafür.
 - Thorin fragt nach Gertruda. Ismag kennt sie kaum, hat sie fast nie gesehen — er nennt Marie "die Irre Marie" und klingt dabei erschöpft, nicht grausam. Das Entführen junger Frauen ist in Barovia ein bekanntes, generelles Problem von Strahd.
 
 Alberich fragt nach einer Karte — Ismag hat eine zuhause und sagt sie zu.
@@ -93,7 +93,7 @@ Moxie beobachtet Irena genauer und bemerkt: am Hals verblasste, verheilte Bisssp
 
 Irena erzählt: Ihr Vater hat sie als kleines Mädchen aufgenommen. An davor hat sie keine Erinnerungen. Er war freundlich, gegen Strahd, hat sie nie eingesperrt — trotz allem. Er hat es geschafft, dass sie noch ein Leben hatte.
 
-Ismag bringt zwischendurch die Karte. Nach Valaki braucht man einige Tage, Krezk ist ähnlich weit. Ismag weiß es nicht genauer, er war nie dort. Er erwähnt noch: irgendwo bei den Baratok-Berg, nahe dem großen See, soll ein verrückter Magier hausen.
+Ismag bringt zwischendurch die Karte. Nach Vallaki braucht man einige Tage, Krezk ist ähnlich weit. Ismag weiß es nicht genauer, er war nie dort. Er erwähnt noch: irgendwo beim Baratok-Berg, nahe dem großen See, soll ein verrückter Magier hausen.
 
 ### Nacht im Herrenhaus — Wachen, Weihwasser, Abendessen
 > Alberich stellt fest: nichts Böses im Haus, aber draußen lauert es. Er weiht einen Liter Wasser, die Kratzer an den Wänden werden weniger. Abendessen mit Schweinshaxe und Trauben.
@@ -173,8 +173,8 @@ Flori spricht sie an. Die Frau dreht sich um und rennt. Flori wirkt Cantrip: ein
 
 Irena, auf dem Rückweg ins Haus: Die Frau heißt **Morgana**. Sie verkauft Traumpasteten — Gebäck, das hilft, aus Elend und Verzweiflung herauszukommen. Also Drogen.
 
-### Aufbruch — Richtung Vistani-Becken
-> Alberich und Irena kehren mit ihren Sachen zurück. Ismag bleibt wegen der Bürgermeisterwahl. Erster Stop: das Vistani-Becken.
+### Aufbruch — Richtung Tser-Becken
+> Alberich und Irena kehren mit ihren Sachen zurück. Ismag bleibt wegen der Bürgermeisterwahl. Erster Stop: das Tser-Becken.
 
 *[alle]*
 
@@ -211,7 +211,7 @@ Die Party bricht auf. Erster Stop: das **Tser-Becken** — das Lager der Vistani
 ---
 
 ## Neue Items / Veränderungen
-- **Karte von Barovia** (grob) → bei Alberich/Party, von Ismag *(Valaki und Krezk eingezeichnet)*
+- **Karte von Barovia** (grob) → bei Alberich/Party, von Ismag *(Vallaki und Krezk eingezeichnet)*
 - **Knopf mit Sonnensymbol** (Morgenfürst, goldbestückt) → bei Mara
 - **Dorus Weste** (weiß, Schafwolle, längliche Holzknöpfe) → bei Mara
 - **1 Liter Weihwasser** → bei Alberich
@@ -224,7 +224,7 @@ Die Party bricht auf. Erster Stop: das **Tser-Becken** — das Lager der Vistani
 - Morgana — was ist sie wirklich, wen bedient sie?
 - Gertruda — immer noch in Ravenloft? Lebt sie?
 - Die drei Vistani-Damen — warum wird ihre Taverne verschont? Verbindung zu Strahd?
-- Verrückter Magier bei den Baratok-Berg — wer ist das?
+- Verrückter Magier beim Baratok-Berg — wer ist das?
 - Wessen Wappen trägt der Knopf von Session 001? (Pferd + Lanze ohne Reiter)
 - Was passierte wirklich beim Sturm auf Ravenloft vor einem Jahr?
 
@@ -235,7 +235,7 @@ Die Party bricht auf. Erster Stop: das **Tser-Becken** — das Lager der Vistani
 - Thorin auf Gertruda: "Hast du zufällig ein kleines Mädchen gesehen? Riecht nach alter Kleidung."
 - "Rucksarg" — Thorin trägt Koljans Sarg auf dem Rücken. Hexenschuss auf der letzten Strecke.
 - Flori in der Küche mit Chefkochmütze und Tentakeln — macht Pfannkuchen während die anderen über Seelen und Vampirbrut reden.
-- Ismag zur Karte: "Nach Valaki? Keine Ahnung, ich war nie dort."
+- Ismag zur Karte: "Nach Vallaki? Keine Ahnung, ich war nie dort."
 
 ---
 
