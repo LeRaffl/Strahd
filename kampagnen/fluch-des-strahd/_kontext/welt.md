@@ -45,5 +45,23 @@ Nia kommt aus **Apfelried**, einem ganz normalen freundlichen Dorf in der Heimat
 
 Alberich baute die Kapelle in Apfelried. Mara Winterried (Nias Tante) kommt ebenfalls aus der Apfelried-Region.
 
+## Geographie (aus der Karte — nur was die Party kennt)
+
+Die Party hat in S002 eine grobe Karte von Ismag bekommen. Bekannte Orte:
+
+| Kürzel | Ort | Status |
+|--------|-----|--------|
+| A | Alte Swalitsch-Straße (Tor-Eingang) | bekannt — hier reingekommen |
+| B | Tore von Barovia | bekannt — Steintor mit kopflosen Ritterstatuen |
+| E | Barovia (Dorf) | bekannt — Ausgangspunkt |
+| G | Lager am Tser-Becken | nächstes Ziel (S002-Ende) |
+| K | Burg Ravenloft | sichtbar, nicht besucht |
+| M | Irrer Magus vom Baratok-Berg | erwähnt von Ismag, Lage bekannt |
+| N | Vallaki | Ziel für Irena (Alternative zu Krezk) |
+| S | Krezk | Primärziel für Irena; Abtei Sankt Markovia dort |
+| W | Weingut Weinmagier | hinter Ravenloft, produziert den Taverne-Wein |
+
+Hauptverkehrsader: **Alte Swalitsch-Straße** — verbindet Barovia (Dorf) im Osten mit Krezk und Vallaki im Westen.
+
 ## Spoiler-Regel
-Diese Datei bleibt **spoiler-arm** bis zum Kampagnenstart. Konkrete NPCs, Orte und Plot-Beats von Curse of Strahd kommen erst nach jeweiliger Session ins Archiv — und auch dann nur, was die Party tatsächlich erlebt hat.
+Diese Datei bleibt **spoiler-arm**. Konkrete NPCs, Orte und Plot-Beats kommen erst nach jeweiliger Session ins Archiv — und auch dann nur, was die Party tatsächlich erlebt hat.

@@ -1,21 +1,22 @@
 # Koljan Indirovic
-**Status:** lebend (angenommen) — in Barovia (Dorf), Herrenhaus
-**Erstauftritt:** S001 — nur aus Brief bekannt, noch nicht angetroffen
+**Status:** TOT — begraben auf dem Friedhof in Barovia (Dorf), S002
+**Erstauftritt:** S001 — nur aus Brief bekannt; S002 — als Leiche in zugenageltem Sarg vorgefunden
 
 ---
 
 ## Erscheinung
-Unbekannt.
+Nie lebend angetroffen. In S002 lag er in einem zugenagelten Holzsarg im Empfangszimmer des Herrenhauses, umgeben von verwelkten Blumen. Leichter Verwesungsgeruch.
 
 ## Rolle
-Bürgermeister des Dorfes Barovia. Hat die Party über Arigal von und zu Nachtigall angeheuert, um seiner Adoptivtochter Irena Koljana zu helfen, die an einer mysteriösen Wunde dahinsiecht.
+Ehemaliger Bürgermeister des Dorfes Barovia. Hatte die Party über Arigal von und zu Nachtigall angeheuert — oder jemand anderes schrieb den Brief in seinem Namen. Gestorben bevor die Party ankam.
 
 ## Was die Party weiß
-- Schrieb den Brief, der die Party nach Barovia lockte — oder jemand anderes tat es in seinem Namen
-- Ismag der Geringere (sein leiblicher Sohn) hat bestätigt: **der Brief trägt nicht die Handschrift seines Vaters**
-- Lebt vermutlich im großen Herrenhaus am Ende der zentralen Straße in Barovia (Dorf)
+- Der Brief, mit dem die Party angeheuert wurde, trägt **nicht seine Handschrift** (laut Ismag)
+- Koljan ist gestorben als er Irena verteidigen wollte
+- Er hat Irena als kleines Mädchen ohne Erinnerungen aufgenommen und wie eine Tochter behandelt
+- Er war stets gegen Strahd
+- Ein goldbestückter Knopf mit Sonnensymbol (Morgenfürst) wurde in S002 bei Mara sichergestellt
 
 ## Offene Fäden
-- Hat er den Brief wirklich geschrieben, oder wurde er in seinem Namen gefälscht?
-- Wie geht es ihm? Kennt er den Status seiner Adoptivtochter?
-- Was weiß er über Strahd und Irenas Lage?
+- Hat er den Brief wirklich geschrieben — oder wurde er in seinem Namen gefälscht? Wer wollte die Party nach Barovia locken?
+- Was hat er über Irenas Herkunft gewusst?
