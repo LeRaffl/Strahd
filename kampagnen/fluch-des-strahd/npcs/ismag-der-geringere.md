@@ -27,7 +27,13 @@ Selbst-ironisch. Der Beiname "der Geringere" ist keine Beleidigung von außen �
 - **Als er von Markus' Tod erfährt:** kurze Stille — dann weiter reden. Er hat es geahnt.
 - **Auf Fremde allgemein:** vorsichtig, aber nicht feindselig. Testet, ob man zuhören kann.
 
+## Was in S002 passiert ist
+- Hat der Party in S002 eine (grobe) Karte von Barovia mitgegeben, mit Valaki und Krezk eingezeichnet.
+- Sein Vater Koljan Indirovic ist gestorben — Ismag hat die Party zur Beerdigung am nächsten Morgen begleitet.
+- Bleibt in Barovia wegen der **Bürgermeisterwahl** — kann das Dorf nicht verlassen.
+- Hat der Party noch einen Hinweis gegeben: Ein verrückter Magier soll bei den Bartok-Bergen nahe dem großen See hausen.
+
 ## Offene Fäden
 - Was genau weiß er über Irenas Verbindung zu Strahd?
-- Wie ist sein Verhältnis zu seinem Vater?
-- Wird er aktiv helfen oder nur informieren?
+- Wie entwickelt sich seine Rolle als "schwacher Feind" Strahds?
+- Wird er Bürgermeister — und was bedeutet das für Barovia?

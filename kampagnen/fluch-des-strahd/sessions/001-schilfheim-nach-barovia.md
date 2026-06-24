@@ -1,12 +1,12 @@
 # Session 001 – Zwischen Schilfheim und Barovia
 **Datum:** 2026-05-13
 **DM:** Jana
-**Ort in der Spielwelt:** Schilfheim → Svalidsch Wald → Dorf Barovia
+**Ort in der Spielwelt:** Schilfheim → Swalitsch Wald → Dorf Barovia
 
 ---
 
 ## Zusammenfassung
-Die Party nimmt in Schilfheim einen Hilferuf des Bürgermeisters von Barovia an und reist durch den unheimlichen Svalidsch Wald — Wölfe, Nebel und ein toter Bote inklusive. Im verrottenden Dorf Barovia warten zwei Handlungsstränge: eine weinende Mutter, deren Tochter der Teufel entführt hat, und im Wirtshaus der Sohn des Bürgermeisters mit der beunruhigenden Enthüllung, dass der Brief, der sie hierher lockte, nicht von seinem Vater stammt.
+Die Party nimmt in Schilfheim einen Hilferuf des Bürgermeisters von Barovia an und reist durch den unheimlichen Swalitsch Wald — Wölfe, Nebel und ein toter Bote inklusive. Im verrottenden Dorf Barovia warten zwei Handlungsstränge: eine weinende Mutter, deren Tochter der Teufel entführt hat, und im Wirtshaus der Sohn des Bürgermeisters mit der beunruhigenden Enthüllung, dass der Brief, der sie hierher lockte, nicht von seinem Vater stammt.
 
 ---
 
@@ -35,7 +35,7 @@ Die Party erholt sich nach ihrem letzten Abenteuer in Schilfheim, einem kleinen 
 
 Draußen zieht Nebel auf. Die Tür wird aufgestoßen: **[Arigal von und zu Nachtigall](../npcs/arigal-nachtigall.md)**, ein Mann in bunten, edlen Kleidern, stürmt herein, sucht sofort die Party und legt Brief und Geldbeutel (100 Goldkronen) auf den Tisch. Der Brief kommt von **[Koljan Indirovic](../npcs/koljan-indirovic.md)**, dem Bürgermeister des Dorfes Barovia — und enthält die Namen aller Partymitglieder. Wie der Bürgermeister von ihnen weiß, erklärt Arigal nicht.
 
-Inhalt des Briefes: Seine Adoptivtochter **[Irena Koljana](../npcs/irena-koljana.md)** siecht an einer Wunde dahin, befallen von "tödlichem Bösem". Arigal empfiehlt, den Svalidsch Wald nicht bei Nacht zu betreten. Westlich, die svalitische Straße entlang, liege Barovia — circa fünf Stunden Fußmarsch. Dann schwingt er sich aufs Pferd und galoppiert davon.
+Inhalt des Briefes: Seine Adoptivtochter **[Irena Koljana](../npcs/irena-koljana.md)** siecht an einer Wunde dahin, befallen von "tödlichem Bösem". Arigal empfiehlt, den Swalitsch Wald nicht bei Nacht zu betreten. Westlich, die Alte Swalitsch-Straße entlang, liege Barovia — circa fünf Stunden Fußmarsch. Dann schwingt er sich aufs Pferd und galoppiert davon.
 
 Das Gold wandert in den Sack. Damit gilt der Auftrag als angenommen.
 
@@ -57,7 +57,7 @@ Mara durchsucht die Ritzen zwischen den Matratzen:
 
 Um 7 Uhr ertönt Floris Schiffshorn-Alarm. Alberich wacht theatralisch auf, Nia macht draußen auf dem Gras Pilates, Mara raucht auf einer Treppe. Üppiges Buffet-Frühstück. Dann Aufbruch nach Westen.
 
-### Der Svalidsch Wald — Wölfe
+### Der Swalitsch Wald — Wölfe
 > Nach fünf Stunden Marsch greifen drei Wölfe an — Thorin verjagt einen, Nia und die anderen erledigen die übrigen zwei.
 
 *[alle]*
@@ -82,7 +82,7 @@ Fünfzehn Minuten später taucht ein riesiges steinernes Tor auf, flankiert von 
 - Thorin geht vor dem Durchschreiten zu den Statuen, **berührt beide abgeschlagenen Köpfe** kurz und dankt seinen Ahnen.
 - Alberich untersucht die liegenden Köpfe — sie sind erodiert, nicht abgeschlagen.
 
-Hinter dem Tor schließt sich der Nebel sofort. Kein Rückweg. Der Svalidsch Wald dahinter wirkt anders: Bäume turmhoch, Licht gedämpft. Alberichs Lichtzauber hält die Dunkelheit auf Abstand. Moxie nimmt wahr, dass der Nebel undurchdringlich und gefährlich ist. Flori merkt, dass die Umgebung nicht natürlich ist.
+Hinter dem Tor schließt sich der Nebel sofort. Kein Rückweg. Der Swalitsch Wald dahinter wirkt anders: Bäume turmhoch, Licht gedämpft. Alberichs Lichtzauber hält die Dunkelheit auf Abstand. Moxie nimmt wahr, dass der Nebel undurchdringlich und gefährlich ist. Flori merkt, dass die Umgebung nicht natürlich ist.
 
 ### Ein Leichnam am Wegrand
 > Die Party findet einen zerfetzten Toten mit einem Brief in der Hand — Thorin riecht: der Brief stinkt anders als ihrer.
@@ -183,7 +183,7 @@ Thorin verrät versehentlich, dass der Tote im Wald existiert. Ismag erfährt so
 - **Selia** — Bardame in der Schilfheimer Kneipe "Zum Schilf"; Muskeln, kein Hehl daraus
 - **Arik** — Wirt im Gasthaus Blut auf den Reben; pummeliger, freundlicher Mann
 - **Drei Vistani-Damen** — Ecktisch in der Taverne; gleicher Akzent und Geruch wie Arigal, vermutlich Vistani
-- **Markus** *(tot)* — Angestellter des Bürgermeisters; Leichnam im Svalidsch Wald; sollte Fremde warnen
+- **Markus** *(tot)* — Angestellter des Bürgermeisters; Leichnam im Swalitsch Wald; sollte Fremde warnen
 
 ---
 

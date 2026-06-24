@@ -1,22 +1,31 @@
 # Irena Koljana
-**Status:** lebend, krank — Barovia (Dorf), genaue Lage unbekannt
-**Erstauftritt:** S001 — nur aus Brief bekannt, noch nicht angetroffen
+**Status:** lebend — reist mit der Party (ab S002); verlässt Barovia (Dorf) Richtung Krezk/Valaki
+**Erstauftritt:** S001 — nur aus Brief bekannt; S002 — persönlich angetroffen
 
 ---
 
 ## Erscheinung
-Unbekannt.
+Lange braune Haare, große rehbraune Augen. Trägt braune Kleidung — früher Samt, jetzt heruntergekommenes Samt. Aufnähte und Verzierungen, die zeigen: Irena hat Stil, auch wenn der Stoff nicht mehr mitmacht. Am Hals: verheilte Bissspuren (Moxie aufgefallen, S002).
 
 ## Rolle
-Adoptivtochter des Bürgermeisters Koljan Indirovic. Ihr Zustand ist offiziell der Grund, warum die Party nach Barovia gerufen wurde: Sie siecht an einer Wunde dahin, befallen von "tödlichem Bösem" laut dem Brief.
+Adoptivtochter des Bürgermeisters Koljan Indirovic (jetzt tot). Ihr Bruder Ismag drängte die Party, sie nach Valaki oder Krezk zu bringen. Irena reist ab S002 mit der Party.
+
+## Persönlichkeit & Voice
+Warmherzig, fast gelassen für jemanden in ihrer Lage. Hat gelernt, mit Strahds Bedrohung zu leben — bis die Angst überhand nahm. Spricht offen über das, was ihr passiert ist, wenn man zuhört.
 
 ## Was die Party weiß
-- Siecht an einer Wunde dahin — Bisswunde am Hals (von Strahd)
-- Ismag der Geringere (ihr Adoptivbruder) drängt darauf, dass sie **dringend aus Barovia heraus** muss
-- Strahd ist ihr gegenüber besonders hingezogen — Ismag weiß nicht warum, aber es macht sie zum primären Ziel
-- Menschen "mit Seelen" interessieren Strahd; Irena scheint eine besonders starke zu haben
+- Strahd hat sie **zweimal gebissen** — aber nie genug Blut getrunken, um sie zur Vampirbrut zu machen. Die verheilten Spuren am Hals sind noch sichtbar (nur Moxie weiß es sicher, S002).
+- Irena hat **keine Erinnerungen** an die Zeit vor ihrer Adoption. Koljan hat sie als kleines Mädchen aufgenommen; sie weiß nicht woher sie kommt.
+- Ihr Vater Koljan ist gestorben als er sie verteidigen wollte. Irena wollte das Herrenhaus nicht verlassen, bevor er ordentlich beerdigt war — das ist in S002 passiert.
+- Strahd ist ihr gegenüber besonders hingezogen, schon seit Ewigkeiten. Warum, weiß Irena selbst nicht.
+- Sie hat Angst, dass Strahd sie irgendwann doch noch vollständig beißt.
+
+## Reaktionsmuster
+- **Auf Fremde:** Offen und gastfreundlich — ungewöhnlich für eine Barovianerin.
+- **Auf Fragen über Strahd:** Sachlich, mit unterliegendem Schauder.
+- **Über ihren Vater:** Sichtbare Trauer, aber stabil.
 
 ## Offene Fäden
-- Wo genau in Barovia befindet sie sich? Im Herrenhaus?
-- Wie weit fortgeschritten ist die Wirkung des Bisses?
-- Was macht sie so besonders für Strahd?
+- Was macht sie so besonders für Strahd? Was ist mit ihrer Herkunft?
+- Wie weit ist die Wirkung der Bisse fortgeschritten?
+- Was erwartet sie in der Abtei St. Markovia / in Krezk?

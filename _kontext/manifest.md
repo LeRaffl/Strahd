@@ -62,7 +62,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `regeln/magic-items/amulet-of-protection.md` — +1 Amulett of Protection (Party-Loot S001)
 
 ## Kampagnen
-### Fluch des Strahd (aktiv — S001 gespielt 13.05.2026)
+### Fluch des Strahd (aktiv — S002 gespielt 21.06.2026)
 - `kampagnen/fluch-des-strahd/party.md` — 6 PCs, DM Jana, Gruppen-Backstory
 - `kampagnen/fluch-des-strahd/_kontext/welt.md` — Barovia, Strahd, Götter (Morgenfürst/Mutternacht), Bevölkerung
 - `kampagnen/fluch-des-strahd/_kontext/timeline.md` — Pre-Campaign-Ereignisse, Session-Einträge
@@ -70,6 +70,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/_kontext/termine.md` — Geplante und vergangene Sessions, Format-Reminder lang/kurz
 - `kampagnen/fluch-des-strahd/_kontext/aktueller-plan.md` — Hauptziel + offene Nebenfäden, Biblo-Referenz für Quest-Fragen
 - `kampagnen/fluch-des-strahd/sessions/001-schilfheim-nach-barovia.md` — S001: Auftrag in Schilfheim, Svalidsch Wald, Ankunft in Barovia (Dorf)
+- `kampagnen/fluch-des-strahd/sessions/002-koljans-letztes-geleit.md` — S002: Taverne, Arik seelenlos, Koljan tot im Sarg, Beerdigung, Irena reist mit
 - `kampagnen/fluch-des-strahd/npcs/hanna-sommerfeld.md` — Nias Mutter (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/bert-sommerfeld.md` — Nias Vater (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/timo-sommerfeld.md` — Nias älterer Bruder (studiert Medizin, pot. Anlaufpunkt Florpthyz-Quest)
@@ -77,16 +78,22 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/npcs/oskar-bram.md` — Dachdecker mit kaputtem Rücken (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/konrad-haupt.md` — Ehemaliger Soldat, Kurier, Nias Kindheitsfigur (Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/arigal-nachtigall.md` — Arigal von und zu Nachtigall (Bote des Bürgermeisters, S001)
-- `kampagnen/fluch-des-strahd/npcs/koljan-indirovic.md` — Koljan Indirovic (Bürgermeister Barovia, nur aus Brief bekannt)
-- `kampagnen/fluch-des-strahd/npcs/irena-koljana.md` — Irena Koljana (Adoptivtochter des Bürgermeisters, krank, Ziel der Reise)
-- `kampagnen/fluch-des-strahd/npcs/ismag-der-geringere.md` — Ismag der Geringere (leibl. Sohn des Bürgermeisters, Informationsquelle S001)
+- `kampagnen/fluch-des-strahd/npcs/koljan-indirovic.md` — Koljan Indirovic (Bürgermeister Barovia, TOT S002, begraben)
+- `kampagnen/fluch-des-strahd/npcs/irena-koljana.md` — Irena Koljana (Adoptivtochter, 2x gebissen von Strahd, reist ab S002 mit Party)
+- `kampagnen/fluch-des-strahd/npcs/ismag-der-geringere.md` — Ismag der Geringere (leibl. Sohn, bleibt in Barovia wegen Bürgermeisterwahl)
 - `kampagnen/fluch-des-strahd/npcs/marie.md` — Marie (Mutter in Barovia, Tochter von Strahd entführt)
 - `kampagnen/fluch-des-strahd/npcs/gertruda.md` — Gertruda (Maries Tochter, 14–16 J., in Ravenloft)
 - `kampagnen/fluch-des-strahd/npcs/bildrath.md` — Bildrath (Ladeninhaber Barovia, Wucherpreise)
+- `kampagnen/fluch-des-strahd/npcs/arik.md` — Arik (Barkeeper "Blut auf den Reben", seelenlos, Gläser-Roboter)
+- `kampagnen/fluch-des-strahd/npcs/donavitsch.md` — Donavitsch (Priester Barovia, Sohn Doru als Vampirbrut im Keller)
+- `kampagnen/fluch-des-strahd/npcs/doru.md` — Doru (Donavitschs Sohn, Vampirbrut, im Kirchenkeller, manipulative Stimme)
+- `kampagnen/fluch-des-strahd/npcs/morgana.md` — Morgana (alte Frau, magische Traumpasteten, rennt weg wenn angesprochen)
 - `kampagnen/fluch-des-strahd/orte/apfelried.md` — Nias und Maras Heimatdorf (nicht-Barovia)
 - `kampagnen/fluch-des-strahd/orte/schilfheim.md` — Startdorf an einem See, Schauplatz Session-Anfang
-- `kampagnen/fluch-des-strahd/orte/barovia-dorf.md` — Dorf Barovia: Gasthaus, Laden, Maries Haus, Ravenloft am Horizont
+- `kampagnen/fluch-des-strahd/orte/barovia-dorf.md` — Dorf Barovia (Karte: E): Gasthaus, Herrenhaus, Kirche/Friedhof, Ravenloft am Horizont
 - `kampagnen/fluch-des-strahd/orte/ravenloft.md` — Schloss Ravenloft: Sitz von Strahd, am Horizont sichtbar, noch nicht betreten
+- `kampagnen/fluch-des-strahd/orte/tser-becken.md` — Vistani-Lager (Karte: G), Madame Evas Zelt; erster Stop ab S002
+- `kampagnen/fluch-des-strahd/orte/krezk.md` — Stadt Krezk (Karte: S), Abtei Sankt Markovia; Primärziel für Irena
 
 #### Key Items
 - `kampagnen/fluch-des-strahd/items/brief-von-koljan-indirowitsch-version-1.md` — Brief von Koljan Indirowitsch (Version 1, gefälscht, bei Nia) — Lockbrief nach Barovia
@@ -95,8 +102,9 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/items/rubin.md` — Rubin (bei Mara, Wert unklar)
 - `kampagnen/fluch-des-strahd/items/goldkronen.md` — 95 Goldkronen Party-Kasse (bei Moxie, Vorauszahlung Auftrag)
 
-#### Transkripte (Roh-Mitschriften — nur als Last-Resort laden)
-- `kampagnen/fluch-des-strahd/transcripts/README.md` — Wofür der Transkript-Ordner ist und wie er gepflegt wird
+#### Roh-Mitschriften (nur als Last-Resort laden)
+- `kampagnen/fluch-des-strahd/transcripts/README.md` — Wofür der Ordner ist und wie er gepflegt wird
+- `kampagnen/fluch-des-strahd/transcripts/002-koljans-letztes-geleit.md` — S002 Roh-Mitschrift (handschriftlich + Audio)
 
 ### Requiem of Wings (One-Shot, abgeschlossen)
 - `kampagnen/requiem-of-wings/party.md` — Wer war dabei
