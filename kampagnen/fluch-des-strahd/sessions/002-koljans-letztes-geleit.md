@@ -41,6 +41,7 @@ Was Ismag der Gruppe erzählt:
 - Strahd **hat** Feinde in Barovia, aber sie sind schwer zu finden. Ismag zählt sich dazu — als schwachen Feind. Es soll Stärkere geben, aber niemand weiß wer.
 - Irena soll so schnell wie möglich nach **Vallaki** oder **Krezk** gebracht werden — beides gesichertere Städte an der Alten Swalitsch-Straße. Ismag braucht die Party dafür.
 - Thorin fragt nach Gertruda. Ismag kennt sie kaum, hat sie fast nie gesehen — er nennt Marie "die Irre Marie" und klingt dabei erschöpft, nicht grausam. Das Entführen junger Frauen ist in Barovia ein bekanntes, generelles Problem von Strahd.
+- Alberich wundert sich, wie in diesem sonnenlosen Land überhaupt Wein wächst. Ismag: Der Barovia-Wein wächst auf dem **Sonnenberg** — dem einzigen sonnigen Hang des Landes, hinter Ravenloft (Swalitsch-Straße folgen, dann links den Berg hinauf zum Weingut). Wie dort die Sonne scheint, weiß niemand. Der Wein ist für viele Barovianer der einzige Grund, weiterzumachen.
 
 Alberich fragt nach einer Karte — Ismag hat eine zuhause und sagt sie zu.
 
@@ -104,6 +105,8 @@ Alberich wirkt Detect Evil and Good (10 Minuten) und geht durchs Haus: innen nic
 
 Dann ein einstündiges Weihritual. Alberich nimmt eine Flasche Wasser vom Tisch und führt die Zeremonie durch. Nach der Stunde: ein Liter Weihwasser. Während des Rituals werden die Kratzer an den Außenwänden weniger — die nächtlichen Besucher verschwinden.
 
+Moxie bleibt misstrauisch. Sie nimmt Flori beiseite: Irena soll ja "vom Bösen befallen" sein (die Bissspuren) — könnte sie nicht selbst zur Vampirin werden, womöglich schon eine sein? Flori relativiert (befallen heißt nicht böse), aber Moxie ist nicht überzeugt und wirkt **Protection from Evil and Good** auf sich selbst — kann für die Nacht nicht besessen, verängstigt oder bezaubert werden (und leuchtet dabei sanft).
+
 Ismag und Irena machen Abendessen: Schweinshaxe, Trauben, Vegetarisches. Alberich salbt den Sarg mit einem Spritzer Weihwasser, dann gehen alle schlafen.
 
 ### Die Prozession der Erinnerungen
@@ -113,7 +116,9 @@ Ismag und Irena machen Abendessen: Schweinshaxe, Trauben, Vegetarisches. Alberic
 
 Mitten in der Nacht: intensives weißes, gelbliches Leuchten von draußen. Mara geht zum Fenster. Sie sieht eine endlose Prozession — Reiter auf Pferden, Bauern mit Gabeln, Magier in Roben, Ritter in Rüstungen, Leute in Kleidung aus anderen Welten. Alle schweigen. Alle ziehen dieselbe Straße entlang, Richtung Ravenloft. Oben angelangt stürzen sie nacheinander ins Nichts — und dann ist das Licht weg.
 
-Thorin, nach kurzem Nachdenken: Das waren Erinnerungen, keine Seelen und keine Geister. Irena ist aufgewacht und bestätigt — sie kennt dieses Phänomen, kann es aber nicht erklären.
+Thorin, nach kurzem Nachdenken: Das waren Erinnerungen, keine Seelen und keine Geister — und nicht nur die Männer des Magiers, sondern **alle, die je gegen Strahd in den Tod gezogen sind**. Moxie deutet es ähnlich: Das Land selbst erinnert sich an das, was auf ihm geschehen ist, an Gutes wie an Schlechtes. Irena ist aufgewacht und bestätigt — sie kennt das Phänomen (immer um Mitternacht, dann nach kurzer Zeit vorbei), kann es aber nicht erklären. Sie hält es für ein Zeichen der Hoffnung: Es gibt also Leute, die gegen Strahd kämpfen.
+
+*(Beim Frühstück diskutiert die Gruppe es aus: Alberich will wissen, warum diese Toten keine Ruhe finden; Thorin nennt sie "Abbilder". Niemand kommt zu einem klaren Schluss.)*
 
 *(Im Hintergrund: Flori steht in der Küche mit Chefkochmütze und Tentakeln und macht Pfannkuchen.)*
 
@@ -180,7 +185,7 @@ Irena, auf dem Rückweg ins Haus: Die Frau heißt **Morgana**. Sie verkauft Trau
 
 Ismag bleibt in Barovia — die Bürgermeisterwahl kann er nicht ignorieren. Irena geht mit. Alberich und Irena holen ihre Sachen.
 
-Die Party bricht auf. Erster Stop: das **Tser-Becken** — das Lager der Vistani, westlich von Barovia an der Swalitsch-Straße.
+Die Party bricht auf — der halbe Tag ist zwar schon herum, aber nach Ismags Schätzung schaffen sie es vor Einbruch der Nacht noch zum ersten Stop: dem **Tser-Becken**, etwa drei Stunden entfernt, das Lager der Vistani, westlich von Barovia an der Swalitsch-Straße. Ab hier wird aus der befestigten Straße ein Pfad.
 
 ---
 
@@ -215,6 +220,7 @@ Die Party bricht auf. Erster Stop: das **Tser-Becken** — das Lager der Vistani
 - **Knopf mit Sonnensymbol** (Morgenfürst, goldbestückt) → bei Mara
 - **Dorus Weste** (weiß, Schafwolle, längliche Holzknöpfe) → bei Mara
 - **1 Liter Weihwasser** → bei Alberich
+- **Sonnensymbol-Anhänger** (kleines Morgenfürst-Symbol aus dem Herrenhaus) → bei Alberich; von einer der Wand-Sonnen abgenommen, als "Souvenir" mitgenommen (obwohl er selbst Helm dient)
 
 ---
 
@@ -236,6 +242,9 @@ Die Party bricht auf. Erster Stop: das **Tser-Becken** — das Lager der Vistani
 - "Rucksarg" — Thorin trägt Koljans Sarg auf dem Rücken. Hexenschuss auf der letzten Strecke.
 - Flori in der Küche mit Chefkochmütze und Tentakeln — macht Pfannkuchen während die anderen über Seelen und Vampirbrut reden.
 - Ismag zur Karte: "Nach Vallaki? Keine Ahnung, ich war nie dort."
+- Doru hinter der Kellertür: "Macht auf." — Mara: "Wieso?" — Doru: "Weil ich Hunger habe." — Mara: "Auf was?" — Doru: "Mensch." — Moxie zieht Mara weg, bevor sie aus Neugier den Riegel öffnet.
+- Alberich, als Irena sein Helm-Symbol mit dem Sonnensymbol des Morgenfürsten verwechselt: "So heißt der Gott, an den ich bete — Helm."
+- Raffi/Nia, als Tentakel-Standuhr und Goblin einer alten Frau durchs Dorf hinterherjagen: "Mit nichts kann man euch allein lassen. Wahnsinn."
 
 ---
 

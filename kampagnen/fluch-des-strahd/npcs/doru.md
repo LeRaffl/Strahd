@@ -13,6 +13,8 @@ Sohn von Donavitsch, dem Priester. War vor einem Jahr mit dem Magier losgezogen,
 ## Was die Party weiß
 - Sitzt hinter einer schweren, gesicherten Tür mit Vorhängeschloss im Keller unter der Kapelle.
 - Als Mara und Moxie an die Tür klopften, antwortete eine manipulative, hungrige Stimme. Mara war leicht davon erfasst (8 auf Save), Moxie weniger (13).
+  - Wörtlich: "Macht auf." / "Wieso?" / "Weil ich Hunger habe." / "Auf was?" / "Mensch." Er fragt, ob man bei ihm "noch leben" muss, klagt über seine Holzpritsche statt eines Bettes — spielt um Mitleid, um zum Öffnen zu verleiten.
+- Thorin nennt ihn (vom Hörensagen Donavitschs) eine "weiße Gestalt", die zurückkam. Versucht den Vater zu beißen, sobald er ihm nahekommt.
 - Donavitsch will ihn nicht töten lassen.
 - Dorus altes Zimmer oben ist lange nicht betreten worden, aber die bunten Sachen darin zeigen: Er hatte einmal eine Seele.
 
