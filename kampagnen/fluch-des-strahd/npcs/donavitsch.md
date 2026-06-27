@@ -5,7 +5,7 @@
 ---
 
 ## Erscheinung
-Noch nicht genau beschrieben. Wirkt gebrochen — sein Sohn ist als Vampirbrut zurückgekehrt und sitzt im Kirchenkeller.
+Übernächtigt und am Ende seiner Kräfte — rote, rotgeränderte Augen, kaum geschlafen. Kniet in Kutte/Messgewand vor dem Altar und murmelt unablässig Gebete. Hält die Kapelle manisch hell erleuchtet (Kerzen in jeder Ecke, keine Schatten), seit sein Sohn als Vampirbrut zurückgekehrt ist und im Keller sitzt.
 
 ## Rolle
 Priester der Kirche in Barovia (Dorf). Hat Koljan Indirovic beerdigt. Hüter des eingesperrten Doru.
