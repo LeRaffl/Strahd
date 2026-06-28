@@ -71,6 +71,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/_kontext/aktueller-plan.md` — Hauptziel + offene Nebenfäden, Biblo-Referenz für Quest-Fragen
 - `kampagnen/fluch-des-strahd/sessions/001-schilfheim-nach-barovia.md` — S001: Auftrag in Schilfheim, Svalidsch Wald, Ankunft in Barovia (Dorf)
 - `kampagnen/fluch-des-strahd/sessions/002-koljans-letztes-geleit.md` — S002: Taverne, Arik seelenlos, Koljan tot im Sarg, Beerdigung, Irena reist mit
+- `kampagnen/fluch-des-strahd/sessions/003-madame-evas-karten.md` — S003: Galgen + 11 Gräber, Moxies Doppelgängerin, Madame Evas Tarokka-Weissagung, Edelsteine am Wasserfall, Gargoyles auf der Brücke
 - `kampagnen/fluch-des-strahd/npcs/hanna-sommerfeld.md` — Nias Mutter (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/bert-sommerfeld.md` — Nias Vater (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/timo-sommerfeld.md` — Nias älterer Bruder (studiert Medizin, pot. Anlaufpunkt Florpthyz-Quest)
@@ -88,6 +89,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/npcs/donavitsch.md` — Donavitsch (Priester Barovia, Sohn Doru als Vampirbrut im Keller)
 - `kampagnen/fluch-des-strahd/npcs/doru.md` — Doru (Donavitschs Sohn, Vampirbrut, im Kirchenkeller, manipulative Stimme)
 - `kampagnen/fluch-des-strahd/npcs/morgana.md` — Morgana (alte Frau, magische Traumpasteten, rennt weg wenn angesprochen)
+- `kampagnen/fluch-des-strahd/npcs/madame-eva.md` — Madame Eva (Vistani-Wahrsagerin Tser-Becken, S003 Tarokka-Weissagung: Quest-Kompass gegen Strahd)
 - `kampagnen/fluch-des-strahd/orte/apfelried.md` — Nias und Maras Heimatdorf (nicht-Barovia)
 - `kampagnen/fluch-des-strahd/orte/schilfheim.md` — Startdorf an einem See, Schauplatz Session-Anfang
 - `kampagnen/fluch-des-strahd/orte/barovia-dorf.md` — Dorf Barovia (Karte: E): Gasthaus, Herrenhaus, Kirche/Friedhof, Ravenloft am Horizont
@@ -99,12 +101,14 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/items/brief-von-koljan-indirowitsch-version-1.md` — Brief von Koljan Indirowitsch (Version 1, gefälscht, bei Nia) — Lockbrief nach Barovia
 - `kampagnen/fluch-des-strahd/items/brief-von-koljan-indirowitsch-version-2.md` — Brief von Koljan Indirowitsch (Version 2, echt, bei Nia) — Markus' Warnschreiben für Wanderer
 - `kampagnen/fluch-des-strahd/items/metallknopf.md` — Metallknopf mit Wappen (Pferd + Lanze ohne Reiter, bei Mara)
+- `kampagnen/fluch-des-strahd/items/eisenknopf.md` — Eisenknopf mit fremdem Wappen (verrostet, von den 11 Gräbern am Galgen, bei Mara, S003)
 - `kampagnen/fluch-des-strahd/items/rubin.md` — Rubin (bei Mara, Wert unklar)
 - `kampagnen/fluch-des-strahd/items/goldkronen.md` — 95 Goldkronen Party-Kasse (bei Moxie, Vorauszahlung Auftrag)
 
 #### Roh-Mitschriften (nur als Last-Resort laden)
 - `kampagnen/fluch-des-strahd/transcripts/README.md` — Wofür der Ordner ist und wie er gepflegt wird
 - `kampagnen/fluch-des-strahd/transcripts/002-koljans-letztes-geleit.md` — S002 Roh-Mitschrift (handschriftlich)
+- `kampagnen/fluch-des-strahd/transcripts/003-madame-evas-karten.md` — S003 Roh-Mitschrift (handschriftlich)
 
 ### Requiem of Wings (One-Shot, abgeschlossen)
 - `kampagnen/requiem-of-wings/party.md` — Wer war dabei
