@@ -3,12 +3,12 @@
 **Modul:** Curse of Strahd (D&D 5e Adventure)
 **Regeln:** D&D 5e 2024
 **DM:** Jana
-**Status:** aktiv — S001 gespielt 13.05.2026
+**Status:** aktiv — S003 gespielt 24.06.2026, nächste Session 20.07.2026
 **Startlevel:** 3
 
 | Charakter | Spieler | Klasse | Level | Status |
 |-----------|---------|--------|-------|--------|
-| [Nia Sommerfeld](../../charaktere/nia-sommerfeld/charakterbogen.md) | Raffi | Bard (College of Lore) | 3 | bestätigt |
+| [Nia Sommerfeld](../../charaktere/nia-sommerfeld/charakterbogen.md) | Raffi | Bard (College of Dance) | 3 | bestätigt |
 | [Florpthyz Dread](../../charaktere/florpthyz-dread/charakterbogen.md) | Felix | Fighter (Eldritch Knight) | 3 | bestätigt |
 | [Alberich von Steinkreis](../../charaktere/alberich/charakterbogen.md) | Andi | Cleric (Domain of Light) | 3 | bestätigt |
 | [Thorin](../../charaktere/thorin/charakterbogen.md) | Tom | Barbarian | 3 | bestätigt |
@@ -37,3 +37,5 @@ Das letzte Abenteuer liegt gerade hinter der Gruppe. Ein Amulett, das Florpthyz 
 | Nr | Datum | Titel | Ort |
 |----|-------|-------|-----|
 | [S001](sessions/001-schilfheim-nach-barovia.md) | 13.05.2026 | Zwischen Schilfheim und Barovia | Schilfheim → Svalidsch Wald → Barovia (Dorf) |
+| [S002](sessions/002-koljans-letztes-geleit.md) | 21.06.2026 | Koljans letztes Geleit | Barovia (Dorf): Gasthaus → Herrenhaus → Kirche & Friedhof |
+| [S003](sessions/003-madame-evas-karten.md) | 24.06.2026 | Madame Evas Karten | Swalitsch-Straße: Brücke → Galgen → Tser-Becken → Tser-Fälle |

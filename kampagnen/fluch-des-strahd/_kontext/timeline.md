@@ -57,3 +57,46 @@
 - **Marie** (vernageltes Haus, Seitenstraße): erzählt, dass Strahd ihre Tochter **Gertruda** (14–16 J.) entführt hat. Ihr Mann ging nach Ravenloft und kam nie zurück. Sie gibt der Party Gertrudas Kleid für Thorins Geruchsspur.
 - **Bildrath** (Laden, Moxie/Mara/Alberich): Ausrüstung, Wucherpreise, klärt über Untote nachts auf. Moxie zeichnet selbst eine Karte.
 - **Ismag der Geringere** (Taverne, Nia/Thorin/Flori): leiblicher Sohn des Bürgermeisters. Enthüllt: Strahd trinkt Menschen "mit Seelen", Irena muss dringend raus — und **der Brief der Party stammt nicht von seinem Vater**. Der Brief beim Leichnam war für seinen Bruder Markus, der tot ist (versehentlich von Thorin enthüllt).
+
+---
+
+## Session 002 — 21.06.2026 · Barovia (Dorf): Taverne → Herrenhaus → Kirche & Friedhof
+
+### Taverne "Blut auf den Reben"
+- Ismag erklärt die Vampir-Regeln: Einladung nötig, Türen sind entscheidend, Salz-Linien halten Vampire (nicht Ghoule) auf. Vor einem Jahr zog ein Magier mit Barovianern gen Ravenloft — niemand kehrte zurück.
+- Die drei Vistani-Damen (Besitzerinnen der Taverne) bestätigen: In ihre Wagen kommen Vampire nicht hinein.
+- Flori testet den Barkeeper **Arik** mit einem Cantrip-Spektakel → Arik flieht schreiend, kehrt zurück, putzt sofort wieder Gläser: seelenloser "Automat". Moxie (Hunter's Sense): Arik und Ismag sind schlicht Menschen.
+- Der Barovia-Wein wächst auf dem **Sonnenberg** hinter Ravenloft — dem einzigen sonnigen Hang des Landes.
+
+### Nacht im Herrenhaus
+- **Koljan Indirovic ist tot** — er liegt zugenagelt im Empfangszimmer seines Herrenhauses; er starb, als er Irena verteidigte.
+- Erstbegegnung mit **Irena**: warmherzig, stilvoll, keine Erinnerung an die Zeit vor ihrer Adoption. Moxie bemerkt verheilte Bissspuren — Strahd hat sie bereits **zweimal gebissen**.
+- Seelen-Lore: Unbeerdigte Seelen irren ewig, und Kinder werden ohne Seele geboren (wie Arik). Grau-braun Gekleidete sind meist seelenlos.
+- Alberich weiht 1 Liter Wasser; während des Rituals nehmen die nächtlichen Kratzspuren an den Außenwänden ab.
+- Um Mitternacht sieht Mara die **Prozession der Erinnerungen**: endlose Scharen aller, die je gegen Strahd zogen, wandern leuchtend Richtung Ravenloft und stürzen ins Nichts.
+
+### Beerdigung und Aufbruch
+- Thorin trägt den Sarg auf dem Rücken zur Kirche ("Rucksarg", inkl. Hexenschuss — Nia kuriert).
+- Priester **Donavitsch** beerdigt Koljan ordentlich. Im Kirchenkeller hungert sein Sohn **Doru** — als Vampirbrut vom Sturm auf Ravenloft zurückgekehrt. Donavitsch will ihn nicht töten lassen.
+- **Morgana**, eine alte Frau mit magischen Traumpasteten, flieht, als Flori sie anspricht.
+- Ismag bleibt wegen der Bürgermeisterwahl in Barovia. Die Party bricht mit Irena Richtung **Tser-Becken** auf.
+
+---
+
+## Session 003 — 24.06.2026 · Swalitsch-Straße: Brücke → Galgen → Tser-Becken → Tser-Fälle
+
+### Der Galgen und die elf Gräber
+- Hinter einem alten Holzgalgen: **elf namenlose Gräber** — Irena nennt sie Strahds "Funde". Mara gräbt einen **verrosteten Eisenknopf mit fremdem Wappen** aus (nicht barovianisch, vielleicht von Abenteurern gegen Strahd).
+- Mara nimmt ein **graues Bündel** (Kleid + Haarüberwurf) vom Straßenrand mit.
+- Am Galgen erscheint eine Gestalt: Alle sehen einen fremden Barovianer — **nur Moxie sieht sich selbst**, weinend auf einem Baum, beobachtet von einem Raben. Moxie spricht heimlich mit dem Raben.
+- Thorin nagelt das umgefallene Wegschild (Barovia / Tser-Becken / Ravenloft-Vallaki) mit Moxies Pfeil an den Galgen.
+
+### Madame Eva legt die Karten
+- Im Vistani-Lager am Tser-Becken legt **Madame Eva** die Tarokka-Karten — der Schlachtplan gegen Strahd: ein **Buch** (Magierturm am See, Namen merken), ein **Amulett / "Symbol der Hoffnung"** (im "Haus des Drachen"), ein **Lichtschwert** (beim Weinberg-Magier, "in Holz und Sand").
+- Die **Raben** sind Feinde Strahds und dürfen nicht getötet werden; ihr **Anführer** ("in den Reben") muss als Verbündeter gewonnen werden.
+- Nur wer **warm, verzweifelt und weise** ist, kann Strahd mit Lichtschwert und Raben erschlagen — Rückverwandlung scheint möglich.
+- Eva spricht Nia **telepathisch mit vollem Namen** an — sie kennt Nias Herkunft. Jeder Charakter erhält einen **Trank der größeren Heilung**.
+
+### Wasserfall und Rückweg
+- An den gut 300 m hohen **Tser-Fällen** fischt Nia **16 Edelsteine** (je 100 G) aus dem Wasser; einen schenkt sie Thorin.
+- Rückweg über die breite Flussbrücke: **Gargoyles**, die auf dem Hinweg nicht da waren — Cliffhanger, Kampf steht bevor.

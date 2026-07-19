@@ -5,7 +5,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `charaktere/shii-take/charakterbogen.md` — Shii Take (Human Druide, Raffi) — Stats, Spells, Ausrüstung
 - `charaktere/shii-take/persoenlichkeit.md` — Shii Take Voice, Traits, Reaktionsmuster
 - `charaktere/shii-take/beziehungen.md` — Shii Takes Beziehungen (pro Kampagne)
-- `charaktere/nia-sommerfeld/charakterbogen.md` — Nia Sommerfeld (Human Bard College of Lore, Raffi) — Level-3-Build, Spells, Ausrüstung
+- `charaktere/nia-sommerfeld/charakterbogen.md` — Nia Sommerfeld (Human Bard College of Dance, Raffi) — Level-3-Build, Spells, Ausrüstung
 - `charaktere/nia-sommerfeld/persoenlichkeit.md` — Nia Sommerfeld Voice, Traits, Reaktionsmuster
 - `charaktere/nia-sommerfeld/beziehungen.md` — Nia Sommerfelds Beziehungen (Fluch des Strahd, Party + Familie)
 - `charaktere/nia-sommerfeld/build-notizen.md` — DnDBeyond-Checklist Level 3 und Levelplan
@@ -62,7 +62,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `regeln/magic-items/amulet-of-protection.md` — +1 Amulett of Protection (Party-Loot S001)
 
 ## Kampagnen
-### Fluch des Strahd (aktiv — S002 gespielt 21.06.2026)
+### Fluch des Strahd (aktiv — S003 gespielt 24.06.2026, nächste Session 20.07.2026)
 - `kampagnen/fluch-des-strahd/party.md` — 6 PCs, DM Jana, Gruppen-Backstory
 - `kampagnen/fluch-des-strahd/_kontext/welt.md` — Barovia, Strahd, Götter (Morgenfürst/Mutternacht), Bevölkerung
 - `kampagnen/fluch-des-strahd/_kontext/timeline.md` — Pre-Campaign-Ereignisse, Session-Einträge
@@ -104,6 +104,9 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/items/eisenknopf.md` — Eisenknopf mit fremdem Wappen (verrostet, von den 11 Gräbern am Galgen, bei Mara, S003)
 - `kampagnen/fluch-des-strahd/items/rubin.md` — Rubin (bei Mara, Wert unklar)
 - `kampagnen/fluch-des-strahd/items/goldkronen.md` — 95 Goldkronen Party-Kasse (bei Moxie, Vorauszahlung Auftrag)
+- `kampagnen/fluch-des-strahd/items/graues-buendel.md` — Graues Bündel (Kleid + Haarüberwurf vom Straßenrand, bei Mara, S003) — grau-braun wie die Kleidung der Seelenlosen
+- `kampagnen/fluch-des-strahd/items/edelsteine.md` — 16 Edelsteine à 100 G aus den Tser-Fällen (15 bei Nia, 1 bei Thorin, S003)
+- `kampagnen/fluch-des-strahd/items/trank-der-groesseren-heilung.md` — Trank der größeren Heilung ×6 (je 1 pro Charakter, Geschenk von Madame Eva, S003)
 
 #### Roh-Mitschriften (nur als Last-Resort laden)
 - `kampagnen/fluch-des-strahd/transcripts/README.md` — Wofür der Ordner ist und wie er gepflegt wird
