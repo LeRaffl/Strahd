@@ -8,10 +8,13 @@
 *Hinweis: Das "siecht an mysteriöser Wunde"-Framing stammt aus dem **gefälschten** Brief — tatsächlich ist Irena körperlich okay (verheilte Bissspuren), aber Strahd hat sie bereits zweimal angezapft. Die Gefahr ist real, nur anders als der Brief behauptet.*
 
 ## Nächster Schritt
-- **Gargoyles auf der Brücke** (Ende S003) — der Rückweg über die breite Flussbrücke ist blockiert; Kampf steht unmittelbar bevor.
-- Danach weiter über die Swalitsch-Straße Richtung Vallaki → Krezk. Das Tser-Becken (Madame Eva) ist abgehakt.
+- **Vampir-Kampf im Thronsaal der verlassenen Festung** (Ende S004) — ein Vampir tritt heraus, drei Paar Füße sind zu hören; Initiative wurde auf nächstes Mal vertagt. Kampf steht unmittelbar bevor.
+- Danach: **aus der Festung raus** und zurück auf die Hauptstraße Richtung Vallaki → Krezk. Die Türen fielen hinter der Party zu — Rückweg unklar. Irena ist mit in der Festung.
+- *(Der Gargoyle-Cliffhanger aus S003 führte zu keinem Kampf; die Party ging weiter zur Kutschen-Biegung und dann in die Festung.)*
 
 ## Sofort offen
+- **Die schwarze Kutsche** ohne Kutscher auf dem Bergpfad — was ist sie, wen soll sie holen (Irena)? Warum zog es Moxie hinein? Steht evtl. noch dort.
+- **Artefakte-Fluch** — Glühbert (Thorin), Schild (Alberich), Krone (Mara) geben je +2/−2. Lohnt sich der Malus, kann man sie ablegen? Und: Ist „Glühbert" wirklich das Lichtschwert der Prophezeiung?
 - Wer hat den **falschen Brief** geschrieben? Der Brief in der Hand der Party ist nicht von Koljan — Ismag hat es bestätigt.
 - **Markus' Tod** aufklären — Bote im Svalidsch Wald, mit dem echten Brief in der Hand verblutet.
 - **Gertruda** befreien — Maries Tochter (14–16 J.), von Strahd nach Ravenloft entführt.
@@ -20,7 +23,7 @@
 - **Strahd bezwingen — Evas Karten (S003):** Drei Dinge sammeln und einen Verbündeten gewinnen:
   - **Buch** — von einem Magier; **Magierturm am See**, dessen Namen man sich merken muss.
   - **Amulett / „Symbol der Hoffnung"** — im **„Haus des Drachen"**.
-  - **Lichtschwert** — beim **Weinberg-Magier** („in Holz und Sand").
+  - **Lichtschwert** — beim **Weinberg-Magier** („in Holz und Sand"). *(In S004 fand die Party in der Festung ein leuchtendes Langschwert „Glühbert" — evtl. dieses Schwert, aber nicht bestätigt; der Prophezeiungs-Ort widerspricht.)*
   - **Rabenanführer „in den Reben"** als Verbündeter gewinnen (Raben **nicht** töten).
   - Bedingung: nur wer **warm, verzweifelt und weise** ist, kann Strahd mit Lichtschwert + Raben erschlagen. Strahd lässt sich evtl. zurückverwandeln.
 - **Florpthyz zurückverwandeln** — laufendes Gruppen-Anliegen seit dem Transformations-Abenteuer.

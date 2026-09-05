@@ -99,4 +99,28 @@
 
 ### Wasserfall und Rückweg
 - An den gut 300 m hohen **Tser-Fällen** fischt Nia **16 Edelsteine** (je 100 G) aus dem Wasser; einen schenkt sie Thorin.
-- Rückweg über die breite Flussbrücke: **Gargoyles**, die auf dem Hinweg nicht da waren — Cliffhanger, Kampf steht bevor.
+- Rückweg über die breite Flussbrücke: **Gargoyles**, die auf dem Hinweg nicht da waren — Cliffhanger. *(Zu einem Gargoyle-Kampf kam es letztlich nicht; die Reise ging weiter — siehe S004.)*
+
+---
+
+## Session 004 — 20.07.2026 · Bergpfad → Verlassene Festung („Glühwärts Höhle")
+
+### Die wartende Kutsche
+- Auf dem Bergpfad Richtung Vallaki wartet an einer Biegung im Nebel eine **schwarze Kutsche** mit bösen Pferden, aber **ohne Kutscher**. **Moxie** will einsteigen; die Party (Thorin) hält sie ab und geht weiter. Erinnerung an die Vistani-Regeln: auf der Hauptstraße bleiben, nicht zur Windmühle, keine Raben töten.
+
+### Abseits des Weges — die Festung
+- **Florpthyz** wird von einem Steinbau abseits des Wegs angezogen (womöglich „aus Tentakelhand"?) und läuft trotz Warnung vom Weg. Die Gruppe folgt (Alberich mit Licht) und steht nach ~50 m vor einer **verlassenen Festung**.
+
+### Das Tor der Ehre
+- Geschnitztes Holztor mit **Schwert, Schild, Krone** und alt-barovianischer Inschrift (Irena liest). Das Rätsel verlangt das Wort, das die drei vereint. Falsche Antworten (u.a. Alberichs „Mellon", „Metall", „Mensch") schießen **Pfeile**; Thorin und Alberich werden getroffen. Die Pforte öffnet sich auf **„Ehre"**.
+
+### Drei Artefakte & die Wächter
+- Im Festsaal drei Podeste: **leuchtendes Schwert, Schild, Krone (dunkle Edelsteine)**. Eine Stimme warnt: Nicht jedem geben sie Macht; der richtige Träger bekommt Bonus + Malus und wird verschont.
+- Nia greift das Schwert, Mara die Krone → **drei steinerne Wächter** erwachen, das Schwert wird heiß (Nia lässt es fallen). Im Kampf werden die Statuen zu **Fleisch**, bluten und weinen **rote Tränen**. Alle drei besiegt.
+- Verteilung an die „richtigen" Träger: **Thorin → Schwert „Glühbert"** (+2 Angriff/−2 WIS-Save), **Alberich → Schild** (+2 AC/−2 GES-Check), **Mara → Krone** (+2 CHA-Check/−2 Konzentration).
+
+### Garten der alten Seelen
+- Überwucherter Garten mit Brunnen; flüsternde **„alte Seelen"** verlangen Beichten (Laster, Ängste, Geheimnisse), Lügen werden bestraft. Comedic: Thorins Fisch & Seelen-Angst, Floris Nasenloch-Tentakel & Obsoleszenz-Angst, Nias Zimt-Abneigung, Maras misslungene Lüge. Ranken ziehen die Beichtenden weiter.
+
+### Thronsaal — Cliffhanger
+- Kerzenbeleuchteter Thronsaal; aus einer Tür hinter dem Thron tritt ein **Vampir** (Cape, Fangzähne) — die Party hört **drei Paar Füße**. Initiative auf nächstes Mal vertagt. Festung im Spaß „Glühwärts Höhle" getauft.
