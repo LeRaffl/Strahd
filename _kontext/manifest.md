@@ -62,7 +62,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `regeln/magic-items/amulet-of-protection.md` — +1 Amulett of Protection (Party-Loot S001)
 
 ## Kampagnen
-### Fluch des Strahd (aktiv — S003 gespielt 24.06.2026, nächste Session 20.07.2026)
+### Fluch des Strahd (aktiv — S004 gespielt 20.07.2026, nächste Session offen)
 - `kampagnen/fluch-des-strahd/party.md` — 6 PCs, DM Jana, Gruppen-Backstory
 - `kampagnen/fluch-des-strahd/_kontext/welt.md` — Barovia, Strahd, Götter (Morgenfürst/Mutternacht), Bevölkerung
 - `kampagnen/fluch-des-strahd/_kontext/timeline.md` — Pre-Campaign-Ereignisse, Session-Einträge
@@ -72,6 +72,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/sessions/001-schilfheim-nach-barovia.md` — S001: Auftrag in Schilfheim, Svalidsch Wald, Ankunft in Barovia (Dorf)
 - `kampagnen/fluch-des-strahd/sessions/002-koljans-letztes-geleit.md` — S002: Taverne, Arik seelenlos, Koljan tot im Sarg, Beerdigung, Irena reist mit
 - `kampagnen/fluch-des-strahd/sessions/003-madame-evas-karten.md` — S003: Galgen + 11 Gräber, Moxies Doppelgängerin, Madame Evas Tarokka-Weissagung, Edelsteine am Wasserfall, Gargoyles auf der Brücke
+- `kampagnen/fluch-des-strahd/sessions/004-die-festung-der-ehre.md` — S004: schwarze Kutsche, verlassene Festung, Tor-Rätsel „Ehre", drei Artefakte (Glühbert/Schild/Krone), Kampf gegen steinerne Wächter, Garten der Beichte, Thronsaal-Vampir (Cliffhanger)
 - `kampagnen/fluch-des-strahd/npcs/hanna-sommerfeld.md` — Nias Mutter (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/bert-sommerfeld.md` — Nias Vater (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/timo-sommerfeld.md` — Nias älterer Bruder (studiert Medizin, pot. Anlaufpunkt Florpthyz-Quest)
@@ -96,6 +97,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/orte/ravenloft.md` — Schloss Ravenloft: Sitz von Strahd, am Horizont sichtbar, noch nicht betreten
 - `kampagnen/fluch-des-strahd/orte/tser-becken.md` — Vistani-Lager (Karte: G), Madame Evas Zelt; erster Stop ab S002
 - `kampagnen/fluch-des-strahd/orte/krezk.md` — Stadt Krezk (Karte: S), Abtei Sankt Markovia; Primärziel für Irena
+- `kampagnen/fluch-des-strahd/orte/verlassene-festung.md` — Verlassene Festung („Glühwärts Höhle"), abseits der Straße: Tor der Ehre, Festsaal mit Artefakten + Wächtern, Garten der alten Seelen, Thronsaal mit Vampiren (S004)
 
 #### Key Items
 - `kampagnen/fluch-des-strahd/items/brief-von-koljan-indirowitsch-version-1.md` — Brief von Koljan Indirowitsch (Version 1, gefälscht, bei Nia) — Lockbrief nach Barovia
@@ -107,6 +109,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/items/graues-buendel.md` — Graues Bündel (Kleid + Haarüberwurf vom Straßenrand, bei Mara, S003) — grau-braun wie die Kleidung der Seelenlosen
 - `kampagnen/fluch-des-strahd/items/edelsteine.md` — 16 Edelsteine à 100 G aus den Tser-Fällen (15 bei Nia, 1 bei Thorin, S003)
 - `kampagnen/fluch-des-strahd/items/trank-der-groesseren-heilung.md` — Trank der größeren Heilung ×6 (je 1 pro Charakter, Geschenk von Madame Eva, S003)
+- `kampagnen/fluch-des-strahd/items/artefakte-der-festung.md` — Artefakte der verlassenen Festung: Schwert „Glühbert" (Thorin), Schild (Alberich), Krone (Mara), je Segen + Fluch (S004)
 
 #### Roh-Mitschriften (nur als Last-Resort laden)
 - `kampagnen/fluch-des-strahd/transcripts/README.md` — Wofür der Ordner ist und wie er gepflegt wird

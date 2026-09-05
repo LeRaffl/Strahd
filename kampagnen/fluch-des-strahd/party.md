@@ -3,7 +3,7 @@
 **Modul:** Curse of Strahd (D&D 5e Adventure)
 **Regeln:** D&D 5e 2024
 **DM:** Jana
-**Status:** aktiv — S003 gespielt 24.06.2026, nächste Session 20.07.2026
+**Status:** aktiv — S004 gespielt 20.07.2026 (Cliffhanger: Vampir-Kampf in der verlassenen Festung), nächste Session offen
 **Startlevel:** 3
 
 | Charakter | Spieler | Klasse | Level | Status |
@@ -39,3 +39,7 @@ Das letzte Abenteuer liegt gerade hinter der Gruppe. Ein Amulett, das Florpthyz 
 | [S001](sessions/001-schilfheim-nach-barovia.md) | 13.05.2026 | Zwischen Schilfheim und Barovia | Schilfheim → Svalidsch Wald → Barovia (Dorf) |
 | [S002](sessions/002-koljans-letztes-geleit.md) | 21.06.2026 | Koljans letztes Geleit | Barovia (Dorf): Gasthaus → Herrenhaus → Kirche & Friedhof |
 | [S003](sessions/003-madame-evas-karten.md) | 24.06.2026 | Madame Evas Karten | Swalitsch-Straße: Brücke → Galgen → Tser-Becken → Tser-Fälle |
+| [S004](sessions/004-die-festung-der-ehre.md) | 20.07.2026 | Die Festung der Ehre | Bergpfad → Verlassene Festung: Tor → Festsaal → Garten → Thronsaal |
+
+## Artefakte (seit S004)
+Aus der [verlassenen Festung](orte/verlassene-festung.md): **Thorin** trägt das leuchtende Langschwert **„Glühbert"** (+2 Angriff/−2 WIS-Save), **Alberich** das **Schild** (+2 AC/−2 GES-Check), **Mara** die **Krone** (+2 CHA-Check/−2 Konzentration). Details → [Artefakte der Festung](items/artefakte-der-festung.md).

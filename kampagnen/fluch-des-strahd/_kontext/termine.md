@@ -11,10 +11,8 @@
 
 ## Anstehend
 
-### Sonntag, 20.07.2026 — lange Session
-- 15 Uhr eintrudeln, 16 Uhr Spielstart, hartes Ende 21 Uhr
-- Essen bei Halbzeit → Bestellung vorher klären
-- Einstieg: Gargoyles auf der Brücke (Cliffhanger aus Session 003)
+### Nächste Session — Termin offen
+- Einstieg: **Vampir-Kampf im Thronsaal der verlassenen Festung** (Cliffhanger aus Session 004). Initiative wurde vertagt — Kampf startet sofort.
 
 ---
 
@@ -24,3 +22,4 @@
 - **2026-05-13 (Mi):** Session 001 — Schilfheim → Barovia → [`../sessions/001-schilfheim-nach-barovia.md`](../sessions/001-schilfheim-nach-barovia.md)
 - **2026-06-21 (So):** Session 002 — Koljans letztes Geleit → [`../sessions/002-koljans-letztes-geleit.md`](../sessions/002-koljans-letztes-geleit.md)
 - **2026-06-24 (Mi):** Session 003 — Madame Evas Karten → [`../sessions/003-madame-evas-karten.md`](../sessions/003-madame-evas-karten.md)
+- **2026-07-20 (So):** Session 004 — Die Festung der Ehre → [`../sessions/004-die-festung-der-ehre.md`](../sessions/004-die-festung-der-ehre.md)
