@@ -62,7 +62,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `regeln/magic-items/amulet-of-protection.md` — +1 Amulett of Protection (Party-Loot S001)
 
 ## Kampagnen
-### Fluch des Strahd (aktiv — S004 gespielt 20.07.2026, nächste Session offen)
+### Fluch des Strahd (aktiv — S005 geplant 06.09.2026 15:00 Uhr)
 - `kampagnen/fluch-des-strahd/party.md` — 6 PCs, DM Jana, Gruppen-Backstory
 - `kampagnen/fluch-des-strahd/_kontext/welt.md` — Barovia, Strahd, Götter (Morgenfürst/Mutternacht), Bevölkerung
 - `kampagnen/fluch-des-strahd/_kontext/timeline.md` — Pre-Campaign-Ereignisse, Session-Einträge
@@ -73,6 +73,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/sessions/002-koljans-letztes-geleit.md` — S002: Taverne, Arik seelenlos, Koljan tot im Sarg, Beerdigung, Irena reist mit
 - `kampagnen/fluch-des-strahd/sessions/003-madame-evas-karten.md` — S003: Galgen + 11 Gräber, Moxies Doppelgängerin, Madame Evas Tarokka-Weissagung, Edelsteine am Wasserfall, Gargoyles auf der Brücke
 - `kampagnen/fluch-des-strahd/sessions/004-die-festung-der-ehre.md` — S004: schwarze Kutsche, verlassene Festung, Tor-Rätsel „Ehre", drei Artefakte (Glühbert/Schild/Krone), Kampf gegen steinerne Wächter, Garten der Beichte, Thronsaal-Vampir (Cliffhanger)
+- `kampagnen/fluch-des-strahd/sessions/005-thronsaal-inferno.md` — S005 (geplant 06.09.2026 15:00 Uhr): Thronsaal-Kampf gegen Vampir, Flucht aus der Festung
 - `kampagnen/fluch-des-strahd/npcs/hanna-sommerfeld.md` — Nias Mutter (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/bert-sommerfeld.md` — Nias Vater (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/timo-sommerfeld.md` — Nias älterer Bruder (studiert Medizin, pot. Anlaufpunkt Florpthyz-Quest)

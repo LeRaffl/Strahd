@@ -7,9 +7,9 @@
 **Irena Koljana in Sicherheit bringen** — sie nach **Krezk** (bevorzugt, am weitesten von Ravenloft weg; dort die Abtei St. Markovia) oder ersatzweise **Vallaki** eskortieren, weg von Strahd, der hinter ihr her ist. Irena reist seit S002 mit der Party.
 *Hinweis: Das "siecht an mysteriöser Wunde"-Framing stammt aus dem **gefälschten** Brief — tatsächlich ist Irena körperlich okay (verheilte Bissspuren), aber Strahd hat sie bereits zweimal angezapft. Die Gefahr ist real, nur anders als der Brief behauptet.*
 
-## Nächster Schritt
-- **Vampir-Kampf im Thronsaal der verlassenen Festung** (Ende S004) — ein Vampir tritt heraus, drei Paar Füße sind zu hören; Initiative wurde auf nächstes Mal vertagt. Kampf steht unmittelbar bevor.
-- Danach: **aus der Festung raus** und zurück auf die Hauptstraße Richtung Vallaki → Krezk. Die Türen fielen hinter der Party zu — Rückweg unklar. Irena ist mit in der Festung.
+## Nächster Schritt (S005 – 06.09.2026 15:00)
+- **Vampir-Kampf im Thronsaal der verlassenen Festung** — Taktik, Ressourcen-Management, Flucht-Plan. Ein Vampir tritt heraus, drei Paar Füße sind zu hören (vermutlich Thralls/Geister). Initiative startet jetzt (Cliffhanger seit S004).
+- **Aus der Festung raus** — Die Türen fielen hinter der Party zu; Rückweg unklar. Nach dem Kampf suchen sie einen Exit. Ziel: zurück auf die Hauptstraße Richtung Vallaki → Krezk. Irena ist mit in der Festung.
 - *(Der Gargoyle-Cliffhanger aus S003 führte zu keinem Kampf; die Party ging weiter zur Kutschen-Biegung und dann in die Festung.)*
 
 ## Sofort offen
