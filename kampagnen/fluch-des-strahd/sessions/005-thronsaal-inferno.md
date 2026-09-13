@@ -13,7 +13,7 @@ Der Cliffhanger explodiert: Ein Vampir tritt aus der Geheimtür, zwei zahnlose G
 ## Die Party
 | Spieler | Charakter | Rasse | Klasse | Level |
 |---------|-----------|-------|--------|-------|
-| Raffi | [Nia Sommerfeld](../../../charaktere/nia-sommerfeld/charakterbogen.md) | Mensch | Bard (College of Dance) | 3 |
+| Raffi | [Nia Sommerfeld](../../../charaktere/nia-sommerfeld/charakterbogen.md) | Mensch | Bard (College of Dance) | 4 |
 | Felix | [Florpthyz Dread](../../../charaktere/florpthyz-dread/charakterbogen.md) | Gnom/Standuhr | Fighter (Eldritch Knight) | 3 |
 | Andi | [Alberich von Steinkreis](../../../charaktere/alberich/charakterbogen.md) | Zwerg | Cleric (Domain of Light) | 3 |
 | Tom | [Thorin](../../../charaktere/thorin/charakterbogen.md) | Mensch | Barbarian | 3 |

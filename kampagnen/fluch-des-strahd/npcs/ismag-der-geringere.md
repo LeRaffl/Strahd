@@ -28,10 +28,10 @@ Selbst-ironisch. Der Beiname "der Geringere" ist keine Beleidigung von außen �
 - **Auf Fremde allgemein:** vorsichtig, aber nicht feindselig. Testet, ob man zuhören kann.
 
 ## Was in S002 passiert ist
-- Hat der Party in S002 eine (grobe) Karte von Barovia mitgegeben, mit Valaki und Krezk eingezeichnet.
+- Hat der Party in S002 eine (grobe) Karte von Barovia mitgegeben, mit Vallaki und Krezk eingezeichnet.
 - Sein Vater Koljan Indirovic ist gestorben — Ismag hat die Party zur Beerdigung am nächsten Morgen begleitet.
 - Bleibt in Barovia wegen der **Bürgermeisterwahl** — kann das Dorf nicht verlassen.
-- Hat der Party noch einen Hinweis gegeben: Ein verrückter Magier soll bei den Bartok-Bergen nahe dem großen See hausen.
+- Hat der Party noch einen Hinweis gegeben: Ein verrückter Magier soll beim Baratok-Berg nahe dem großen See hausen.
 
 ## Offene Fäden
 - Was genau weiß er über Irenas Verbindung zu Strahd?

@@ -1,6 +1,6 @@
 # Brief von Koljan Indirowitsch (Version 2)
 **Bei:** Nia
-**Erstauftritt:** S001 — Svalidsch Wald, in der Hand des zerfetzten Leichnams von Markus
+**Erstauftritt:** S001 — Swalitsch Wald, in der Hand des zerfetzten Leichnams von Markus
 **Typ:** Brief (echt, von Koljan an Markus)
 
 ---

@@ -24,7 +24,6 @@ kampagnen/
     _kontext/welt.md        # Setting, Fraktionen
     _kontext/timeline.md    # Timeline der Kampagne
     sessions/               # Kuratierte Session-Summaries
-    transcripts/            # Roh-Transkripte / händische Mitschriften (last-resort)
     npcs/                   # NPCs dieser Kampagne
     orte/                   # Schauplätze dieser Kampagne
 
@@ -36,11 +35,15 @@ index.html                  # Biblo Web-UI
 ## Charaktere
 | Charakter | Spieler | Spezies | Klasse |
 |-----------|---------|---------|--------|
-| [Shii Take](charaktere/shii-take/charakterbogen.md) | Raffi | Human | Druide |
 | [Nia Sommerfeld](charaktere/nia-sommerfeld/charakterbogen.md) | Raffi | Human | Bard (College of Dance) |
-| [Lazar](charaktere/lazar/charakterbogen.md) | Andi | Tabaxi | Mönch |
-| [Major Sempft](charaktere/major-sempft/charakterbogen.md) | Felix | Halbling | Paladin |
-| [Moxi](charaktere/moxi/charakterbogen.md) | Svenja | Goblin | Jäger |
+| [Florpthyz Dread](charaktere/florpthyz-dread/charakterbogen.md) | Felix | Gnom/Standuhr | Fighter (Eldritch Knight) |
+| [Alberich von Steinkreis](charaktere/alberich/charakterbogen.md) | Andi | Zwerg | Cleric (Domain of Light) |
+| [Thorin](charaktere/thorin/charakterbogen.md) | Tom | Mensch | Barbarian |
+| [Moxie](charaktere/moxi/charakterbogen.md) | Svenja | Goblin | Ranger (Monster Slayer) |
+| [Mara Winterried](charaktere/mara/charakterbogen.md) | Anna | Human | Bard |
+| [Shii Take](charaktere/shii-take/charakterbogen.md) | Raffi | Human | Druide *(Requiem of Wings)* |
+| [Lazar](charaktere/lazar/charakterbogen.md) | Andi | Tabaxi | Mönch *(Requiem of Wings)* |
+| [Major Sempft](charaktere/major-sempft/charakterbogen.md) | Felix | Halbling | Paladin *(Requiem of Wings)* |
 
 ## Kampagnen
 | Kampagne | Status | Sessions |
@@ -61,12 +64,5 @@ Setup:
 
 Typische Nutzung:
 - **Nachschlagen am Spieltisch** — "Was kann Lazars Mönchsklasse auf Level 3?", "Welche NPCs hatten wir in Session 1?"
-- **Session loggen** — Erzähl die Session, paste eine Apple-Notes-Mitschrift oder ein Transkript rein. Biblo strukturiert nach `_templates/session.md` und legt die Datei an. Audio muss vorher transkribiert werden (Apple Voice Memos / MacWhisper).
+- **Session loggen** — Erzähl die Session oder paste eine Apple-Notes-Mitschrift. Biblo strukturiert nach `_templates/session.md`.
 - **Char-Building** — neue Spells/Items recherchieren und im Archiv anlegen.
-
-## Transkripte / Mitschriften
-Roh-Material aus den Sessions liegt in `kampagnen/<kampagne>/transcripts/`. Das sind Voll-Transkripte oder händische Notizen — ungekürzt, im Gegensatz zu den kuratierten `sessions/<nr>.md`. Biblo greift hier nur als Last-Resort drauf zu (wenn die kuratierte Session-Datei eine Frage nicht abdeckt) oder wenn explizit danach gefragt wird. Workflow nach einer Session:
-
-1. Transkript in `kampagnen/<kampagne>/transcripts/<nr>-<slug>.md` ablegen — Template: `_templates/transcript.md`.
-2. Eintrag in `_kontext/manifest.md` ergänzen, sonst sieht Biblos Tool-Use die Datei nicht.
-3. Optional: Biblo bitten, die kuratierte `sessions/<nr>.md` aus dem Transkript nachzuziehen.

@@ -5,7 +5,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `charaktere/shii-take/charakterbogen.md` — Shii Take (Human Druide, Raffi) — Stats, Spells, Ausrüstung
 - `charaktere/shii-take/persoenlichkeit.md` — Shii Take Voice, Traits, Reaktionsmuster
 - `charaktere/shii-take/beziehungen.md` — Shii Takes Beziehungen (pro Kampagne)
-- `charaktere/nia-sommerfeld/charakterbogen.md` — Nia Sommerfeld (Human Bard College of Dance, Raffi) — Level-3-Build, Spells, Ausrüstung
+- `charaktere/nia-sommerfeld/charakterbogen.md` — Nia Sommerfeld (Human Bard College of Dance, Raffi) — Level-4-Build, Spells, Ausrüstung
 - `charaktere/nia-sommerfeld/persoenlichkeit.md` — Nia Sommerfeld Voice, Traits, Reaktionsmuster
 - `charaktere/nia-sommerfeld/beziehungen.md` — Nia Sommerfelds Beziehungen (Fluch des Strahd, Party + Familie)
 - `charaktere/nia-sommerfeld/build-notizen.md` — DnDBeyond-Checklist Level 3 und Levelplan
@@ -69,9 +69,9 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/_kontext/session-zero.md` — Organisationsregeln, Do's/Don'ts, X-Card, Regelwerk 2024
 - `kampagnen/fluch-des-strahd/_kontext/termine.md` — Geplante und vergangene Sessions, Format-Reminder lang/kurz
 - `kampagnen/fluch-des-strahd/_kontext/aktueller-plan.md` — Hauptziel Irena nach Krezk/Vallaki; nach S005: raus aus der Festung, Vampir lebt, Moxie fehlt
-- `kampagnen/fluch-des-strahd/sessions/001-schilfheim-nach-barovia.md` — S001: Auftrag in Schilfheim, Svalidsch Wald, Ankunft in Barovia (Dorf)
+- `kampagnen/fluch-des-strahd/sessions/001-schilfheim-nach-barovia.md` — S001: Auftrag in Schilfheim, Swalitsch Wald, Ankunft in Barovia (Dorf)
 - `kampagnen/fluch-des-strahd/sessions/002-koljans-letztes-geleit.md` — S002: Taverne, Arik seelenlos, Koljan tot im Sarg, Beerdigung, Irena reist mit
-- `kampagnen/fluch-des-strahd/sessions/003-madame-evas-karten.md` — S003: Galgen + 11 Gräber, Moxies Doppelgängerin, Madame Evas Tarokka-Weissagung, Edelsteine am Wasserfall, Gargoyles auf der Brücke
+- `kampagnen/fluch-des-strahd/sessions/003-madame-evas-karten.md` — S003: Galgen + 11 Gräber, Moxies Doppelgängerin, Madame Evas Tarokka-Weissagung, Edelsteine am Wasserfall; Gargoyles als Cliffhanger (S004 kein Kampf)
 - `kampagnen/fluch-des-strahd/sessions/004-die-festung-der-ehre.md` — S004: schwarze Kutsche, verlassene Festung, Tor-Rätsel „Ehre", drei Artefakte (Glühbert/Schild/Krone), Kampf gegen steinerne Wächter, Garten der Beichte, Thronsaal-Vampir (Cliffhanger)
 - `kampagnen/fluch-des-strahd/sessions/005-thronsaal-inferno.md` — S005: Vampir-Kampf im Thronsaal, Ghouls, Moxie charmed/geht, Fledermaus-Flucht, Tagebuch (Strahd/Spiegelbild), Rast
 - `kampagnen/fluch-des-strahd/npcs/hanna-sommerfeld.md` — Nias Mutter (Apfelried, Hintergrund)

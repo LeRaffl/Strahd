@@ -1,5 +1,5 @@
 # 95 Goldkronen (Party-Kasse)
-**Bei:** Moxie (95) — Nia (5, nicht getrackt)
+**Bei:** Moxie (95) — Nia (5, nicht getrackt). Seit S005: Moxie ist allein unterwegs; ob die Kasse bei ihr bleibt, ist offen.
 **Erstauftritt:** S001 — Kneipe „Zum Schilf", Vorauszahlung durch Arigal
 **Typ:** Münze
 

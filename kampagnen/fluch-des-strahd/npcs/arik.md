@@ -1,5 +1,5 @@
 # Arik
-**Status:** lebend — Baravia (Dorf), Gasthaus "Blut auf den Reben" (Barkeeper)
+**Status:** lebend — Barovia (Dorf), Gasthaus "Blut auf den Reben" (Barkeeper)
 **Erstauftritt:** S001 — hinter der Bar, hat der Party Wein serviert
 
 ---

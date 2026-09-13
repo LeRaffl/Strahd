@@ -1600,7 +1600,7 @@
     <div class="rail-block">
       <div class="rail-block-label">Wo wir stehen</div>
       <div class="where-we-stand">
-        Die Party ist in <span class="highlight">Barovia (Dorf)</span> angekommen. <span class="highlight">Irena Koljana</span> siecht dahin — und der Brief, der die Gruppe hierhergelockt hat, stammt <span class="accent">nicht vom Bürgermeister.</span>
+        Die Party rastet in der <span class="highlight">verlassenen Festung</span>. Der Thronsaal-Vampir ist als Fledermaus entkommen. <span class="highlight">Irena</span> reist mit — Ziel Vallaki, dann Krezk. <span class="accent">Moxie</span> ist vorübergehend allein unterwegs.
       </div>
       <div class="next-session-pill" id="next-session-pill">
         <div class="pill-label">Nächste Session</div>
@@ -1782,7 +1782,7 @@ const VALID = new Set([
 
       // Login in Google Sheet loggen (fire-and-forget)
       const fd = new FormData();
-      fd.append('entry.1712699213', raw.trim());
+      fd.append('entry.1780260843', raw.trim());
       fetch('https://docs.google.com/forms/d/e/1FAIpQLSc6YB68u8uxCsAjELLoNWeQIdN0VJ1CHp591pxi27EHzX3UQQ/formResponse', {
         method: 'POST', mode: 'no-cors', body: fd,
       }).catch(() => {});
@@ -1835,7 +1835,7 @@ const VALID = new Set([
 Index aller Dateien im Archiv.
 
 ## Charaktere
-- \`charaktere/nia-sommerfeld/charakterbogen.md\` — Nia Sommerfeld (Human Bard College of Lore, Raffi) — Stats, Spells, Ausrüstung
+- \`charaktere/nia-sommerfeld/charakterbogen.md\` — Nia Sommerfeld (Human Bard College of Dance, Raffi) — Stats, Spells, Ausrüstung
 - \`charaktere/nia-sommerfeld/persoenlichkeit.md\` — Nia Sommerfeld Voice, Traits, Reaktionsmuster
 - \`charaktere/florpthyz-dread/charakterbogen.md\` — Florpthyz Dread (Gnome Fighter, Felix) — Standuhr mit Tentakeln
 - \`charaktere/alberich/charakterbogen.md\` — Alberich von Steinkreis (Dwarf Cleric, Andi)
@@ -1922,7 +1922,7 @@ Index aller Dateien im Archiv.
 
   // Active campaign info for Biblo system prompt
   const CAMPAIGN_NAME = 'Fluch des Strahd';
-  const CAMPAIGN_STATUS = 'aktiv — erste Session 13.05.2026';
+  const CAMPAIGN_STATUS = 'aktiv — S005 gespielt, nächste Session 14.09.2026';
 
   // Sessions cached globally so NPC/Ort grids can sort by recency
   let globalSessions = [];

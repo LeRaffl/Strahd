@@ -16,8 +16,8 @@ Wirkte dringend, aber nicht panisch. Wenig Erklärungen — übergibt, warnt, ge
 ## In S001
 - Stürmt in die Kneipe "Zum Schilf" in Schilfheim
 - Übergibt Brief und 100 Goldkronen im Auftrag des Bürgermeisters
-- Warnt davor, den Svalidsch Wald bei Nacht zu betreten
-- Erklärt den Weg: westlich, svalitische Straße, ~5h Fußmarsch bis Barovia
+- Warnt davor, den Swalitsch Wald bei Nacht zu betreten
+- Erklärt den Weg: westlich, Alte Swalitsch-Straße, ~5h Fußmarsch bis Barovia
 - Reitet danach sofort davon
 
 ## Verbindungen

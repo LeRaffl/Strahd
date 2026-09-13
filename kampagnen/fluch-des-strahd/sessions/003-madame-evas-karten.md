@@ -122,7 +122,7 @@ Die Party kehrt um und gelangt wieder an die breite Brücke — diesmal nicht da
 - Eva spricht Nia telepathisch mit vollem Namen an → Eva kennt Nias Herkunft
 - Eva gibt jedem einen Trank der größeren Heilung → je 1 pro Charakter
 - Nia findet 16 Edelsteine (je 100 G), gibt 1 an Thorin → 15 bei Nia, 1 bei Thorin
-- Gargoyles auf der Brücke → Kampf steht unmittelbar bevor (nächste Session)
+- Gargoyles auf der Brücke → Cliffhanger S003 *(S004: kein Kampf)*
 
 ---
 
@@ -141,7 +141,7 @@ Die Party kehrt um und gelangt wieder an die breite Brücke — diesmal nicht da
 ---
 
 ## Offene Fäden
-- **Gargoyles auf der Brücke** — Kampf steht bevor; was bewachen sie?
+- **Gargoyles auf der Brücke** — Cliffhanger S003. *(S004: kein Kampf; die Party ging weiter zur Kutschen-Biegung.)*
 - **Magierturm am See** — welcher Magier, wie heißt er? (Name merken!)
 - **„Haus des Drachen"** — wo ist das, was ist das Symbol der Hoffnung?
 - **Weinberg-Magier** — das Lichtschwert „in Holz und Sand"

@@ -38,13 +38,13 @@
 ### Auftrag in Schilfheim
 - **Arigal von und zu Nachtigall** stürmt in die Kneipe "Zum Schilf" und übergibt der Party einen Brief + 100 Goldkronen im Auftrag von **Koljan Indirovic**, Bürgermeister von Barovia.
 - Die Adoptivtochter **Irena Koljana** siecht an einer mysteriösen Wunde dahin — die Party soll helfen.
-- Arigal warnt vor dem Svalidsch Wald bei Nacht und reitet davon. Das Gold wird eingesteckt → Auftrag gilt als angenommen.
+- Arigal warnt vor dem Swalitsch Wald bei Nacht und reitet davon. Das Gold wird eingesteckt → Auftrag gilt als angenommen.
 - Mara findet im Gemeinschaftsraum: Metallknopf (Wappen: Pferd + Lanze ohne Reiter) und einen Rubin.
 
-### Svalidsch Wald — Wölfe und das Tor
+### Swalitsch Wald — Wölfe und das Tor
 - Drei Wölfe greifen an. Thorin intimidiert einen zur Flucht. Nia halbiert einen beim Rückzug. Der dritte stirbt unter Alberich + Floris Angriffen.
 - Riesiges Steintor mit kopflosen Ritterstatuen — öffnet sich von selbst. Dahinter schließt sich der Nebel sofort. Kein Rückweg erkennbar.
-- Im Svalidsch Wald: turmhohe Bäume, gedämpftes Licht, Moxie nimmt den Nebel als gefährlich wahr.
+- Im Swalitsch Wald: turmhohe Bäume, gedämpftes Licht, Moxie nimmt den Nebel als gefährlich wahr.
 
 ### Leichnam im Wald
 - Fauliger Geruch führt vom Weg zu einem zerfetzten Leichnam (Lederkleidung, Maden, Brief in der Hand).

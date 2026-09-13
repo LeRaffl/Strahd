@@ -54,7 +54,7 @@ Die Party hat in S002 eine grobe Karte von Ismag bekommen. Bekannte Orte:
 | A | Alte Swalitsch-Straße (Tor-Eingang) | bekannt — hier reingekommen |
 | B | Tore von Barovia | bekannt — Steintor mit kopflosen Ritterstatuen |
 | E | Barovia (Dorf) | bekannt — Ausgangspunkt |
-| G | Lager am Tser-Becken | nächstes Ziel (S002-Ende) |
+| G | Lager am Tser-Becken | bekannt — besucht S003 |
 | K | Burg Ravenloft | sichtbar, nicht besucht |
 | M | Irrer Magus vom Baratok-Berg | erwähnt von Ismag, Lage bekannt |
 | N | Vallaki | Ziel für Irena (Alternative zu Krezk) |

@@ -8,7 +8,7 @@
 
 | Charakter | Spieler | Klasse | Level | Status |
 |-----------|---------|--------|-------|--------|
-| [Nia Sommerfeld](../../charaktere/nia-sommerfeld/charakterbogen.md) | Raffi | Bard (College of Dance) | 3 | bestätigt |
+| [Nia Sommerfeld](../../charaktere/nia-sommerfeld/charakterbogen.md) | Raffi | Bard (College of Dance) | 4 | bestätigt |
 | [Florpthyz Dread](../../charaktere/florpthyz-dread/charakterbogen.md) | Felix | Fighter (Eldritch Knight) | 3 | bestätigt |
 | [Alberich von Steinkreis](../../charaktere/alberich/charakterbogen.md) | Andi | Cleric (Domain of Light) | 3 | bestätigt |
 | [Thorin](../../charaktere/thorin/charakterbogen.md) | Tom | Barbarian | 3 | bestätigt |
@@ -36,7 +36,7 @@ Das letzte Abenteuer liegt gerade hinter der Gruppe. Ein Amulett, das Florpthyz 
 ## Sessions
 | Nr | Datum | Titel | Ort |
 |----|-------|-------|-----|
-| [S001](sessions/001-schilfheim-nach-barovia.md) | 13.05.2026 | Zwischen Schilfheim und Barovia | Schilfheim → Svalidsch Wald → Barovia (Dorf) |
+| [S001](sessions/001-schilfheim-nach-barovia.md) | 13.05.2026 | Zwischen Schilfheim und Barovia | Schilfheim → Swalitsch Wald → Barovia (Dorf) |
 | [S002](sessions/002-koljans-letztes-geleit.md) | 21.06.2026 | Koljans letztes Geleit | Barovia (Dorf): Gasthaus → Herrenhaus → Kirche & Friedhof |
 | [S003](sessions/003-madame-evas-karten.md) | 24.06.2026 | Madame Evas Karten | Swalitsch-Straße: Brücke → Galgen → Tser-Becken → Tser-Fälle |
 | [S004](sessions/004-die-festung-der-ehre.md) | 20.07.2026 | Die Festung der Ehre | Bergpfad → Verlassene Festung: Tor → Festsaal → Garten → Thronsaal |

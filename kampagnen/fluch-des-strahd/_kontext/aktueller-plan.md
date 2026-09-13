@@ -19,7 +19,7 @@
 - **Die schwarze Kutsche** ohne Kutscher auf dem Bergpfad — was ist sie, wen soll sie holen (Irena)? Warum zog es Moxie hinein? Steht evtl. noch dort.
 - **Artefakte-Fluch** — Glühbert (Thorin), Schild (Alberich), Krone (Mara) geben je +2/−2. Lohnt sich der Malus, kann man sie ablegen? Und: Ist „Glühbert" wirklich das Lichtschwert der Prophezeiung?
 - Wer hat den **falschen Brief** geschrieben? Der Brief in der Hand der Party ist nicht von Koljan — Ismag hat es bestätigt.
-- **Markus' Tod** aufklären — Bote im Svalidsch Wald, mit dem echten Brief in der Hand verblutet.
+- **Markus' Tod** aufklären — Bote im Swalitsch Wald, mit dem echten Brief in der Hand verblutet.
 - **Gertruda** befreien — Maries Tochter (14–16 J.), von Strahd nach Ravenloft entführt.
 
 ## Übergeordnet

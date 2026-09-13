@@ -1,5 +1,5 @@
 # Irena Koljana
-**Status:** lebend — reist mit der Party (ab S002); verlässt Barovia (Dorf) Richtung Krezk/Valaki
+**Status:** lebend — reist mit der Party (ab S002); aktuell in der verlassenen Festung, Ziel Vallaki → Krezk
 **Erstauftritt:** S001 — nur aus Brief bekannt; S002 — persönlich angetroffen
 
 ---
@@ -8,7 +8,7 @@
 Lange braune Haare, große rehbraune Augen. Trägt braune Kleidung — früher Samt, jetzt heruntergekommenes Samt. Aufnähte und Verzierungen, die zeigen: Irena hat Stil, auch wenn der Stoff nicht mehr mitmacht. Am Hals: verheilte Bissspuren (Moxie aufgefallen, S002).
 
 ## Rolle
-Adoptivtochter des Bürgermeisters Koljan Indirovic (jetzt tot). Ihr Bruder Ismag drängte die Party, sie nach Valaki oder Krezk zu bringen. Irena reist ab S002 mit der Party.
+Adoptivtochter des Bürgermeisters Koljan Indirovic (jetzt tot). Ihr Bruder Ismag drängte die Party, sie nach Vallaki oder Krezk zu bringen. Irena reist ab S002 mit der Party.
 
 ## Persönlichkeit & Voice
 Warmherzig, fast gelassen für jemanden in ihrer Lage. Hat gelernt, mit Strahds Bedrohung zu leben — bis die Angst überhand nahm. Spricht offen über das, was ihr passiert ist, wenn man zuhört.
