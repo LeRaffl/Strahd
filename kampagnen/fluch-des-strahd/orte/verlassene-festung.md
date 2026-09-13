@@ -1,7 +1,7 @@
 # Die verlassene Festung (»Glühwärts Höhle«)
 **Karte:** Barovia — abseits der Swalitsch-Straße (Bergpfad Richtung Vallaki), Lage ungefähr
 **Region:** Berge zwischen dem Kreuzweg (Ravenloft/Vallaki) und Vallaki
-**Status:** verlassen, aber „bewohnt" von Wächtern, alten Seelen und Vampiren — betreten in S004
+**Status:** betreten S004, Kampf S005 — Vampir geflohen, Party rastet im Thronsaal
 
 ---
 
@@ -12,12 +12,12 @@ Eine alte, von Menschenhand aus Stein auf Stein gebaute Festung, versteckt hinte
 1. **Das Tor** — massives, geschnitztes Holztor mit drei Symbolen (Schwert, Schild, Krone) und einer alt-barovianischen Inschrift. Öffnet sich nur auf das richtige Wort (**„Ehre"**); falsche Antworten lösen **Pfeile aus einer Scharte** aus.
 2. **Der Festsaal** — großer Saal mit alten Wandteppichen, drei Podesten mit den [drei Artefakten](../items/artefakte-der-festung.md) und drei **steinernen Wächter-Statuen**, die erwachen, sobald man ein Artefakt nimmt. Die Türen fallen zu, sobald alle drinnen sind.
 3. **Der Garten** — überwucherter Innenhof mit **Brunnen**, dornigen Ranken, „atmendem" Mauerwerk und flüsternden Schatten (den **alten Seelen**), die Beichten verlangen. Ranken ziehen die Beichtenden durch die nächste Tür.
-4. **Der Thronsaal** — kleiner, kerzenbeleuchteter Raum mit großem Thron. Aus einer Tür dahinter treten **Vampire** (mind. drei). *(Cliffhanger S004.)*
+4. **Der Thronsaal** — kleiner, kerzenbeleuchteter Raum mit großem Thron (massives Holz, roter Samt, kippt nicht). Geheimtür hinter dem Thron → kleines **Seitenschiff** nach draußen. S005: Kampf gegen den [Thronsaal-Vampir](../npcs/thronsaal-vampir.md) + zwei Ghouls; Party rastet hier.
 
 ## Bewohner / Gefahren
 - **Drei steinerne Wächter** — humanoide Kämpfer-Statuen (~2 m) mit Langschwert/Dolch. Werden im Kampf zunehmend zu **Fleisch**, bluten und weinen **rote Tränen**. In S004 besiegt.
 - **Die „alten Seelen"** — flüsternde Schatten im Garten; verlangen Laster, Ängste und Geheimnisse, bestrafen Lügen.
-- **Vampir(e)** — treten am Ende von S004 aus dem Thronsaal; Identität und Zahl (drei Paar Füße gehört) offen.
+- **Vampir(e)** — S004 drei Paar Füße; S005 ein Vampir + zwei Ghouls. Der Vampir floh als Fledermaus, lebt. Ghouls zerstört.
 
 ## Mechanik der Artefakte
 Schwert, Schild und Krone sind für je **eine** „richtige" Person bestimmt. Bei ihr geben sie einen Bonus und einen Malus und **verschonen** sie; in der falschen Hand bleiben sie wirkungslos (das Schwert wird sogar heiß). Details → [Artefakte der verlassenen Festung](../items/artefakte-der-festung.md).
@@ -25,5 +25,5 @@ Schwert, Schild und Krone sind für je **eine** „richtige" Person bestimmt. Be
 ## Offene Fäden
 - Wer hat die Festung gebaut, und wozu die Prüfung von Ehre und Beichte?
 - Sind die Wächter (Stein → Fleisch, rote Tränen) verwunschene Menschen? Verbindung zu Strahds Opfern / zum Verwandlungs-Thema?
-- Was wollen die Vampire am Thron — und ist einer davon Strahd?
-- Gibt es einen Rückweg auf die Hauptstraße (mit Irena)?
+- Was wollen die Vampire am Thron — der Kämpfer aus S005 ist **nicht Strahd**. Kommt die Fledermaus zurück?
+- Rückweg: Seitenschiff nach draußen ist offen; Hauptstraße mit Irena noch nicht erreicht.

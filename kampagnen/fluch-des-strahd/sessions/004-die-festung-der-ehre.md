@@ -136,7 +136,7 @@ Mara hört mit der Krone ein Flüstern, das sich aus dem übrigen heraushebt —
 Die Beichten (mal ehrlich, mal albern):
 - **Thorin** gesteht, er habe den **kleinen Fisch** vom Wasserfall eingesteckt und nicht teilen wollen (Völlerei/Habgier) — und, ernster: seine **Angst, keine Seele zu haben**.
 - **Flori** beichtet, dass er nachts heimlich **Tentakel in die Nasenlöcher der Schlafenden** steckt — und seine **Angst, obsolet zu werden**, weil es jetzt magische Uhren gibt.
-- **Nia** hat eigentlich nichts zu beichten (das ist der Witz an ihr) — außer, dass sie **keinen Zimt mag** (Mamas Zimtquarkbällchen).
+- **Nia** hat eigentlich nichts zu beichten (das ist der Witz an ihr) — außer, dass sie **keinen Zimt mag** (Mamas Zimtquarkbällchen). *(S005-Nachtrag: Durchgekommen ist sie, weil sie danach die Angst ausgesprochen hat, **allein gelassen zu werden**.)*
 - **Mara** versucht, die Seelen mit einer **erfundenen Geschichte** zu überzeugen (Deception) — und blamiert sich als „schlechter Lügner".
 - **Alberich** fürchtet, seine **sakrale Schärpe** könnte dreckig werden und er ihr nicht würdig sein.
 

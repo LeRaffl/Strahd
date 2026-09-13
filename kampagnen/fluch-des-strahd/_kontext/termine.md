@@ -11,8 +11,11 @@
 
 ## Anstehend
 
-### Nächste Session — Termin offen
-- Einstieg: **Vampir-Kampf im Thronsaal der verlassenen Festung** (Cliffhanger aus Session 004). Initiative wurde vertagt — Kampf startet sofort.
+### Montag, 14.09.2026 — kurze Session
+- 18 Uhr eintrudeln, 18:30 Uhr Spielstart, ca. 2h
+- Einstieg: nach der Rast im Thronsaal, raus Richtung **Vallaki**
+- **Moxie** wieder dabei (In-Game: stößt wieder zur Party)
+- **Alberich/Andi** voraussichtlich nicht — In-Game-Grund noch offen
 
 ---
 
@@ -23,3 +26,4 @@
 - **2026-06-21 (So):** Session 002 — Koljans letztes Geleit → [`../sessions/002-koljans-letztes-geleit.md`](../sessions/002-koljans-letztes-geleit.md)
 - **2026-06-24 (Mi):** Session 003 — Madame Evas Karten → [`../sessions/003-madame-evas-karten.md`](../sessions/003-madame-evas-karten.md)
 - **2026-07-20 (So):** Session 004 — Die Festung der Ehre → [`../sessions/004-die-festung-der-ehre.md`](../sessions/004-die-festung-der-ehre.md)
+- **2026-09-06 (So):** Session 005 — Thronsaal Inferno → [`../sessions/005-thronsaal-inferno.md`](../sessions/005-thronsaal-inferno.md)

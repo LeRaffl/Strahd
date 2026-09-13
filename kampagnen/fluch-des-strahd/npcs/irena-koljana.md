@@ -25,6 +25,9 @@ Warmherzig, fast gelassen für jemanden in ihrer Lage. Hat gelernt, mit Strahds 
 - **Auf Fragen über Strahd:** Sachlich, mit unterliegendem Schauder.
 - **Über ihren Vater:** Sichtbare Trauer, aber stabil.
 
+## In S005
+- Im Thronsaal, kämpft nicht. *„Ich wollte gar nicht erst hier sein."* Übernimmt eine Schicht Nachtwache — nicht die ganze Nacht.
+
 ## Offene Fäden
 - Was macht sie so besonders für Strahd? Was ist mit ihrer Herkunft?
 - Wie weit ist die Wirkung der Bisse fortgeschritten?

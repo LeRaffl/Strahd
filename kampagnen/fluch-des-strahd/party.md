@@ -3,7 +3,7 @@
 **Modul:** Curse of Strahd (D&D 5e Adventure)
 **Regeln:** D&D 5e 2024
 **DM:** Jana
-**Status:** aktiv — S004 gespielt 20.07.2026 (Cliffhanger: Vampir-Kampf in der verlassenen Festung), nächste Session offen
+**Status:** aktiv — S005 gespielt 06.09.2026 (Vampir geflohen, Rast im Thronsaal), nächste Session 14.09.2026
 **Startlevel:** 3
 
 | Charakter | Spieler | Klasse | Level | Status |
@@ -12,7 +12,7 @@
 | [Florpthyz Dread](../../charaktere/florpthyz-dread/charakterbogen.md) | Felix | Fighter (Eldritch Knight) | 3 | bestätigt |
 | [Alberich von Steinkreis](../../charaktere/alberich/charakterbogen.md) | Andi | Cleric (Domain of Light) | 3 | bestätigt |
 | [Thorin](../../charaktere/thorin/charakterbogen.md) | Tom | Barbarian | 3 | bestätigt |
-| [Moxie](../../charaktere/moxi/charakterbogen.md) | Svenja | Ranger (Monster Slayer) | 3 | bestätigt |
+| [Moxie](../../charaktere/moxi/charakterbogen.md) | Svenja | Ranger (Monster Slayer) | 3 | S005: vorübergehend weg (Kloster); S006 wieder vorgesehen |
 | [Mara Winterried](../../charaktere/mara/charakterbogen.md) | Anna | Bard | 3 | bestätigt |
 
 ## Gruppen-Backstory
@@ -40,6 +40,10 @@ Das letzte Abenteuer liegt gerade hinter der Gruppe. Ein Amulett, das Florpthyz 
 | [S002](sessions/002-koljans-letztes-geleit.md) | 21.06.2026 | Koljans letztes Geleit | Barovia (Dorf): Gasthaus → Herrenhaus → Kirche & Friedhof |
 | [S003](sessions/003-madame-evas-karten.md) | 24.06.2026 | Madame Evas Karten | Swalitsch-Straße: Brücke → Galgen → Tser-Becken → Tser-Fälle |
 | [S004](sessions/004-die-festung-der-ehre.md) | 20.07.2026 | Die Festung der Ehre | Bergpfad → Verlassene Festung: Tor → Festsaal → Garten → Thronsaal |
+| [S005](sessions/005-thronsaal-inferno.md) | 06.09.2026 | Thronsaal Inferno | Verlassene Festung: Thronsaal (Vampir-Kampf, Rast) |
 
 ## Artefakte (seit S004)
 Aus der [verlassenen Festung](orte/verlassene-festung.md): **Thorin** trägt das leuchtende Langschwert **„Glühbert"** (+2 Angriff/−2 WIS-Save), **Alberich** das **Schild** (+2 AC/−2 GES-Check), **Mara** die **Krone** (+2 CHA-Check/−2 Konzentration). Details → [Artefakte der Festung](items/artefakte-der-festung.md).
+
+## Loot seit S005
+**Flori:** [Umhang des Wächters](items/umhang-des-waechters.md), [Langschwert +1 gegen Untote](items/langschwert-plus1-untote.md). **Mara:** [Tagebuch des Thronsaal-Vampirs](items/tagebuch-des-thronsaal-vampirs.md) (Strahd / Wahrheit / Spiegelbild).

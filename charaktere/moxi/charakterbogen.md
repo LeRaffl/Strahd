@@ -49,8 +49,8 @@ _TODO — Spielerwerte einpflegen_
 
 ## Kampagnen
 ### Fluch des Strahd
-**Status:** aktiv | **Level:** 3
-Kennt Thorin — er hat sie aus einem Banditenüberfall gerettet. Reist seitdem mit ihm. Schloss sich der Restgruppe in Schilfheim an.
+**Status:** S005 vorübergehend getrennt (Kloster/Selbstschutz); Rückkehr S006 vorgesehen | **Level:** 3
+Kennt Thorin — er hat sie aus einem Banditenüberfall gerettet. Reist seitdem mit ihm. Schloss sich der Restgruppe in Schilfheim an. In S005 vom Thronsaal-Vampir gecharnt, Zusammenbruch, geht allein.
 
 ### Requiem of Wings (One-Shot)
 **Status:** abgeschlossen | **Level:** 3

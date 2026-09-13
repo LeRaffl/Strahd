@@ -45,7 +45,7 @@ index.html                  # Biblo Web-UI
 ## Kampagnen
 | Kampagne | Status | Sessions |
 |----------|--------|----------|
-| [Fluch des Strahd](kampagnen/fluch-des-strahd/party.md) | aktiv (S005: 06.09.2026 15:00) | 5 |
+| [Fluch des Strahd](kampagnen/fluch-des-strahd/party.md) | aktiv (S005 gespielt 06.09.2026) | 5 |
 | [Requiem of Wings](kampagnen/requiem-of-wings/party.md) | One-Shot (abgeschlossen) | 1 |
 
 ## Biblo (Web-Interface)

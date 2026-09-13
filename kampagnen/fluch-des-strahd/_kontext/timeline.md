@@ -124,3 +124,19 @@
 
 ### Thronsaal — Cliffhanger
 - Kerzenbeleuchteter Thronsaal; aus einer Tür hinter dem Thron tritt ein **Vampir** (Cape, Fangzähne) — die Party hört **drei Paar Füße**. Initiative auf nächstes Mal vertagt. Festung im Spaß „Glühwärts Höhle" getauft.
+
+---
+
+## Session 005 — 06.09.2026 · Verlassene Festung: Thronsaal
+
+### Kampf gegen Vampir und Ghouls
+- Initiative sofort. Nia Bless + Flickflack auf den Vampir (24, 6). Er lacht, verfehlt, wird zu Feuchtigkeit. Zwei **zahnlose Ghouls** hinter ihm.
+- Mara Sleep + Healing Word. Alberich rüstet Radiance of Dawn. Thorin trifft Luft, ruft Moxie.
+- **Moxie** (Svenja nicht am Tisch) kauert im Eck, charmed: *„Lass ihn in Frieden!"*
+- Hit-and-run: Vampir sticht Mara, kassiert Radiance of Dawn, Zorro-Umhang, weg. Ghouls beißen Flori. Thorin und Flori zerstören beide Ghouls.
+- Flori begreift Nebelform, sagt es nicht, Axt bleibt im Thron. Vampir haut Alberich (27). Lichtstrahlen *für Helm!* — der Vampir wird zur **Fledermaus** und flieht. Lebt (~95 HP, Regeneration).
+
+### Loot, Moxie, Rast
+- **Umhang des Wächters** und **+1-Langschwert gegen Untote** → Flori. **Tagebuch** → Mara: Strahd von Zarovich fürchtet die Wahrheit, zeig ihm sein Spiegelbild. Der Gegner ist nicht Strahd.
+- Moxie weint, hat einem Wesen vertraut, geht allein ins **Kloster**.
+- Irena: *„Ich wollte gar nicht erst hier sein."* Lange Rast im Thronsaal mit Wache (Alberich / Irena / Thorin). Nächstes Ziel: Vallaki.

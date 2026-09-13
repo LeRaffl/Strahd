@@ -62,18 +62,18 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `regeln/magic-items/amulet-of-protection.md` — +1 Amulett of Protection (Party-Loot S001)
 
 ## Kampagnen
-### Fluch des Strahd (aktiv — S005 geplant 06.09.2026 15:00 Uhr)
+### Fluch des Strahd (aktiv — S005 gespielt 06.09.2026)
 - `kampagnen/fluch-des-strahd/party.md` — 6 PCs, DM Jana, Gruppen-Backstory
 - `kampagnen/fluch-des-strahd/_kontext/welt.md` — Barovia, Strahd, Götter (Morgenfürst/Mutternacht), Bevölkerung
 - `kampagnen/fluch-des-strahd/_kontext/timeline.md` — Pre-Campaign-Ereignisse, Session-Einträge
 - `kampagnen/fluch-des-strahd/_kontext/session-zero.md` — Organisationsregeln, Do's/Don'ts, X-Card, Regelwerk 2024
 - `kampagnen/fluch-des-strahd/_kontext/termine.md` — Geplante und vergangene Sessions, Format-Reminder lang/kurz
-- `kampagnen/fluch-des-strahd/_kontext/aktueller-plan.md` — Hauptziel + offene Nebenfäden, Biblo-Referenz für Quest-Fragen
+- `kampagnen/fluch-des-strahd/_kontext/aktueller-plan.md` — Hauptziel Irena nach Krezk/Vallaki; nach S005: raus aus der Festung, Vampir lebt, Moxie fehlt
 - `kampagnen/fluch-des-strahd/sessions/001-schilfheim-nach-barovia.md` — S001: Auftrag in Schilfheim, Svalidsch Wald, Ankunft in Barovia (Dorf)
 - `kampagnen/fluch-des-strahd/sessions/002-koljans-letztes-geleit.md` — S002: Taverne, Arik seelenlos, Koljan tot im Sarg, Beerdigung, Irena reist mit
 - `kampagnen/fluch-des-strahd/sessions/003-madame-evas-karten.md` — S003: Galgen + 11 Gräber, Moxies Doppelgängerin, Madame Evas Tarokka-Weissagung, Edelsteine am Wasserfall, Gargoyles auf der Brücke
 - `kampagnen/fluch-des-strahd/sessions/004-die-festung-der-ehre.md` — S004: schwarze Kutsche, verlassene Festung, Tor-Rätsel „Ehre", drei Artefakte (Glühbert/Schild/Krone), Kampf gegen steinerne Wächter, Garten der Beichte, Thronsaal-Vampir (Cliffhanger)
-- `kampagnen/fluch-des-strahd/sessions/005-thronsaal-inferno.md` — S005 (geplant 06.09.2026 15:00 Uhr): Thronsaal-Kampf gegen Vampir, Flucht aus der Festung
+- `kampagnen/fluch-des-strahd/sessions/005-thronsaal-inferno.md` — S005: Vampir-Kampf im Thronsaal, Ghouls, Moxie charmed/geht, Fledermaus-Flucht, Tagebuch (Strahd/Spiegelbild), Rast
 - `kampagnen/fluch-des-strahd/npcs/hanna-sommerfeld.md` — Nias Mutter (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/bert-sommerfeld.md` — Nias Vater (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/timo-sommerfeld.md` — Nias älterer Bruder (studiert Medizin, pot. Anlaufpunkt Florpthyz-Quest)
@@ -92,13 +92,14 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/npcs/doru.md` — Doru (Donavitschs Sohn, Vampirbrut, im Kirchenkeller, manipulative Stimme)
 - `kampagnen/fluch-des-strahd/npcs/morgana.md` — Morgana (alte Frau, magische Traumpasteten, rennt weg wenn angesprochen)
 - `kampagnen/fluch-des-strahd/npcs/madame-eva.md` — Madame Eva (Vistani-Wahrsagerin Tser-Becken, S003 Tarokka-Weissagung: Quest-Kompass gegen Strahd)
+- `kampagnen/fluch-des-strahd/npcs/thronsaal-vampir.md` — Thronsaal-Vampir (S004/S005): nicht Strahd, Charm auf Moxie, Nebel/Fledermaus, geflohen
 - `kampagnen/fluch-des-strahd/orte/apfelried.md` — Nias und Maras Heimatdorf (nicht-Barovia)
 - `kampagnen/fluch-des-strahd/orte/schilfheim.md` — Startdorf an einem See, Schauplatz Session-Anfang
 - `kampagnen/fluch-des-strahd/orte/barovia-dorf.md` — Dorf Barovia (Karte: E): Gasthaus, Herrenhaus, Kirche/Friedhof, Ravenloft am Horizont
 - `kampagnen/fluch-des-strahd/orte/ravenloft.md` — Schloss Ravenloft: Sitz von Strahd, am Horizont sichtbar, noch nicht betreten
 - `kampagnen/fluch-des-strahd/orte/tser-becken.md` — Vistani-Lager (Karte: G), Madame Evas Zelt; erster Stop ab S002
 - `kampagnen/fluch-des-strahd/orte/krezk.md` — Stadt Krezk (Karte: S), Abtei Sankt Markovia; Primärziel für Irena
-- `kampagnen/fluch-des-strahd/orte/verlassene-festung.md` — Verlassene Festung („Glühwärts Höhle"), abseits der Straße: Tor der Ehre, Festsaal mit Artefakten + Wächtern, Garten der alten Seelen, Thronsaal mit Vampiren (S004)
+- `kampagnen/fluch-des-strahd/orte/verlassene-festung.md` — Verlassene Festung („Glühwärts Höhle"): Tor, Festsaal, Garten, Thronsaal; S005 Kampf + Seitenschiff nach draußen, Rast
 
 #### Key Items
 - `kampagnen/fluch-des-strahd/items/brief-von-koljan-indirowitsch-version-1.md` — Brief von Koljan Indirowitsch (Version 1, gefälscht, bei Nia) — Lockbrief nach Barovia
@@ -111,6 +112,9 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/items/edelsteine.md` — 16 Edelsteine à 100 G aus den Tser-Fällen (15 bei Nia, 1 bei Thorin, S003)
 - `kampagnen/fluch-des-strahd/items/trank-der-groesseren-heilung.md` — Trank der größeren Heilung ×6 (je 1 pro Charakter, Geschenk von Madame Eva, S003)
 - `kampagnen/fluch-des-strahd/items/artefakte-der-festung.md` — Artefakte der verlassenen Festung: Schwert „Glühbert" (Thorin), Schild (Alberich), Krone (Mara), je Segen + Fluch (S004)
+- `kampagnen/fluch-des-strahd/items/umhang-des-waechters.md` — Umhang des Wächters (Flori, S005): +1 AC, Charm-Immunität, 1×/Tag unsichtbar im Schatten
+- `kampagnen/fluch-des-strahd/items/langschwert-plus1-untote.md` — Langschwert +1, +1W6 gegen Untote (Flori, S005)
+- `kampagnen/fluch-des-strahd/items/tagebuch-des-thronsaal-vampirs.md` — Tagebuch (Mara, S005): Strahd von Zarovich fürchtet die Wahrheit / Spiegelbild
 
 #### Roh-Mitschriften (nur als Last-Resort laden)
 - `kampagnen/fluch-des-strahd/transcripts/README.md` — Wofür der Ordner ist und wie er gepflegt wird
