@@ -140,3 +140,34 @@
 - **Umhang des Wächters** und **+1-Langschwert gegen Untote** → Flori. **Tagebuch** → Mara: Strahd von Zarovich fürchtet die Wahrheit, zeig ihm sein Spiegelbild. Der Gegner ist nicht Strahd.
 - Moxie weint, hat einem Wesen vertraut, geht allein ins **Kloster**.
 - Irena: *„Ich wollte gar nicht erst hier sein."* Lange Rast im Thronsaal mit Wache (Alberich / Irena / Thorin). Nächstes Ziel: Vallaki.
+
+---
+
+## Session 006 — 11.10.2026 · Festung → Swalitsch-Straße → Vallaki: Tor, Marktplatz, Gasthaus Blauwasser
+
+### Aufbruch und Moxies Rückkehr
+- Irena drängt nach der Rast: noch vor der Nacht nach **Vallaki**. Regen und Nebel.
+- **Moxie** hat die Nacht allein im größten Baum verbracht und stößt wieder zur Party. Zähne-Check, Weihwasser-Tropfen von Alberich — nichts. Die Party ist sich einig: Das in S005 war ein **Zauber**.
+
+### Der Weg nach Vallaki
+- Der Pfad an der Bergflanke gibt den Blick frei auf **Vallaki**: ummauert, am dunklen See — der **Nebel kommt nicht in die Stadt**. Gerücht: Der **Baron** feiert Feste gegen Strahd; Vallaki wehrt sich.
+- Irena: Nicht alle Vistani stehen zu Strahd, aber Strahd hat Spione überall.
+- Am Abzweig: eine verrottete **Windmühle** auf dem Berg — Madame Evas Warnung. Lange Debatte, dann geht Thorin einfach weiter.
+- Der Jäger **Soldarovitsch** mit einem toten Riesenwolf: *„Die Wölfe des Teufels kreisen um die Straße. Wenn ihr nach Vallaki wollt — lauft."*
+
+### Die Wölfe wollen Irena
+- Kurz vor der Stadt: **zwei Schreckenswölfe und fünf Wölfe**, Rudeltaktik. Sie zielen **nur auf Irena** und zerren sie Richtung Wald.
+- Mara (Sleep, Trugbild-Feuerwand), Thorin (Irena am Arm, Glühbert ins Maul), Moxie (Zephyr Strike, Hunter's Mark per Blasrohr) — der **Leitwolf fällt**.
+- **Feuerpfeile** von Vallakis Palisade vertreiben die übrigen Wölfe. Nia heilt Irena.
+
+### Einlass nach Vallaki
+- Irena nennt ihren Namen, Mara spielt Flöte. Einlass unter Auflagen: **keine Unruhe**, **alle außer Irena müssen zum Fest der brennenden Sonne** (in drei Tagen), das **„Raubtier" Thorin** trägt eine **lila Schleife** und wird an der **Leine** geführt.
+- Vallaki **grinst**: Fast alle tragen **lila Schleifen** (Zeichen für den Baron), am Marktplatz stehen Unglückliche mit **Eselsmasken am Pranger**. *„Alles wird gut."*
+
+### Gasthaus Blauwasser
+- Wirt **Martikov** und Wirtin **Danina** nehmen die Party auf — Kost und Logis gegen Maras Musik. Danina: Irena nicht aus den Augen lassen; „draußen jagen die Monster, hier drinnen die Menschen".
+- **Rictavio**, bunter Barde mit Federhut, schreibt alles mit. Gerüchte: der Baron rettet uns alle, **Lady Wachter**, ein gefährlicher **„lila Knabe"**, verschwundene Menschen.
+- Thorin sieht ein Gesicht in Lila am Fenster; Nia und Mara sehen den Mann auf der Straße — **Stachelarm mit zu langen Fingern, Feuer beim Schnippen**.
+- Nia verkauft einen **grünen Rubin für 120 Gold** an die Edelsteinhändlerin am Markt. Plakate: aus dem „Wolfskopfgelage" wird das „Fest der brennenden Sonne" — jede Woche das größte Fest des Jahres.
+- Moxie hört: **Baron Vargas Vallakovich** hält das Fest in drei Tagen ab; Kritiker gelten als Strahds Verbündete. Rictavio bestätigt: Der Lilane ist **Isek Strazni**, Handlanger des Barons — und er **interessiert sich für Irena**.
+- Irena wechselt heimlich, versteckt hinter Thorin, das Zimmer. Raben auf dem Dach. Floris Alarm erwischt Rictavio: *„Entschuldigen Sie, Herr Uhr!"*

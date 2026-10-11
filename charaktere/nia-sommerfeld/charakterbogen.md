@@ -63,7 +63,8 @@ Common Sign Language passt als professionelle, zugängliche Kommunikationsform f
 - 3 Costumes
 - elastische Trainingsbänder / Thera-Bands (Flavour-Item)
 - Notizbuch mit Übungen, Essensnotizen und Briefentwürfen nach Hause (Flavour-Item)
-- **Gold:** 14 GP
+- **Gold:** 14 GP (Startgeld) + 120 G aus dem Verkauf eines grünen Rubins in Vallaki (S006)
+- **[Edelsteine aus den Tser-Fällen](../../kampagnen/fluch-des-strahd/items/edelsteine.md):** 14 grüne Rubine, je ca. 100–120 G (S003 gefunden, S006 einer verkauft)
 
 ## Combat Notes Level 3
 - **Bardic Inspiration:** Verteilen triggert direkt einen Bonus-Action Unarmed Strike für Nia — sie coacht und greift in einem Zug an.
@@ -106,7 +107,7 @@ Common Sign Language passt als professionelle, zugängliche Kommunikationsform f
 
 ## Kampagnen
 ### Fluch des Strahd
-**Status:** geplant | **Level:** 3 | **Spoiler-Regel:** Keine Kampagnen-Spoiler in Charakterdokumentation.
+**Status:** aktiv (S006: Vallaki) | **Level:** 4 | **Spoiler-Regel:** Keine Kampagnen-Spoiler in Charakterdokumentation.
 
 ## Links
 - [Persönlichkeit](persoenlichkeit.md)

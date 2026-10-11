@@ -62,18 +62,19 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `regeln/magic-items/amulet-of-protection.md` — +1 Amulett of Protection (Party-Loot S001)
 
 ## Kampagnen
-### Fluch des Strahd (aktiv — S005 gespielt 06.09.2026)
+### Fluch des Strahd (aktiv — S006 gespielt 11.10.2026)
 - `kampagnen/fluch-des-strahd/party.md` — 6 PCs, DM Jana, Gruppen-Backstory
 - `kampagnen/fluch-des-strahd/_kontext/welt.md` — Barovia, Strahd, Götter (Morgenfürst/Mutternacht), Bevölkerung
 - `kampagnen/fluch-des-strahd/_kontext/timeline.md` — Pre-Campaign-Ereignisse, Session-Einträge
 - `kampagnen/fluch-des-strahd/_kontext/session-zero.md` — Organisationsregeln, Do's/Don'ts, X-Card, Regelwerk 2024
 - `kampagnen/fluch-des-strahd/_kontext/termine.md` — Geplante und vergangene Sessions, Format-Reminder lang/kurz
-- `kampagnen/fluch-des-strahd/_kontext/aktueller-plan.md` — Hauptziel Irena nach Krezk/Vallaki; nach S005: raus aus der Festung, Vampir lebt, Moxie fehlt
+- `kampagnen/fluch-des-strahd/_kontext/aktueller-plan.md` — Hauptziel Irena in Sicherheit; nach S006: Vallaki, Kirche, Fest der brennenden Sonne in drei Tagen, Isek Strazni
 - `kampagnen/fluch-des-strahd/sessions/001-schilfheim-nach-barovia.md` — S001: Auftrag in Schilfheim, Swalitsch Wald, Ankunft in Barovia (Dorf)
 - `kampagnen/fluch-des-strahd/sessions/002-koljans-letztes-geleit.md` — S002: Taverne, Arik seelenlos, Koljan tot im Sarg, Beerdigung, Irena reist mit
 - `kampagnen/fluch-des-strahd/sessions/003-madame-evas-karten.md` — S003: Galgen + 11 Gräber, Moxies Doppelgängerin, Madame Evas Tarokka-Weissagung, Edelsteine am Wasserfall; Gargoyles als Cliffhanger (S004 kein Kampf)
 - `kampagnen/fluch-des-strahd/sessions/004-die-festung-der-ehre.md` — S004: schwarze Kutsche, verlassene Festung, Tor-Rätsel „Ehre", drei Artefakte (Glühbert/Schild/Krone), Kampf gegen steinerne Wächter, Garten der Beichte, Thronsaal-Vampir (Cliffhanger)
 - `kampagnen/fluch-des-strahd/sessions/005-thronsaal-inferno.md` — S005: Vampir-Kampf im Thronsaal, Ghouls, Moxie charmed/geht, Fledermaus-Flucht, Tagebuch (Strahd/Spiegelbild), Rast
+- `kampagnen/fluch-des-strahd/sessions/006-alles-wird-gut.md` — S006: Moxie zurück, Windmühle gemieden, Wolfsjäger Soldarovitsch, Wölfe wollen Irena, Einlass nach Vallaki (lila Schleife, Fest-Pflicht), Gasthaus Blauwasser, Rictavio, Isek Strazni, grüner Rubin verkauft
 - `kampagnen/fluch-des-strahd/npcs/hanna-sommerfeld.md` — Nias Mutter (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/bert-sommerfeld.md` — Nias Vater (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/timo-sommerfeld.md` — Nias älterer Bruder (studiert Medizin, pot. Anlaufpunkt Florpthyz-Quest)
@@ -82,7 +83,7 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/npcs/konrad-haupt.md` — Ehemaliger Soldat, Kurier, Nias Kindheitsfigur (Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/arigal-nachtigall.md` — Arigal von und zu Nachtigall (Bote des Bürgermeisters, S001)
 - `kampagnen/fluch-des-strahd/npcs/koljan-indirovic.md` — Koljan Indirovic (Bürgermeister Barovia, TOT S002, begraben)
-- `kampagnen/fluch-des-strahd/npcs/irena-koljana.md` — Irena Koljana (Adoptivtochter, 2x gebissen von Strahd, reist ab S002 mit Party)
+- `kampagnen/fluch-des-strahd/npcs/irena-koljana.md` — Irena Koljana (Adoptivtochter, 2x gebissen von Strahd, reist ab S002 mit Party; seit S006 in Vallaki)
 - `kampagnen/fluch-des-strahd/npcs/ismag-der-geringere.md` — Ismag der Geringere (leibl. Sohn, bleibt in Barovia wegen Bürgermeisterwahl)
 - `kampagnen/fluch-des-strahd/npcs/marie.md` — Marie (Mutter in Barovia, Tochter von Strahd entführt)
 - `kampagnen/fluch-des-strahd/npcs/gertruda.md` — Gertruda (Maries Tochter, 14–16 J., in Ravenloft)
@@ -93,13 +94,23 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/npcs/morgana.md` — Morgana (alte Frau, magische Traumpasteten, rennt weg wenn angesprochen)
 - `kampagnen/fluch-des-strahd/npcs/madame-eva.md` — Madame Eva (Vistani-Wahrsagerin Tser-Becken, S003 Tarokka-Weissagung: Quest-Kompass gegen Strahd)
 - `kampagnen/fluch-des-strahd/npcs/thronsaal-vampir.md` — Thronsaal-Vampir (S004/S005): nicht Strahd, Charm auf Moxie, Nebel/Fledermaus, geflohen
+- `kampagnen/fluch-des-strahd/npcs/soldarovitsch.md` — Soldarovitsch (Wolfsjäger vor Vallaki, S006): „Lauft. Dort ist alles gut.“
+- `kampagnen/fluch-des-strahd/npcs/danina-martikov.md` — Danina Martikov (Wirtin Gasthaus Blauwasser, Vallaki, S006): Musik gegen Kost und Logis, schützt Irena
+- `kampagnen/fluch-des-strahd/npcs/wirt-martikov.md` — Wirt Martikov (Gasthaus Blauwasser, Vallaki, S006): kariertes Hemd, Platz am Kamin
+- `kampagnen/fluch-des-strahd/npcs/rictavio.md` — Rictavio (Barde mit Federhut im Blauwasser, S006): schreibt alles mit, warnt vor Isek
+- `kampagnen/fluch-des-strahd/npcs/isek-strazni.md` — Isek Strazni (Handlanger des Barons, „der Lilane“, S006): Stachelarm, Feuer, interessiert sich für Irena
+- `kampagnen/fluch-des-strahd/npcs/baron-vargas-vallakovich.md` — Baron Vargas Vallakovich (Bürgermeister Vallaki, S006 nur gehört): wöchentliche Pflichtfeste, Pranger
+- `kampagnen/fluch-des-strahd/npcs/edelsteinhaendlerin.md` — Edelsteinhändlerin mit Monokel (Marktplatz Vallaki, S006): kauft grünen Rubin für 120 G
 - `kampagnen/fluch-des-strahd/orte/apfelried.md` — Nias und Maras Heimatdorf (nicht-Barovia)
 - `kampagnen/fluch-des-strahd/orte/schilfheim.md` — Startdorf an einem See, Schauplatz Session-Anfang
 - `kampagnen/fluch-des-strahd/orte/barovia-dorf.md` — Dorf Barovia (Karte: E): Gasthaus, Herrenhaus, Kirche/Friedhof, Ravenloft am Horizont
 - `kampagnen/fluch-des-strahd/orte/ravenloft.md` — Schloss Ravenloft: Sitz von Strahd, am Horizont sichtbar, noch nicht betreten
 - `kampagnen/fluch-des-strahd/orte/tser-becken.md` — Vistani-Lager (Karte: G), Madame Evas Zelt; erster Stop ab S002
 - `kampagnen/fluch-des-strahd/orte/krezk.md` — Stadt Krezk (Karte: S), Abtei Sankt Markovia; Primärziel für Irena
-- `kampagnen/fluch-des-strahd/orte/verlassene-festung.md` — Verlassene Festung („Glühwärts Höhle"): Tor, Festsaal, Garten, Thronsaal; S005 Kampf + Seitenschiff nach draußen, Rast
+- `kampagnen/fluch-des-strahd/orte/verlassene-festung.md` — Verlassene Festung („Glühwärts Höhle"): Tor, Festsaal, Garten, Thronsaal; S005 Kampf + Seitenschiff nach draußen, Rast; S006 verlassen
+- `kampagnen/fluch-des-strahd/orte/windmuehle.md` — Alte Windmühle auf dem Berg am Abzweig vor Vallaki (S006 gesehen, gemieden — Evas Warnung)
+- `kampagnen/fluch-des-strahd/orte/vallaki.md` — Vallaki (Karte: N): ummauerte Stadt am Zarowitschsee, Baron, Pflichtfeste, lila Schleifen, Pranger (S006)
+- `kampagnen/fluch-des-strahd/orte/gasthaus-blauwasser.md` — Gasthaus Blauwasser (Vallaki): Quartier der Party ab S006, Grundriss, Zimmerverteilung
 
 #### Key Items
 - `kampagnen/fluch-des-strahd/items/brief-von-koljan-indirowitsch-version-1.md` — Brief von Koljan Indirowitsch (Version 1, gefälscht, bei Nia) — Lockbrief nach Barovia
@@ -107,14 +118,15 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/items/metallknopf.md` — Metallknopf mit Wappen (Pferd + Lanze ohne Reiter, bei Mara)
 - `kampagnen/fluch-des-strahd/items/eisenknopf.md` — Eisenknopf mit fremdem Wappen (verrostet, von den 11 Gräbern am Galgen, bei Mara, S003)
 - `kampagnen/fluch-des-strahd/items/rubin.md` — Rubin (bei Mara, Wert unklar)
-- `kampagnen/fluch-des-strahd/items/goldkronen.md` — 95 Goldkronen Party-Kasse (bei Moxie, Vorauszahlung Auftrag)
+- `kampagnen/fluch-des-strahd/items/goldkronen.md` — Goldkronen: 95 Party-Kasse bei Moxie, 125 bei Nia (120 aus Rubin-Verkauf, S006)
 - `kampagnen/fluch-des-strahd/items/graues-buendel.md` — Graues Bündel (Kleid + Haarüberwurf vom Straßenrand, bei Mara, S003) — grau-braun wie die Kleidung der Seelenlosen
-- `kampagnen/fluch-des-strahd/items/edelsteine.md` — 16 Edelsteine à 100 G aus den Tser-Fällen (15 bei Nia, 1 bei Thorin, S003)
+- `kampagnen/fluch-des-strahd/items/edelsteine.md` — Grüne Rubine aus den Tser-Fällen (S003: 16; S006 einer für 120 G verkauft — 14 bei Nia, 1 bei Thorin)
 - `kampagnen/fluch-des-strahd/items/trank-der-groesseren-heilung.md` — Trank der größeren Heilung ×6 (je 1 pro Charakter, Geschenk von Madame Eva, S003)
 - `kampagnen/fluch-des-strahd/items/artefakte-der-festung.md` — Artefakte der verlassenen Festung: Schwert „Glühbert" (Thorin), Schild (Alberich), Krone (Mara), je Segen + Fluch (S004)
 - `kampagnen/fluch-des-strahd/items/umhang-des-waechters.md` — Umhang des Wächters (Flori, S005): +1 AC, Charm-Immunität, 1×/Tag unsichtbar im Schatten
-- `kampagnen/fluch-des-strahd/items/langschwert-plus1-untote.md` — Langschwert +1, +1W6 gegen Untote (Flori, S005)
+- `kampagnen/fluch-des-strahd/items/langschwert-plus1-untote.md` — Langschwert +1, +1W6 gegen Untote, schimmert grün (S005 Flori, seit S006 Alberich)
 - `kampagnen/fluch-des-strahd/items/tagebuch-des-thronsaal-vampirs.md` — Tagebuch (Mara, S005): Strahd von Zarovich fürchtet die Wahrheit / Spiegelbild
+- `kampagnen/fluch-des-strahd/items/lila-schleifen.md` — Lila Schleifen (ganze Party, S006): Zeichen für den Baron in Vallaki; Thorin zusätzlich an der Leine
 
 #### Roh-Mitschriften (nur als Last-Resort laden)
 - `kampagnen/fluch-des-strahd/transcripts/README.md` — Wofür der Ordner ist und wie er gepflegt wird

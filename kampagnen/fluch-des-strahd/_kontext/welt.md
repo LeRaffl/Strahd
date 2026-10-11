@@ -57,11 +57,14 @@ Die Party hat in S002 eine grobe Karte von Ismag bekommen. Bekannte Orte:
 | G | Lager am Tser-Becken | bekannt — besucht S003 |
 | K | Burg Ravenloft | sichtbar, nicht besucht |
 | M | Irrer Magus vom Baratok-Berg | erwähnt von Ismag, Lage bekannt |
-| N | Vallaki | Ziel für Irena (Alternative zu Krezk) |
+| N | Vallaki | **besucht S006** — ummauerte Stadt am Zarowitschsee, Irena im Gasthaus Blauwasser |
+| — | Alte Windmühle (Berg am Abzweig vor Vallaki) | gesehen S006, bewusst gemieden (Madame Evas Warnung) |
 | S | Krezk | Primärziel für Irena; Abtei Sankt Markovia dort |
 | W | Weingut Weinmagier | hinter Ravenloft, produziert den Taverne-Wein |
 
-Hauptverkehrsader: **Alte Swalitsch-Straße** — verbindet Barovia (Dorf) im Osten mit Krezk und Vallaki im Westen.
+Hauptverkehrsader: **Alte Swalitsch-Straße** — verbindet Barovia (Dorf) im Osten mit Krezk und Vallaki im Westen. Zwischen Tser-Becken und Vallaki wird sie zum schmalen Pfad an der Bergflanke (S006).
+
+Karten-Bilder: spoilerfreie Übersichtskarte und die Karte vom Spieltisch in der Galerie von [S006](../sessions/006-alles-wird-gut.md) (`assets/sessions/006/`).
 
 ## Spoiler-Regel
 Diese Datei bleibt **spoiler-arm**. Konkrete NPCs, Orte und Plot-Beats kommen erst nach jeweiliger Session ins Archiv — und auch dann nur, was die Party tatsächlich erlebt hat.

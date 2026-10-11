@@ -28,13 +28,18 @@ _TODO — Spielerwerte einpflegen_
 
 ## Ausrüstung
 - Bogen (Fernkampf — primäre Waffe)
+- Langschwert (Nahkampf, S006 gegen die Wölfe)
+- Kleines Blasrohr mit bunt leuchtenden Pfeilen — Flavour für Hunter's Mark (S006)
 - Leichte Rüstung
 - Trommel
+- [Party-Kasse: 95 Goldkronen](../../kampagnen/fluch-des-strahd/items/goldkronen.md)
+- Leine für Thorin (Vallaki-Auflage, S006) + lila Schleife
 - Abenteurer-Ausrüstung
 
 ## Features & Spells (Ranger Level 3)
 ### Spells
-- **Hunter's Mark** — Kernzauber; markiert Gegner für Bonusschaden
+- **Hunter's Mark** — Kernzauber; markiert Gegner für Bonusschaden. Flavour (S006): ein winziges Blasrohr, ein bunt leuchtender Pfeil landet neben dem Ohr des Ziels.
+- **Zephyr Strike** — auf sich selbst; Bewegung ohne Gelegenheitsangriffe, einmal Vorteil auf einen Waffenangriff (S006)
 - **Speak with Animals** (Ritual) — kommuniziert mit Tieren; emotionaler Anker der Figur
 - _TODO (weitere Spells)_
 
@@ -49,8 +54,8 @@ _TODO — Spielerwerte einpflegen_
 
 ## Kampagnen
 ### Fluch des Strahd
-**Status:** S005 vorübergehend getrennt (Kloster/Selbstschutz); Rückkehr S006 vorgesehen | **Level:** 3
-Kennt Thorin — er hat sie aus einem Banditenüberfall gerettet. Reist seitdem mit ihm. Schloss sich der Restgruppe in Schilfheim an. In S005 vom Thronsaal-Vampir gecharnt, Zusammenbruch, geht allein.
+**Status:** aktiv — seit S006 wieder bei der Party | **Level:** 3
+Kennt Thorin — er hat sie aus einem Banditenüberfall gerettet. Reist seitdem mit ihm. Schloss sich der Restgruppe in Schilfheim an. In S005 vom Thronsaal-Vampir gecharnt, Zusammenbruch, geht allein. In S006 hat sie die Nacht allein im größten Baum verbracht und stößt auf dem Weg wieder zur Party; Weihwasser-Test unauffällig. Vor Vallaki rettet sie Irena mit Zephyr Strike, Hunter's Mark (Blasrohr) und dem Schlag, der den Leitwolf fällt. In Vallaki hält sie Thorins Leine — von seinen Schultern aus.
 
 ### Requiem of Wings (One-Shot)
 **Status:** abgeschlossen | **Level:** 3

@@ -37,6 +37,10 @@ _TODO_
 - _TODO_
 - Abgenutztes, zusammengestücktes Leder (Erscheinungsbild: gelebtes Reisegepäck)
 - Notizbücher mit gesammelten Volksgeschichten
+- Kleine Flöte (S006: spielt und tanzt am Tor von Vallaki)
+- [Krone der verlassenen Festung](../../kampagnen/fluch-des-strahd/items/artefakte-der-festung.md) (S004) — +2 CHA-Check / −2 Konzentration
+- [Tagebuch des Thronsaal-Vampirs](../../kampagnen/fluch-des-strahd/items/tagebuch-des-thronsaal-vampirs.md) (S005)
+- Lila Schleife (Vallaki, S006)
 
 ## Spells & Features (Bard Level 3)
 ### Cantrips
@@ -46,6 +50,7 @@ _TODO_
 ### Spells
 - _TODO — Spieler ergänzt_
 - Debuffs und psychische Angriffe als Schwerpunkt
+- **Am Tisch gesehen:** Sleep (S005, S006), Healing Word (S005), Dissonant Whispers (S005), Phantasmal Force / *Trugbild* (S006), Detect Thoughts / *Gedanken wahrnehmen* (S006), Light (Cantrip, S006)
 
 ### Features
 - **Bardic Inspiration (d6):** 3/Long Rest

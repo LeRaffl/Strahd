@@ -35,8 +35,13 @@ _TODO — Spielerwerte einpflegen_
 ## Ausrüstung
 - Schwere Rüstung (Optik: weiß/hell, "Branding" — sehr sauber und ordentlich)
 - Heiliges Symbol (Helm)
+- [Schild der verlassenen Festung](../../kampagnen/fluch-des-strahd/items/artefakte-der-festung.md) (S004) — +2 AC / −2 GES-Check
+- [Langschwert +1 gegen Untote](../../kampagnen/fluch-des-strahd/items/langschwert-plus1-untote.md) — „das grüne", von Flori übernommen (seit S006)
+- Kriegshammer (vor S006 seine Hauptwaffe)
+- Barovia-Karte — Alberich ist der Navigator der Gruppe
 - Abenteurer-Ausrüstung
-- Weihwasser (täglich für das Florpthyz-Ritual)
+- Weihwasser (täglich für das Florpthyz-Ritual; S006 auch als Vampir-Test für Moxie)
+- Lila Schleife (Vallaki, S006)
 
 ## Features & Spells (Cleric Level 3)
 

@@ -167,7 +167,7 @@ Lange Rast. Cut. Nächstes Reiseziel: **Vallaki**.
 
 ## Neue Items / Veränderungen
 - **[Umhang des Wächters](../items/umhang-des-waechters.md)** → bei **Flori**: +1 AC, Immunität gegen Charm, 1×/Tag unsichtbar im Schatten
-- **[Langschwert +1 (gegen Untote)](../items/langschwert-plus1-untote.md)** → bei **Flori**: +1 Treffer, +1W6 gegen Untote
+- **[Langschwert +1 (gegen Untote)](../items/langschwert-plus1-untote.md)** → bei **Flori**: +1 Treffer, +1W6 gegen Untote; schimmert grün *(ab S006 bei Alberich)*
 - **[Tagebuch des Thronsaal-Vampirs](../items/tagebuch-des-thronsaal-vampirs.md)** → bei **Mara**: Strahd von Zarovich, Schwäche Wahrheit/Spiegelbild
 - **Glühbert** bleibt bei Thorin
 - Floris **Axt** steckt im Thron (Warbond — holbar)
@@ -198,6 +198,6 @@ Lange Rast. Cut. Nächstes Reiseziel: **Vallaki**.
 ---
 
 ## Notizen
-> Gespielt am 06.09.2026 (lange Sonntags-Session, Wäschergasse 2). Grundlage war eine manuelle Mitschrift, die bewusst **nicht** im Repo abgelegt wird. Svenja/Moxie nicht am Tisch — Jana hat Moxie gespielt (mit Svenja vorher abgesprochen: Moxie geht, kommt nächste Session wieder). Nächster Termin: kurze Session **14.09.2026** abends; Andi/Alberich voraussichtlich nicht dabei (In-Game-Grund noch offen).
+> Gespielt am 06.09.2026 (lange Sonntags-Session, Wäschergasse 2). Grundlage war eine manuelle Mitschrift, die bewusst **nicht** im Repo abgelegt wird. Svenja/Moxie nicht am Tisch — Jana hat Moxie gespielt (mit Svenja vorher abgesprochen: Moxie geht, kommt nächste Session wieder). Nächster Termin war eine kurze Session am **14.09.2026** — sie entfiel; weiter ging es am 11.10.2026 mit [S006](006-alles-wird-gut.md), alle sechs am Tisch.
 >
 > Nachtrag zum Garten (S004): Nias Durchkommen hing nicht nur am Zimt — sie hat die Angst ausgesprochen, **allein gelassen zu werden**.
