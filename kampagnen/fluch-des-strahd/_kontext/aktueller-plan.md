@@ -4,23 +4,32 @@
 ---
 
 ## Hauptziel
-**Irena Koljana in Sicherheit bringen** — sie nach **Krezk** (bevorzugt, am weitesten von Ravenloft weg; dort die Abtei St. Markovia) oder ersatzweise **Vallaki** eskortieren, weg von Strahd, der hinter ihr her ist. Irena reist seit S002 mit der Party.
+**Irena Koljana in Sicherheit bringen** — weg von Strahd, der hinter ihr her ist. Seit S006 ist sie in **[Vallaki](../orte/vallaki.md)**, im [Gasthaus Blauwasser](../orte/gasthaus-blauwasser.md). Dort soll sie auf Dauer in die **Kirche** (dort sicher vor Strahds Blick); **Krezk** mit der Abtei St. Markovia bleibt die weiter entfernte Option.
 *Hinweis: Das "siecht an mysteriöser Wunde"-Framing stammt aus dem **gefälschten** Brief — tatsächlich ist Irena körperlich okay (verheilte Bissspuren), aber Strahd hat sie bereits zweimal angezapft. Die Gefahr ist real, nur anders als der Brief behauptet.*
 
-## Nächster Schritt (nach S005)
-- **Raus aus der Festung, dann Vallaki** — Lange Rast im Thronsaal ist durch; Seitenschiff führt nach draußen. Ziel unverändert: Hauptstraße → Vallaki → Krezk, Irena dabei.
-- **Moxie fehlt** — nach dem Charm-Bruch allein Richtung Kloster. Spielerisch für die nächste Session wieder vorgesehen; In-Game muss sie wieder zur Party stoßen.
-- **Alberich ggf. abwesend** (kurze Session 14.09.) — In-Game-Grund noch offen.
-- *(Der Gargoyle-Cliffhanger aus S003 führte zu keinem Kampf. Der Vampir-Cliffhanger aus S004 ist durch: er floh als Fledermaus, lebt.)*
+## Nächster Schritt (nach S006)
+- **Morgen: Irena in die Kirche von Vallaki** begleiten — sie will hin, notfalls allein. Bis dahin bleibt sie im Haus (Danina: draußen dürfen Strahds Spione sie nicht finden).
+- **Fest der brennenden Sonne — in drei Tagen** auf dem Stadtplatz. Einlass-Auflage: **alle außer Irena** müssen teilnehmen; lachen, klatschen, lila Schleife tragen. Thorin an der Leine.
+- **Keine Unruhe stiften** — sonst fliegt die Party aus Vallaki.
+- **Isek Strazni im Auge behalten** — der Handlanger des Barons interessiert sich für Irena und hat schon ins Gasthaus gespäht.
+- Weitere Edelsteine verkaufen? Die Händlerin am Markt will mehr.
 
 ## Sofort offen
+- **Isek Strazni** — warum will er Irena? Stachelarm, Feuer aus den Fingern; Menschen sollen verschwunden sein.
+- **Baron Vargas Vallakovich** — wöchentliche Pflichtfeste, Pranger für Unglückliche, „vom Bösen befreien" für Kritiker. Was steckt dahinter?
+- **Rictavio** — der Barde mit Federhut, der alles mitschreibt und „viel über diese Stadt herausfinden" will.
+- **Lady Wachter** — nur ein Name aus dem Gasthaus.
+- **„Blitze und Schreie"** — Gesprächsfetzen, den Flori aufgeschnappt hat.
+- Die **Raben** auf dem Dach des Blauwasser.
+- Die **Wölfe** vor Vallaki wollten **gezielt Irena** — Zufall oder geschickt?
 - **Der Thronsaal-Vampir lebt** — Fledermaus-Flucht, ~95 HP, Regeneration. Kommt er wieder?
 - **Tagebuch** nur angerissen: Strahd fürchtet die Wahrheit / sein Spiegelbild. Rest ungelesen. Heinrich/Heini ungeklärt.
-- **Die schwarze Kutsche** ohne Kutscher auf dem Bergpfad — was ist sie, wen soll sie holen (Irena)? Warum zog es Moxie hinein? Steht evtl. noch dort.
-- **Artefakte-Fluch** — Glühbert (Thorin), Schild (Alberich), Krone (Mara) geben je +2/−2. Lohnt sich der Malus, kann man sie ablegen? Und: Ist „Glühbert" wirklich das Lichtschwert der Prophezeiung?
+- **Die schwarze Kutsche** ohne Kutscher auf dem Bergpfad — was ist sie, wen soll sie holen (Irena)?
+- **Artefakte-Fluch** — Glühbert (Thorin), Schild (Alberich), Krone (Mara) geben je +2/−2. Ist „Glühbert" wirklich das Lichtschwert der Prophezeiung?
 - Wer hat den **falschen Brief** geschrieben? Der Brief in der Hand der Party ist nicht von Koljan — Ismag hat es bestätigt.
 - **Markus' Tod** aufklären — Bote im Swalitsch Wald, mit dem echten Brief in der Hand verblutet.
 - **Gertruda** befreien — Maries Tochter (14–16 J.), von Strahd nach Ravenloft entführt.
+- *(Erledigt in S006: Moxie ist zurück, die Festung liegt hinter der Party, Vallaki ist erreicht. Die **Windmühle** wurde bewusst gemieden.)*
 
 ## Übergeordnet
 - **Strahd bezwingen — Evas Karten (S003):** Drei Dinge sammeln und einen Verbündeten gewinnen:

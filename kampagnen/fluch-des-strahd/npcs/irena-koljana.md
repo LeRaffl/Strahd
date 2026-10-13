@@ -1,5 +1,5 @@
 # Irena Koljana
-**Status:** lebend — reist mit der Party (ab S002); aktuell in der verlassenen Festung, Ziel Vallaki → Krezk
+**Status:** lebend — reist mit der Party (ab S002); seit S006 in **Vallaki**, Gasthaus Blauwasser (heimlich im gemeinsamen Zimmer); will in die Kirche
 **Erstauftritt:** S001 — nur aus Brief bekannt; S002 — persönlich angetroffen
 
 ---
@@ -28,7 +28,20 @@ Warmherzig, fast gelassen für jemanden in ihrer Lage. Hat gelernt, mit Strahds 
 ## In S005
 - Im Thronsaal, kämpft nicht. *„Ich wollte gar nicht erst hier sein."* Übernimmt eine Schicht Nachtwache — nicht die ganze Nacht.
 
+## In S006
+- Drängt nach der Rast: **heute noch nach Vallaki**, bevor es dunkel wird. An der Windmühle würde sie sogar Geld geben, damit die Party weitergeht; nimmt Nia an der Hand.
+- Weiß: Vallaki wehrt sich gegen Strahd, der Baron feiert Feste. **Nicht alle Vistani** stehen zu Strahd — aber Strahd hat **Spione**, unter Vistani wie unter normalen Barovianern.
+- Die **Wölfe** vor Vallaki wollen **nur sie**: reißen sie um und zerren sie Richtung Wald. Die Party holt sie zurück; Nia heilt ihre Fleischwunde.
+- Öffnet mit ihrem Namen das **Tor von Vallaki**: *„Das sind meine getreuen Gefährten, die mich gerettet haben."* Muss als Frau von Stand **nicht** zum Fest der brennenden Sonne.
+- War **selbst noch nie in Vallaki**. Ist dort nur in **bestimmten Häusern** sicher; auf Dauer in der **Kirche** — sicher vor Strahds Blick. Will **morgen** hin, notfalls allein.
+- Ihr Vater kannte den **Baron**, hat ihn aber selten gesehen; Irena war damals noch ein kleines Mädchen.
+- Im [Gasthaus Blauwasser](../orte/gasthaus-blauwasser.md) bekommt sie sofort ein Einzelzimmer. Danina: Nicht aus den Augen lassen.
+- **[Isek Strazni](isek-strazni.md)**, der Handlanger des Barons, **interessiert sich auffällig für sie** (laut [Rictavio](rictavio.md)); ein Mann in Lila späht ins Gasthaus.
+- Wechselt nachts **heimlich** — versteckt hinter Thorin — ins gemeinsame Zimmer mit Nia und Mara.
+
 ## Offene Fäden
 - Was macht sie so besonders für Strahd? Was ist mit ihrer Herkunft?
 - Wie weit ist die Wirkung der Bisse fortgeschritten?
+- Warum interessiert sich Isek Strazni für sie — und warum wollten die Wölfe gezielt sie?
+- Ist sie in Vallakis Kirche wirklich sicher?
 - Was erwartet sie in der Abtei St. Markovia / in Krezk?

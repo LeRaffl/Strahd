@@ -31,10 +31,11 @@ _TODO_
 - **Warbond Weapon:** Großaxt — magisch gebunden, kann Florpthyz nicht dauerhaft entwunden werden
 
 ## Ausrüstung
-- Großaxt (Warbond) — S005: steckt im Thronsaal-Thron, holbar
+- Großaxt (Warbond) — S005 im Thronsaal-Thron stecken geblieben, ab S006 wieder in der Hand
 - Rüstung (magisch integriert / flavour-technisch Teil der Uhr)
 - [Umhang des Wächters](../../kampagnen/fluch-des-strahd/items/umhang-des-waechters.md) (S005)
-- [Langschwert +1 gegen Untote](../../kampagnen/fluch-des-strahd/items/langschwert-plus1-untote.md) (S005)
+- ~~Langschwert +1 gegen Untote~~ — in S005 aufgehoben, an [Alberich](../alberich/charakterbogen.md) weitergegeben (S006)
+- Lila Schleife — in Vallaki an einen Uhrzeiger geknotet (S006)
 - Abenteurer-Standard (Rucksack etc.)
 
 ## Features & Spells (Eldritch Knight Level 3)

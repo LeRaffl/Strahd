@@ -35,8 +35,14 @@ _TODO_
 
 ## Ausrüstung
 - Großaxt
+- [„Glühbert"](../../kampagnen/fluch-des-strahd/items/artefakte-der-festung.md) — leuchtendes Langschwert aus der verlassenen Festung (S004): +2 Angriff / −2 WIS-Save
+- 1 [Edelstein aus den Tser-Fällen](../../kampagnen/fluch-des-strahd/items/edelsteine.md) (Geschenk von Nia, S003)
+- Pfeife
+- Lila Schleife (auf dem Kopf) + Leine — Einlass-Auflage in Vallaki für „das Raubtier" (S006); Moxie hält die Leine
 - Abenteurer-Ausrüstung
 - Rituelle Tätowierungen (Kälteschutz / kulturell)
+
+> In Vallaki wird Thorin als **„großer Eisbär"** bzw. **„Raubtier"** wahrgenommen (S006) — Wachen und Wirtin behandeln ihn entsprechend.
 
 ## Features (Barbarian Level 3)
 - **Rage:** _TODO Anzahl/Tag_; Vorteil auf STR-Checks/-Saves, Resistenz auf physischen Schaden, STR-basierter Bonus auf Schaden

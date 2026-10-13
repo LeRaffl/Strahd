@@ -11,11 +11,7 @@
 
 ## Anstehend
 
-### Montag, 14.09.2026 — kurze Session
-- 18 Uhr eintrudeln, 18:30 Uhr Spielstart, ca. 2h
-- Einstieg: nach der Rast im Thronsaal, raus Richtung **Vallaki**
-- **Moxie** wieder dabei (In-Game: stößt wieder zur Party)
-- **Alberich/Andi** voraussichtlich nicht — In-Game-Grund noch offen
+*Nächster Termin noch offen.* Einstieg: Vallaki, Gasthaus Blauwasser — der Morgen nach der Ankunft (Irena will in die Kirche; Fest der brennenden Sonne in drei Tagen).
 
 ---
 
@@ -27,3 +23,5 @@
 - **2026-06-24 (Mi):** Session 003 — Madame Evas Karten → [`../sessions/003-madame-evas-karten.md`](../sessions/003-madame-evas-karten.md)
 - **2026-07-20 (So):** Session 004 — Die Festung der Ehre → [`../sessions/004-die-festung-der-ehre.md`](../sessions/004-die-festung-der-ehre.md)
 - **2026-09-06 (So):** Session 005 — Thronsaal Inferno → [`../sessions/005-thronsaal-inferno.md`](../sessions/005-thronsaal-inferno.md)
+- **2026-09-14 (Mo):** kurze Session — entfallen
+- **2026-10-11 (So):** Session 006 — Alles wird gut → [`../sessions/006-alles-wird-gut.md`](../sessions/006-alles-wird-gut.md)
