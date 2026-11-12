@@ -11,7 +11,10 @@
 
 ## Anstehend
 
-*Nächster Termin noch offen.* Einstieg: Vallaki, Gasthaus Blauwasser — der Morgen nach der Ankunft (Irena will in die Kirche; Fest der brennenden Sonne in drei Tagen).
+- **2026-11-22 (So):** lange Session, 15 Uhr eintrudeln → 16 Uhr Spielstart, Ende 21 Uhr
+- **2026-11-27 (Fr):** kurze Session, 18 Uhr eintrudeln → 18:30 Uhr Spielstart, ca. 2h
+
+Einstieg: Vallaki, Gasthaus Blauwasser — der Morgen nach der Ankunft (Irena will in die Kirche; Fest der brennenden Sonne in drei Tagen).
 
 ---
 
