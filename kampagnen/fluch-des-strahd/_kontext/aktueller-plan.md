@@ -17,7 +17,7 @@
 
 ## Sofort offen
 - **Die Gebeine** — zurück in der Kirche. Wirkt der Schutz wieder? Wer ist „der Verlorene“?
-- **Die vier Vampire** und der **Sargmacher** — geflohen bzw. eingeschlossen. Tod des Sargmachers nicht bestätigt, von Raffi angenommen. Einer wollte die Gebeine unbedingt.
+- **Die vier Vampire** und der **Sargmacher** — geflohen bzw. im Schrank gelassen. Sie haben nicht nachgesehen. Einer wollte die Gebeine unbedingt.
 - **Milivoj** weiß, wo sie waren. Yeska hat es ihm gesagt. Nicht der Wache übergeben.
 - **Isek Strazni** — warum will er Irena? Stachelarm, Feuer aus den Fingern; Menschen sollen verschwunden sein. In S007 nicht gesehen.
 - **Baron Vargas Vallakovich** — wöchentliche Pflichtfeste, Pranger für Unglückliche, „vom Bösen befreien" für Kritiker. Was steckt dahinter?

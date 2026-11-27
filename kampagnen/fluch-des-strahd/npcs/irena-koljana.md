@@ -40,7 +40,7 @@ Warmherzig, fast gelassen für jemanden in ihrer Lage. Hat gelernt, mit Strahds 
 - Wechselt nachts **heimlich** — versteckt hinter Thorin — ins gemeinsame Zimmer mit Nia und Mara.
 
 ## In S007
-Sie ist in der Kirche, mit Nia. Beide wissen nicht, dass die Gebeine weg sind und die Kirche nicht schützt. Nia passt auf sie auf. Was Flori, Mara und Thorin draußen tun, erfahren die beiden an dem Tag nicht. Die Gebeine kommen zurück, das Ritual wird gesprochen. Jana sagt nicht, dass die Kirche wieder sicher ist. Die Party geht davon aus. Irena weiß nicht, dass sie es je nicht war.
+Sie ist in der Kirche, mit Nia. Beide wissen nicht, dass die Gebeine weg sind. Nia passt auf sie auf. Was draußen passiert, erfahren die beiden an dem Tag nicht. Die Gebeine kommen zurück, das Ritual wird gesprochen, und danach gilt die Kirche wieder als sicher. Irena weiß nicht, dass sie es je nicht war.
 
 ## Offene Fäden
 - Was macht sie so besonders für Strahd? Was ist mit ihrer Herkunft?
