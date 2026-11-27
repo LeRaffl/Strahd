@@ -1,7 +1,7 @@
 # Kirche von Vallaki
-**Karte:** Vallaki — in den Mitschriften nicht verortet, nur „die Kirche“
+**Karte:** Vallaki
 **Region:** Vallaki
-**Status:** betreten S007; Gebeine zurück, Ritual gesprochen. Jana hat den Schutz nicht bestätigt. Die Party nimmt ihn an. Nia und Irena wussten nicht, dass er weg war.
+**Status:** betreten S007; Gebeine zurück, Ritual gesprochen, gilt wieder als sicher. Nia und Irena wussten nicht, dass der Schutz weg war.
 **Erstbesuch:** S007 (27.11.2026)
 
 ---
@@ -18,9 +18,9 @@ Unter der Kirche, durch eine Falltür. Jemand hat sie **ausgehebelt**, ohne Schl
 
 ## S007
 - Yeska hat den Ort [Milivoj](../npcs/milivoj.md) erzählt, dem Totengräber.
-- Flori schärft auf Alberichs Bitte Alarm. Worauf, ist nicht notiert.
+- Flori schärft auf Alberichs Bitte Alarm.
 - Die Gebeine kommen in einem **zerknüllten Bettlaken** zurück. Alberich und der Pater betten „den Verlorenen“ neu bei: Weihrauch, heilige Flamme, im Uhrzeigersinn und gegen den Uhrzeigersinn.
-- Jana sagt nicht, dass die Kirche wieder sicher ist. Die Party geht davon aus.
+- Danach gilt die Kirche wieder als sicher. Die Gebeine liegen drin.
 - Nia und Irena sind den Tag über in der Kirche und halten sie für sicher. Nia kennt den Kampf nicht.
 - Gegen Abend verrammeln sie, soweit es geht. Moxie lässt Milivoj nicht rein. Vampire brauchen eine Einladung.
 
@@ -28,6 +28,6 @@ Unter der Kirche, durch eine Falltür. Jemand hat sie **ausgehebelt**, ohne Schl
 [Pater Lucian Petrovich](../npcs/lucian-petrovich.md) · [Yeska](../npcs/yeska.md) · [Milivoj](../npcs/milivoj.md) (Totengräber, nicht im Haus)
 
 ## Offene Fäden
-- Ist der Schutz zurück? Angenommen ja, von Jana nicht gesagt.
+- Ist der Schutz zurück? Sie tun so.
 - Wer ist „der Verlorene“?
 - Nia und Irena waren da und wissen nicht, dass der Schutz weg war.

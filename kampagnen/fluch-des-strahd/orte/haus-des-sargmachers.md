@@ -18,5 +18,5 @@ Das Fenster fängt Feuer, nicht die ganze Bude. Der Schrank mit den Gebeinen sta
 
 ## Offene Fäden
 - Steht das Haus noch?
-- Lebt der Sargmacher? Nicht bestätigt. Raffi nimmt ihn als tot an.
+- Lebt der Sargmacher? Sie haben nicht nachgesehen.
 - Kommen die vier Vampire zurück?
