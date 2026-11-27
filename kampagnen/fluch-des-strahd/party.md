@@ -3,7 +3,7 @@
 **Modul:** Curse of Strahd (D&D 5e Adventure)
 **Regeln:** D&D 5e 2024
 **DM:** Jana
-**Status:** aktiv — S006 gespielt 11.10.2026 (Vallaki erreicht, Gasthaus Blauwasser), nächste Session offen
+**Status:** aktiv — S007 gespielt 27.11.2026 (Vallaki, Kirche, Gebeine zurück, Schutz nicht bestätigt), nächste Session offen
 **Startlevel:** 3
 
 | Charakter | Spieler | Klasse | Level | Status |
@@ -42,6 +42,7 @@ Das letzte Abenteuer liegt gerade hinter der Gruppe. Ein Amulett, das Florpthyz 
 | [S004](sessions/004-die-festung-der-ehre.md) | 20.07.2026 | Die Festung der Ehre | Bergpfad → Verlassene Festung: Tor → Festsaal → Garten → Thronsaal |
 | [S005](sessions/005-thronsaal-inferno.md) | 06.09.2026 | Thronsaal Inferno | Verlassene Festung: Thronsaal (Vampir-Kampf, Rast) |
 | [S006](sessions/006-alles-wird-gut.md) | 11.10.2026 | Alles wird gut | Festung → Swalitsch-Straße → Vallaki: Tor, Marktplatz, Gasthaus Blauwasser |
+| [S007](sessions/007-der-verlorene.md) | 27.11.2026 | Der Verlorene | Vallaki: Kirche, Gruft, Haus des Sargmachers |
 
 ## Artefakte (seit S004)
 Aus der [verlassenen Festung](orte/verlassene-festung.md): **Thorin** trägt das leuchtende Langschwert **„Glühbert"** (+2 Angriff/−2 WIS-Save), **Alberich** das **Schild** (+2 AC/−2 GES-Check), **Mara** die **Krone** (+2 CHA-Check/−2 Konzentration). Details → [Artefakte der Festung](items/artefakte-der-festung.md).
@@ -52,5 +53,7 @@ Aus der [verlassenen Festung](orte/verlassene-festung.md): **Thorin** trägt das
 ## Vermögen (Stand S006)
 **Nia:** 14 [grüne Rubine](items/edelsteine.md) aus den Tser-Fällen + 125 Gold (davon 120 aus dem ersten Rubin-Verkauf in Vallaki). **Thorin:** 1 Rubin. **Moxie:** 95 [Goldkronen](items/goldkronen.md) Party-Kasse.
 
-## In Vallaki (seit S006)
+## In Vallaki (seit S006, Stand S007)
 Einlass unter Auflagen: keine Unruhe, **alle außer Irena** nehmen am **Fest der brennenden Sonne** teil, **Thorin** trägt eine [lila Schleife](items/lila-schleifen.md) und geht an der Leine (Moxie hält sie). Quartier: [Gasthaus Blauwasser](orte/gasthaus-blauwasser.md) — Kost und Logis gegen Maras Musik.
+
+S007: die [Kirche](orte/kirche-vallaki.md) war ohne die Gebeine nicht sicher. Gebeine zurück, Ritual gesprochen. Jana hat sie nicht für sicher erklärt; die Party nimmt es an. Nia und Irena waren in der Kirche, ohne das zu wissen. Nia kennt den Kampf nicht. Thorin hat in der Stadt „Vampire“ gebrüllt. Der Sargmacher saß im Kleiderschrank; Raffi nimmt ihn als tot an, belegt ist es nicht.
