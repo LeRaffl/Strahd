@@ -207,21 +207,6 @@ Die Spielleitung schließt die fast tödliche Session.
 
 ---
 
-## Zitate / Memorable Moments
-- „Wo lila Bänder Zwang und Lächeln binden, da lohnt es sich nicht, die Maske abzunehmen.“ — Notiz, Sprecher offen
-- „Selbst ein Jäger, bunt im Narrenkleid, trägt Silber.“ — Notiz; dazu: selbst der Dumme hat Silber und Knoblauch dabei
-- „Das seien seine Gebeine.“ — der Vampir in der Tür, sinngemäß
-- „Superhero landing. Really bad for your knees.“ — Raffi, am Tisch, als Thorin aus dem Fenster springt
-- „No, it's just a homicidal clock.“ — Felix, als Flori ins Feuer geht
-- „Flori sperrt den Sargmacher in seinem Kleiderschrank ein, damit er verbrennen kann.“ — Raffi, am Tisch
-- „Ah! Der Verlorene. Vater, wir hätten hier den Verlorenen.“ — Alberich
-- „Medizin schmeckt nicht.“ — Thorin
-- „Ich glaube, die ist nicht funktionsfähiger Knoblauch verkauft worden.“ — Mara, zu Moxie
-- „Das kann ich jetzt schon richtig gut.“ — Yeska, über Geheimnisse
-- „Ein Ende der fast tödlichen Session.“ — Jana
-
----
-
 ## Notizen
 > Gespielt am 27.11.2026, kurze Freitagssession. Grundlage sind **zwei Mitschriften**, keine Aufnahme der ganzen Session und kein Modultext.
 >
