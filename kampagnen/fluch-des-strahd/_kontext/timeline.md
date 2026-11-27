@@ -189,6 +189,6 @@
 
 ### Zurück, fast tödlich
 - Vampire werden Fledermäuse. Thorin brüllt in der Stadt. Die Wache kommt, die Vampire fliehen. Die Party redet nicht mit der Wache.
-- Flori sperrt den Sargmacher in den Kleiderschrank, damit er verbrennt, und läuft selbst glimmend durch die Stadt. Thorin löscht ihn mit dem Wasserschlauch. Tod nicht bestätigt; Raffi nimmt ihn als tot an. Nia weiß davon nichts.
-- Die Gebeine kommen in einem zerknüllten Bettlaken zurück. Alberich: „der Verlorene.“ Ritual mit dem Pater. Jana erklärt die Kirche nicht für sicher. Die Party geht davon aus, weil die Gebeine wieder drin liegen.
+- Flori sperrt den Sargmacher in den Kleiderschrank, damit er verbrennt, und läuft selbst glimmend durch die Stadt. Thorin löscht ihn mit dem Wasserschlauch. Sie schauen nicht nach.
+- Die Gebeine kommen in einem zerknüllten Bettlaken zurück. Alberich: „der Verlorene.“ Ritual mit dem Pater. Danach behandeln sie die Kirche wieder als sicher.
 - Knoblauch unbrauchbar, Weihwasser ungenutzt. Yeska bekommt ein Witzbuch. Gegen Abend verrammeln sie. Nia hat den Tag über auf Irena aufgepasst und weiß das Draußen noch nicht.
