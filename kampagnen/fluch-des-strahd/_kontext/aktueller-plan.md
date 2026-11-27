@@ -4,20 +4,20 @@
 ---
 
 ## Hauptziel
-**Irena Koljana in Sicherheit bringen** — weg von Strahd, der hinter ihr her ist. Seit S006 ist sie in **[Vallaki](../orte/vallaki.md)**, im [Gasthaus Blauwasser](../orte/gasthaus-blauwasser.md). Die [Kirche](../orte/kirche-vallaki.md) sollte sie vor Strahds Blick schützen. S007: der Schutz hängt an den **Gebeinen**, und die waren weg. Sie sind zurück, das Ritual ist gesprochen. Ob die Kirche damit wieder sicher ist, steht in den Mitschriften nicht. **Krezk** mit der Abtei St. Markovia bleibt die weiter entfernte Option. Irena selbst kommt in den S007-Mitschriften nicht vor.
+**Irena Koljana in Sicherheit bringen** — weg von Strahd, der hinter ihr her ist. Seit S006 ist sie in **[Vallaki](../orte/vallaki.md)**, im [Gasthaus Blauwasser](../orte/gasthaus-blauwasser.md). Die [Kirche](../orte/kirche-vallaki.md) sollte sie vor Strahds Blick schützen. S007: der Schutz hängt an den **Gebeinen**, und die waren weg. Sie sind zurück, das Ritual ist gesprochen. Jana hat nicht gesagt, dass die Kirche wieder sicher ist. Die Party geht davon aus. **Irena und Nia wissen nicht, dass sie es je nicht war.** Nia hat den Tag über auf sie aufgepasst und kennt den Kampf nicht. **Krezk** mit der Abtei St. Markovia bleibt die weiter entfernte Option.
 *Hinweis: Das "siecht an mysteriöser Wunde"-Framing stammt aus dem **gefälschten** Brief — tatsächlich ist Irena körperlich okay (verheilte Bissspuren), aber Strahd hat sie bereits zweimal angezapft. Die Gefahr ist real, nur anders als der Brief behauptet.*
 
 ## Nächster Schritt (nach S007)
-- **Prüfen, ob die Kirche wieder sicher ist** — Gebeine zurück, Ritual gesprochen, Bestätigung fehlt. Irena ist in den Notizen nicht dabei gewesen; ob sie hin kann, ist die offene Frage.
+- **Prüfen, ob die Kirche wieder sicher ist** — die Party nimmt es an, Jana hat es nicht gesagt. Irena und Nia halten sie für sicher, weil ihnen niemand gesagt hat, dass die Gebeine weg waren. Nia kennt den Kampf nicht.
 - **Nacht in der Kirche:** Türen verrammeln, Milivoj nicht reinlassen, Verletzte ausruhen. Vampire brauchen eine Einladung.
 - **Fest der brennenden Sonne** steht weiter an. Der Countdown „in drei Tagen“ ist der Stand von S006. S007 schreibt ihn nicht fort.
 - **Keine Unruhe** — Thorin hat in der Stadt „Vampire“ gebrüllt, die Wache ist gekommen, die Party ist ohne Gespräch davon. Ob das nachhängt, ist offen.
 - **Isek Strazni** weiter im Auge. In S007 nicht aufgetaucht.
-- Der **Sargmacher** sitzt, soweit Flori das eingerichtet hat, im Kleiderschrank eines brennenden Fensters. Lebt er, ist das ein loses Ende. Die vier Vampire sind geflohen, nicht als tot notiert.
+- Der **Sargmacher** saß im Kleiderschrank. Tod nicht bestätigt. Raffi nimmt ihn als tot an. Die vier Vampire sind geflohen, nicht als tot notiert.
 
 ## Sofort offen
 - **Die Gebeine** — zurück in der Kirche. Wirkt der Schutz wieder? Wer ist „der Verlorene“?
-- **Die vier Vampire** und der **Sargmacher** — geflohen bzw. eingeschlossen, beides ohne bestätigtes Ende. Einer wollte die Gebeine unbedingt.
+- **Die vier Vampire** und der **Sargmacher** — geflohen bzw. eingeschlossen. Tod des Sargmachers nicht bestätigt, von Raffi angenommen. Einer wollte die Gebeine unbedingt.
 - **Milivoj** weiß, wo sie waren. Yeska hat es ihm gesagt. Nicht der Wache übergeben.
 - **Isek Strazni** — warum will er Irena? Stachelarm, Feuer aus den Fingern; Menschen sollen verschwunden sein. In S007 nicht gesehen.
 - **Baron Vargas Vallakovich** — wöchentliche Pflichtfeste, Pranger für Unglückliche, „vom Bösen befreien" für Kritiker. Was steckt dahinter?

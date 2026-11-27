@@ -56,4 +56,4 @@ Aus der [verlassenen Festung](orte/verlassene-festung.md): **Thorin** trägt das
 ## In Vallaki (seit S006, Stand S007)
 Einlass unter Auflagen: keine Unruhe, **alle außer Irena** nehmen am **Fest der brennenden Sonne** teil, **Thorin** trägt eine [lila Schleife](items/lila-schleifen.md) und geht an der Leine (Moxie hält sie). Quartier: [Gasthaus Blauwasser](orte/gasthaus-blauwasser.md) — Kost und Logis gegen Maras Musik.
 
-S007: die [Kirche](orte/kirche-vallaki.md) war ohne die Gebeine nicht sicher. Gebeine zurück, Ritual gesprochen, Bestätigung fehlt. Thorin hat in der Stadt „Vampire“ gebrüllt. Der Sargmacher sitzt im Kleiderschrank, Schicksal offen. Irena kommt in den Mitschriften nicht vor.
+S007: die [Kirche](orte/kirche-vallaki.md) war ohne die Gebeine nicht sicher. Gebeine zurück, Ritual gesprochen. Jana hat sie nicht für sicher erklärt; die Party nimmt es an. Nia und Irena waren in der Kirche, ohne das zu wissen. Nia kennt den Kampf nicht. Thorin hat in der Stadt „Vampire“ gebrüllt. Der Sargmacher saß im Kleiderschrank; Raffi nimmt ihn als tot an, belegt ist es nicht.

@@ -22,7 +22,7 @@ Regiert vom **[Baron Vargas Vallakovich](../npcs/baron-vargas-vallakovich.md)**,
 - **Stadttor** — mit Guckschlitz; Wachen mit lila Armschleifen. Feuerpfeile von der Palisade vertreiben Wölfe.
 - **Marktplatz / Stadtplatz** — Pranger, Eselsmasken, Plakatwand des Barons, Stand mit lila Schleifen, Stand der [Edelsteinhändlerin](../npcs/edelsteinhaendlerin.md). Hier soll das **Fest der brennenden Sonne** stattfinden (Stand S006: in drei Tagen; S007 schreibt den Countdown nicht fort).
 - **[Gasthaus Blauwasser](gasthaus-blauwasser.md)** — vom Tor aus der Straße folgen, nie abbiegen, rechts. Treffpunkt von ganz Vallaki.
-- **[Kirche](kirche-vallaki.md)** — sollte vor Strahds Blick sicher sein. S007: nur, solange die Gebeine darin liegen. Sie waren weg, sind zurück, das Ritual ist gesprochen. Ob der Schutz wieder hält, ist nicht bestätigt.
+- **[Kirche](kirche-vallaki.md)** — sollte vor Strahds Blick sicher sein. S007: nur, solange die Gebeine darin liegen. Sie waren weg, sind zurück, das Ritual ist gesprochen. Jana hat den Schutz nicht bestätigt. Die Party nimmt ihn an. Nia und Irena wussten nicht, dass er weg war.
 - **[Haus des Sargmachers](haus-des-sargmachers.md)** — Tür eingetreten, Fenster in Brand. Name und Lage nicht notiert.
 - **Latrine** — draußen, nicht im Gasthaus (Moxie hat nachgeschaut).
 

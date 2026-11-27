@@ -1,5 +1,5 @@
 # Irena Koljana
-**Status:** lebend — reist mit der Party (ab S002); seit S006 in **Vallaki**, Gasthaus Blauwasser (heimlich im gemeinsamen Zimmer); Kirche in S007 nicht als Aufenthaltsort belegt
+**Status:** lebend — reist mit der Party (ab S002); seit S006 in **Vallaki**, Gasthaus Blauwasser; S007 in der Kirche, ohne zu wissen, dass der Schutz weg war
 **Erstauftritt:** S001 — nur aus Brief bekannt; S002 — persönlich angetroffen
 
 ---
@@ -40,11 +40,11 @@ Warmherzig, fast gelassen für jemanden in ihrer Lage. Hat gelernt, mit Strahds 
 - Wechselt nachts **heimlich** — versteckt hinter Thorin — ins gemeinsame Zimmer mit Nia und Mara.
 
 ## In S007
-Die Mitschriften nennen sie nicht. Ob sie mit in die Kirche ging, steht da nicht. Was die Party über die Kirche gelernt hat: sie ist nur sicher, solange die Gebeine darin liegen. Die waren weg, sind zurück, das Ritual ist gesprochen. Ob der Schutz wieder hält, ist nicht bestätigt.
+Sie ist in der Kirche, mit Nia. Beide wissen nicht, dass die Gebeine weg sind und die Kirche nicht schützt. Nia passt auf sie auf. Was Flori, Mara und Thorin draußen tun, erfahren die beiden an dem Tag nicht. Die Gebeine kommen zurück, das Ritual wird gesprochen. Jana sagt nicht, dass die Kirche wieder sicher ist. Die Party geht davon aus. Irena weiß nicht, dass sie es je nicht war.
 
 ## Offene Fäden
 - Was macht sie so besonders für Strahd? Was ist mit ihrer Herkunft?
 - Wie weit ist die Wirkung der Bisse fortgeschritten?
 - Warum interessiert sich Isek Strazni für sie — und warum wollten die Wölfe gezielt sie?
-- Ist sie in Vallakis Kirche wirklich sicher — jetzt, wo die Gebeine zurück sind, und war sie überhaupt dort?
+- Ist die Kirche wirklich wieder sicher — und erfährt Irena je, dass sie es einen Tag lang nicht war?
 - Was erwartet sie in der Abtei St. Markovia / in Krezk?

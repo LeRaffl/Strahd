@@ -183,12 +183,12 @@
 - Flori schärft auf Alberichs Bitte Alarm. Ziel nicht notiert. Mara will Messwein; Moxie sagt ihr, dass es ein Problem gibt.
 
 ### Die leere Gruft und der Sargmacher
-- Alberich, Thorin und der Pater: Falltür ausgehebelt, Sarg offen, keine Gebeine. Thorin will die Spur riechen. Wie sie von dort zum Sargmacher kommen, fehlt in den Mitschriften.
+- Alberich, Thorin und der Pater: Falltür ausgehebelt, Sarg offen, keine Gebeine. Thorin will die Spur riechen. Zum Sargmacher gehen nur Flori, Mara und Thorin, einfach hin, kein Geheimversteck. Nia und Irena bleiben in der Kirche und wissen nicht, dass der Schutz weg ist.
 - Flori, Mara und Thorin treten die Tür ein. Gebeine im Schrank. Ein Vampir in der Tür: das seien seine. Drei weitere. Tageslicht durch ein halbherzig eingeschlagenes Fenster hilft kaum.
 - Kampf, Zahlen in der Session. Mara klettert, Thorin springt (Athletik 22). Flori bleibt, unsichtbar im Schatten, Witch Bolt, Burning Hands. Das Fenster brennt, nicht die ganze Bude.
 
 ### Zurück, fast tödlich
 - Vampire werden Fledermäuse. Thorin brüllt in der Stadt. Die Wache kommt, die Vampire fliehen. Die Party redet nicht mit der Wache.
-- Flori sperrt den Sargmacher in den Kleiderschrank, damit er verbrennt, und läuft selbst glimmend durch die Stadt. Thorin löscht ihn mit dem Wasserschlauch. Ob der Sargmacher tot ist, steht nicht da.
-- Die Gebeine kommen in einem zerknüllten Bettlaken zurück. Alberich: „der Verlorene.“ Ritual mit dem Pater. Ob die Kirche damit wieder sicher ist, bestätigen die Mitschriften nicht.
-- Knoblauch unbrauchbar, Weihwasser ungenutzt. Yeska bekommt ein Witzbuch. Gegen Abend verrammeln sie. Irena und Nia kommen in den Mitschriften nicht als Handelnde vor.
+- Flori sperrt den Sargmacher in den Kleiderschrank, damit er verbrennt, und läuft selbst glimmend durch die Stadt. Thorin löscht ihn mit dem Wasserschlauch. Tod nicht bestätigt; Raffi nimmt ihn als tot an. Nia weiß davon nichts.
+- Die Gebeine kommen in einem zerknüllten Bettlaken zurück. Alberich: „der Verlorene.“ Ritual mit dem Pater. Jana erklärt die Kirche nicht für sicher. Die Party geht davon aus, weil die Gebeine wieder drin liegen.
+- Knoblauch unbrauchbar, Weihwasser ungenutzt. Yeska bekommt ein Witzbuch. Gegen Abend verrammeln sie. Nia hat den Tag über auf Irena aufgepasst und weiß das Draußen noch nicht.
