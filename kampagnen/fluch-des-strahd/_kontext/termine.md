@@ -11,7 +11,7 @@
 
 ## Anstehend
 
-*Nächster Termin noch offen.* Einstieg: Vallaki, Gasthaus Blauwasser — der Morgen nach der Ankunft (Irena will in die Kirche; Fest der brennenden Sonne in drei Tagen).
+*Nächster Termin noch offen.* Einstieg: Vallaki, nach der fast tödlichen Session in der Kirche. Gebeine zurück, Schutz nicht bestätigt. Fest der brennenden Sonne weiter offen, Countdown seit S006 nicht fortgeschrieben.
 
 ---
 
@@ -25,3 +25,4 @@
 - **2026-09-06 (So):** Session 005 — Thronsaal Inferno → [`../sessions/005-thronsaal-inferno.md`](../sessions/005-thronsaal-inferno.md)
 - **2026-09-14 (Mo):** kurze Session — entfallen
 - **2026-10-11 (So):** Session 006 — Alles wird gut → [`../sessions/006-alles-wird-gut.md`](../sessions/006-alles-wird-gut.md)
+- **2026-11-27 (Fr):** Session 007 — Der Verlorene → [`../sessions/007-der-verlorene.md`](../sessions/007-der-verlorene.md)

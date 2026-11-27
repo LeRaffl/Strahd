@@ -33,7 +33,11 @@ Höflich, etwas theatralisch, verschlossen, sobald es persönlich wird. Lässt s
 - Sagt Flori die Uhrzeit: 17:35.
 - Löst nachts Floris Alarm im Gang aus.
 
+## In S007
+Mara hält den Barden für **keinen Barden**: wohlgesetzte Worte, aber nicht wirklich bardisch. Ein neues Gespräch mit ihm steht in den Mitschriften nicht. Oben in den Notizen, Sprecher offen: selbst ein Jäger, bunt im Narrenkleid, trägt Silber — und selbst der Dumme habe Silber und Knoblauch dabei. Ob das ihn meint, ist Maras Verdacht, nicht belegt.
+
 ## Offene Fäden
 - Was schreibt er wirklich in sein Büchlein — und über wen?
-- Was will er in Vallaki „herausfinden"?
+- Was will er in Vallaki „herausfinden“?
 - Warum weiß er so genau, für wen sich Isek interessiert?
+- Ist er überhaupt ein Barde?

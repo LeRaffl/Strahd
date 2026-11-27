@@ -62,19 +62,20 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `regeln/magic-items/amulet-of-protection.md` — +1 Amulett of Protection (Party-Loot S001)
 
 ## Kampagnen
-### Fluch des Strahd (aktiv — S006 gespielt 11.10.2026)
+### Fluch des Strahd (aktiv — S007 gespielt 27.11.2026)
 - `kampagnen/fluch-des-strahd/party.md` — 6 PCs, DM Jana, Gruppen-Backstory
 - `kampagnen/fluch-des-strahd/_kontext/welt.md` — Barovia, Strahd, Götter (Morgenfürst/Mutternacht), Bevölkerung
 - `kampagnen/fluch-des-strahd/_kontext/timeline.md` — Pre-Campaign-Ereignisse, Session-Einträge
 - `kampagnen/fluch-des-strahd/_kontext/session-zero.md` — Organisationsregeln, Do's/Don'ts, X-Card, Regelwerk 2024
 - `kampagnen/fluch-des-strahd/_kontext/termine.md` — Geplante und vergangene Sessions, Format-Reminder lang/kurz
-- `kampagnen/fluch-des-strahd/_kontext/aktueller-plan.md` — Hauptziel Irena in Sicherheit; nach S006: Vallaki, Kirche, Fest der brennenden Sonne in drei Tagen, Isek Strazni
+- `kampagnen/fluch-des-strahd/_kontext/aktueller-plan.md` — Hauptziel Irena in Sicherheit; nach S007: Gebeine zurück in der Kirche, Schutz nicht bestätigt, Fest weiter offen, Isek Strazni
 - `kampagnen/fluch-des-strahd/sessions/001-schilfheim-nach-barovia.md` — S001: Auftrag in Schilfheim, Swalitsch Wald, Ankunft in Barovia (Dorf)
 - `kampagnen/fluch-des-strahd/sessions/002-koljans-letztes-geleit.md` — S002: Taverne, Arik seelenlos, Koljan tot im Sarg, Beerdigung, Irena reist mit
 - `kampagnen/fluch-des-strahd/sessions/003-madame-evas-karten.md` — S003: Galgen + 11 Gräber, Moxies Doppelgängerin, Madame Evas Tarokka-Weissagung, Edelsteine am Wasserfall; Gargoyles als Cliffhanger (S004 kein Kampf)
 - `kampagnen/fluch-des-strahd/sessions/004-die-festung-der-ehre.md` — S004: schwarze Kutsche, verlassene Festung, Tor-Rätsel „Ehre", drei Artefakte (Glühbert/Schild/Krone), Kampf gegen steinerne Wächter, Garten der Beichte, Thronsaal-Vampir (Cliffhanger)
 - `kampagnen/fluch-des-strahd/sessions/005-thronsaal-inferno.md` — S005: Vampir-Kampf im Thronsaal, Ghouls, Moxie charmed/geht, Fledermaus-Flucht, Tagebuch (Strahd/Spiegelbild), Rast
 - `kampagnen/fluch-des-strahd/sessions/006-alles-wird-gut.md` — S006: Moxie zurück, Windmühle gemieden, Wolfsjäger Soldarovitsch, Wölfe wollen Irena, Einlass nach Vallaki (lila Schleife, Fest-Pflicht), Gasthaus Blauwasser, Rictavio, Isek Strazni, grüner Rubin verkauft
+- `kampagnen/fluch-des-strahd/sessions/007-der-verlorene.md` — S007: Kirche ohne Gebeine nicht sicher, Yeska hat es Milivoj erzählt, vier Vampire beim Sargmacher, Gebeine im Bettlaken zurück, „der Verlorene“ neu beigesetzt; Schutz nicht bestätigt
 - `kampagnen/fluch-des-strahd/npcs/hanna-sommerfeld.md` — Nias Mutter (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/bert-sommerfeld.md` — Nias Vater (Apfelried, Hintergrund)
 - `kampagnen/fluch-des-strahd/npcs/timo-sommerfeld.md` — Nias älterer Bruder (studiert Medizin, pot. Anlaufpunkt Florpthyz-Quest)
@@ -101,6 +102,11 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/npcs/isek-strazni.md` — Isek Strazni (Handlanger des Barons, „der Lilane“, S006): Stachelarm, Feuer, interessiert sich für Irena
 - `kampagnen/fluch-des-strahd/npcs/baron-vargas-vallakovich.md` — Baron Vargas Vallakovich (Bürgermeister Vallaki, S006 nur gehört): wöchentliche Pflichtfeste, Pranger
 - `kampagnen/fluch-des-strahd/npcs/edelsteinhaendlerin.md` — Edelsteinhändlerin mit Monokel (Marktplatz Vallaki, S006): kauft grünen Rubin für 120 G
+- `kampagnen/fluch-des-strahd/npcs/lucian-petrovich.md` — Pater Lucian Petrovich (Kirche Vallaki, S007): Gebeine weg, nur Alberich und Yeska eingeweiht
+- `kampagnen/fluch-des-strahd/npcs/yeska.md` — Yeska (Messdiener, Waise, S007): hat Milivoj gesagt, wo die Gebeine sind
+- `kampagnen/fluch-des-strahd/npcs/milivoj.md` — Milivoj (Totengräber Vallaki, S007): nichts Lilanes, nicht Yeskas Bruder
+- `kampagnen/fluch-des-strahd/npcs/sargmacher.md` — Sargmacher (S007, Name nicht gefallen): Gebeine im Schrank, von Flori in den Kleiderschrank gesperrt
+- `kampagnen/fluch-des-strahd/npcs/vampire-beim-sargmacher.md` — vier unbenannte Vampire (S007): beanspruchen die Gebeine, Tageslicht hilft kaum, Flucht vor der Wache
 - `kampagnen/fluch-des-strahd/orte/apfelried.md` — Nias und Maras Heimatdorf (nicht-Barovia)
 - `kampagnen/fluch-des-strahd/orte/schilfheim.md` — Startdorf an einem See, Schauplatz Session-Anfang
 - `kampagnen/fluch-des-strahd/orte/barovia-dorf.md` — Dorf Barovia (Karte: E): Gasthaus, Herrenhaus, Kirche/Friedhof, Ravenloft am Horizont
@@ -111,6 +117,8 @@ Index aller Dateien im Archiv. Pfade sind relativ zum Repo-Root und direkt per `
 - `kampagnen/fluch-des-strahd/orte/windmuehle.md` — Alte Windmühle auf dem Berg am Abzweig vor Vallaki (S006 gesehen, gemieden — Evas Warnung)
 - `kampagnen/fluch-des-strahd/orte/vallaki.md` — Vallaki (Karte: N): ummauerte Stadt am Zarowitschsee, Baron, Pflichtfeste, lila Schleifen, Pranger (S006)
 - `kampagnen/fluch-des-strahd/orte/gasthaus-blauwasser.md` — Gasthaus Blauwasser (Vallaki): Quartier der Party ab S006, Grundriss, Zimmerverteilung
+- `kampagnen/fluch-des-strahd/orte/kirche-vallaki.md` — Kirche von Vallaki (S007): sicher nur mit den Gebeinen darin; Gruft leer, Gebeine zurück, Schutz nicht bestätigt
+- `kampagnen/fluch-des-strahd/orte/haus-des-sargmachers.md` — Haus des Sargmachers (S007): Tür eingetreten, Fenster in Brand, Name und Lage nicht notiert
 
 #### Key Items
 - `kampagnen/fluch-des-strahd/items/brief-von-koljan-indirowitsch-version-1.md` — Brief von Koljan Indirowitsch (Version 1, gefälscht, bei Nia) — Lockbrief nach Barovia

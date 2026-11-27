@@ -170,4 +170,25 @@
 - Thorin sieht ein Gesicht in Lila am Fenster; Nia und Mara sehen den Mann auf der Straße — **Stachelarm mit zu langen Fingern, Feuer beim Schnippen**.
 - Nia verkauft einen **grünen Rubin für 120 Gold** an die Edelsteinhändlerin am Markt. Plakate: aus dem „Wolfskopfgelage" wird das „Fest der brennenden Sonne" — jede Woche das größte Fest des Jahres.
 - Moxie hört: **Baron Vargas Vallakovich** hält das Fest in drei Tagen ab; Kritiker gelten als Strahds Verbündete. Rictavio bestätigt: Der Lilane ist **Isek Strazni**, Handlanger des Barons — und er **interessiert sich für Irena**.
-- Irena wechselt heimlich, versteckt hinter Thorin, das Zimmer. Raben auf dem Dach. Floris Alarm erwischt Rictavio: *„Entschuldigen Sie, Herr Uhr!"*
+- Irena wechselt heimlich, versteckt hinter Thorin, das Zimmer. Raben auf dem Dach. Floris Alarm erwischt Rictavio: *„Entschuldigen Sie, Herr Uhr!“*
+
+---
+
+## Session 007 — 27.11.2026 · Vallaki: Kirche, Gruft, Haus des Sargmachers
+
+### Die Kirche ohne Gebeine
+- Mara hält den Barden (Rictavio) für keinen Barden: wohlgesetzte Worte, nicht bardisch. Ein neues Gespräch mit ihm steht nicht in den Notizen.
+- Die Kirche ist nicht sicher. Die Gebeine sind weg. **Pater Lucian** hat das nur Alberich und dem Messdiener **Yeska** gesagt. Die Gebeine schützen die Kirche nur, solange sie darin liegen.
+- Yeska, Waisenkind, hellbraunes Haar, wohnt beim Pater, hat große Angst und verspricht sich den Ort. Er hat es dem Totengräber **Milivoj** erzählt. Milivoj trägt nichts Lilanes und ist nicht sein Bruder.
+- Flori schärft auf Alberichs Bitte Alarm. Ziel nicht notiert. Mara will Messwein; Moxie sagt ihr, dass es ein Problem gibt.
+
+### Die leere Gruft und der Sargmacher
+- Alberich, Thorin und der Pater: Falltür ausgehebelt, Sarg offen, keine Gebeine. Thorin will die Spur riechen. Wie sie von dort zum Sargmacher kommen, fehlt in den Mitschriften.
+- Flori, Mara und Thorin treten die Tür ein. Gebeine im Schrank. Ein Vampir in der Tür: das seien seine. Drei weitere. Tageslicht durch ein halbherzig eingeschlagenes Fenster hilft kaum.
+- Kampf, Zahlen in der Session. Mara klettert, Thorin springt (Athletik 22). Flori bleibt, unsichtbar im Schatten, Witch Bolt, Burning Hands. Das Fenster brennt, nicht die ganze Bude.
+
+### Zurück, fast tödlich
+- Vampire werden Fledermäuse. Thorin brüllt in der Stadt. Die Wache kommt, die Vampire fliehen. Die Party redet nicht mit der Wache.
+- Flori sperrt den Sargmacher in den Kleiderschrank, damit er verbrennt, und läuft selbst glimmend durch die Stadt. Thorin löscht ihn mit dem Wasserschlauch. Ob der Sargmacher tot ist, steht nicht da.
+- Die Gebeine kommen in einem zerknüllten Bettlaken zurück. Alberich: „der Verlorene.“ Ritual mit dem Pater. Ob die Kirche damit wieder sicher ist, bestätigen die Mitschriften nicht.
+- Knoblauch unbrauchbar, Weihwasser ungenutzt. Yeska bekommt ein Witzbuch. Gegen Abend verrammeln sie. Irena und Nia kommen in den Mitschriften nicht als Handelnde vor.

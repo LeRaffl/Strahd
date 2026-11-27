@@ -1,7 +1,7 @@
 # Vallaki
 **Karte:** Barovia, N — ummauerte Stadt am Ufer des Zarowitschsees, an der Alten Swalitsch-Straße
 **Region:** Westlich des Tser-Beckens, zwischen den Bergen und dem See
-**Status:** betreten S006 — Party wohnt im Gasthaus Blauwasser
+**Status:** betreten S006 — Party wohnt im Gasthaus Blauwasser; Kirche in S007 betreten, Gebeine waren weg
 **Erstbesuch:** S006 (11.10.2026)
 
 ---
@@ -20,9 +20,10 @@ Regiert vom **[Baron Vargas Vallakovich](../npcs/baron-vargas-vallakovich.md)**,
 
 ## Orte in der Stadt (bekannt)
 - **Stadttor** — mit Guckschlitz; Wachen mit lila Armschleifen. Feuerpfeile von der Palisade vertreiben Wölfe.
-- **Marktplatz / Stadtplatz** — Pranger, Eselsmasken, Plakatwand des Barons, Stand mit lila Schleifen, Stand der [Edelsteinhändlerin](../npcs/edelsteinhaendlerin.md). Hier findet in drei Tagen das **Fest der brennenden Sonne** statt.
+- **Marktplatz / Stadtplatz** — Pranger, Eselsmasken, Plakatwand des Barons, Stand mit lila Schleifen, Stand der [Edelsteinhändlerin](../npcs/edelsteinhaendlerin.md). Hier soll das **Fest der brennenden Sonne** stattfinden (Stand S006: in drei Tagen; S007 schreibt den Countdown nicht fort).
 - **[Gasthaus Blauwasser](gasthaus-blauwasser.md)** — vom Tor aus der Straße folgen, nie abbiegen, rechts. Treffpunkt von ganz Vallaki.
-- **Kirche** — Irena soll dort sicher sein vor Strahds Blick; noch nicht besucht.
+- **[Kirche](kirche-vallaki.md)** — sollte vor Strahds Blick sicher sein. S007: nur, solange die Gebeine darin liegen. Sie waren weg, sind zurück, das Ritual ist gesprochen. Ob der Schutz wieder hält, ist nicht bestätigt.
+- **[Haus des Sargmachers](haus-des-sargmachers.md)** — Tür eingetreten, Fenster in Brand. Name und Lage nicht notiert.
 - **Latrine** — draußen, nicht im Gasthaus (Moxie hat nachgeschaut).
 
 ## Einlass-Auflagen für die Party (S006)
@@ -35,10 +36,12 @@ Regiert vom **[Baron Vargas Vallakovich](../npcs/baron-vargas-vallakovich.md)**,
 - **Fest der brennenden Sonne** — das neue „größte Fest des Jahres": Ein riesiger **Ball aus Getreide** wird hoch aufgehängt und angezündet — die Sonne. Alle lachen, alle klatschen. *„Regen oder Sonnenschein. Alles wird gut sein."*
 
 ## Leute (bekannt)
-[Baron Vargas Vallakovich](../npcs/baron-vargas-vallakovich.md) · [Isek Strazni](../npcs/isek-strazni.md) · [Danina Martikov](../npcs/danina-martikov.md) · [Wirt Martikov](../npcs/wirt-martikov.md) · [Rictavio](../npcs/rictavio.md) · [Soldarovitsch](../npcs/soldarovitsch.md) · [Edelsteinhändlerin](../npcs/edelsteinhaendlerin.md) · **Lady Wachter** (nur der Name)
+[Baron Vargas Vallakovich](../npcs/baron-vargas-vallakovich.md) · [Isek Strazni](../npcs/isek-strazni.md) · [Danina Martikov](../npcs/danina-martikov.md) · [Wirt Martikov](../npcs/wirt-martikov.md) · [Rictavio](../npcs/rictavio.md) · [Soldarovitsch](../npcs/soldarovitsch.md) · [Edelsteinhändlerin](../npcs/edelsteinhaendlerin.md) · [Pater Lucian Petrovich](../npcs/lucian-petrovich.md) · [Yeska](../npcs/yeska.md) · [Milivoj](../npcs/milivoj.md) · [der Sargmacher](../npcs/sargmacher.md) · **Lady Wachter** (nur der Name)
 
 ## Offene Fäden
 - Hält das Feiern wirklich den Nebel draußen?
 - Wohin verschwinden die Menschen?
 - Wer ist Lady Wachter?
 - Was passiert beim Fest der brennenden Sonne — und mit denen, die nicht klatschen?
+- Hält die Kirche wieder, jetzt wo die Gebeine zurück sind?
+- Die Wache hat „Vampire“ gehört. Hängt das an der Party?
